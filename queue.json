@@ -1,7 +1,8 @@
 {
  "offset": 0,
  "history": [
-  "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!"
+  "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
+  "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik"
  ],
  "items": {
   "dcdc2b1c": {
@@ -17,6 +18,20 @@
    ],
    "status": "published",
    "video_id": "FuVjGPWGPJU"
+  },
+  "c1c7a8ee": {
+   "title": "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
+   "description": "Bu kısa videoda, yapılandırma yedeği almadan otomasyona geçmenin risklerini anlatıyoruz. Önce otomatik backup, ardından değişiklik adımlarını uygulayın ve ağınızı koruyun.\n\n#Shorts #yedekotomasyon #networking #cybersecurity #automation #linux",
+   "tags": [
+    "yedekotomasyon",
+    "networking",
+    "cybersecurity",
+    "automation",
+    "linux",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "_5hPc-0Drw4"
   }
  }
 }
