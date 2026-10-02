@@ -37,6 +37,8 @@ jobs:
       CONTENT_LANG: ${{ vars.CONTENT_LANG }}
       CHANNEL_TAG: ${{ vars.CHANNEL_TAG }}
       AFFILIATE_TEXT: ${{ vars.AFFILIATE_TEXT }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
