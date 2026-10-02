@@ -11,14 +11,14 @@ from google import genai
 from config import *
 
 # ---------- Sağlayıcı ayarları ----------
-GEMINI_MODEL = env("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = "gemini-3.8-flash"  # sabit
 GROQ_MODELS = [m.strip() for m in env(
     "GROQ_MODELS",
     "llama-3.3-70b-versatile,openai/gpt-oss-120b,llama-3.1-8b-instant",
 ).split(",") if m.strip()]
 OPENROUTER_MODEL = env("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
-GROQ_KEY = env("GROQ_API_KEY")
-OPENROUTER_KEY = env("OPENROUTER_API_KEY")
+GROQ_KEY = env("GROQ_API_KEY").strip()
+OPENROUTER_KEY = env("OPENROUTER_API_KEY").strip()
 
 
 # ---------- Haber başlıkları / not ----------
@@ -41,7 +41,7 @@ def _gemini(prompt, as_json):
     cfg = {"temperature": 1.0}
     if as_json:
         cfg["response_mime_type"] = "application/json"
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY.strip())
     return client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=cfg).text
 
 
@@ -58,7 +58,7 @@ def _chat(url, key, model, prompt):
 
 
 def _chain(as_json):
-    """Sıra: Gemini -> Groq (3 model) -> OpenRouter. Key'i olmayan atlanır."""
+    """Sıra: Gemini 3.8 -> Groq (3 model) -> OpenRouter. Key'i olmayan atlanır."""
     chain = []
     if GEMINI_API_KEY:
         chain.append((f"gemini:{GEMINI_MODEL}", lambda p: _gemini(p, as_json)))
