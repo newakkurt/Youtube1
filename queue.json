@@ -1,1 +1,22 @@
-{"offset": 0, "history": [], "items": {}}
+{
+ "offset": 0,
+ "history": [
+  "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!"
+ ],
+ "items": {
+  "dcdc2b1c": {
+   "title": "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
+   "description": "DHCP Snooping yapılandırırken port rollerini doğru belirlemek ağ güvenliği için hayati önem taşır. Uplink ve kullanıcı portlarının doğru ayrımı sahte DHCP saldırılarını tamamen engeller.\n\n#Shorts #agguvenligi #networksecurity #cisco #sysadmin #networking",
+   "tags": [
+    "agguvenligi",
+    "networksecurity",
+    "cisco",
+    "sysadmin",
+    "networking",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "FuVjGPWGPJU"
+  }
+ }
+}
