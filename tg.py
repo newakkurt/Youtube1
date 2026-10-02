@@ -7,9 +7,25 @@ from config import *
 API = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 
 
+def check():
+    """Üretime başlamadan önce token ve chat id doğrula (8 dk boşa gitmesin)."""
+    me = requests.get(f"{API}/getMe", timeout=30)
+    if me.status_code != 200:
+        raise RuntimeError(f"Telegram token geçersiz ({me.status_code}). TELEGRAM_BOT_TOKEN secret'ını kontrol et.")
+    chat = requests.get(f"{API}/getChat", params={"chat_id": TELEGRAM_CHAT_ID}, timeout=30)
+    if chat.status_code != 200:
+        raise RuntimeError("Telegram chat id yanlış ya da botuna /start yazılmamış. TELEGRAM_CHAT_ID secret'ını kontrol et.")
+    print("Telegram OK:", me.json()["result"]["username"])
+
+
 def send(text):
-    requests.post(f"{API}/sendMessage",
-                  json={"chat_id": TELEGRAM_CHAT_ID, "text": text[:4000], "disable_web_page_preview": True}, timeout=30)
+    try:
+        r = requests.post(f"{API}/sendMessage",
+                          json={"chat_id": TELEGRAM_CHAT_ID, "text": text[:4000], "disable_web_page_preview": True}, timeout=30)
+        if r.status_code != 200:
+            print("Telegram send hatası:", r.status_code, r.text[:200])
+    except Exception as e:
+        print("Telegram send hatası:", e)
 
 
 def send_video(path, caption, uid):

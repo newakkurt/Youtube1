@@ -17,8 +17,10 @@ GROQ_MODELS = [m.strip() for m in env(
     "llama-3.3-70b-versatile,openai/gpt-oss-120b,llama-3.1-8b-instant",
 ).split(",") if m.strip()]
 OPENROUTER_MODEL = env("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
-GROQ_KEY = env("GROQ_API_KEY").strip()
-OPENROUTER_KEY = env("OPENROUTER_API_KEY").strip()
+GROQ_KEY = env("GROQ_API_KEY")
+OPENROUTER_KEY = env("OPENROUTER_API_KEY")
+
+_dead = set()  # bu çalışmada kotası dolan / bulunamayan modeller
 
 
 # ---------- Haber başlıkları / not ----------
@@ -41,7 +43,7 @@ def _gemini(prompt, as_json):
     cfg = {"temperature": 1.0}
     if as_json:
         cfg["response_mime_type"] = "application/json"
-    client = genai.Client(api_key=GEMINI_API_KEY.strip())
+    client = genai.Client(api_key=GEMINI_API_KEY)
     return client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=cfg).text
 
 
@@ -73,7 +75,7 @@ def _chain(as_json):
             f"openrouter:{OPENROUTER_MODEL}",
             lambda p: _chat("https://openrouter.ai/api/v1/chat/completions", OPENROUTER_KEY, OPENROUTER_MODEL, p),
         ))
-    return chain
+    return [c for c in chain if c[0] not in _dead]
 
 
 def _clean(text):
@@ -86,11 +88,13 @@ def _extract_json(text):
 
 def _ask(prompt, as_json=True):
     chain = _chain(as_json)
+    print("Zincir:", [n for n, _ in chain])
     if not chain:
-        raise RuntimeError("Hiç API key tanımlı değil (GEMINI_API_KEY / GROQ_API_KEY / OPENROUTER_API_KEY)")
+        raise RuntimeError("Kullanılabilir model yok (key eksik ya da hepsinin kotası doldu)")
     errors = []
-    for rnd in range(3):  # tüm zinciri 3 tur dene
-        for name, fn in chain:
+    for rnd in range(3):
+        for item in list(chain):
+            name, fn = item
             try:
                 text = _clean(fn(prompt) or "")
                 if as_json:
@@ -99,9 +103,15 @@ def _ask(prompt, as_json=True):
                     print(f"OK: {name}")
                     return text
             except Exception as e:
-                print(f"FAIL: {name}: {str(e)[:150]}")
-                errors.append(f"{name}: {str(e)[:100]}")
-        time.sleep(20 * (rnd + 1))
+                msg = str(e)
+                print(f"FAIL: {name}: {msg[:150]}")
+                errors.append(f"{name}: {msg[:100]}")
+                if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "404" in msg or "401" in msg:
+                    _dead.add(name)
+                    chain.remove(item)
+        if not chain:
+            break
+        time.sleep(10 * (rnd + 1))
     raise RuntimeError("Tüm modeller başarısız: " + " | ".join(errors[-5:]))
 
 

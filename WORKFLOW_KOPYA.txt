@@ -1,0 +1,77 @@
+name: Shorts Bot
+on:
+  schedule:
+    - cron: "0 6 * * *"    # 09:00 TR
+    - cron: "0 11 * * *"   # 14:00 TR
+    - cron: "0 17 * * *"   # 20:00 TR
+    - cron: "0 15 * * 0"   # Pazar 18:00 TR haftalık rapor
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [generate, process, report]
+        default: generate
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AUTO_APPROVE: ${{ vars.AUTO_APPROVE }}
+      CONTENT_LANG: ${{ vars.CONTENT_LANG }}
+      CHANNEL_TAG: ${{ vars.CHANNEL_TAG }}
+      AFFILIATE_TEXT: ${{ vars.AFFILIATE_TEXT }}
+      GROQ_MODELS: ${{ vars.GROQ_MODELS }}
+      OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+
+      - run: pip install -r requirements.txt
+
+      - name: Mod belirle
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            M="${{ inputs.mode }}"
+          elif [ "${{ github.event.schedule }}" = "0 15 * * 0" ]; then
+            M="report"
+          else
+            M="generate"
+          fi
+          echo "mode=$M" >> $GITHUB_OUTPUT
+
+      - name: Çalıştır
+        run: python main.py ${{ steps.mode.outputs.mode }}
+
+      - name: State kaydet
+        if: always()
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add queue.json
+          git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)

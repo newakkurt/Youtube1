@@ -28,6 +28,16 @@ def upload(path, title, description, tags):
     return yt.videos().insert(part="snippet,status", body=body, media_body=media).execute()["id"]
 
 
+def privacy(video_id):
+    """Yüklenen videonun gizlilik durumu (public/private). Hata olursa None."""
+    try:
+        yt = build("youtube", "v3", credentials=_creds(), cache_discovery=False)
+        items = yt.videos().list(part="status", id=video_id).execute()["items"]
+        return items[0]["status"]["privacyStatus"] if items else None
+    except Exception:
+        return None
+
+
 def stats(days=7):
     c = _creds()
     yt = build("youtube", "v3", credentials=c, cache_discovery=False)

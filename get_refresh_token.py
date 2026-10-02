@@ -1,5 +1,6 @@
 """Bilgisayarında BİR KEZ çalıştır: pip install google-auth-oauthlib
-client_secret.json (Google Cloud > Credentials > OAuth client > Desktop app) aynı klasörde olmalı."""
+client_secret.json (Google Cloud > Credentials > OAuth client > Desktop app) aynı klasörde olmalı.
+client_secret.json dosyasını GitHub'a YÜKLEME."""
 import json
 
 from google_auth_oauthlib.flow import InstalledAppFlow

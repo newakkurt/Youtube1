@@ -101,7 +101,6 @@ def build(script, out_path):
     try:
         scenes = [build_scene(i, s, tmp) for i, s in enumerate(script["scenes"])]
         final = concatenate_videoclips(scenes, method="compose")
-        # 3000k bitrate: Telegram bot indirme limiti (20MB) altında kalmak için
         final.write_videofile(str(out_path), fps=30, codec="libx264", audio_codec="aac",
                               bitrate="3000k", preset="veryfast", threads=2, logger=None)
         final.close()
