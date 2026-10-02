@@ -1,0 +1,8 @@
+DHCP Snooping açıkken sadece uplink portları trusted olmalı, kullanıcı portları untrusted kalmalı.
+Port Security'de sticky MAC kullanırsan cihaz değiştiğinde port neden err-disable olur ve nasıl düzeltilir.
+TACACS+ kullanıyorsan sunucu çökerse switch'e girmek için mutlaka local fallback kullanıcısı bırak.
+Binlerce switch'e komut atmadan önce önce tek bir cihazda test et, sonra küçük bir grupta dene.
+Dynamic ARP Inspection, DHCP Snooping binding tablosuna güvenir; tablo boşsa meşru trafik de düşer.
+Ansible ile switch yapılandırırken önce --check ile kuru çalıştırma yap, sonra gerçek değişikliği uygula.
+Yapılandırma yedeği almadan otomasyona geçme; önce otomatik backup, sonra değişiklik.
+Merkezi syslog olmadan ağ sorunu çözmek tahmin yürütmektir; her cihaz loglarını tek yere göndermeli.
