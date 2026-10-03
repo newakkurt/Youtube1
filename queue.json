@@ -2,7 +2,8 @@
  "offset": 0,
  "history": [
   "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
-  "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik"
+  "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
+  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz"
  ],
  "items": {
   "dcdc2b1c": {
@@ -32,6 +33,20 @@
    ],
    "status": "published",
    "video_id": "_5hPc-0Drw4"
+  },
+  "c5792b59": {
+   "title": "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
+   "description": "Sticky MAC özelliği, cihaz değiştiğinde portun otomatik olarak kapanmasına neden olur. Bu videoda sorunu nasıl tespit edip, portu nasıl tekrar aktif hâle getireceğinizi gösteriyoruz.\n\n#Shorts #portguvenligi #networking #security #automation #linux",
+   "tags": [
+    "portguvenligi",
+    "networking",
+    "security",
+    "automation",
+    "linux",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "arLcvH77ZRM"
   }
  }
 }
