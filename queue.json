@@ -3,6 +3,7 @@
  "history": [
   "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
   "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
+  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz"
  ],
  "items": {
@@ -47,6 +48,20 @@
    ],
    "status": "published",
    "video_id": "arLcvH77ZRM"
+  },
+  "292c4692": {
+   "title": "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
+   "description": "Bu kısa videoda sticky MAC kullandığınızda portun err-disable olma nedenini ve hızlı çözüm adımlarını öğreneceksiniz. Ağ güvenliğinizi artırmak için basit bir komutla sorunu nasıl düzeltebileceğinizi gösteriyoruz.\n\n#Shorts #ağgüvenliği #networksecurity #IT #cybersecurity #automation",
+   "tags": [
+    "ağgüvenliği",
+    "networksecurity",
+    "IT",
+    "cybersecurity",
+    "automation",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "hKLL1QMTSeE"
   }
  }
 }
