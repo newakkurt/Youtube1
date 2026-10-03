@@ -5,7 +5,8 @@
   "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
-  "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!"
+  "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
+  "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!"
  ],
  "items": {
   "dcdc2b1c": {
@@ -77,6 +78,20 @@
    ],
    "status": "published",
    "video_id": "hv8SS2TnXaI"
+  },
+  "8b604e22": {
+   "title": "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
+   "description": "DHCP Snooping, ağınızdaki sahte DHCP sunucularını etkisiz hale getirir. Uplink portları trusted, kullanıcı portları untrusted olarak ayarlamayı unutmayın.\n\n#Shorts #ağgüvenliği #networksecurity #dhcpsnooping #ITtips #cybersecurity",
+   "tags": [
+    "ağgüvenliği",
+    "networksecurity",
+    "dhcpsnooping",
+    "ITtips",
+    "cybersecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "OL0-Wx7RcVA"
   }
  }
 }
