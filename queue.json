@@ -4,7 +4,8 @@
   "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
   "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
-  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz"
+  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
+  "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!"
  ],
  "items": {
   "dcdc2b1c": {
@@ -62,6 +63,20 @@
    ],
    "status": "published",
    "video_id": "hKLL1QMTSeE"
+  },
+  "b12b4027": {
+   "title": "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
+   "description": "Ansible'ın --check modunu kullanarak switch değişikliklerini güvenle test edin. Kuru çalıştırma sonrası gerçek yapılandırmayı sorunsuz uygulayın.\n\n#Shorts #AğOtomasyonu #NetworkAutomation #Ansible #ITSecurity #DevOps",
+   "tags": [
+    "AğOtomasyonu",
+    "NetworkAutomation",
+    "Ansible",
+    "ITSecurity",
+    "DevOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "hv8SS2TnXaI"
   }
  }
 }
