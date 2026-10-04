@@ -13,6 +13,14 @@ IG_USER_ID = os.environ["IG_USER_ID"]
 TOKEN = os.environ["IG_ACCESS_TOKEN"]
 
 
+def _check(resp, step):
+    """Hata olursa Instagram'ın asıl cevabını (token'sız) mesaja koy."""
+    if resp.ok:
+        return resp
+    body = resp.text.replace(TOKEN, "***")[:350]
+    raise RuntimeError(f"[{step}] HTTP {resp.status_code}: {body}")
+
+
 def publish_reel(video_path: str, caption: str, timeout_s: int = 300) -> str:
     # 1) Resumable upload container oluştur (public URL gerekmez)
     r = requests.post(
@@ -25,7 +33,7 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 300) -> str:
         },
         timeout=60,
     )
-    r.raise_for_status()
+    _check(r, "container")
     j = r.json()
     container_id, upload_uri = j["id"], j["uri"]
 
@@ -42,21 +50,23 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 300) -> str:
             data=f,
             timeout=300,
         )
-    up.raise_for_status()
+    _check(up, "upload")
 
     # 3) İşlenmesini bekle
     deadline = time.time() + timeout_s
     while time.time() < deadline:
-        s = requests.get(
+        sr = requests.get(
             f"{API}/{container_id}",
-            params={"fields": "status_code", "access_token": TOKEN},
+            params={"fields": "status_code,status", "access_token": TOKEN},
             timeout=30,
-        ).json()
+        )
+        _check(sr, "status")
+        s = sr.json()
         code = s.get("status_code")
         if code == "FINISHED":
             break
         if code in ("ERROR", "EXPIRED"):
-            raise RuntimeError(f"IG işleme hatası: {s}")
+            raise RuntimeError(f"[processing] {s}")
         time.sleep(5)
     else:
         raise TimeoutError("IG video işleme zaman aşımı")
@@ -67,7 +77,7 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 300) -> str:
         data={"creation_id": container_id, "access_token": TOKEN},
         timeout=60,
     )
-    p.raise_for_status()
+    _check(p, "publish")
     return p.json()["id"]
 
 
@@ -78,5 +88,5 @@ def refresh_token() -> str:
         params={"grant_type": "ig_refresh_token", "access_token": TOKEN},
         timeout=30,
     )
-    r.raise_for_status()
+    _check(r, "refresh")
     return r.json()["access_token"]
