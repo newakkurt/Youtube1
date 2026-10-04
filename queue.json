@@ -11,7 +11,8 @@
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
-  "How to Safely Configure Switches with Ansible’s Dry‑Run First"
+  "How to Safely Configure Switches with Ansible’s Dry‑Run First",
+  "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled"
  ],
  "items": {
   "dcdc2b1c": {
@@ -167,6 +168,20 @@
    ],
    "status": "published",
    "video_id": "OZGsFNlvSsg"
+  },
+  "3a287b42": {
+   "title": "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
+   "description": "Enabling DHCP Snooping protects your network, but it must be configured correctly. Trust only uplink ports and keep user ports untrusted to stop rogue DHCP attacks.\n\n#Shorts #DHCPTrust #NetworkSecurity #CyberSecurity #ITOps #TechTips",
+   "tags": [
+    "DHCPTrust",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "ITOps",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "78zso5PLcbU"
   }
  }
 }
