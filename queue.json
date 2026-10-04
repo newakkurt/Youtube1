@@ -12,7 +12,8 @@
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
-  "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled"
+  "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
+  "Why Sticky MAC Causes Err‑Disable and How to Repair It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -182,6 +183,20 @@
    ],
    "status": "published",
    "video_id": "78zso5PLcbU"
+  },
+  "9adf37fa": {
+   "title": "Why Sticky MAC Causes Err‑Disable and How to Repair It",
+   "description": "When a device is replaced, its new MAC address no longer matches the sticky entry, causing the port to err‑disable. Clear the sticky table or switch to restrict mode, then re‑enable the port to restore connectivity.\n\n#Shorts #StickyMACFix #NetworkSecurity #CiscoSwitches #ITInfrastructure #CyberOps",
+   "tags": [
+    "StickyMACFix",
+    "NetworkSecurity",
+    "CiscoSwitches",
+    "ITInfrastructure",
+    "CyberOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "-7WDLv1APHg"
   }
  }
 }
