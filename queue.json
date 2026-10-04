@@ -6,7 +6,8 @@
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
-  "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!"
+  "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
+  "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?"
  ],
  "items": {
   "dcdc2b1c": {
@@ -92,6 +93,20 @@
    ],
    "status": "published",
    "video_id": "OL0-Wx7RcVA"
+  },
+  "bce094ff": {
+   "title": "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
+   "description": "DHCP Snooping'i etkinleştirdiğinizde sadece uplink portlarını trusted, kullanıcı portlarını untrusted tutmanız gerekir. Bu basit adımla ağınızı sahte DHCP saldırılarına karşı koruyabilirsiniz.\n\n#Shorts #ağguvenliği #networksecurity #IT #automation #Linux",
+   "tags": [
+    "ağguvenliği",
+    "networksecurity",
+    "IT",
+    "automation",
+    "Linux",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "bwyeuRwiYR8"
   }
  }
 }
