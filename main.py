@@ -73,6 +73,15 @@ def generate_one(state):
         item.update(file_id=file_id, message_id=mid)
     state["items"][uid] = item
 
+def ig_test(state):
+    import script_gen
+    import video_maker
+    script = script_gen.generate(state["history"])
+    OUT.mkdir(exist_ok=True)
+    path = video_maker.build(script, OUT / "igtest.mp4")
+    desc, tags = compose(script)
+    post_instagram({"title": script["title"], "description": desc}, path)
+
 
 def handle_callback(state, cq):
     action, uid = cq["data"].split(":")
@@ -157,7 +166,7 @@ if __name__ == "__main__":
     mode = sys.argv[1]
     state = load()
     try:
-        {"generate": lambda: generate_one(state), "process": lambda: process(state), "report": report}[mode]()
+        {"generate": lambda: generate_one(state), "process": lambda: process(state), "report": report, "igtest": lambda: ig_test(state)}[mode]()
     except Exception as e:
         tg.send(f"⚠️ Hata ({mode}): {str(e)[:500]}")
         raise
