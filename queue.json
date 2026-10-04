@@ -9,7 +9,8 @@
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
-  "Why Dynamic ARP Inspection Silently Kills Good Traffic"
+  "Why Dynamic ARP Inspection Silently Kills Good Traffic",
+  "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -137,6 +138,20 @@
    ],
    "status": "published",
    "video_id": "cMe1O_0Q2Do"
+  },
+  "8aea6876": {
+   "title": "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
+   "description": "When you enable sticky MAC on a port, swapping a device can trigger an err-disable state. Learn the quick steps to clear the sticky entry and bring the port back online.\n\n#Shorts #StickyMacFix #NetworkSecurity #Cybersecurity #ITOps #SwitchConfig",
+   "tags": [
+    "StickyMacFix",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "xKjobQma6z0"
   }
  }
 }
