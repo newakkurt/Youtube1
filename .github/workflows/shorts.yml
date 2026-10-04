@@ -54,18 +54,18 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Mod belirle
+    - name: Mod belirle
         id: mode
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             M="${{ inputs.mode }}"
-          elif [ "${{ github.event.schedule }}" = "0 15 * * 0" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 19 * * 0" ]; then
             M="report"
           else
             M="generate"
           fi
           echo "mode=$M" >> $GITHUB_OUTPUT
-
+          
       - name: Çalıştır
         run: python main.py ${{ steps.mode.outputs.mode }}
 
