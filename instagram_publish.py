@@ -1,7 +1,8 @@
 """
 Instagram Reels yayıncı — Instagram API with Instagram Login (Facebook Page gerekmez).
 Bu hesap tipi dosya yüklemeyi kabul etmiyor, video_url (public link) istiyor.
-Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> link ile Reels container -> işle -> yayınla.
+Akış: videoyu IG biçimine çevir -> geçici host'a yükle (link gerçekten MP4 mü doğrula)
+      -> link ile Reels container -> işle -> yayınla.
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN
 """
 import os
@@ -13,6 +14,7 @@ import requests
 API = "https://graph.instagram.com/v21.0"
 IG_USER_ID = os.environ["IG_USER_ID"]
 TOKEN = os.environ["IG_ACCESS_TOKEN"]
+UA = "Mozilla/5.0 (compatible; reels-bot/1.0)"
 
 
 def _check(resp, step):
@@ -32,7 +34,7 @@ def _ffmpeg() -> str:
 
 
 def make_ig_compatible(src: str) -> str:
-    """H.264 + yuv420p + 30fps + AAC 48k stereo + faststart (moov başta). Ses yoksa sessiz ses ekler."""
+    """H.264 + yuv420p + 30fps + AAC 48k stereo + faststart. Ses yoksa sessiz ses ekler."""
     ff = _ffmpeg()
     dst = os.path.splitext(src)[0] + "_ig.mp4"
 
@@ -58,74 +60,106 @@ def make_ig_compatible(src: str) -> str:
     return dst
 
 
-def _host_litterbox(video_path: str) -> str:
-    with open(video_path, "rb") as f:
+# ---------- Geçici host'lar (hepsi doğrudan dosya linki dönmeli) ----------
+
+def _host_litterbox(path: str) -> str:
+    with open(path, "rb") as f:
         r = requests.post(
             "https://litterbox.catbox.moe/resources/internals/api.php",
             data={"reqtype": "fileupload", "time": "24h"},
-            files={"fileToUpload": (os.path.basename(video_path), f, "video/mp4")},
-            timeout=300,
+            files={"fileToUpload": (os.path.basename(path), f, "video/mp4")},
+            headers={"User-Agent": UA}, timeout=300,
         )
     r.raise_for_status()
-    url = r.text.strip()
-    if not url.startswith("http"):
-        raise RuntimeError(f"litterbox cevabı beklenmedik: {url[:100]}")
-    return url
+    return r.text.strip()
 
 
-def _host_tmpfiles(video_path: str) -> str:
-    with open(video_path, "rb") as f:
+def _host_uguu(path: str) -> str:
+    with open(path, "rb") as f:
         r = requests.post(
-            "https://tmpfiles.org/api/v1/upload",
-            files={"file": (os.path.basename(video_path), f, "video/mp4")},
-            timeout=300,
+            "https://uguu.se/upload",
+            files={"files[]": (os.path.basename(path), f, "video/mp4")},
+            headers={"User-Agent": UA}, timeout=300,
         )
     r.raise_for_status()
-    url = r.json()["data"]["url"]
-    return url.replace("http://", "https://").replace("tmpfiles.org/", "tmpfiles.org/dl/", 1)
-
-
-def _fetchable(url: str) -> str:
-    """Instagram botu gibi linke bak; durumu kısa metin olarak döndür."""
     try:
-        r = requests.get(
-            url, stream=True, timeout=30, allow_redirects=True,
-            headers={"User-Agent": "facebookexternalhit/1.1", "Range": "bytes=0-1023"},
+        return r.json()["files"][0]["url"]
+    except Exception:
+        return r.text.strip()
+
+
+def _host_0x0(path: str) -> str:
+    with open(path, "rb") as f:
+        r = requests.post(
+            "https://0x0.st",
+            files={"file": (os.path.basename(path), f, "video/mp4")},
+            data={"expires": "24"},
+            headers={"User-Agent": "curl/8.5.0"}, timeout=300,
         )
+    r.raise_for_status()
+    return r.text.strip()
+
+
+def _host_catbox(path: str) -> str:
+    with open(path, "rb") as f:
+        r = requests.post(
+            "https://catbox.moe/user/api.php",
+            data={"reqtype": "fileupload"},
+            files={"fileToUpload": (os.path.basename(path), f, "video/mp4")},
+            headers={"User-Agent": UA}, timeout=300,
+        )
+    r.raise_for_status()
+    return r.text.strip()
+
+
+HOSTS = (_host_litterbox, _host_uguu, _host_0x0, _host_catbox)
+
+
+def _is_direct_mp4(url: str) -> str:
+    """Linkten ilk baytları çek: MP4 imzası ('ftyp') varsa doğrudan video demektir.
+    Boş string = uygun, doluysa sebep."""
+    try:
+        r = requests.get(url, stream=True, timeout=30, allow_redirects=True,
+                         headers={"User-Agent": UA, "Range": "bytes=0-63"})
+        head = next(r.iter_content(64), b"")
         ctype = r.headers.get("Content-Type", "?")
+        status = r.status_code
         r.close()
-        return f"{r.status_code} {ctype}"
+        if status not in (200, 206):
+            return f"HTTP {status}"
+        if b"ftyp" not in head[:16]:
+            return f"video değil ({ctype})"
+        return ""
     except Exception as e:
-        return f"erişilemedi: {str(e)[:80]}"
+        return f"erişilemedi: {str(e)[:60]}"
 
 
-def upload_public(video_path: str):
-    """(url, host_adı, erişim_durumu) döndürür. Erişilebilir ilk host'u seçer."""
-    errors, fallback = [], None
-    for fn in (_host_litterbox, _host_tmpfiles):
-        try:
-            url = fn(video_path)
-        except Exception as e:
-            errors.append(f"{fn.__name__}: {str(e)[:120]}")
-            continue
-        status = _fetchable(url)
+def upload_public(path: str):
+    """İlk doğrulanmış doğrudan-MP4 linkini döndür: (url, host_adı)."""
+    notes = []
+    for fn in HOSTS:
         name = fn.__name__.replace("_host_", "")
-        ok = status.startswith(("200", "206")) and "video" in status.lower()
-        if ok:
-            return url, name, status
-        fallback = fallback or (url, name, status)
-        errors.append(f"{name}: IG botuna uygun değil ({status})")
-    if fallback:
-        return fallback
-    raise RuntimeError("Geçici host yüklemesi başarısız: " + " | ".join(errors))
+        try:
+            url = fn(path)
+        except Exception as e:
+            notes.append(f"{name}: yükleme hatası {str(e)[:60]}")
+            continue
+        if not url.startswith("http"):
+            notes.append(f"{name}: beklenmedik cevap {url[:50]}")
+            continue
+        why = _is_direct_mp4(url)
+        if not why:
+            return url, name
+        notes.append(f"{name}: {why}")
+    raise RuntimeError("Hiçbir host uygun değil -> " + " | ".join(notes))
 
 
 def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     # 0) IG biçimine çevir
     ig_path = make_ig_compatible(video_path)
 
-    # 1) Videoyu public linke koy
-    video_url, host, fetch_status = upload_public(ig_path)
+    # 1) Videoyu doğrulanmış public linke koy
+    video_url, host = upload_public(ig_path)
 
     # 2) Reels container oluştur
     r = requests.post(
@@ -155,7 +189,7 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
         if code == "FINISHED":
             break
         if code in ("ERROR", "EXPIRED"):
-            raise RuntimeError(f"[processing] {s} | host={host} erisim={fetch_status}")
+            raise RuntimeError(f"[processing] {s} | host={host}")
         time.sleep(6)
     else:
         raise TimeoutError("IG video işleme zaman aşımı")
