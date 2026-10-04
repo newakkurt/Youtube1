@@ -1,6 +1,20 @@
 import json
 import os
 import sys
+from lead_finder import run_lead_finder
+# diğer importların...
+
+mode = sys.argv[1] if len(sys.argv) > 1 else "generate"
+
+if mode == "generate":
+    # mevcut video üretme kodun
+    pass
+elif mode == "report":
+    # mevcut rapor kodun
+    pass
+elif mode == "lead":
+    run_lead_finder()
+    
 import uuid
 
 import requests
