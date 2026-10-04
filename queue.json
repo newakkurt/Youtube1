@@ -13,7 +13,8 @@
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
-  "Why Sticky MAC Causes Err‑Disable and How to Repair It"
+  "Why Sticky MAC Causes Err‑Disable and How to Repair It",
+  "Dry‑Run First: Safer Switch Config with Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -197,6 +198,20 @@
    ],
    "status": "published",
    "video_id": "-7WDLv1APHg"
+  },
+  "54833477": {
+   "title": "Dry‑Run First: Safer Switch Config with Ansible",
+   "description": "Running a dry‑run with Ansible’s --check flag lets you see what will change on a switch before anything is applied. After confirming the results, run the playbook again without --check to safely push the configuration.\n\n#Shorts #AnsibleDryRun #NetworkAutomation #CyberSecurity #ITOps #DevOps",
+   "tags": [
+    "AnsibleDryRun",
+    "NetworkAutomation",
+    "CyberSecurity",
+    "ITOps",
+    "DevOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "-vEgMmpoAXM"
   }
  }
 }
