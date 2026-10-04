@@ -2,6 +2,7 @@ name: Shorts Bot
 on:
   schedule:
     - cron: "0 6 * * *"   # TSİ 09:00 (UTC 06:00) - 1. Video
+    - cron: "22 8 * * *"   # TSİ 11:22 (UTC 08:22) - Hızlı Test
     - cron: "0 10 * * *"  # TSİ 13:00 (UTC 10:00) - 2. Video
     - cron: "0 14 * * *"  # TSİ 17:00 (UTC 14:00) - 3. Video
     - cron: "0 18 * * *"  # TSİ 21:00 (UTC 18:00) - 4. Video
