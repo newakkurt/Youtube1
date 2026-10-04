@@ -14,7 +14,8 @@
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Sticky MAC Causes Err‑Disable and How to Repair It",
-  "Dry‑Run First: Safer Switch Config with Ansible"
+  "Dry‑Run First: Safer Switch Config with Ansible",
+  "Why Skipping Backups Before Automation Crashes Your Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -212,6 +213,20 @@
    ],
    "status": "published",
    "video_id": "-vEgMmpoAXM"
+  },
+  "ae38922e": {
+   "title": "Why Skipping Backups Before Automation Crashes Your Network",
+   "description": "A quick reminder that automation without a recent config backup is a recipe for outage. Save the backup first, then let automation do its job safely.\n\n#Shorts #BackupFirst #NetworkSecurity #Automation #ITOps #CyberSafety",
+   "tags": [
+    "BackupFirst",
+    "NetworkSecurity",
+    "Automation",
+    "ITOps",
+    "CyberSafety",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "rdU0004SToE"
   }
  }
 }
