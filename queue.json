@@ -15,7 +15,8 @@
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Sticky MAC Causes Err‑Disable and How to Repair It",
   "Dry‑Run First: Safer Switch Config with Ansible",
-  "Why Skipping Backups Before Automation Crashes Your Network"
+  "Why Skipping Backups Before Automation Crashes Your Network",
+  "Why Sticky MAC Locks Your Port and How to Unlock It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -227,6 +228,20 @@
    ],
    "status": "published",
    "video_id": "rdU0004SToE"
+  },
+  "2c6fa2b7": {
+   "title": "Why Sticky MAC Locks Your Port and How to Unlock It",
+   "description": "When a device changes its MAC address, a switch using sticky MAC will disable the port to prevent unauthorized traffic. Learn the quick steps to clear the error and keep your network running smoothly.\n\n#Shorts #StickyMAC #NetworkSecurity #Cybersecurity #ITInfrastructure #SwitchConfig",
+   "tags": [
+    "StickyMAC",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITInfrastructure",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "8ERt7O_5NGA"
   }
  }
 }
