@@ -8,7 +8,8 @@
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
-  "Why Every Device Needs a Central Syslog – Stop Guessing!"
+  "Why Every Device Needs a Central Syslog – Stop Guessing!",
+  "Why Dynamic ARP Inspection Silently Kills Good Traffic"
  ],
  "items": {
   "dcdc2b1c": {
@@ -122,6 +123,20 @@
    ],
    "status": "published",
    "video_id": "aP7j14rJ70A"
+  },
+  "a72b23b6": {
+   "title": "Why Dynamic ARP Inspection Silently Kills Good Traffic",
+   "description": "Dynamic ARP Inspection relies on an accurate DHCP Snooping binding table to validate packet sources. If that table is empty, your switch will drop legitimate traffic without warning.\n\n#Shorts #DynamicARPInspection #NetworkSecurity #CiscoNetworking #SysAdminTips #CyberSecurity",
+   "tags": [
+    "DynamicARPInspection",
+    "NetworkSecurity",
+    "CiscoNetworking",
+    "SysAdminTips",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "cMe1O_0Q2Do"
   }
  }
 }
