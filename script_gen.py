@@ -11,7 +11,7 @@ from google import genai
 from config import *
 
 # ---------- Sağlayıcı ayarları ----------
-GEMINI_MODEL = "gemini-3.8-flash"  # sabit
+GEMINI_MODEL = "gemini-3.8-flash"
 GROQ_MODELS = [m.strip() for m in env(
     "GROQ_MODELS",
     "llama-3.3-70b-versatile,openai/gpt-oss-120b,llama-3.1-8b-instant",
@@ -20,15 +20,12 @@ OPENROUTER_MODEL = env("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:fr
 GROQ_KEY = env("GROQ_API_KEY")
 OPENROUTER_KEY = env("OPENROUTER_API_KEY")
 
-_dead = set()  # bu çalışmada kotası dolan / bulunamayan modeller
-
+_dead = set()
 
 # ---------- Haber başlıkları / not ----------
 def headlines(n=8):
-    if LANG == "tr":
-        q, loc = "ağ güvenliği OR siber güvenlik OR network when:2d", "hl=tr&gl=TR&ceid=TR:tr"
-    else:
-        q, loc = "network security OR cybersecurity OR networking when:2d", "hl=en-US&gl=US&ceid=US:en"
+    # Dil İngilizce olarak ayarlandı
+    q, loc = "network security OR cybersecurity OR networking when:2d", "hl=en-US&gl=US&ceid=US:en"
     feed = feedparser.parse(f"https://news.google.com/rss/search?q={urllib.parse.quote(q)}&{loc}")
     return [e.title for e in feed.entries[:n]]
 
@@ -60,7 +57,6 @@ def _chat(url, key, model, prompt):
 
 
 def _chain(as_json):
-    """Sıra: Gemini 3.8 -> Groq (3 model) -> OpenRouter. Key'i olmayan atlanır."""
     chain = []
     if GEMINI_API_KEY:
         chain.append((f"gemini:{GEMINI_MODEL}", lambda p: _gemini(p, as_json)))
@@ -88,9 +84,9 @@ def _extract_json(text):
 
 def _ask(prompt, as_json=True):
     chain = _chain(as_json)
-    print("Zincir:", [n for n, _ in chain])
+    print("Chain:", [n for n, _ in chain])
     if not chain:
-        raise RuntimeError("Kullanılabilir model yok (key eksik ya da hepsinin kotası doldu)")
+        raise RuntimeError("No available model (missing key or quota exhausted)")
     errors = []
     for rnd in range(3):
         for item in list(chain):
@@ -112,14 +108,14 @@ def _ask(prompt, as_json=True):
         if not chain:
             break
         time.sleep(10 * (rnd + 1))
-    raise RuntimeError("Tüm modeller başarısız: " + " | ".join(errors[-5:]))
+    raise RuntimeError("All models failed: " + " | ".join(errors[-5:]))
 
 
 # ---------- Senaryo ----------
 def generate(history):
     note = pick_note()
-    prompt = f"""You write 25-35 second YouTube Shorts voiceover scripts for a channel about: {NICHE}.
-All output language: {LANG_NAME}.
+    prompt = f"""You write 25-35 second YouTube Shorts voiceover scripts for a channel about: Network & Cybersecurity.
+All output language: English.
 Build the video around this real field note from the channel owner. It is the unique angle: keep its meaning, and do not invent personal anecdotes beyond it:
 "{note}"
 Trending context (use only if clearly relevant): {headlines()}
@@ -128,7 +124,7 @@ Rules: fully original wording, no quotes from copyrighted sources, no false clai
 Return ONLY JSON, no markdown:
 {{"title": "curiosity-driven, max 70 chars, honest",
  "scenes": [{{"text": "spoken line", "keyword": "2-3 English words for stock footage, concrete visual like 'server room'"}}],
- "local_tag": "one hashtag in {LANG_NAME}, no spaces",
+ "local_tag": "one hashtag in English, no spaces",
  "global_tags": ["4 broad English hashtags, no spaces"],
  "description": "2 sentences"}}"""
     last = None
@@ -136,16 +132,16 @@ Return ONLY JSON, no markdown:
         try:
             data = json.loads(_ask(prompt))
             assert data["scenes"] and data["title"]
-            data["scenes"].append({"text": OUTRO, "keyword": "computer network cables"})
+            data["scenes"].append({"text": "Subscribe for more network security tips!", "keyword": "computer network cables"})
             return data
         except Exception as e:
             last = e
-    raise RuntimeError(f"Senaryo üretilemedi: {last}")
+    raise RuntimeError(f"Scenario generation failed: {last}")
 
 
 def advice(stats_text):
     prompt = (
         "You are a YouTube Shorts growth coach. Based on this weekly report, give exactly 3 short, concrete, "
-        f"actionable suggestions in Turkish (what to repeat, what to change, posting tips):\n{stats_text}"
+        f"actionable suggestions in English (what to repeat, what to change, posting tips):\n{stats_text}"
     )
     return _ask(prompt, as_json=False)
