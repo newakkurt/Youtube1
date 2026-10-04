@@ -40,7 +40,15 @@ def compose(script):
         desc += "\n\n" + AFFILIATE_TEXT
     desc += "\n\n#Shorts " + " ".join(tags)
     return desc, [t.lstrip("#") for t in tags] + ["Shorts"]
-
+def post_instagram(item, path):
+    try:
+        import instagram_publish
+        caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
+        ig_id = instagram_publish.publish_reel(str(path), caption)
+        item["ig_id"] = ig_id
+        tg.send(f"📸 Instagram'a yüklendi: {item['title']}")
+    except Exception as e:
+        tg.send(f"⚠️ Instagram hatası: {str(e)[:400]}")
 
 def generate_one(state):
     import script_gen
@@ -58,6 +66,7 @@ def generate_one(state):
     if AUTO_APPROVE:
         vid = youtube.upload(path, title, desc, tags)
         item.update(status="published", video_id=vid)
+        post_instagram(item, path)   # <- bunu ekle
         tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
@@ -78,6 +87,7 @@ def handle_callback(state, cq):
     path = tg.download(item["file_id"], OUT / f"{uid}.mp4")
     vid = youtube.upload(path, item["title"], item["description"], item["tags"])
     item.update(status="published", video_id=vid)
+    post_instagram(item, path)   # <- bunu ekle
     tg.edit_caption(item["message_id"], f"✅ Yayınlandı: {item['title']}\nhttps://youtube.com/shorts/{vid}")
 
 
