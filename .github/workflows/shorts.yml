@@ -1,9 +1,10 @@
 name: Shorts Bot
 on:
   schedule:
-    - cron: "0 6 * * *"    # 09:00 TR
-    - cron: "0 11 * * *"   # 14:00 TR
-    - cron: "0 17 * * *"   # 20:00 TR
+    - cron: "0 6 * * *"   # TSİ 09:00 (UTC 06:00) - 1. Video
+    - cron: "0 10 * * *"  # TSİ 13:00 (UTC 10:00) - 2. Video
+    - cron: "0 14 * * *"  # TSİ 17:00 (UTC 14:00) - 3. Video
+    - cron: "0 18 * * *"  # TSİ 21:00 (UTC 18:00) - 4. Video
     - cron: "0 15 * * 0"   # Pazar 18:00 TR haftalık rapor
   workflow_dispatch:
     inputs:
