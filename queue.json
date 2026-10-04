@@ -10,7 +10,8 @@
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
-  "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It"
+  "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
+  "How to Safely Configure Switches with Ansible’s Dry‑Run First"
  ],
  "items": {
   "dcdc2b1c": {
@@ -152,6 +153,20 @@
    ],
    "status": "published",
    "video_id": "xKjobQma6z0"
+  },
+  "e1ee3ccd": {
+   "title": "How to Safely Configure Switches with Ansible’s Dry‑Run First",
+   "description": "Using Ansible’s --check mode lets you preview switch changes without risk. Apply the real configuration only after the dry‑run passes, keeping your network stable.\n\n#Shorts #AnsibleCheck #NetworkAutomation #Cybersecurity #DevOps #ITOps",
+   "tags": [
+    "AnsibleCheck",
+    "NetworkAutomation",
+    "Cybersecurity",
+    "DevOps",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "OZGsFNlvSsg"
   }
  }
 }
