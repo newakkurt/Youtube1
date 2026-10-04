@@ -17,7 +17,8 @@
   "Dry‑Run First: Safer Switch Config with Ansible",
   "Why Skipping Backups Before Automation Crashes Your Network",
   "Why Sticky MAC Locks Your Port and How to Unlock It",
-  "Why Skipping Backups Before Automation Can Crash Your Network"
+  "Why Skipping Backups Before Automation Can Crash Your Network",
+  "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled"
  ],
  "items": {
   "dcdc2b1c": {
