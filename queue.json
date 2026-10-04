@@ -7,7 +7,8 @@
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
-  "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?"
+  "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
+  "Why Every Device Needs a Central Syslog – Stop Guessing!"
  ],
  "items": {
   "dcdc2b1c": {
@@ -107,6 +108,20 @@
    ],
    "status": "published",
    "video_id": "bwyeuRwiYR8"
+  },
+  "e278ceef": {
+   "title": "Why Every Device Needs a Central Syslog – Stop Guessing!",
+   "description": "Without a central syslog, troubleshooting becomes a game of guesswork that wastes time and resources. Deploy a unified logging server and gain instant insight into every device on your network.\n\n#Shorts #centralSyslog #NetworkSecurity #CyberOps #ITManagement #LogAnalytics",
+   "tags": [
+    "centralSyslog",
+    "NetworkSecurity",
+    "CyberOps",
+    "ITManagement",
+    "LogAnalytics",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "aP7j14rJ70A"
   }
  }
 }
