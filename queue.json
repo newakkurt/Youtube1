@@ -21,7 +21,8 @@
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
-  "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On"
+  "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
+  "Test Before You Deploy: Safe Switch Configuration in Seconds"
  ],
  "items": {
   "dcdc2b1c": {
@@ -277,6 +278,21 @@
    "status": "published",
    "video_id": "i4DxBvEl9oI",
    "ig_id": "18354729532173086"
+  },
+  "13fd1ed5": {
+   "title": "Test Before You Deploy: Safe Switch Configuration in Seconds",
+   "description": "Deploying switch changes without testing can cause massive outages. Follow the single‑device then pilot approach to keep your network secure and resilient.\n\n#Shorts #TestFirst #NetworkSecurity #CyberOps #ITInfrastructure #BestPractices",
+   "tags": [
+    "TestFirst",
+    "NetworkSecurity",
+    "CyberOps",
+    "ITInfrastructure",
+    "BestPractices",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "vMIite6UPHQ",
+   "ig_id": "17942227395094349"
   }
  }
 }
