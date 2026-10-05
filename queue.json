@@ -19,7 +19,8 @@
   "Why Sticky MAC Locks Your Port and How to Unlock It",
   "Why Skipping Backups Before Automation Can Crash Your Network",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
-  "Why Ansible Dry-Run Saves Your Switch Config Changes"
+  "Why Ansible Dry-Run Saves Your Switch Config Changes",
+  "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table"
  ],
  "items": {
   "dcdc2b1c": {
@@ -245,6 +246,21 @@
    ],
    "status": "published",
    "video_id": "8ERt7O_5NGA"
+  },
+  "234bd507": {
+   "title": "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
+   "description": "Dynamic ARP Inspection relies on the DHCP Snooping binding table, so an empty table can drop legitimate traffic. Keep your snooping tables populated and enable DAI safely for uninterrupted network flow.\n\n#Shorts #SwitchSecurity #Cybersecurity #NetworkEngineering #ITSecurity #TechTips",
+   "tags": [
+    "SwitchSecurity",
+    "Cybersecurity",
+    "NetworkEngineering",
+    "ITSecurity",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "kQWa0c7fLmo",
+   "ig_id": "18111086567169475"
   }
  }
 }
