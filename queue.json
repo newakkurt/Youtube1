@@ -23,7 +23,8 @@
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
   "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
   "Test Before You Deploy: Safe Switch Configuration in Seconds",
-  "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them"
+  "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
+  "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table"
  ],
  "items": {
   "dcdc2b1c": {
@@ -309,6 +310,20 @@
    "status": "published",
    "video_id": "SvWTDWIN9Ss",
    "ig_id": "18217329448346491"
+  },
+  "cbd2bb4c": {
+   "title": "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
+   "description": "Dynamic ARP Inspection trusts the DHCP Snooping binding table, so an empty table blocks legitimate traffic. Keep your DHCP Snooping active and verify bindings to prevent silent network outages.\n\n#Shorts #NetworkMystery #CyberSecurity #Networking #InfoSec #NetworkOps",
+   "tags": [
+    "NetworkMystery",
+    "CyberSecurity",
+    "Networking",
+    "InfoSec",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "v40B-68wNRE"
   }
  }
 }
