@@ -1,8 +1,6 @@
 """
-Instagram Reels yayıncı — Instagram API with Instagram Login (Facebook Page gerekmez).
-Bu hesap tipi dosya yüklemeyi kabul etmiyor, video_url (public link) istiyor.
-Akış: videoyu IG biçimine çevir -> geçici host'a yükle (link gerçekten MP4 mü doğrula)
-      -> link ile Reels container -> işle -> yayınla.
+Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
+Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN
 """
 import os
@@ -11,17 +9,24 @@ import subprocess
 import time
 import requests
 
-API = "https://graph.instagram.com/v21.0"
-IG_USER_ID = os.environ["IG_USER_ID"]
-TOKEN = os.environ["IG_ACCESS_TOKEN"]
+# Reels paylaşımı için doğru endpoint Facebook Graph API'dir
+API = "https://graph.facebook.com/v21.0"
 UA = "Mozilla/5.0 (compatible; reels-bot/1.0)"
 
 
-def _check(resp, step):
+def _get_env():
+    user_id = os.environ.get("IG_USER_ID")
+    token = os.environ.get("IG_ACCESS_TOKEN")
+    if not user_id or not token:
+        raise ValueError("IG_USER_ID veya IG_ACCESS_TOKEN ortam değişkeni eksik!")
+    return user_id, token
+
+
+def _check(resp, step, token):
     """Hata olursa Instagram'ın asıl cevabını (token'sız) mesaja koy."""
     if resp.ok:
         return resp
-    body = resp.text.replace(TOKEN, "***")[:350]
+    body = resp.text.replace(token, "***")[:350]
     raise RuntimeError(f"[{step}] HTTP {resp.status_code}: {body}")
 
 
@@ -35,6 +40,9 @@ def _ffmpeg() -> str:
 
 def make_ig_compatible(src: str) -> str:
     """H.264 + yuv420p + 30fps + AAC 48k stereo + faststart. Ses yoksa sessiz ses ekler."""
+    if not os.path.exists(src):
+        raise FileNotFoundError(f"Video dosyası bulunamadı: {src}")
+
     ff = _ffmpeg()
     dst = os.path.splitext(src)[0] + "_ig.mp4"
 
@@ -60,7 +68,7 @@ def make_ig_compatible(src: str) -> str:
     return dst
 
 
-# ---------- Geçici host'lar (hepsi doğrudan dosya linki dönmeli) ----------
+# ---------- Geçici host'lar (doğrudan mp4 linki verenler) ----------
 
 def _host_litterbox(path: str) -> str:
     with open(path, "rb") as f:
@@ -116,8 +124,7 @@ HOSTS = (_host_litterbox, _host_uguu, _host_0x0, _host_catbox)
 
 
 def _is_direct_mp4(url: str) -> str:
-    """Linkten ilk baytları çek: MP4 imzası ('ftyp') varsa doğrudan video demektir.
-    Boş string = uygun, doluysa sebep."""
+    """Linkten ilk baytları çek: MP4 imzası ('ftyp') varsa doğrudan video demektir."""
     try:
         r = requests.get(url, stream=True, timeout=30, allow_redirects=True,
                          headers={"User-Agent": UA, "Range": "bytes=0-63"})
@@ -155,6 +162,8 @@ def upload_public(path: str):
 
 
 def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
+    ig_user_id, token = _get_env()
+
     # 0) IG biçimine çevir
     ig_path = make_ig_compatible(video_path)
 
@@ -163,16 +172,16 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
 
     # 2) Reels container oluştur
     r = requests.post(
-        f"{API}/{IG_USER_ID}/media",
+        f"{API}/{ig_user_id}/media",
         data={
             "media_type": "REELS",
             "video_url": video_url,
             "caption": caption[:2200],
-            "access_token": TOKEN,
+            "access_token": token,
         },
         timeout=60,
     )
-    _check(r, "container")
+    _check(r, "container", token)
     container_id = r.json()["id"]
 
     # 3) Instagram videoyu çekip işleyene kadar bekle
@@ -180,10 +189,10 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     while time.time() < deadline:
         sr = requests.get(
             f"{API}/{container_id}",
-            params={"fields": "status_code,status", "access_token": TOKEN},
+            params={"fields": "status_code,status", "access_token": token},
             timeout=30,
         )
-        _check(sr, "status")
+        _check(sr, "status", token)
         s = sr.json()
         code = s.get("status_code")
         if code == "FINISHED":
@@ -196,20 +205,26 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
 
     # 4) Yayınla
     p = requests.post(
-        f"{API}/{IG_USER_ID}/media_publish",
-        data={"creation_id": container_id, "access_token": TOKEN},
+        f"{API}/{ig_user_id}/media_publish",
+        data={"creation_id": container_id, "access_token": token},
         timeout=60,
     )
-    _check(p, "publish")
+    _check(p, "publish", token)
     return p.json()["id"]
 
 
 def refresh_token() -> str:
-    """Token ~60 gün geçerli; ayda bir çağır, yeni token'ı secret'a yaz."""
+    """Token yenileme fonksiyonu."""
+    _, token = _get_env()
     r = requests.get(
-        "https://graph.instagram.com/refresh_access_token",
-        params={"grant_type": "ig_refresh_token", "access_token": TOKEN},
+        f"{API}/oauth/access_token",
+        params={
+            "grant_type": "fb_exchange_token",
+            "client_id": os.environ.get("FB_APP_ID"),
+            "client_secret": os.environ.get("FB_APP_SECRET"),
+            "fb_exchange_token": token
+        },
         timeout=30,
     )
-    _check(r, "refresh")
+    _check(r, "refresh", token)
     return r.json()["access_token"]
