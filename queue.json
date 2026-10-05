@@ -22,7 +22,8 @@
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
   "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
-  "Test Before You Deploy: Safe Switch Configuration in Seconds"
+  "Test Before You Deploy: Safe Switch Configuration in Seconds",
+  "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them"
  ],
  "items": {
   "dcdc2b1c": {
@@ -293,6 +294,21 @@
    "status": "published",
    "video_id": "vMIite6UPHQ",
    "ig_id": "17942227395094349"
+  },
+  "eeaa9b1f": {
+   "title": "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
+   "description": "When you enable sticky MAC on a port, a device change can cause the port to go into err‑disable. Learn the quick steps to clear the error and prevent it from happening again.\n\n#Shorts #NetworkFix #NetworkSecurity #Cybersecurity #ITOps #TechTips",
+   "tags": [
+    "NetworkFix",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "SvWTDWIN9Ss",
+   "ig_id": "18217329448346491"
   }
  }
 }
