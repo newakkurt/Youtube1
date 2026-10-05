@@ -11,7 +11,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [generate, process, report, lead, igtest]
+        options: [generate, process, report, lead, igtest, li_status]
         default: generate
 
 concurrency:
