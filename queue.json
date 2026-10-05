@@ -20,7 +20,8 @@
   "Why Skipping Backups Before Automation Can Crash Your Network",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
-  "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table"
+  "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
+  "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On"
  ],
  "items": {
   "dcdc2b1c": {
@@ -261,6 +262,21 @@
    "status": "published",
    "video_id": "kQWa0c7fLmo",
    "ig_id": "18111086567169475"
+  },
+  "0e7e5a5a": {
+   "title": "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
+   "description": "Enabling DHCP Snooping protects against rogue DHCP servers, but only if you trust the right ports. Learn the simple rule that keeps your network safe.\n\n#Shorts #DHCPTrust #NetworkSecurity #CyberDefense #ITInfrastructure #InfoSec",
+   "tags": [
+    "DHCPTrust",
+    "NetworkSecurity",
+    "CyberDefense",
+    "ITInfrastructure",
+    "InfoSec",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "i4DxBvEl9oI",
+   "ig_id": "18354729532173086"
   }
  }
 }
