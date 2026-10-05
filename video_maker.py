@@ -1,4 +1,19 @@
 import asyncio
+# MoviePy'nin HDR klip "side data" satırında çökmesini engelle
+from moviepy.video.io import ffmpeg_reader as _fr
+
+_orig_parse = _fr.FFmpegInfosParser.parse_metadata_field_value
+
+
+def _safe_parse(self, line):
+    try:
+        return _orig_parse(self, line)
+    except ValueError:
+        return "", ""
+
+
+_fr.FFmpegInfosParser.parse_metadata_field_value = _safe_parse
+
 import random
 import shutil
 import textwrap
