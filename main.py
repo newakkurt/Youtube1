@@ -1,22 +1,7 @@
 import json
 import os
 import sys
-from lead_finder import run_lead_finder
-# diğer importların...
-
-mode = sys.argv[1] if len(sys.argv) > 1 else "generate"
-
-if mode == "generate":
-    # mevcut video üretme kodun
-    pass
-elif mode == "report":
-    # mevcut rapor kodun
-    pass
-elif mode == "lead":
-    run_lead_finder()
-    
 import uuid
-
 import requests
 
 import tg
@@ -40,6 +25,8 @@ def compose(script):
         desc += "\n\n" + AFFILIATE_TEXT
     desc += "\n\n#Shorts " + " ".join(tags)
     return desc, [t.lstrip("#") for t in tags] + ["Shorts"]
+
+
 def post_instagram(item, path):
     try:
         import instagram_publish
@@ -49,6 +36,30 @@ def post_instagram(item, path):
         tg.send(f"📸 Instagram'a yüklendi: {item['title']}")
     except Exception as e:
         tg.send(f"⚠️ Instagram hatası: {str(e)[:400]}")
+
+
+def post_linkedin_status(state):
+    """LinkedIn Token durumunu kontrol eder ve durum bildirimi yapar."""
+    try:
+        token = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+        if not token:
+            tg.send("⚠️ LinkedIn Access Token bulunamadı (Secret eksik).")
+            return
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "X-Restli-Protocol-Version": "2.0.0"
+        }
+        res = requests.get("https://api.linkedin.com/v2/me", headers=headers, timeout=15)
+        if res.status_code == 200:
+            user_data = res.json()
+            user_id = user_data.get("id", "Bilinmeyen ID")
+            tg.send(f"🔗 LinkedIn Bağlantısı Başarılı!\nKullanıcı ID: `{user_id}`\nToken Durumu: Aktif ✅")
+        else:
+            tg.send(f"⚠️ LinkedIn Token Hatası ({res.status_code}): {res.text[:300]}")
+    except Exception as e:
+        tg.send(f"⚠️ LinkedIn Status Hatası: {str(e)[:400]}")
+
 
 def generate_one(state):
     import script_gen
@@ -66,12 +77,13 @@ def generate_one(state):
     if AUTO_APPROVE:
         vid = youtube.upload(path, title, desc, tags)
         item.update(status="published", video_id=vid)
-        post_instagram(item, path)   # <- bunu ekle
+        post_instagram(item, path)
         tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
         item.update(file_id=file_id, message_id=mid)
     state["items"][uid] = item
+
 
 def ig_test(state):
     import script_gen
@@ -96,7 +108,7 @@ def handle_callback(state, cq):
     path = tg.download(item["file_id"], OUT / f"{uid}.mp4")
     vid = youtube.upload(path, item["title"], item["description"], item["tags"])
     item.update(status="published", video_id=vid)
-    post_instagram(item, path)   # <- bunu ekle
+    post_instagram(item, path)
     tg.edit_caption(item["message_id"], f"✅ Yayınlandı: {item['title']}\nhttps://youtube.com/shorts/{vid}")
 
 
@@ -117,6 +129,7 @@ def handle_message(state, msg):
     if cmd in ("/yardim", "/yardım", "/start"):
         tg.send("Komutlar:\n/durum - kuyruk özeti\n/trend - güncel konu başlıkları\n/analiz - haftalık rapor\n"
                 "/video - hemen yeni video üret\n/iptal - bekleyenleri iptal et\n"
+                "/oneriler - hedef video ve yorum önerileri\n"
                 "Not: komutlar ~30 dk içinde cevaplanır.")
     elif cmd == "/durum":
         counts = {}
@@ -131,6 +144,12 @@ def handle_message(state, msg):
         tg.send(youtube.stats(7))
     elif cmd == "/video":
         tg.send("🎬 Üretim başladı, birkaç dakikaya gelir." if dispatch_generate() else "⚠️ Üretim tetiklenemedi (Actions izni?).")
+    elif cmd == "/oneriler":
+        try:
+            from lead_finder import run_lead_finder
+            run_lead_finder()
+        except Exception as e:
+            tg.send(f"⚠️ Lead Finder hatası: {e}")
     elif cmd == "/iptal":
         n = 0
         for it in state["items"].values():
@@ -162,11 +181,29 @@ def report():
     tg.send(text)
 
 
+def run_lead():
+    from lead_finder import run_lead_finder
+    run_lead_finder()
+
+
 if __name__ == "__main__":
-    mode = sys.argv[1]
+    mode = sys.argv[1] if len(sys.argv) > 1 else "generate"
     state = load()
+
+    modes = {
+        "generate": lambda: generate_one(state),
+        "process": lambda: process(state),
+        "report": report,
+        "igtest": lambda: ig_test(state),
+        "lead": run_lead,
+        "li_status": lambda: post_linkedin_status(state)
+    }
+
     try:
-        {"generate": lambda: generate_one(state), "process": lambda: process(state), "report": report, "igtest": lambda: ig_test(state)}[mode]()
+        if mode in modes:
+            modes[mode]()
+        else:
+            tg.send(f"⚠️ Bilinmeyen mod: {mode}")
     except Exception as e:
         tg.send(f"⚠️ Hata ({mode}): {str(e)[:500]}")
         raise
