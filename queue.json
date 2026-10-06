@@ -25,7 +25,8 @@
   "Test Before You Deploy: Safe Switch Configuration in Seconds",
   "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
   "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
-  "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table"
+  "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
+  "The Hidden Reason Secure Switches Block Real Users"
  ],
  "items": {
   "dcdc2b1c": {
@@ -339,6 +340,20 @@
    ],
    "status": "published",
    "video_id": "4LbHQ_4SRRo"
+  },
+  "319f61fe": {
+   "title": "The Hidden Reason Secure Switches Block Real Users",
+   "description": "Dynamic ARP Inspection relies entirely on the DHCP snooping database to validate traffic. If that table is empty, your switch will drop legitimate users without warning.\n\n#Shorts #dynamicarpinspection #cybersecurity #networking #switchsecurity #networkengineer",
+   "tags": [
+    "dynamicarpinspection",
+    "cybersecurity",
+    "networking",
+    "switchsecurity",
+    "networkengineer",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "jT1h-uqVY_g"
   }
  }
 }
