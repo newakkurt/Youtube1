@@ -26,7 +26,8 @@
   "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
   "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
   "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
-  "The Hidden Reason Secure Switches Block Real Users"
+  "The Hidden Reason Secure Switches Block Real Users",
+  "Why Sticky MAC Shuts Down Your Port and How to Restore It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -354,6 +355,20 @@
    ],
    "status": "published",
    "video_id": "jT1h-uqVY_g"
+  },
+  "ef7ebf6c": {
+   "title": "Why Sticky MAC Shuts Down Your Port and How to Restore It",
+   "description": "When a device changes its MAC address, sticky MAC on a port can trigger an err‑disable state, cutting off traffic. We'll show the quick steps to clear the sticky entry and bring the port back up safely.\n\n#Shorts #StickyMACFix #NetworkSecurity #Cybersecurity #ITOps #SwitchConfig",
+   "tags": [
+    "StickyMACFix",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "cBunBwenLtw"
   }
  }
 }
