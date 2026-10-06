@@ -28,7 +28,8 @@
   "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
   "The Hidden Reason Secure Switches Block Real Users",
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
-  "The Critical DHCP Snooping Rule Most Engineers Forget"
+  "The Critical DHCP Snooping Rule Most Engineers Forget",
+  "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On"
  ],
  "items": {
   "dcdc2b1c": {
@@ -384,6 +385,20 @@
    ],
    "status": "published",
    "video_id": "rThn-TaQeI8"
+  },
+  "7693fe26": {
+   "title": "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
+   "description": "Enabling DHCP Snooping protects against rogue DHCP servers, but only if you trust the right ports. Keep uplink ports trusted and user ports untrusted for a clean, secure network.\n\n#Shorts #DHCPTrust #CyberSecurity #NetworkSecurity #ITInfrastructure #TechTips",
+   "tags": [
+    "DHCPTrust",
+    "CyberSecurity",
+    "NetworkSecurity",
+    "ITInfrastructure",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "IHfJ-GGJCzs"
   }
  }
 }
