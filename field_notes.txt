@@ -1,8 +1,10 @@
-DHCP Snooping açıkken sadece uplink portları trusted olmalı, kullanıcı portları untrusted kalmalı.
-Port Security'de sticky MAC kullanırsan cihaz değiştiğinde port neden err-disable olur ve nasıl düzeltilir.
-TACACS+ kullanıyorsan sunucu çökerse switch'e girmek için mutlaka local fallback kullanıcısı bırak.
-Binlerce switch'e komut atmadan önce önce tek bir cihazda test et, sonra küçük bir grupta dene.
-Dynamic ARP Inspection, DHCP Snooping binding tablosuna güvenir; tablo boşsa meşru trafik de düşer.
-Ansible ile switch yapılandırırken önce --check ile kuru çalıştırma yap, sonra gerçek değişikliği uygula.
-Yapılandırma yedeği almadan otomasyona geçme; önce otomatik backup, sonra değişiklik.
-Merkezi syslog olmadan ağ sorunu çözmek tahmin yürütmektir; her cihaz loglarını tek yere göndermeli.
+STP/BPDU Guard: Kullanıcı portlarında PortFast + BPDU Guard aç. Birisi masaya mini switch takarsa port err-disable olur, döngü ve root bridge ele geçirme riski biter. Err-disable recovery'yi (örn. 300 sn) ayarlamazsan her olay manuel müdahale ister.
+Native VLAN ve VLAN 1: Trunk'larda native VLAN'ı kullanılmayan, hiçbir yerde kullanıcı taşımayan bir VLAN yap ve iki uçta aynı olduğundan emin ol. Uyuşmazlık hem CDP/STP hata mesajı üretir hem VLAN hopping (double tagging) kapısını açar. Kullanılmayan portları da boş bir "blackhole" VLAN'a at ve shutdown yap.
+DHCP Snooping rate-limit: Untrusted portlara DHCP paket sınırı koy (örn. 15 pps). Starvation saldırısı ya da arızalı bir cihazın DHCP fırtınası portu kapatır, sunucuyu ve CPU'yu korur. Trusted uplink'lerde limit koymazsan meşru trafik de etkilenebilir.
+Snooping binding DB kalıcılığı: Binding tablosunu flash ya da TFTP/FTP'ye yazdır. Switch reload olunca tablo boşalırsa IP Source Guard ve DAI statik IP'li cihazları ve henüz lease yenilememiş istemcileri düşürür. Statik IP'liler (yazıcı, PLC, kamera) için manuel binding girmeyi unutma.
+SNMPv3 ve ACL: v2c community'leri kaldır, SNMPv3 (authPriv) kullan ve erişimi sadece NMS IP'lerine ACL ile kısıtla. "public/private" bırakmak, 3.000 cihazlık envanterde tek bir zayıf nokta olarak tüm topolojiyi ve konfigürasyonu dışarı sızdırır.
+Management plane izolasyonu: Yönetim trafiğini ayrı bir mgmt VLAN/VRF'e al, SSH erişimini ACL ya da line vty access-class ile sadece jump host/bastion'dan ver. Telnet ve HTTP server'ı tamamen kapat. Kullanıcı VLAN'ından switch'e SSH atılabiliyorsa TACACS+ tek başına yetmez.
+Storm Control: Kullanıcı portlarında broadcast/multicast/unicast storm-control eşiği tanımla ve aksiyon olarak trap veya shutdown seç. Bir döngü ya da bozuk NIC tüm VLAN'ı kilitleyebilir. Eşiği çok düşük tutarsan multicast kullanan fabrika uygulamaları (video, bazı endüstriyel protokoller) sebepsiz kesilir; önce izle, sonra sıkılaştır.
+NTP senkronizasyonu: Tüm cihazlar aynı NTP kaynaklarına bağlı olsun ve timezone aynı olsun. Syslog, TACACS+ accounting ve sertifikalar zamana bağlı; saatler kayarsa olay korelasyonu imkansızlaşır, sonradan "hangi değişiklik önce oldu" sorusu cevapsız kalır.
+Config drift tespiti: rConfig ya da Ansible ile "golden config" şablonu tanımla ve periyodik olarak canlı konfigürasyonu şablonla karşılaştır. Biri konsoldan elle yaptığı değişikliği unutursa, aylar sonra neden bir switch'in diğerlerinden farklı davrandığını bulmak saatler alır. Fark çıkınca otomatik düzeltme yerine önce alarm üret.
+Fiziksel port ve MAB/802.1X temposu: FortiNAC ile MAB kullanıyorsan, yazıcı gibi yavaş açılan cihazlar için reauth ve inactivity timer'larını doğru ayarla. Çok agresif timer'lar cihazı sürekli yetkisiz VLAN'a düşürür. Ayrıca fail-open davranışını (RADIUS/NAC sunucusu ulaşılamazken ne olacağı) önceden kararlaştır, yoksa NAC sunucusu çöktüğünde üretim hattı durabilir.
