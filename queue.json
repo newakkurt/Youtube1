@@ -32,7 +32,8 @@
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
-  "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips"
+  "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
+  "Catch Config Drift Before It Cripples Your Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -444,6 +445,20 @@
    ],
    "status": "published",
    "video_id": "uEEIB4P4Ouc"
+  },
+  "9d91f2e7": {
+   "title": "Catch Config Drift Before It Cripples Your Network",
+   "description": "Learn how to use a golden configuration template with rConfig or Ansible to detect drift. An alert-first approach stops hours of debugging and keeps your network reliable.\n\n#Shorts #ConfigDrift #NetworkSecurity #Automation #Ansible #ITOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkSecurity",
+    "Automation",
+    "Ansible",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "zwxuXJd5csU"
   }
  }
 }
