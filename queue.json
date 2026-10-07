@@ -30,7 +30,8 @@
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
   "The Critical DHCP Snooping Rule Most Engineers Forget",
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
-  "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog"
+  "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
+  "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap"
  ],
  "items": {
   "dcdc2b1c": {
@@ -414,6 +415,20 @@
    ],
    "status": "published",
    "video_id": "A3t1NzVOnsE"
+  },
+  "ad2f70e2": {
+   "title": "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
+   "description": "Dynamic ARP Inspection depends on a populated DHCP Snooping binding table. If the table is empty, even legitimate traffic gets blocked, so always verify your snooping configuration before enabling DAI.\n\n#Shorts #NetworkPitfall #Cybersecurity #Networking #ITSecurity #NetworkEngineering",
+   "tags": [
+    "NetworkPitfall",
+    "Cybersecurity",
+    "Networking",
+    "ITSecurity",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "MMeK6-z98Eo"
   }
  }
 }
