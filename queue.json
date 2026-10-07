@@ -31,7 +31,8 @@
   "The Critical DHCP Snooping Rule Most Engineers Forget",
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
-  "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap"
+  "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
+  "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips"
  ],
  "items": {
   "dcdc2b1c": {
@@ -429,6 +430,20 @@
    ],
    "status": "published",
    "video_id": "MMeK6-z98Eo"
+  },
+  "58cc549a": {
+   "title": "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
+   "description": "Learn why setting storm‑control thresholds too low can unintentionally disrupt factory applications. We'll show you how to monitor first and then tighten settings safely.\n\n#Shorts #StormControl #NetworkSecurity #CyberDefense #ITOps #IndustrialIoT",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "CyberDefense",
+    "ITOps",
+    "IndustrialIoT",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "uEEIB4P4Ouc"
   }
  }
 }
