@@ -29,7 +29,8 @@
   "The Hidden Reason Secure Switches Block Real Users",
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
   "The Critical DHCP Snooping Rule Most Engineers Forget",
-  "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On"
+  "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
+  "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog"
  ],
  "items": {
   "dcdc2b1c": {
@@ -399,6 +400,20 @@
    ],
    "status": "published",
    "video_id": "IHfJ-GGJCzs"
+  },
+  "15de641d": {
+   "title": "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
+   "description": "Without a central syslog, troubleshooting is just guesswork. Consolidate all device logs to a single server for clear, real‑time insight.\n\n#Shorts #CentralSyslog #NetworkSecurity #ITOps #Cybersecurity #Syslog",
+   "tags": [
+    "CentralSyslog",
+    "NetworkSecurity",
+    "ITOps",
+    "Cybersecurity",
+    "Syslog",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "A3t1NzVOnsE"
   }
  }
 }
