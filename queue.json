@@ -36,7 +36,8 @@
   "Catch Config Drift Before It Cripples Your Network",
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
-  "Stop Broadcast Storms Without Breaking Industrial Traffic"
+  "Stop Broadcast Storms Without Breaking Industrial Traffic",
+  "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds"
  ],
  "items": {
   "dcdc2b1c": {
@@ -504,6 +505,21 @@
    ],
    "status": "published",
    "video_id": "dQ3jXPtOzo8"
+  },
+  "3ea5d8f0": {
+   "title": "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
+   "description": "Learn how enabling PortFast and BPDU Guard on user ports protects your network from rogue switches. Set an err‑disable recovery timer to automate recovery and avoid costly manual intervention.\n\n#Shorts #NetworkSecurity #Cybersecurity #ITOps #Networking #Switches",
+   "tags": [
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "Networking",
+    "Switches",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "zgrj2o-UZzc",
+   "ig_id": "17954994717258617"
   }
  }
 }
