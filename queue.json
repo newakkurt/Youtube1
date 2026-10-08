@@ -35,7 +35,8 @@
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
   "Catch Config Drift Before It Cripples Your Network",
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
-  "Why Ignoring Native VLAN Settings Lets Hackers Slip Through"
+  "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
+  "Stop Broadcast Storms Without Breaking Industrial Traffic"
  ],
  "items": {
   "dcdc2b1c": {
@@ -489,6 +490,20 @@
    ],
    "status": "published",
    "video_id": "d7ZHX1oFusI"
+  },
+  "a493a7e6": {
+   "title": "Stop Broadcast Storms Without Breaking Industrial Traffic",
+   "description": "Configuring storm control on access ports stops broadcast loops before they paralyze your VLAN. Monitor your multicast baselines first so you do not accidentally knock out critical industrial systems.\n\n#Shorts #StormControl #NetworkSecurity #SysAdmin #IndustrialEthernet #CiscoSwitching",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "SysAdmin",
+    "IndustrialEthernet",
+    "CiscoSwitching",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "dQ3jXPtOzo8"
   }
  }
 }
