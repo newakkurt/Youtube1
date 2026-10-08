@@ -10,7 +10,7 @@ import time
 import requests
 
 # Reels paylaşımı için doğru endpoint Facebook Graph API'dir
-API = "https://graph.facebook.com/v21.0"
+API = "https://graph.instagram.com/v21.0"
 UA = "Mozilla/5.0 (compatible; reels-bot/1.0)"
 
 
