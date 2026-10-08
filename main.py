@@ -107,7 +107,16 @@ def generate_one(state):
 
 
 def ig_test(state):
-    def li_test(state):
+    import script_gen
+    import video_maker
+    script = script_gen.generate(state["history"])
+    OUT.mkdir(exist_ok=True)
+    path = video_maker.build(script, OUT / "igtest.mp4")
+    desc, tags = compose(script)
+    post_instagram({"title": script["title"], "description": desc}, path)
+
+
+def li_test(state):
     import script_gen
     import video_maker
     script = script_gen.generate(state["history"])
