@@ -107,13 +107,14 @@ def generate_one(state):
 
 
 def ig_test(state):
+    def li_test(state):
     import script_gen
     import video_maker
     script = script_gen.generate(state["history"])
     OUT.mkdir(exist_ok=True)
-    path = video_maker.build(script, OUT / "igtest.mp4")
+    path = video_maker.build(script, OUT / "litest.mp4")
     desc, tags = compose(script)
-    post_instagram({"title": script["title"], "description": desc}, path)
+    post_linkedin({"title": script["title"], "description": desc}, path)
 
 
 def handle_callback(state, cq):
@@ -219,6 +220,7 @@ if __name__ == "__main__":
         "igtest": lambda: ig_test(state),
         "lead": run_lead,
         "li_status": lambda: post_linkedin_status(state),
+        "litest": lambda: li_test(state),
     }
 
     try:
