@@ -34,7 +34,8 @@
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
   "Catch Config Drift Before It Cripples Your Network",
-  "Why Precise Time Sync Is the Unsung Hero of Network Security"
+  "Why Precise Time Sync Is the Unsung Hero of Network Security",
+  "Why Ignoring Native VLAN Settings Lets Hackers Slip Through"
  ],
  "items": {
   "dcdc2b1c": {
@@ -474,6 +475,20 @@
    ],
    "status": "published",
    "video_id": "DzROAo7A9dA"
+  },
+  "0b0550bc": {
+   "title": "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
+   "description": "A tiny native VLAN mismatch can trigger protocol errors and enable VLAN hopping. Lock down unused ports with a blackhole VLAN to keep your network safe.\n\n#Shorts #VLANsecurity #NetworkSecurity #CyberSec #ITInfra #TechTips",
+   "tags": [
+    "VLANsecurity",
+    "NetworkSecurity",
+    "CyberSec",
+    "ITInfra",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "d7ZHX1oFusI"
   }
  }
 }
