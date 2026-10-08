@@ -38,25 +38,45 @@ def post_instagram(item, path):
         tg.send(f"⚠️ Instagram hatası: {str(e)[:400]}")
 
 
-def post_linkedin_status(state):
-    """LinkedIn Token durumunu kontrol eder ve durum bildirimi yapar."""
+def post_linkedin(item, path):
+    """LinkedIn'e video paylaşır. post_instagram'dan SONRA çağrılmalı (_ig.mp4 dosyasını kullanır)."""
     try:
-        token = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+        from linkedin_post import publish_linkedin
+        caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
+        status = publish_linkedin(str(path), caption)
+        tg.send(f"{status}\n{item['title']}")
+    except Exception as e:
+        tg.send(f"⚠️ LinkedIn hatası: {str(e)[:400]}")
+
+
+def post_linkedin_status(state):
+    """LinkedIn token durumunu kontrol eder ve Telegram'a bildirir."""
+    try:
+        token = os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip()
         if not token:
             tg.send("⚠️ LinkedIn Access Token bulunamadı (Secret eksik).")
             return
 
-        headers = {
-            "Authorization": f"Bearer {token}",
-            "X-Restli-Protocol-Version": "2.0.0"
-        }
-        res = requests.get("https://api.linkedin.com/v2/me", headers=headers, timeout=15)
+        headers = {"Authorization": f"Bearer {token}"}
+        res = requests.get("https://api.linkedin.com/v2/userinfo", headers=headers, timeout=15)
         if res.status_code == 200:
-            user_data = res.json()
-            user_id = user_data.get("id", "Bilinmeyen ID")
-            tg.send(f"🔗 LinkedIn Bağlantısı Başarılı!\nKullanıcı ID: `{user_id}`\nToken Durumu: Aktif ✅")
+            data = res.json()
+            tg.send(
+                f"🔗 LinkedIn Bağlantısı Başarılı!\n"
+                f"İsim: {data.get('name', '?')}\n"
+                f"Kullanıcı ID: {data.get('sub', '?')}\n"
+                f"Token Durumu: Aktif ✅"
+            )
         else:
             tg.send(f"⚠️ LinkedIn Token Hatası ({res.status_code}): {res.text[:300]}")
+
+        try:
+            from linkedin_post import token_warning
+            warn = token_warning()
+            if warn:
+                tg.send(f"⚠️ {warn}")
+        except Exception:
+            pass
     except Exception as e:
         tg.send(f"⚠️ LinkedIn Status Hatası: {str(e)[:400]}")
 
@@ -78,6 +98,7 @@ def generate_one(state):
         vid = youtube.upload(path, title, desc, tags)
         item.update(status="published", video_id=vid)
         post_instagram(item, path)
+        post_linkedin(item, path)
         tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
@@ -109,6 +130,7 @@ def handle_callback(state, cq):
     vid = youtube.upload(path, item["title"], item["description"], item["tags"])
     item.update(status="published", video_id=vid)
     post_instagram(item, path)
+    post_linkedin(item, path)
     tg.edit_caption(item["message_id"], f"✅ Yayınlandı: {item['title']}\nhttps://youtube.com/shorts/{vid}")
 
 
@@ -196,7 +218,7 @@ if __name__ == "__main__":
         "report": report,
         "igtest": lambda: ig_test(state),
         "lead": run_lead,
-        "li_status": lambda: post_linkedin_status(state)
+        "li_status": lambda: post_linkedin_status(state),
     }
 
     try:
