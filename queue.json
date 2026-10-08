@@ -37,7 +37,8 @@
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
-  "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds"
+  "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
+  "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics"
  ],
  "items": {
   "dcdc2b1c": {
@@ -520,6 +521,21 @@
    "status": "published",
    "video_id": "zgrj2o-UZzc",
    "ig_id": "17954994717258617"
+  },
+  "c2abae3d": {
+   "title": "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
+   "description": "Storm control prevents a single misbehaving NIC from bringing down an entire VLAN. Set proper thresholds, choose the right action, and monitor before tightening to keep industrial traffic running.\n\n#Shorts #StormControl #NetworkSecurity #ITOps #IndustrialIoT #CyberTips",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "ITOps",
+    "IndustrialIoT",
+    "CyberTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "uv7ApkvCbY4",
+   "ig_id": "18337667170256627"
   }
  }
 }
