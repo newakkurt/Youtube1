@@ -33,7 +33,8 @@
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
-  "Catch Config Drift Before It Cripples Your Network"
+  "Catch Config Drift Before It Cripples Your Network",
+  "Why Precise Time Sync Is the Unsung Hero of Network Security"
  ],
  "items": {
   "dcdc2b1c": {
@@ -459,6 +460,20 @@
    ],
    "status": "published",
    "video_id": "zwxuXJd5csU"
+  },
+  "e9de23e1": {
+   "title": "Why Precise Time Sync Is the Unsung Hero of Network Security",
+   "description": "Accurate NTP synchronization keeps logs, accounting and certificates in lockstep, enabling clear event correlation. Without it, you can't determine which change occurred first, leaving investigations in the dark.\n\n#Shorts #TimeSync #Cybersecurity #NetworkOps #InfoSec #NTP",
+   "tags": [
+    "TimeSync",
+    "Cybersecurity",
+    "NetworkOps",
+    "InfoSec",
+    "NTP",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "DzROAo7A9dA"
   }
  }
 }
