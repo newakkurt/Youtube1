@@ -43,7 +43,8 @@
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
   "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
   "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
-  "Why Your NAC Might Lock Out Slow Network Devices"
+  "Why Your NAC Might Lock Out Slow Network Devices",
+  "Detect Config Drift Early: Golden Templates vs Silent Switch Changes"
  ],
  "items": {
   "dcdc2b1c": {
