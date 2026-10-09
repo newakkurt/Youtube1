@@ -41,7 +41,8 @@
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
-  "How PortFast + BPDU Guard Stops Rogue Switches in Seconds"
+  "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
+  "Stop Config Drift: How Golden Templates Catch Silent Switch Changes"
  ],
  "items": {
   "dcdc2b1c": {
@@ -584,6 +585,21 @@
    "status": "published",
    "video_id": "oXkDizaI14E",
    "ig_id": "18109347470336316"
+  },
+  "df6cb98e": {
+   "title": "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
+   "description": "Learn how to detect configuration drift using a golden template and automated comparisons. Alerts keep you informed before any automatic corrections cause unexpected issues.\n\n#Shorts #ConfigDrift #NetworkSecurity #Automation #Ansible #ITOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkSecurity",
+    "Automation",
+    "Ansible",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "2VhSGVsACfM",
+   "ig_id": "18397491538200414"
   }
  }
 }
