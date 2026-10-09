@@ -42,7 +42,8 @@
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
   "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
-  "Stop Config Drift: How Golden Templates Catch Silent Switch Changes"
+  "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
+  "Why Your NAC Might Lock Out Slow Network Devices"
  ],
  "items": {
   "dcdc2b1c": {
@@ -600,6 +601,20 @@
    "status": "published",
    "video_id": "2VhSGVsACfM",
    "ig_id": "18397491538200414"
+  },
+  "2f3d2fd0": {
+   "title": "Why Your NAC Might Lock Out Slow Network Devices",
+   "description": "Aggressive MAB and 802.1X timers can repeatedly isolate slow devices like printers into unauthorized VLANs. Configure proper timeout windows and fail-open policies to keep your production line running during outages.\n\n#Shorts #NetworkAccessControl #Cybersecurity #Networking #SysAdmin #TechTips",
+   "tags": [
+    "NetworkAccessControl",
+    "Cybersecurity",
+    "Networking",
+    "SysAdmin",
+    "TechTips",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "z4c6F79lfIA"
   }
  }
 }
