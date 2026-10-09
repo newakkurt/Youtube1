@@ -38,7 +38,8 @@
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
-  "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics"
+  "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
+  "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -536,6 +537,21 @@
    "status": "published",
    "video_id": "uv7ApkvCbY4",
    "ig_id": "18337667170256627"
+  },
+  "39752224": {
+   "title": "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
+   "description": "Learn how setting a DHCP snooping rate‑limit on untrusted ports can stop storms and protect your core infrastructure. Avoid limiting trusted uplinks, or you risk dropping legitimate traffic.\n\n#Shorts #DHCPGuard #NetworkSecurity #CyberDefense #ITOps #SwitchConfig",
+   "tags": [
+    "DHCPGuard",
+    "NetworkSecurity",
+    "CyberDefense",
+    "ITOps",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "W7sFEtTDBKs",
+   "ig_id": "17897262315608186"
   }
  }
 }
