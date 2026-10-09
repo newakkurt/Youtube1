@@ -40,7 +40,8 @@
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
-  "How Rogue Desk Switches Crash Networks Without BPDU Guard"
+  "How Rogue Desk Switches Crash Networks Without BPDU Guard",
+  "How PortFast + BPDU Guard Stops Rogue Switches in Seconds"
  ],
  "items": {
   "dcdc2b1c": {
@@ -568,6 +569,21 @@
    "status": "published",
    "video_id": "omnX2SFOhqY",
    "ig_id": "18125500993844469"
+  },
+  "42756716": {
+   "title": "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
+   "description": "Learn why turning on PortFast and BPDU Guard on user ports can instantly neutralize rogue mini‑switches. Also discover how a simple recovery timer prevents endless manual interventions.\n\n#Shorts #BPDUGuard #NetworkSecurity #Cybersecurity #ITOps #SwitchConfig",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "oXkDizaI14E",
+   "ig_id": "18109347470336316"
   }
  }
 }
