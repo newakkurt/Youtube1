@@ -39,7 +39,8 @@
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
-  "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast"
+  "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
+  "How Rogue Desk Switches Crash Networks Without BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -552,6 +553,21 @@
    "status": "published",
    "video_id": "W7sFEtTDBKs",
    "ig_id": "17897262315608186"
+  },
+  "beae89c5": {
+   "title": "How Rogue Desk Switches Crash Networks Without BPDU Guard",
+   "description": "Learn why combining PortFast and BPDU Guard stops rogue switches from triggering spanning tree loops. Configure err-disable recovery to keep minor accidents from overwhelming your helpdesk with tickets.\n\n#Shorts #BPDUGuard #NetworkSecurity #SysAdmin #Cisco #NetworkEngineering",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "SysAdmin",
+    "Cisco",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "omnX2SFOhqY",
+   "ig_id": "18125500993844469"
   }
  }
 }
