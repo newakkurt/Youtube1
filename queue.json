@@ -48,7 +48,8 @@
   "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
   "Why Storm Control Might Silently Kill Factory Networks",
   "Why TACACS Won't Save an Exposed Management Plane",
-  "How One SNMP String Leaks Your Entire Network"
+  "How One SNMP String Leaks Your Entire Network",
+  "The Trunk Port Mistake That Enables VLAN Hopping"
  ],
  "items": {
   "dcdc2b1c": {
