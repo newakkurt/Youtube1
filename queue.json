@@ -46,7 +46,8 @@
   "Why Your NAC Might Lock Out Slow Network Devices",
   "Detect Config Drift Early: Golden Templates vs Silent Switch Changes",
   "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
-  "Why Storm Control Might Silently Kill Factory Networks"
+  "Why Storm Control Might Silently Kill Factory Networks",
+  "Why TACACS Won't Save an Exposed Management Plane"
  ],
  "items": {
   "dcdc2b1c": {
