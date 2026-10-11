@@ -49,7 +49,8 @@
   "Why Storm Control Might Silently Kill Factory Networks",
   "Why TACACS Won't Save an Exposed Management Plane",
   "How One SNMP String Leaks Your Entire Network",
-  "The Trunk Port Mistake That Enables VLAN Hopping"
+  "The Trunk Port Mistake That Enables VLAN Hopping",
+  "The DHCP Snooping Rate Limit That Saves Your CPU"
  ],
  "items": {
   "dcdc2b1c": {
@@ -621,6 +622,21 @@
    ],
    "status": "published",
    "video_id": "z4c6F79lfIA"
+  },
+  "0997c20a": {
+   "title": "The DHCP Snooping Rate Limit That Saves Your CPU",
+   "description": "Applying rate limits on untrusted switch ports prevents DHCP starvation attacks and broadcast storms from overwhelming your network. Just make sure to leave your trusted uplink ports unthrottled so legitimate user traffic flows freely.\n\n#Shorts #DHCPSnooping #NetworkSecurity #SysAdmin #CiscoConfig #CyberSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "SysAdmin",
+    "CiscoConfig",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "IB23fKCOS_E",
+   "ig_id": "17880093456547781"
   }
  }
 }
