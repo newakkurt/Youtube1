@@ -92,7 +92,8 @@ def generate_one(state):
     desc, tags = compose(script)
     title = script["title"]
     state["history"] = (state["history"] + [title])[-100:]
-    item = {"title": title, "description": desc, "tags": tags, "status": "pending"}
+    item = {"title": title, "description": desc, "tags": tags, "status": "pending",
+            "hook": script["scenes"][0]["text"]}
 
     if AUTO_APPROVE:
         vid = youtube.upload(path, title, desc, tags)
@@ -203,9 +204,14 @@ def process(state):
             handle_message(state, u["message"])
 
 
-def report():
+def report(state):
     import script_gen
     text = youtube.stats(7)
+    try:
+        hooks = {it["video_id"]: it["hook"] for it in state["items"].values() if it.get("video_id") and it.get("hook")}
+        print("performance.json:", youtube.save_performance(hooks), "kayıt")
+    except Exception as e:
+        print("save_performance hatası:", str(e)[:200])
     try:
         text += "\n\n💡 Öneriler:\n" + script_gen.advice(text)
     except Exception:
@@ -225,7 +231,7 @@ if __name__ == "__main__":
     modes = {
         "generate": lambda: generate_one(state),
         "process": lambda: process(state),
-        "report": report,
+        "report": lambda: report(state),
         "igtest": lambda: ig_test(state),
         "lead": run_lead,
         "li_status": lambda: post_linkedin_status(state),
