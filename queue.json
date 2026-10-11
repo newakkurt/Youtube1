@@ -50,7 +50,8 @@
   "Why TACACS Won't Save an Exposed Management Plane",
   "How One SNMP String Leaks Your Entire Network",
   "The Trunk Port Mistake That Enables VLAN Hopping",
-  "The DHCP Snooping Rate Limit That Saves Your CPU"
+  "The DHCP Snooping Rate Limit That Saves Your CPU",
+  "Why One Switch Behaves Weirdly: Catching Manual Config Drift"
  ],
  "items": {
   "dcdc2b1c": {
@@ -637,6 +638,21 @@
    "status": "published",
    "video_id": "IB23fKCOS_E",
    "ig_id": "17880093456547781"
+  },
+  "be610820": {
+   "title": "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
+   "description": "Undocumented manual console changes create silent configuration drift that wastes hours during an outage. Compare live devices against a golden template and alert your team before auto-remediating.\n\n#Shorts #NetworkAutomation #CyberSecurity #Networking #Ansible #SysAdmin",
+   "tags": [
+    "NetworkAutomation",
+    "CyberSecurity",
+    "Networking",
+    "Ansible",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "_jyKMrqVeZM",
+   "ig_id": "18017429276937227"
   }
  }
 }
