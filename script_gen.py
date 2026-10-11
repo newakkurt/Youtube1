@@ -60,10 +60,12 @@ def grounding(pick=3, pool=15):
 
 # ---------- (1) Geri besleme: en çok izlenen başlıklar ----------
 def winners(n=5):
+    """performance.json'dan en çok izlenen n kayıt (dict: title, views, hook). Yoksa boş liste."""
     try:
         rows = json.loads(PERF_FILE.read_text(encoding="utf-8"))
-        rows = sorted(rows, key=lambda r: r.get("views", 0), reverse=True)[:n]
-        return [r["title"] for r in rows if r.get("title")]
+        # Kanal İngilizceye geçti: eski Türkçe başlıkları örnek olarak verme
+        rows = [r for r in rows if r.get("title") and not re.search(r"[çğıöşüÇĞİÖŞÜ]", r["title"])]
+        return sorted(rows, key=lambda r: r.get("views", 0), reverse=True)[:n]
     except Exception:
         return []
 
@@ -176,10 +178,15 @@ Judge the draft and return ONLY JSON with these keys:
 
 # ---------- Senaryo ----------
 def _draft(note, facts, win, history, feedback):
-    win_block = (
-        f"Our best-performing titles so far (match their style and curiosity pattern, do NOT copy them): {win}\n"
-        if win else ""
-    )
+    win_block = ""
+    if win:
+        win_block = (
+            "Our best-performing titles so far (match their style and curiosity pattern, do NOT copy them): "
+            f"{[r['title'] for r in win]}\n"
+        )
+        hooks = [r["hook"] for r in win if r.get("hook")]
+        if hooks:
+            win_block += f"Opening hooks of our best videos (learn the pattern, do NOT copy): {hooks}\n"
     facts_block = (
         f"Verified facts (CISA Known Exploited Vulnerabilities). Any specific CVE, date or vendor you mention MUST come from here:\n{facts}\n"
         if facts else ""
