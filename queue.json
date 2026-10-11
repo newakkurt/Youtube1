@@ -55,7 +55,8 @@
   "The Native VLAN Setting That Stops Double Tagging",
   "The Silent NAC Timer That Halts Production Lines",
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
-  "How Default VLAN Settings Expose Your Entire Network"
+  "How Default VLAN Settings Expose Your Entire Network",
+  "Catch Config Drift Early with Golden Templates and Alerts"
  ],
  "items": {
   "dcdc2b1c": {
@@ -718,6 +719,22 @@
    "hook": "Default switch settings leave a hidden backdoor straight into your core network.",
    "video_id": "ElorNngXW4w",
    "ig_id": "18096292232418186"
+  },
+  "bc557f87": {
+   "title": "Catch Config Drift Early with Golden Templates and Alerts",
+   "description": "Using a golden configuration template with tools like rConfig or Ansible lets you spot unauthorized changes before they cause outages. When drift is found, an alert gives your team time to investigate rather than applying an automatic fix.\n\n#Shorts #ConfigDriftAlert #NetworkSecurity #Automation #Ansible #ITOps",
+   "tags": [
+    "ConfigDriftAlert",
+    "NetworkSecurity",
+    "Automation",
+    "Ansible",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A silent switch change can cripple your whole network.",
+   "video_id": "A6dpNvvPPc4",
+   "ig_id": "18097915556531869"
   }
  }
 }
