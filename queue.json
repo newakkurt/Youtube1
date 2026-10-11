@@ -53,7 +53,8 @@
   "The DHCP Snooping Rate Limit That Saves Your CPU",
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
   "The Native VLAN Setting That Stops Double Tagging",
-  "The Silent NAC Timer That Halts Production Lines"
+  "The Silent NAC Timer That Halts Production Lines",
+  "How a 15 PPS DHCP Limit Protects Your Switch CPU"
  ],
  "items": {
   "dcdc2b1c": {
@@ -685,6 +686,21 @@
    "status": "published",
    "video_id": "mFSyFbBslqk",
    "ig_id": "18055899041801845"
+  },
+  "199138fb": {
+   "title": "How a 15 PPS DHCP Limit Protects Your Switch CPU",
+   "description": "Rate limiting untrusted ports prevents rogue DHCP exhaustion attacks and buggy hardware from overwhelming switch processors. Keep uplink interfaces unrestricted to guarantee legitimate client requests always get through.\n\n#Shorts #DHCPSnooping #NetworkSecurity #SysAdmin #Cisco #CyberSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "SysAdmin",
+    "Cisco",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "M12zlmT0ZPs",
+   "ig_id": "18087643493277803"
   }
  }
 }
