@@ -51,7 +51,8 @@
   "How One SNMP String Leaks Your Entire Network",
   "The Trunk Port Mistake That Enables VLAN Hopping",
   "The DHCP Snooping Rate Limit That Saves Your CPU",
-  "Why One Switch Behaves Weirdly: Catching Manual Config Drift"
+  "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
+  "The Native VLAN Setting That Stops Double Tagging"
  ],
  "items": {
   "dcdc2b1c": {
@@ -653,6 +654,21 @@
    "status": "published",
    "video_id": "_jyKMrqVeZM",
    "ig_id": "18017429276937227"
+  },
+  "262ec36f": {
+   "title": "The Native VLAN Setting That Stops Double Tagging",
+   "description": "Leaving the default native VLAN on trunk ports creates serious configuration mismatches and opens the door to VLAN hopping. Use dedicated dummy VLANs for trunk native traffic and isolate unused switch ports to keep your infrastructure secure.\n\n#Shorts #vlansecurity #networking #cybersecurity #networkengineer #cisco",
+   "tags": [
+    "vlansecurity",
+    "networking",
+    "cybersecurity",
+    "networkengineer",
+    "cisco",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "RTlFr3XlW8Q",
+   "ig_id": "18118445324055641"
   }
  }
 }
