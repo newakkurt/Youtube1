@@ -56,7 +56,8 @@
   "The Silent NAC Timer That Halts Production Lines",
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
   "How Default VLAN Settings Expose Your Entire Network",
-  "Catch Config Drift Early with Golden Templates and Alerts"
+  "Catch Config Drift Early with Golden Templates and Alerts",
+  "Locking Down Trunk Ports with a Blackhole VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -735,6 +736,22 @@
    "hook": "A silent switch change can cripple your whole network.",
    "video_id": "A6dpNvvPPc4",
    "ig_id": "18097915556531869"
+  },
+  "98e3092f": {
+   "title": "Locking Down Trunk Ports with a Blackhole VLAN",
+   "description": "Leaving default native VLAN configurations active on trunk links leaves your switches vulnerable to double tagging and STP errors. Secure your fabric by matching dedicated native VLAN IDs across links and parking inactive ports in a shutdown blackhole VLAN.\n\n#Shorts #VLANSecurity #NetworkEngineering #CyberSecurity #SysAdmin #CiscoSwitch",
+   "tags": [
+    "VLANSecurity",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SysAdmin",
+    "CiscoSwitch",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Leaving default VLAN 1 on trunks invites silent network takeover.",
+   "video_id": "66QwOckHR1E",
+   "ig_id": "17910605448504676"
   }
  }
 }
