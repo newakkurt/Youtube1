@@ -1,3 +1,4 @@
+import json
 from datetime import date, timedelta
 
 from google.oauth2.credentials import Credentials
@@ -64,3 +65,32 @@ def stats(days=7):
     ]
     lines += [f"{n + 1}. {names.get(t[0], t[0])} — {t[1]} izlenme" for n, t in enumerate(top)]
     return "\n".join(lines)
+
+
+def save_performance(hooks=None, days=90, n=20):
+    """En çok izlenen videoları performance.json'a yazar. script_gen.winners() bunu okuyup
+    yeni scriptlerin prompt'una örnek olarak verir. hooks: {video_id: açılış cümlesi}."""
+    hooks = hooks or {}
+    c = _creds()
+    yt = build("youtube", "v3", credentials=c, cache_discovery=False)
+    yta = build("youtubeAnalytics", "v2", credentials=c, cache_discovery=False)
+    end = date.today()
+    start = end - timedelta(days=days)
+    top = yta.reports().query(
+        ids="channel==MINE", startDate=str(start), endDate=str(end),
+        metrics="views", dimensions="video", sort="-views", maxResults=n,
+    ).execute().get("rows") or []
+    if not top:
+        return 0
+    items = yt.videos().list(part="snippet", id=",".join(t[0] for t in top)).execute()["items"]
+    names = {i["id"]: i["snippet"]["title"] for i in items}
+    rows = []
+    for vid, views in top:
+        if not names.get(vid):
+            continue
+        row = {"video_id": vid, "title": names[vid], "views": int(views)}
+        if hooks.get(vid):
+            row["hook"] = hooks[vid]
+        rows.append(row)
+    (ROOT / "performance.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    return len(rows)
