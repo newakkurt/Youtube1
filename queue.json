@@ -52,7 +52,8 @@
   "The Trunk Port Mistake That Enables VLAN Hopping",
   "The DHCP Snooping Rate Limit That Saves Your CPU",
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
-  "The Native VLAN Setting That Stops Double Tagging"
+  "The Native VLAN Setting That Stops Double Tagging",
+  "The Silent NAC Timer That Halts Production Lines"
  ],
  "items": {
   "dcdc2b1c": {
@@ -669,6 +670,21 @@
    "status": "published",
    "video_id": "RTlFr3XlW8Q",
    "ig_id": "18118445324055641"
+  },
+  "be8fdc29": {
+   "title": "The Silent NAC Timer That Halts Production Lines",
+   "description": "Aggressive MAB reauth timers can continuously isolate slow devices like network printers into unauthorized VLANs. Defining clear fail-open behavior prevents a NAC outage from completely halting your production line.\n\n#Shorts #NetworkAccessControl #CyberSecurity #Networking #NetworkEngineer #SysAdmin",
+   "tags": [
+    "NetworkAccessControl",
+    "CyberSecurity",
+    "Networking",
+    "NetworkEngineer",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "video_id": "mFSyFbBslqk",
+   "ig_id": "18055899041801845"
   }
  }
 }
