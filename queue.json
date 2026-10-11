@@ -57,7 +57,8 @@
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
   "How Default VLAN Settings Expose Your Entire Network",
   "Catch Config Drift Early with Golden Templates and Alerts",
-  "Locking Down Trunk Ports with a Blackhole VLAN"
+  "Locking Down Trunk Ports with a Blackhole VLAN",
+  "Is Your Switch Management Plane Leaking to Users?"
  ],
  "items": {
   "dcdc2b1c": {
@@ -752,6 +753,22 @@
    "hook": "Leaving default VLAN 1 on trunks invites silent network takeover.",
    "video_id": "66QwOckHR1E",
    "ig_id": "17910605448504676"
+  },
+  "d96d3aaf": {
+   "title": "Is Your Switch Management Plane Leaking to Users?",
+   "description": "Relying strictly on TACACS+ won't stop attackers if your switch management plane is exposed to user VLANs. Isolate management traffic to a dedicated VRF and restrict SSH solely to a trusted bastion host.\n\n#Shorts #ManagementPlane #NetworkSecurity #SysAdmin #Cisco #CyberSecurity",
+   "tags": [
+    "ManagementPlane",
+    "NetworkSecurity",
+    "SysAdmin",
+    "Cisco",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Can regular users reach your switch login screen right now?",
+   "video_id": "VdtM4JPqjLI",
+   "ig_id": "18129116962854383"
   }
  }
 }
