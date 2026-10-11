@@ -58,7 +58,8 @@
   "How Default VLAN Settings Expose Your Entire Network",
   "Catch Config Drift Early with Golden Templates and Alerts",
   "Locking Down Trunk Ports with a Blackhole VLAN",
-  "Is Your Switch Management Plane Leaking to Users?"
+  "Is Your Switch Management Plane Leaking to Users?",
+  "Why Default Native VLANs Leak Traffic Across Trunks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -769,6 +770,22 @@
    "hook": "Can regular users reach your switch login screen right now?",
    "video_id": "VdtM4JPqjLI",
    "ig_id": "18129116962854383"
+  },
+  "ac9f7b7c": {
+   "title": "Why Default Native VLANs Leak Traffic Across Trunks",
+   "description": "Leaving native VLANs on default settings risks STP errors, cross-segment traffic leakage, and double-tagging attacks. Secure your switch infrastructure by tagging native traffic, matching trunk endpoints, and blackholing unused ports.\n\n#Shorts #vlansecurity #cybersecurity #networking #networksecurity #sysadmin",
+   "tags": [
+    "vlansecurity",
+    "cybersecurity",
+    "networking",
+    "networksecurity",
+    "sysadmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Still using default VLAN one everywhere? Your network might be leaking traffic.",
+   "video_id": "fIw8hBV-Lzs",
+   "ig_id": "18129851560695532"
   }
  }
 }
