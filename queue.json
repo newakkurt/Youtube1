@@ -54,7 +54,8 @@
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
   "The Native VLAN Setting That Stops Double Tagging",
   "The Silent NAC Timer That Halts Production Lines",
-  "How a 15 PPS DHCP Limit Protects Your Switch CPU"
+  "How a 15 PPS DHCP Limit Protects Your Switch CPU",
+  "How Default VLAN Settings Expose Your Entire Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -701,6 +702,22 @@
    "status": "published",
    "video_id": "M12zlmT0ZPs",
    "ig_id": "18087643493277803"
+  },
+  "d7185a83": {
+   "title": "How Default VLAN Settings Expose Your Entire Network",
+   "description": "Leaving default VLAN settings intact can open your switches to double-tagging attacks and traffic leakage. Change your native VLAN to an isolated ID and disable unused ports to keep trunks secure.\n\n#Shorts #NetworkHardening #CyberSecurity #NetworkingTips #CiscoConfig #InfoSec",
+   "tags": [
+    "NetworkHardening",
+    "CyberSecurity",
+    "NetworkingTips",
+    "CiscoConfig",
+    "InfoSec",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Default switch settings leave a hidden backdoor straight into your core network.",
+   "video_id": "ElorNngXW4w",
+   "ig_id": "18096292232418186"
   }
  }
 }
