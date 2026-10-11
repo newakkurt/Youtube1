@@ -59,7 +59,8 @@
   "Catch Config Drift Early with Golden Templates and Alerts",
   "Locking Down Trunk Ports with a Blackhole VLAN",
   "Is Your Switch Management Plane Leaking to Users?",
-  "Why Default Native VLANs Leak Traffic Across Trunks"
+  "Why Default Native VLANs Leak Traffic Across Trunks",
+  "How a Single Manual Switch Change Triggers Network Chaos"
  ],
  "items": {
   "dcdc2b1c": {
