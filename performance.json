@@ -1,0 +1,102 @@
+[
+ {
+  "video_id": "-7WDLv1APHg",
+  "title": "Why Sticky MAC Causes Err‑Disable and How to Repair It",
+  "views": 946
+ },
+ {
+  "video_id": "hv8SS2TnXaI",
+  "title": "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
+  "views": 934
+ },
+ {
+  "video_id": "v40B-68wNRE",
+  "title": "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
+  "views": 907
+ },
+ {
+  "video_id": "kQWa0c7fLmo",
+  "title": "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
+  "views": 701
+ },
+ {
+  "video_id": "FuVjGPWGPJU",
+  "title": "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
+  "views": 626
+ },
+ {
+  "video_id": "SvWTDWIN9Ss",
+  "title": "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
+  "views": 522
+ },
+ {
+  "video_id": "hKLL1QMTSeE",
+  "title": "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
+  "views": 423
+ },
+ {
+  "video_id": "cMe1O_0Q2Do",
+  "title": "Why Dynamic ARP Inspection Silently Kills Good Traffic",
+  "views": 315
+ },
+ {
+  "video_id": "8ERt7O_5NGA",
+  "title": "Why Sticky MAC Locks Your Port and How to Unlock It",
+  "views": 281
+ },
+ {
+  "video_id": "OZGsFNlvSsg",
+  "title": "How to Safely Configure Switches with Ansible’s Dry‑Run First",
+  "views": 257
+ },
+ {
+  "video_id": "bwyeuRwiYR8",
+  "title": "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
+  "views": 250
+ },
+ {
+  "video_id": "aP7j14rJ70A",
+  "title": "Why Every Device Needs a Central Syslog – Stop Guessing!",
+  "views": 233
+ },
+ {
+  "video_id": "vMIite6UPHQ",
+  "title": "Test Before You Deploy: Safe Switch Configuration in Seconds",
+  "views": 220
+ },
+ {
+  "video_id": "MMeK6-z98Eo",
+  "title": "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
+  "views": 216
+ },
+ {
+  "video_id": "xKjobQma6z0",
+  "title": "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
+  "views": 199
+ },
+ {
+  "video_id": "uEEIB4P4Ouc",
+  "title": "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
+  "views": 186
+ },
+ {
+  "video_id": "IHfJ-GGJCzs",
+  "title": "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
+  "views": 183
+ },
+ {
+  "video_id": "jT1h-uqVY_g",
+  "title": "The Hidden Reason Secure Switches Block Real Users",
+  "views": 176
+ },
+ {
+  "video_id": "rdU0004SToE",
+  "title": "Why Skipping Backups Before Automation Crashes Your Network",
+  "views": 151
+ },
+ {
+  "video_id": "-vEgMmpoAXM",
+  "title": "Dry‑Run First: Safer Switch Config with Ansible",
+  "views": 140
+ }
+]
