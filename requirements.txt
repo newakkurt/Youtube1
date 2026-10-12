@@ -3,3 +3,4 @@ edge-tts>=6.1.12
 moviepy==2.1.2
 pillow>=10.4.0
 numpy>=1.26
+gTTS
