@@ -58,8 +58,9 @@ jobs:
       - name: Install Python Dependencies
         run: |
           pip install -r requirements.txt
-          pip install -U edge-tts
+          pip install -U edge-tts gTTS
           pip show edge-tts | grep -i ^version
+          pip show gTTS | grep -i ^version
 
       - name: Mod belirle
         id: mode
