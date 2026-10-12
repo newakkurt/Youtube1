@@ -38,9 +38,19 @@ def _font(size):
         return ImageFont.load_default()
 
 
-def tts(text, path):
-    asyncio.run(edge_tts.Communicate(text, VOICE, rate="+5%").save(str(path)))
+_edge_ok = True
 
+def tts(text, path):
+    global _edge_ok
+    if _edge_ok:
+        try:
+            asyncio.run(edge_tts.Communicate(text, VOICE, rate="+5%").save(str(path)))
+            return
+        except Exception as e:
+            print(f"edge-tts FAIL, gTTS'e geçiliyor: {e}")
+            _edge_ok = False  # sonraki sahnelerde tekrar deneme
+    from gtts import gTTS
+    gTTS(text=text, lang=VOICE[:2]).save(str(path))
 
 def fetch_clip(keyword, dest):
     r = requests.get(
