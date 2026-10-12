@@ -63,7 +63,8 @@
   "How a Single Manual Switch Change Triggers Network Chaos",
   "How a Single Faulty NIC Can Lock Down an Entire VLAN",
   "How a Tiny Desk Switch Can Crash Your Whole Network – Fast Fix",
-  "Why a DHCP Storm Freezes Your Switch CPU"
+  "Why a DHCP Storm Freezes Your Switch CPU",
+  "Why Enabling BPDU Guard on User Ports Saves Your Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -822,6 +823,22 @@
    "hook": "A single broken device can freeze your switch with DHCP packets.",
    "video_id": "i2xrCr28CU8",
    "ig_id": "17912103273537583"
+  },
+  "c0567ed3": {
+   "title": "Why Enabling BPDU Guard on User Ports Saves Your Network",
+   "description": "Learn how PortFast plus BPDU Guard prevents rogue switches from crashing your LAN. Set a recovery timer to avoid manual fixes and keep your network safe.\n\n#Shorts #BPDUGuard #NetworkSecurity #CyberSec #Switching #ITOps",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "CyberSec",
+    "Switching",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One tiny switch can bring your whole LAN down.",
+   "video_id": "s2zcSVKQ_Bo",
+   "ig_id": "18640635460013913"
   }
  }
 }
