@@ -17,9 +17,10 @@ Ana bot dosyasindan kullanim (degismedi, 2 satir):
   from linkedin_post import publish_linkedin
   li_status = publish_linkedin(video_path, caption)   # Telegram mesajina ekle
 
-publish_linkedin artik caption'i kaynak alip LinkedIn icin ayri bir yazi uretir:
-merak uyandiran hook, bilim kurgu -> bugunun teknolojisi, kisisel aci ve
-yorum cekmek icin sonda acik uclu bir soru.
+publish_linkedin caption'i kaynak alip LinkedIn'e OZEL bir yazi uretir. Konuya gore iki stil:
+  - TEKNIK konu (network, guvenlik, altyapi, IT): sahadan bakis, problem -> cozum -> ders
+  - BILIM KURGU / uzay / gelecek teknolojisi: bilim kurgu fikri -> bugunun teknolojisi
+Her iki stilde: merak uyandiran hook, sonda yorum cekmek icin acik uclu soru, 3-4 hashtag.
 """
 import os
 import re
@@ -33,10 +34,9 @@ API = "https://api.linkedin.com"
 TOKEN_LIFETIME_DAYS = 60
 WARN_AT_DAYS_LEFT = 10
 
-FALLBACK_QUESTION = "Which sci-fi idea do you think becomes reality next? Tell me in the comments."
-FALLBACK_HASHTAGS = "#technology #scifi #futuretech #innovation"
-
-SYSTEM_PROMPT = (
-    "You write LinkedIn posts for the personal profile of {author}. "
-    "Topic area: general technology and science fiction. Write in English.\n"
-    "Rules:\n"
+TECH_KEYWORDS = (
+    "network", "switch", "vlan", "bpdu", "stp", "spanning", "firewall", "router", "routing",
+    "cisco", "huawei", "aruba", "fortinet", "dhcp", "dns", "tacacs", "radius", "ansible",
+    "security", "cyber", "cve", "cisa", "vulnerab", "exploit", "ransomware", "patch",
+    "server", "linux", "cloud", "docker", "devops", "automation", "infrastructure",
+    "ethernet", "wifi", "wi-fi", "vpn", "protocol", "port", "latency", "bandwidth",
