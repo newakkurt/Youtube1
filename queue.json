@@ -68,7 +68,8 @@
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
   "Why Strong Auth Fails Without Management Plane Isolation",
   "Why Aggressive Storm Control Drops Good Multicast Traffic",
-  "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure"
+  "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
+  "Why Slow Printers Can Crash Your Production Line with FortiNAC"
  ],
  "items": {
   "dcdc2b1c": {
@@ -907,6 +908,22 @@
    "hook": "Your switch’s management plane is probably wide open.",
    "video_id": "j11nBKDvS3s",
    "ig_id": "18113453333111628"
+  },
+  "bd0b0aae": {
+   "title": "Why Slow Printers Can Crash Your Production Line with FortiNAC",
+   "description": "Learn how misconfigured MAB timers on FortiNAC can push slow‑starting devices like printers into an unauthorized VLAN. Set proper re‑auth, inactivity timers, and decide fail‑open behavior before a RADIUS outage halts production.\n\n#Shorts #FortiNACTips #NetworkSecurity #Cybersecurity #NAC #ITOps",
+   "tags": [
+    "FortiNACTips",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "NAC",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Why slow printers can shut down your production line",
+   "video_id": "cYSYeh6nrKo",
+   "ig_id": "18190872451408581"
   }
  }
 }
