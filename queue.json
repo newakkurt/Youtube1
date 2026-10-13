@@ -75,7 +75,8 @@
   "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
-  "How PortFast + BPDU Guard Stops Tiny Switch Hijacks"
+  "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
+  "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield"
  ],
  "items": {
   "dcdc2b1c": {
@@ -994,6 +995,22 @@
    "hook": "A single mini switch can hijack your whole network.",
    "video_id": "YRosqyMDusE",
    "ig_id": "18458092810192200"
+  },
+  "6a75a2e6": {
+   "title": "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
+   "description": "Learn how a simple DHCP rate‑limit on untrusted ports can stop storms and save your switch’s CPU. Apply the limit wisely—only on user ports—to keep legitimate traffic flowing.\n\n#Shorts #DHCPShield #NetworkSecurity #Cybersecurity #ITInfrastructure #SwitchProtection",
+   "tags": [
+    "DHCPShield",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITInfrastructure",
+    "SwitchProtection",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A rogue device can drown your network in DHCP traffic.",
+   "video_id": "qithIsaGd1c",
+   "ig_id": "18070347965749330"
   }
  }
 }
