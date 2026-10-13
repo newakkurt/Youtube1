@@ -72,7 +72,8 @@
   "Why Slow Printers Can Crash Your Production Line with FortiNAC",
   "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
   "Why Switch Reload Drops Static Devices: Binding Persistence",
-  "Why Unisolated Management Plane Lets Attackers Bypass TACACS+"
+  "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
+  "Why Slow Printers Can Crash Your Factory With FortiNAC"
  ],
  "items": {
   "dcdc2b1c": {
