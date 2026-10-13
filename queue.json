@@ -70,7 +70,8 @@
   "Why Aggressive Storm Control Drops Good Multicast Traffic",
   "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
   "Why Slow Printers Can Crash Your Production Line with FortiNAC",
-  "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It"
+  "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
+  "Why Switch Reload Drops Static Devices: Binding Persistence"
  ],
  "items": {
   "dcdc2b1c": {
@@ -941,6 +942,22 @@
    "hook": "Did a rogue desk switch suddenly shut down your access port?",
    "video_id": "f1tcul8Ya5E",
    "ig_id": "18130034861506210"
+  },
+  "0978d172": {
+   "title": "Why Switch Reload Drops Static Devices: Binding Persistence",
+   "description": "When a switch reloads, its DHCP snooping binding table is lost, causing IP Source Guard and DAI to block static IP devices and clients without a renewed lease. Persist the table to flash or TFTP/FTP and manually bind critical devices to keep your network running.\n\n#Shorts #NetworkFixes #Cybersecurity #Networking #ITSecurity #NetworkEngineering",
+   "tags": [
+    "NetworkFixes",
+    "Cybersecurity",
+    "Networking",
+    "ITSecurity",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Switch reboot wipes binding table, silently killing good traffic.",
+   "video_id": "UMx0DoaoWeU",
+   "ig_id": "17916446406465304"
   }
  }
 }
