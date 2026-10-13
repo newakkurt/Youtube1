@@ -69,7 +69,8 @@
   "Why Strong Auth Fails Without Management Plane Isolation",
   "Why Aggressive Storm Control Drops Good Multicast Traffic",
   "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
-  "Why Slow Printers Can Crash Your Production Line with FortiNAC"
+  "Why Slow Printers Can Crash Your Production Line with FortiNAC",
+  "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -924,6 +925,22 @@
    "hook": "Why slow printers can shut down your production line",
    "video_id": "cYSYeh6nrKo",
    "ig_id": "18190872451408581"
+  },
+  "6bb39121": {
+   "title": "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
+   "description": "Learn how enabling BPDU Guard with PortFast blocks rogue switches from hijacking your Spanning Tree topology. Discover how err-disable recovery timers automate port restoration without manual engineer intervention.\n\n#Shorts #BPDUGuard #NetworkSecurity #CiscoNetworking #SpanningTree #SysAdmin",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "CiscoNetworking",
+    "SpanningTree",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Did a rogue desk switch suddenly shut down your access port?",
+   "video_id": "f1tcul8Ya5E",
+   "ig_id": "18130034861506210"
   }
  }
 }
