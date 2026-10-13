@@ -74,7 +74,8 @@
   "Why Switch Reload Drops Static Devices: Binding Persistence",
   "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
-  "Why One Native VLAN Mistake Lets Hackers Jump Networks"
+  "Why One Native VLAN Mistake Lets Hackers Jump Networks",
+  "How PortFast + BPDU Guard Stops Tiny Switch Hijacks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -977,6 +978,22 @@
    "hook": "Mismatched native VLANs can open a double‑tagging backdoor.",
    "video_id": "Slb9TihRkq0",
    "ig_id": "18130826032747316"
+  },
+  "712126e7": {
+   "title": "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
+   "description": "Learn why enabling PortFast and BPDU Guard on user ports can instantly shut down rogue mini switches and prevent spanning‑tree attacks. Also see how setting an err‑disable recovery timer automates healing and saves you from manual intervention.\n\n#Shorts #BPDUGuard #NetworkSecurity #Cybersecurity #ITInfra #SwitchSecurity",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITInfra",
+    "SwitchSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A single mini switch can hijack your whole network.",
+   "video_id": "YRosqyMDusE",
+   "ig_id": "18458092810192200"
   }
  }
 }
