@@ -66,7 +66,8 @@
   "Why a DHCP Storm Freezes Your Switch CPU",
   "Why Enabling BPDU Guard on User Ports Saves Your Network",
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
-  "Why Strong Auth Fails Without Management Plane Isolation"
+  "Why Strong Auth Fails Without Management Plane Isolation",
+  "Why Aggressive Storm Control Drops Good Multicast Traffic"
  ],
  "items": {
   "dcdc2b1c": {
@@ -873,6 +874,22 @@
    "hook": "Can regular users reach your switch login prompt right now?",
    "video_id": "f_c0azhAqNE",
    "ig_id": "18451187425120129"
+  },
+  "3d0b7a72": {
+   "title": "Why Aggressive Storm Control Drops Good Multicast Traffic",
+   "description": "A runaway network loop or faulty network card can freeze your entire VLAN without proper protection. Learn how monitoring traffic baselines prevents storm control from cutting critical industrial multicast streams.\n\n#Shorts #StormControl #NetworkEngineering #CyberSecurity #SysAdmin #SwitchSecurity",
+   "tags": [
+    "StormControl",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SysAdmin",
+    "SwitchSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Did an overzealous storm control policy just kill your factory video feed?",
+   "video_id": "PFq3IXApwIE",
+   "ig_id": "18097166342419334"
   }
  }
 }
