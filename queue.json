@@ -71,7 +71,8 @@
   "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
   "Why Slow Printers Can Crash Your Production Line with FortiNAC",
   "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
-  "Why Switch Reload Drops Static Devices: Binding Persistence"
+  "Why Switch Reload Drops Static Devices: Binding Persistence",
+  "Why Unisolated Management Plane Lets Attackers Bypass TACACS+"
  ],
  "items": {
   "dcdc2b1c": {
