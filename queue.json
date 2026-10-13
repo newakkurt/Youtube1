@@ -65,7 +65,8 @@
   "How a Tiny Desk Switch Can Crash Your Whole Network – Fast Fix",
   "Why a DHCP Storm Freezes Your Switch CPU",
   "Why Enabling BPDU Guard on User Ports Saves Your Network",
-  "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks"
+  "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
+  "Why Strong Auth Fails Without Management Plane Isolation"
  ],
  "items": {
   "dcdc2b1c": {
@@ -856,6 +857,22 @@
    "hook": "One wrong native VLAN and attackers slip into any network segment.",
    "video_id": "u_azrmcPB7I",
    "ig_id": "18163314355491360"
+  },
+  "f53beebc": {
+   "title": "Why Strong Auth Fails Without Management Plane Isolation",
+   "description": "Relying on authentication alone cannot protect switches if normal user subnets can hit your management interfaces. Learn why isolated management planes and bastion jump hosts are vital.\n\n#Shorts #NetworkHardening #CyberSecurity #Networking #NetworkSecurity #SysAdmin",
+   "tags": [
+    "NetworkHardening",
+    "CyberSecurity",
+    "Networking",
+    "NetworkSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Can regular users reach your switch login prompt right now?",
+   "video_id": "f_c0azhAqNE",
+   "ig_id": "18451187425120129"
   }
  }
 }
