@@ -67,7 +67,8 @@
   "Why Enabling BPDU Guard on User Ports Saves Your Network",
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
   "Why Strong Auth Fails Without Management Plane Isolation",
-  "Why Aggressive Storm Control Drops Good Multicast Traffic"
+  "Why Aggressive Storm Control Drops Good Multicast Traffic",
+  "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure"
  ],
  "items": {
   "dcdc2b1c": {
@@ -890,6 +891,22 @@
    "hook": "Did an overzealous storm control policy just kill your factory video feed?",
    "video_id": "PFq3IXApwIE",
    "ig_id": "18097166342419334"
+  },
+  "a489692b": {
+   "title": "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
+   "description": "Learn how isolating the management plane protects your switches even when TACACS+ falls short. Follow these simple steps to secure SSH access and disable unnecessary services.\n\n#Shorts #NetworkHardening #Cybersecurity #NetworkSecurity #ITOps #InfoSec",
+   "tags": [
+    "NetworkHardening",
+    "Cybersecurity",
+    "NetworkSecurity",
+    "ITOps",
+    "InfoSec",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your switch’s management plane is probably wide open.",
+   "video_id": "j11nBKDvS3s",
+   "ig_id": "18113453333111628"
   }
  }
 }
