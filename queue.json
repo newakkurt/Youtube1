@@ -82,7 +82,8 @@
   "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
   "Why Mystery Switch Glitches Happen: Stopping Config Drift",
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
-  "Why One SNMP String Can Leak Your Entire 3,000-Device Network"
+  "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
+  "Why One Forgotten Switch Change Triggers Hours of Chaos"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1113,6 +1114,22 @@
    "hook": "One SNMP string can expose 3,000 devices.",
    "video_id": "_vtlQCqAXP8",
    "ig_id": "18097851221435914"
+  },
+  "ab738a3d": {
+   "title": "Why One Forgotten Switch Change Triggers Hours of Chaos",
+   "description": "A single manual change can hide for months, turning a healthy network into a mystery. Use golden configuration templates and drift alerts to catch errors before they cause outages.\n\n#Shorts #ConfigDrift #NetworkSecurity #Automation #Ansible #ITOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkSecurity",
+    "Automation",
+    "Ansible",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A switch suddenly misbehaves—why did no one notice?",
+   "video_id": "HxdUSzpIs0o",
+   "ig_id": "18034747049668546"
   }
  }
 }
