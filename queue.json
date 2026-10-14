@@ -78,7 +78,8 @@
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your Whole Network",
-  "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails"
+  "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
+  "How Ignoring SNMPv3 Turns Your Network Into an Open Book"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1045,6 +1046,22 @@
    "hook": "Your switch’s admin traffic could be an open door.",
    "video_id": "jkObWsDJIhE",
    "ig_id": "18110940728228967"
+  },
+  "3e8c85bf": {
+   "title": "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
+   "description": "Learn why the default SNMPv2c community strings are a massive risk and how switching to SNMPv3 with authPriv and strict ACLs can protect your network. One misconfiguration can expose the whole topology, so act now.\n\n#Shorts #SNMPsecurity #networksecurity #cybersecurity #snmp #infosec",
+   "tags": [
+    "SNMPsecurity",
+    "networksecurity",
+    "cybersecurity",
+    "snmp",
+    "infosec",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your network’s secrets are hidden in a single SNMP string.",
+   "video_id": "0tWY6hGpNUU",
+   "ig_id": "17917245804258098"
   }
  }
 }
