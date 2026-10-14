@@ -79,7 +79,8 @@
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your Whole Network",
   "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
-  "How Ignoring SNMPv3 Turns Your Network Into an Open Book"
+  "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
+  "Why Mystery Switch Glitches Happen: Stopping Config Drift"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1062,6 +1063,22 @@
    "hook": "Your network’s secrets are hidden in a single SNMP string.",
    "video_id": "0tWY6hGpNUU",
    "ig_id": "17917245804258098"
+  },
+  "e65345d6": {
+   "title": "Why Mystery Switch Glitches Happen: Stopping Config Drift",
+   "description": "Undocumented manual CLI changes can create frustrating configuration drift across your network switches. Learn how automated golden config templates and early alerting stop mystery outages before troubleshooting begins.\n\n#Shorts #NetworkAutomation #NetworkEngineering #SysAdmin #Ansible #CyberSecurity",
+   "tags": [
+    "NetworkAutomation",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Ansible",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A single rogue CLI command can haunt your network months later.",
+   "video_id": "FAOllfzVPE4",
+   "ig_id": "18112548629579244"
   }
  }
 }
