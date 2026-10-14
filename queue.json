@@ -80,7 +80,8 @@
   "Why One SNMP String Can Leak Your Whole Network",
   "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
   "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
-  "Why Mystery Switch Glitches Happen: Stopping Config Drift"
+  "Why Mystery Switch Glitches Happen: Stopping Config Drift",
+  "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1079,6 +1080,22 @@
    "hook": "A single rogue CLI command can haunt your network months later.",
    "video_id": "FAOllfzVPE4",
    "ig_id": "18112548629579244"
+  },
+  "d4f9583f": {
+   "title": "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
+   "description": "Storm control can protect your network, but misconfiguring thresholds may cripple critical factory traffic. Learn how to set smart limits, choose the right actions, and avoid VLAN-wide lockouts.\n\n#Shorts #StormControl #NetworkSecurity #Cisco #IndustrialIoT #NetworkOps",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "Cisco",
+    "IndustrialIoT",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your whole VLAN could disappear in a single storm.",
+   "video_id": "BxWjbLz_Azo",
+   "ig_id": "17891912634616119"
   }
  }
 }
