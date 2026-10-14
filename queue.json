@@ -83,7 +83,8 @@
   "Why Mystery Switch Glitches Happen: Stopping Config Drift",
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
   "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
-  "Why One Forgotten Switch Change Triggers Hours of Chaos"
+  "Why One Forgotten Switch Change Triggers Hours of Chaos",
+  "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1130,6 +1131,22 @@
    "hook": "A switch suddenly misbehaves—why did no one notice?",
    "video_id": "HxdUSzpIs0o",
    "ig_id": "18034747049668546"
+  },
+  "990ef481": {
+   "title": "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
+   "description": "Even a few seconds of clock drift can scramble log correlation, making incident response impossible. Keep every device on the same NTP source and timezone to preserve accurate security records.\n\n#Shorts #TimeSync #NetworkSecurity #NTP #Syslog #CyberHygiene",
+   "tags": [
+    "TimeSync",
+    "NetworkSecurity",
+    "NTP",
+    "Syslog",
+    "CyberHygiene",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your logs are lying—if the clocks don’t match.",
+   "video_id": "fOKwKx62-p4",
+   "ig_id": "17922466173221030"
   }
  }
 }
