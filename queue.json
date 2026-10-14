@@ -76,7 +76,8 @@
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
-  "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield"
+  "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
+  "Why One SNMP String Can Leak Your Whole Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1011,6 +1012,22 @@
    "hook": "A rogue device can drown your network in DHCP traffic.",
    "video_id": "qithIsaGd1c",
    "ig_id": "18070347965749330"
+  },
+  "20ca4368": {
+   "title": "Why One SNMP String Can Leak Your Whole Network",
+   "description": "Learn why legacy SNMPv2c community strings are a hidden risk and how to lock down your management plane. Switch to SNMPv3 with proper ACLs and TLS to protect thousands of devices from data leakage.\n\n#Shorts #SNMPsecurity #NetworkSecurity #Cybersecurity #SNMP #InfoSec",
+   "tags": [
+    "SNMPsecurity",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "SNMP",
+    "InfoSec",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One SNMP string can expose your entire network.",
+   "video_id": "e65OhyVBkHU",
+   "ig_id": "17913869790533072"
   }
  }
 }
