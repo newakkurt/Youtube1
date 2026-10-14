@@ -77,7 +77,8 @@
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
-  "Why One SNMP String Can Leak Your Whole Network"
+  "Why One SNMP String Can Leak Your Whole Network",
+  "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1028,6 +1029,22 @@
    "hook": "One SNMP string can expose your entire network.",
    "video_id": "e65OhyVBkHU",
    "ig_id": "17913869790533072"
+  },
+  "c525a1ad": {
+   "title": "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
+   "description": "Learn how to isolate the management plane with a dedicated VLAN/VRF, ACLs, and strict AAA enforcement. Disable unused services and log all logins to keep attackers out, even if TACACS+ is misconfigured.\n\n#Shorts #mgmtisolation #NetworkSecurity #CyberSec #ITOps #ZeroTrust",
+   "tags": [
+    "mgmtisolation",
+    "NetworkSecurity",
+    "CyberSec",
+    "ITOps",
+    "ZeroTrust",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your switch’s admin traffic could be an open door.",
+   "video_id": "jkObWsDJIhE",
+   "ig_id": "18110940728228967"
   }
  }
 }
