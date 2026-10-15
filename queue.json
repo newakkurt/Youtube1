@@ -86,7 +86,8 @@
   "Why One Forgotten Switch Change Triggers Hours of Chaos",
   "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
   "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
-  "Why One SNMP String Can Leak a 3,000-Device Network"
+  "Why One SNMP String Can Leak a 3,000-Device Network",
+  "Why Config Drift Sneaks In and How to Spot It Fast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1181,6 +1182,22 @@
    "hook": "One default SNMP string can expose 3,000 devices in seconds.",
    "video_id": "wZmADwYSdWQ",
    "ig_id": "18634024213029545"
+  },
+  "66f887fd": {
+   "title": "Why Config Drift Sneaks In and How to Spot It Fast",
+   "description": "Config drift can hide dangerous changes for months, turning a single manual edit into network chaos. Learn how to define a golden config, detect drift early, and get alerted before any automatic fix.\n\n#Shorts #ConfigDrift #NetworkSecurity #Automation #Cisco #ITOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkSecurity",
+    "Automation",
+    "Cisco",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One hidden switch change can cripple your whole network.",
+   "video_id": "EcWCfX6TfYI",
+   "ig_id": "17904870879349324"
   }
  }
 }
