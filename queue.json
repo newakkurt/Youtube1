@@ -84,7 +84,8 @@
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
   "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
   "Why One Forgotten Switch Change Triggers Hours of Chaos",
-  "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)"
+  "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
+  "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1147,6 +1148,22 @@
    "hook": "Your logs are lying—if the clocks don’t match.",
    "video_id": "fOKwKx62-p4",
    "ig_id": "17922466173221030"
+  },
+  "e841cf88": {
+   "title": "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
+   "description": "Leaving default SNMPv2c community strings creates a single point of exposure across a large inventory. Switching to SNMPv3 with authPriv and ACL‑restricted NMS IPs, while phasing out v2c and rotating any remaining strings, seals that gap.\n\n#Shorts #SNMPsecurity #NetworkSecurity #Cybersecurity #ITOps #SNMP",
+   "tags": [
+    "SNMPsecurity",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "SNMP",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One SNMP string can expose every device you manage.",
+   "video_id": "cL3ZzWe6u6I",
+   "ig_id": "18140992849718280"
   }
  }
 }
