@@ -91,7 +91,8 @@
   "Why Clock Drift Lets Attackers Hide Their Trail",
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
-  "Why a Separate Management VLAN Beats Weak TACACS+ Controls"
+  "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
+  "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1266,6 +1267,22 @@
    "hook": "One mis‑configured SSH port lets attackers hijack your whole network.",
    "video_id": "II9BakWOvv8",
    "ig_id": "18430423930146252"
+  },
+  "526cddb2": {
+   "title": "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
+   "description": "Learn how a simple DHCP rate‑limit on untrusted ports protects your switch from storms and attacks. Avoid limiting trusted uplinks to keep legit traffic flowing.\n\n#Shorts #DHCPShield #NetworkSecurity #Cybersecurity #SwitchConfig #ITOps",
+   "tags": [
+    "DHCPShield",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "SwitchConfig",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Untrusted ports flooding DHCP? Your switch might shut down!",
+   "video_id": "-1A4ZwHmBjc",
+   "ig_id": "18096580754445510"
   }
  }
 }
