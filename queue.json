@@ -85,7 +85,8 @@
   "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
   "Why One Forgotten Switch Change Triggers Hours of Chaos",
   "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
-  "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers"
+  "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
+  "Why One SNMP String Can Leak a 3,000-Device Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1164,6 +1165,22 @@
    "hook": "One SNMP string can expose every device you manage.",
    "video_id": "cL3ZzWe6u6I",
    "ig_id": "18140992849718280"
+  },
+  "c96f9415": {
+   "title": "Why One SNMP String Can Leak a 3,000-Device Network",
+   "description": "Leaving default SNMP community strings open turns a single misconfiguration into a massive data leak. Switch to SNMPv3 authPriv and restrict access with ACLs to protect your entire inventory.\n\n#Shorts #SNMPSecurity #NetworkSecurity #CyberSecurity #InfoSec #ITOps",
+   "tags": [
+    "SNMPSecurity",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "InfoSec",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One default SNMP string can expose 3,000 devices in seconds.",
+   "video_id": "wZmADwYSdWQ",
+   "ig_id": "18634024213029545"
   }
  }
 }
