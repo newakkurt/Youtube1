@@ -88,7 +88,8 @@
   "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
   "Why One SNMP String Can Leak a 3,000-Device Network",
   "Why Config Drift Sneaks In and How to Spot It Fast",
-  "Why Clock Drift Lets Attackers Hide Their Trail"
+  "Why Clock Drift Lets Attackers Hide Their Trail",
+  "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1215,6 +1216,22 @@
    "hook": "A three‑minute clock drift just blinded your SIEM during an active breach.",
    "video_id": "5sEZX5rREKw",
    "ig_id": "17878774179632547"
+  },
+  "2885a599": {
+   "title": "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
+   "description": "When device clocks drift, logs become meaningless and you lose the ability to trace events. Keep all systems synced to a single NTP source and timezone to ensure reliable security monitoring.\n\n#Shorts #TimeSync #CyberSecurity #NetworkOps #InfoSec #ITInfrastructure",
+   "tags": [
+    "TimeSync",
+    "CyberSecurity",
+    "NetworkOps",
+    "InfoSec",
+    "ITInfrastructure",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your network’s time could be hiding a breach.",
+   "video_id": "O66oNm5YgPc",
+   "ig_id": "18145940086602647"
   }
  }
 }
