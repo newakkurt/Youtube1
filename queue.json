@@ -89,7 +89,8 @@
   "Why One SNMP String Can Leak a 3,000-Device Network",
   "Why Config Drift Sneaks In and How to Spot It Fast",
   "Why Clock Drift Lets Attackers Hide Their Trail",
-  "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)"
+  "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
+  "Why Relying Only on TACACS+ Leaves Switches Exposed"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1232,6 +1233,22 @@
    "hook": "Your network’s time could be hiding a breach.",
    "video_id": "O66oNm5YgPc",
    "ig_id": "18145940086602647"
+  },
+  "ba240d2e": {
+   "title": "Why Relying Only on TACACS+ Leaves Switches Exposed",
+   "description": "Relying on TACACS+ isn't enough if your switch management plane is reachable from regular user VLANs. Learn how to isolate management traffic using VRFs, ACLs, and dedicated jump hosts.\n\n#Shorts #NetworkHardening #CyberSecurity #Networking #Cisco #SysAdmin",
+   "tags": [
+    "NetworkHardening",
+    "CyberSecurity",
+    "Networking",
+    "Cisco",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Can users on normal VLANs SSH straight into your switches?",
+   "video_id": "GRXm0CHJERg",
+   "ig_id": "17925508656200549"
   }
  }
 }
