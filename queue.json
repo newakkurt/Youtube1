@@ -92,7 +92,8 @@
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
-  "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield"
+  "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
+  "Why One SNMP String Can Leak Your 3,000-Device Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1283,6 +1284,22 @@
    "hook": "Untrusted ports flooding DHCP? Your switch might shut down!",
    "video_id": "-1A4ZwHmBjc",
    "ig_id": "18096580754445510"
+  },
+  "151e46a9": {
+   "title": "Why One SNMP String Can Leak Your 3,000-Device Network",
+   "description": "Leaving default SNMPv2c community strings like \"public\" or \"private\" creates a single point of failure for thousands of devices. Upgrade to SNMPv3 authPriv and restrict management access to trusted NMS IPs with ACLs to protect your entire topology.\n\n#Shorts #SNMPv3Secure #NetworkSecurity #CyberSec #ITOps #SNMP",
+   "tags": [
+    "SNMPv3Secure",
+    "NetworkSecurity",
+    "CyberSec",
+    "ITOps",
+    "SNMP",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your 3,000-device network could be exposed by one SNMP string.",
+   "video_id": "8KgqUm-3kAY",
+   "ig_id": "18122506075900826"
   }
  }
 }
