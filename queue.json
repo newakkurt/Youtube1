@@ -90,7 +90,8 @@
   "Why Config Drift Sneaks In and How to Spot It Fast",
   "Why Clock Drift Lets Attackers Hide Their Trail",
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
-  "Why Relying Only on TACACS+ Leaves Switches Exposed"
+  "Why Relying Only on TACACS+ Leaves Switches Exposed",
+  "Why a Separate Management VLAN Beats Weak TACACS+ Controls"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1249,6 +1250,22 @@
    "hook": "Can users on normal VLANs SSH straight into your switches?",
    "video_id": "GRXm0CHJERg",
    "ig_id": "17925508656200549"
+  },
+  "c02279b9": {
+   "title": "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
+   "description": "Learn why isolating the management plane on its own VLAN or VRF is essential, even when you use TACACS+ for authentication. Follow our quick steps to lock down SSH, disable Telnet/HTTP, and keep attackers out of your switches.\n\n#Shorts #MgmtIsolation #NetworkSecurity #CyberSec #Cisco #ITOps",
+   "tags": [
+    "MgmtIsolation",
+    "NetworkSecurity",
+    "CyberSec",
+    "Cisco",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One mis‑configured SSH port lets attackers hijack your whole network.",
+   "video_id": "II9BakWOvv8",
+   "ig_id": "18430423930146252"
   }
  }
 }
