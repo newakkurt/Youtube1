@@ -97,7 +97,8 @@
   "Why Your Switch Forgets Devices After a Reboot",
   "Why Aggressive MAB Timers Crash Your Production Line",
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
-  "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits"
+  "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
+  "Why a Simple DHCP Rate‑Limit Stops Network Storms"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1368,6 +1369,22 @@
    "hook": "One rogue device can crash your DHCP server in seconds.",
    "video_id": "UmRR37vfzJY",
    "ig_id": "17990939283052362"
+  },
+  "717f812d": {
+   "title": "Why a Simple DHCP Rate‑Limit Stops Network Storms",
+   "description": "Learn how applying a DHCP snooping rate‑limit on access ports shields your core services from storms and misbehaving devices. Keep uplink ports unrestricted with dedicated policies to avoid disrupting legitimate DHCP traffic.\n\n#Shorts #DHCPShield #NetworkSecurity #CiscoSwitches #CyberDefense #ITOps",
+   "tags": [
+    "DHCPShield",
+    "NetworkSecurity",
+    "CiscoSwitches",
+    "CyberDefense",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your switch could be silently crashing your DHCP.",
+   "video_id": "Ut5pHbAN1R0",
+   "ig_id": "18243781423315453"
   }
  }
 }
