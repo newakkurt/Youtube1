@@ -95,7 +95,8 @@
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your 3,000-Device Network",
   "Why Your Switch Forgets Devices After a Reboot",
-  "Why Aggressive MAB Timers Crash Your Production Line"
+  "Why Aggressive MAB Timers Crash Your Production Line",
+  "Why Switch Reload Drops Static Devices: Binding Persistence Explained"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1334,6 +1335,22 @@
    "hook": "Slow printers can halt your factory in minutes.",
    "video_id": "mu7pWZzmnZQ",
    "ig_id": "18133819177664190"
+  },
+  "ebf2f0ce": {
+   "title": "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
+   "description": "When a switch reloads, unsaved DHCP snooping bindings disappear, causing IP Source Guard and DAI to drop static devices. Learn how to keep your printers, PLCs, and cameras online by persisting the binding table.\n\n#Shorts #BindingPersistence #NetworkSecurity #CyberOps #SwitchManagement #DHCP",
+   "tags": [
+    "BindingPersistence",
+    "NetworkSecurity",
+    "CyberOps",
+    "SwitchManagement",
+    "DHCP",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Your network loses printers after a switch reboot—why?",
+   "video_id": "aTChQ98RFbE",
+   "ig_id": "18095234684653472"
   }
  }
 }
