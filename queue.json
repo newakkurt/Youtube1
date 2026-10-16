@@ -99,7 +99,8 @@
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
-  "How a Wrong Native VLAN Creates a Double‑Tagging Door"
+  "How a Wrong Native VLAN Creates a Double‑Tagging Door",
+  "Why Silent Config Drift Breaks Switches and How to Detect It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1402,6 +1403,22 @@
    "hook": "One native VLAN mistake opens a double‑tagging backdoor.",
    "video_id": "85QuD6Y2dJQ",
    "ig_id": "17881335486652074"
+  },
+  "0cc279f7": {
+   "title": "Why Silent Config Drift Breaks Switches and How to Detect It",
+   "description": "Discover how unnoticed configuration drift can cripple your switches and open security holes. Learn a simple golden‑config check with rConfig or Ansible that alerts you before any automatic changes are applied.\n\n#Shorts #configdrift #networksecurity #devops #automation #itops",
+   "tags": [
+    "configdrift",
+    "networksecurity",
+    "devops",
+    "automation",
+    "itops",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Why does a perfectly healthy switch suddenly behave oddly?",
+   "video_id": "_IZStUVz9X0",
+   "ig_id": "18643990351035636"
   }
  }
 }
