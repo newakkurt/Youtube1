@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
@@ -100,7 +99,8 @@
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
   "Why Silent Config Drift Breaks Switches and How to Detect It",
-  "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network"
+  "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
+  "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1435,6 +1435,22 @@
    "hook": "One mis‑configured storm can halt your whole plant.",
    "video_id": "8ggEMoxk2oA",
    "ig_id": "18109309508209706"
+  },
+  "e3c09f64": {
+   "title": "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
+   "description": "Learn how enabling PortFast with BPDU Guard on user ports automatically shuts down rogue mini‑switches, preventing loops and root bridge takeover. Don't forget to set an err‑disable recovery timer, or you'll be stuck handling manual re‑enables each time.\n\n#Shorts #PortFastGuard #NetworkSecurity #SwitchConfig #STP #CyberOps",
+   "tags": [
+    "PortFastGuard",
+    "NetworkSecurity",
+    "SwitchConfig",
+    "STP",
+    "CyberOps",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A tiny switch on a desk can take down your whole network.",
+   "video_id": "7cYyJzlB0UA",
+   "ig_id": "17984233104084565"
   }
  }
 }
