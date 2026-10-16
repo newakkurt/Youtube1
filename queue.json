@@ -98,7 +98,8 @@
   "Why Aggressive MAB Timers Crash Your Production Line",
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
-  "Why a Simple DHCP Rate‑Limit Stops Network Storms"
+  "Why a Simple DHCP Rate‑Limit Stops Network Storms",
+  "How a Wrong Native VLAN Creates a Double‑Tagging Door"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1385,6 +1386,22 @@
    "hook": "Your switch could be silently crashing your DHCP.",
    "video_id": "Ut5pHbAN1R0",
    "ig_id": "18243781423315453"
+  },
+  "767e1c22": {
+   "title": "How a Wrong Native VLAN Creates a Double‑Tagging Door",
+   "description": "A misconfigured native VLAN can trigger CDP/STP errors and enable VLAN hopping. Isolate unused ports in a blackhole VLAN and shut them down to lock the door.\n\n#Shorts #VLANsecurity #NetworkSecurity #Cybersecurity #SwitchConfig #VLAN",
+   "tags": [
+    "VLANsecurity",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "SwitchConfig",
+    "VLAN",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One native VLAN mistake opens a double‑tagging backdoor.",
+   "video_id": "85QuD6Y2dJQ",
+   "ig_id": "17881335486652074"
   }
  }
 }
