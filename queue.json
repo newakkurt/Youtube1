@@ -93,7 +93,8 @@
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
-  "Why One SNMP String Can Leak Your 3,000-Device Network"
+  "Why One SNMP String Can Leak Your 3,000-Device Network",
+  "Why Your Switch Forgets Devices After a Reboot"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1300,6 +1301,22 @@
    "hook": "Your 3,000-device network could be exposed by one SNMP string.",
    "video_id": "8KgqUm-3kAY",
    "ig_id": "18122506075900826"
+  },
+  "65ea9820": {
+   "title": "Why Your Switch Forgets Devices After a Reboot",
+   "description": "A quick guide to preventing device loss after a switch reload. Save the snooping binding table and set manual static bindings for critical hardware.\n\n#Shorts #SwitchBinding #NetworkSecurity #Cybersecurity #ITInfrastructure #DHCP",
+   "tags": [
+    "SwitchBinding",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITInfrastructure",
+    "DHCP",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Switch reboot wipes static devices—why does it happen?",
+   "video_id": "ZehycXrqwMs",
+   "ig_id": "18495289687109629"
   }
  }
 }
