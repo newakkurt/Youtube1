@@ -96,7 +96,8 @@
   "Why One SNMP String Can Leak Your 3,000-Device Network",
   "Why Your Switch Forgets Devices After a Reboot",
   "Why Aggressive MAB Timers Crash Your Production Line",
-  "Why Switch Reload Drops Static Devices: Binding Persistence Explained"
+  "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
+  "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1351,6 +1352,22 @@
    "hook": "Your network loses printers after a switch reboot—why?",
    "video_id": "aTChQ98RFbE",
    "ig_id": "18095234684653472"
+  },
+  "a4580c71": {
+   "title": "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
+   "description": "Setting DHCP snooping rate limits on untrusted ports stops rogue floods and starvation attacks by triggering err-disable. Always keep trunk uplinks trusted so legitimate aggregated traffic passes without interruption.\n\n#Shorts #dhcpsnooping #networksecurity #cybersecurity #cisco #sysadmin",
+   "tags": [
+    "dhcpsnooping",
+    "networksecurity",
+    "cybersecurity",
+    "cisco",
+    "sysadmin",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One rogue device can crash your DHCP server in seconds.",
+   "video_id": "UmRR37vfzJY",
+   "ig_id": "17990939283052362"
   }
  }
 }
