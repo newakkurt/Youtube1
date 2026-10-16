@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Switch Güvenliğinde Bu DHCP Hatasını Yapmayın!",
   "Yedeksiz Otomasyon Ağınızı Çökertir! Önce Backup, Sonra Değişiklik",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
@@ -100,7 +99,8 @@
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
-  "Why Silent Config Drift Breaks Switches and How to Detect It"
+  "Why Silent Config Drift Breaks Switches and How to Detect It",
+  "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1419,6 +1419,22 @@
    "hook": "Why does a perfectly healthy switch suddenly behave oddly?",
    "video_id": "_IZStUVz9X0",
    "ig_id": "18643990351035636"
+  },
+  "6b6b9adf": {
+   "title": "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
+   "description": "Storm control settings can either protect your network or shut down critical factory traffic. Learn how to set thresholds, choose the right actions, and fine‑tune without breaking video or industrial protocols.\n\n#Shorts #StormControl #NetworkSecurity #CyberDefense #ITOps #IndustrialIoT",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "CyberDefense",
+    "ITOps",
+    "IndustrialIoT",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "One mis‑configured storm can halt your whole plant.",
+   "video_id": "8ggEMoxk2oA",
+   "ig_id": "18109309508209706"
   }
  }
 }
