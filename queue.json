@@ -94,7 +94,8 @@
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your 3,000-Device Network",
-  "Why Your Switch Forgets Devices After a Reboot"
+  "Why Your Switch Forgets Devices After a Reboot",
+  "Why Aggressive MAB Timers Crash Your Production Line"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1317,6 +1318,22 @@
    "hook": "Switch reboot wipes static devices—why does it happen?",
    "video_id": "ZehycXrqwMs",
    "ig_id": "18495289687109629"
+  },
+  "3d3d5901": {
+   "title": "Why Aggressive MAB Timers Crash Your Production Line",
+   "description": "Learn how misconfigured MAB timers can cripple a production line and how to set safe values. Follow FortiNAC best‑practice guidance to prevent unauthorized VLAN drops and define fail‑open behavior.\n\n#Shorts #FortiNAC #NetworkSecurity #CyberOps #ITInfrastructure #NAC",
+   "tags": [
+    "FortiNAC",
+    "NetworkSecurity",
+    "CyberOps",
+    "ITInfrastructure",
+    "NAC",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Slow printers can halt your factory in minutes.",
+   "video_id": "mu7pWZzmnZQ",
+   "ig_id": "18133819177664190"
   }
  }
 }
