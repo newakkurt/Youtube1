@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
@@ -100,7 +99,8 @@
   "Why Silent Config Drift Breaks Switches and How to Detect It",
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
   "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
-  "Why MAB Timers Matter: Protect Printers and Keep Production Running"
+  "Why MAB Timers Matter: Protect Printers and Keep Production Running",
+  "Why Aggressive Storm Control Silently Drops Industrial Feeds"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1467,6 +1467,22 @@
    "hook": "Slow printers can halt your entire factory—if MAB timers are wrong.",
    "video_id": "g1_3kCPMjU0",
    "ig_id": "18136589167652877"
+  },
+  "ef594b54": {
+   "title": "Why Aggressive Storm Control Silently Drops Industrial Feeds",
+   "description": "A looping switchport or faulty network card can trigger traffic storms that lock down an entire subnet. Learn why monitoring traffic baselines before setting storm control thresholds prevents unexpected industrial outages.\n\n#Shorts #StormControl #NetworkEngineering #CyberSecurity #SysAdmin #Cisco",
+   "tags": [
+    "StormControl",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SysAdmin",
+    "Cisco",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A single malfunctioning network card can instantly freeze your entire VLAN.",
+   "video_id": "naMaPIfqDl8",
+   "ig_id": "18139417702627111"
   }
  }
 }
