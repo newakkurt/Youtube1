@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Every Device Needs a Central Syslog – Stop Guessing!",
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
@@ -100,7 +99,8 @@
   "Why Aggressive Storm Control Silently Drops Industrial Feeds",
   "Why a Switch Reboot Blacklists Cameras and Printers",
   "How an Empty Snooping Table Silently Kills Static Devices",
-  "Why a Public SNMP Community Can Leak a 3,000-Device Network"
+  "Why a Public SNMP Community Can Leak a 3,000-Device Network",
+  "Why Fast MAB Timers Silently Quarantine Sleeping Printers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1531,6 +1531,22 @@
    "hook": "Public SNMP community leaks your entire 3,000-device network.",
    "video_id": "qCFuycu9qCw",
    "ig_id": "17961171299996694"
+  },
+  "e6509222": {
+   "title": "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
+   "description": "Learn how probe response timeouts isolate sleeping printers during network reauthentication. Discover why balancing inactivity timers and setting RADIUS fail-open policies prevents catastrophic production outages.\n\n#Shorts #FortiNAC #NetworkSecurity #SysAdmin #CyberSecurity #Networking",
+   "tags": [
+    "FortiNAC",
+    "NetworkSecurity",
+    "SysAdmin",
+    "CyberSecurity",
+    "Networking",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Why do your office printers suddenly get dumped into a quarantine VLAN?",
+   "video_id": "StJK6xI70Ds",
+   "ig_id": "17925471729202236"
   }
  }
 }
