@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Sticky MAC Causes Err‑Disable and How to Repair It",
@@ -100,7 +99,8 @@
   "How an Empty Snooping Table Silently Kills Static Devices",
   "Why a Public SNMP Community Can Leak a 3,000-Device Network",
   "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
-  "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN"
+  "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
+  "Why Time Drift Breaks Incident Response – Sync Your NTP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1547,6 +1547,22 @@
    "hook": "Why do your office printers suddenly get dumped into a quarantine VLAN?",
    "video_id": "StJK6xI70Ds",
    "ig_id": "17925471729202236"
+  },
+  "6ee0948d": {
+   "title": "Why Time Drift Breaks Incident Response – Sync Your NTP",
+   "description": "Discover how even a one‑second clock drift can cripple your security investigations and learn quick steps to keep every device perfectly synchronized. Use built‑in tools like chrony or ntpstat to verify NTP health today.\n\n#Shorts #TimeSync #NetworkSecurity #CyberSecurity #NTP #IncidentResponse",
+   "tags": [
+    "TimeSync",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "NTP",
+    "IncidentResponse",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "A single second off can hide a breach.",
+   "video_id": "r798UM2wY_c",
+   "ig_id": "18500766613103522"
   }
  }
 }
