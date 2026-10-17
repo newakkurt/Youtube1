@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Dynamic ARP Inspection Silently Kills Good Traffic",
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
   "How to Safely Configure Switches with Ansible’s Dry‑Run First",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
@@ -100,7 +99,8 @@
   "Why a Switch Reboot Blacklists Cameras and Printers",
   "How an Empty Snooping Table Silently Kills Static Devices",
   "Why a Public SNMP Community Can Leak a 3,000-Device Network",
-  "Why Fast MAB Timers Silently Quarantine Sleeping Printers"
+  "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
+  "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN"
  ],
  "items": {
   "dcdc2b1c": {
