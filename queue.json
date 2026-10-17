@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
   "Why Sticky MAC Makes Your Switch Shut Down and How to Fix It",
@@ -100,7 +99,8 @@
   "Why MAB Timers Matter: Protect Printers and Keep Production Running",
   "Why Aggressive Storm Control Silently Drops Industrial Feeds",
   "Why a Switch Reboot Blacklists Cameras and Printers",
-  "How an Empty Snooping Table Silently Kills Static Devices"
+  "How an Empty Snooping Table Silently Kills Static Devices",
+  "Why a Public SNMP Community Can Leak a 3,000-Device Network"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1515,6 +1515,22 @@
    "hook": "Did a switch reload suddenly knock your static cameras and printers offline?",
    "video_id": "sKeABzusGGI",
    "ig_id": "18350117152254087"
+  },
+  "c1ff6809": {
+   "title": "Why a Public SNMP Community Can Leak a 3,000-Device Network",
+   "description": "Leaving the default 'public' SNMP community active lets an attacker harvest topology and config from every device in a 3,000-node network. Switch to SNMPv3 authPriv, lock access with ACLs, and protect your entire infrastructure.\n\n#Shorts #SNMPv3 #NetworkSecurity #Cybersecurity #SNMP #ACL",
+   "tags": [
+    "SNMPv3",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "SNMP",
+    "ACL",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Public SNMP community leaks your entire 3,000-device network.",
+   "video_id": "qCFuycu9qCw",
+   "ig_id": "17961171299996694"
   }
  }
 }
