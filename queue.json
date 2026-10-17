@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
@@ -100,7 +99,8 @@
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
   "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
   "Why MAB Timers Matter: Protect Printers and Keep Production Running",
-  "Why Aggressive Storm Control Silently Drops Industrial Feeds"
+  "Why Aggressive Storm Control Silently Drops Industrial Feeds",
+  "Why a Switch Reboot Blacklists Cameras and Printers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1483,6 +1483,22 @@
    "hook": "A single malfunctioning network card can instantly freeze your entire VLAN.",
    "video_id": "naMaPIfqDl8",
    "ig_id": "18139417702627111"
+  },
+  "a8a77639": {
+   "title": "Why a Switch Reboot Blacklists Cameras and Printers",
+   "description": "A switch reboot clears volatile DHCP snooping tables, causing DAI and IP Source Guard to drop traffic from static devices. Configure database persistence and static bindings to keep critical endpoints online.\n\n#Shorts #DHCPSnooping #NetworkSecurity #CiscoNetworking #SysAdmin #CyberSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "CiscoNetworking",
+    "SysAdmin",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Did your switch reload and instantly kick your static cameras offline?",
+   "video_id": "2UWYShHjFMY",
+   "ig_id": "18079583306712847"
   }
  }
 }
