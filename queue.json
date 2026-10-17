@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
   "Why Every Device Needs a Central Syslog – Stop Guessing!",
   "Why Dynamic ARP Inspection Silently Kills Good Traffic",
@@ -100,7 +99,8 @@
   "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
   "Why MAB Timers Matter: Protect Printers and Keep Production Running",
   "Why Aggressive Storm Control Silently Drops Industrial Feeds",
-  "Why a Switch Reboot Blacklists Cameras and Printers"
+  "Why a Switch Reboot Blacklists Cameras and Printers",
+  "How an Empty Snooping Table Silently Kills Static Devices"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1499,6 +1499,22 @@
    "hook": "Did your switch reload and instantly kick your static cameras offline?",
    "video_id": "2UWYShHjFMY",
    "ig_id": "18079583306712847"
+  },
+  "9de500fb": {
+   "title": "How an Empty Snooping Table Silently Kills Static Devices",
+   "description": "When a network switch reboots with an empty snooping table, security features like DAI can instantly block static devices. Learn how database persistence and manual bindings prevent sudden network outages.\n\n#Shorts #DHCPSnooping #NetworkSecurity #Cisco #SysAdmin #CyberSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "Cisco",
+    "SysAdmin",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Did a switch reload suddenly knock your static cameras and printers offline?",
+   "video_id": "sKeABzusGGI",
+   "ig_id": "18350117152254087"
   }
  }
 }
