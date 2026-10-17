@@ -2,7 +2,6 @@
  "offset": 0,
  "history": [
   "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
-  "Sticky MAC ile Port Neden Err-Disable Olur? Çözümü Anlatıyoruz",
   "Ansible ile Switch Konfigürasyonunda Riskleri Önceden Gör!",
   "DHCP Snooping ile Sahte DHCP'leri Nasıl Engelleriz? İşte Tek Çözüm!",
   "DHCP Snooping Açıkken Uplink ve Kullanıcı Portları Nasıl Ayarlanmalı?",
@@ -100,7 +99,8 @@
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
   "Why Silent Config Drift Breaks Switches and How to Detect It",
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
-  "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks"
+  "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
+  "Why MAB Timers Matter: Protect Printers and Keep Production Running"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1451,6 +1451,22 @@
    "hook": "A tiny switch on a desk can take down your whole network.",
    "video_id": "7cYyJzlB0UA",
    "ig_id": "17984233104084565"
+  },
+  "f9290513": {
+   "title": "Why MAB Timers Matter: Protect Printers and Keep Production Running",
+   "description": "Learn how misconfigured MAB re‑authentication and inactivity timers can cripple slow devices like printers, sending them to the wrong VLAN. We'll show you the right timer settings and fail‑open strategy to keep your production line humming.\n\n#Shorts #MABTimers #NetworkSecurity #CyberOps #ITInfrastructure #IndustrialIoT",
+   "tags": [
+    "MABTimers",
+    "NetworkSecurity",
+    "CyberOps",
+    "ITInfrastructure",
+    "IndustrialIoT",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Slow printers can halt your entire factory—if MAB timers are wrong.",
+   "video_id": "g1_3kCPMjU0",
+   "ig_id": "18136589167652877"
   }
  }
 }
