@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
   "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
   "The Hidden Reason Secure Switches Block Real Users",
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
@@ -100,7 +99,8 @@
   "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
   "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
   "Manual Changes Cause Config Drift: Diff with Ansible",
-  "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing"
+  "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
+  "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1749,6 +1749,23 @@
    "ig_id": "18139193626540345",
    "file_id": "BAACAgQAAxkDAAIBc2rU_I8c7yuMCZao4CMq7UGOCj0OAAL5JAAC8y-pUnFW1FlNoacaPQQ",
    "message_id": 371
+  },
+  "bd085a86": {
+   "title": "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
+   "description": "When an authentication server crashes, default 802.1X ports fail-close and can halt entire production lines. Configure RADIUS critical authentication policies to keep essential network services running during server outages.\n\n#Shorts #8021X #NetworkSecurity #Cisco #NetworkEngineering #SysAdmin",
+   "tags": [
+    "8021X",
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never deploy 802.1X authentication without defining port failure behavior.",
+   "ig_id": "17892690441653393",
+   "file_id": "BAACAgQAAxkDAAIBd2rVAAGy3pV7T2-26RCPdvc_twJoKAACAyUAAvMvqVLuumnU6HooGD0E",
+   "message_id": 375
   }
  }
 }
