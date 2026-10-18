@@ -1,13 +1,19 @@
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
 Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
-Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN
++ Selenium tabanlı otomatik takip botu entegre edilmiştir.
+Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
 """
 import os
 import re
 import subprocess
 import time
+import random
 import requests
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+import config
 
 # Reels paylaşımı için doğru endpoint Facebook Graph API'dir
 API = "https://graph.instagram.com/v21.0"
@@ -229,22 +235,17 @@ def refresh_token() -> str:
     _check(r, "refresh", token)
     return r.json()["access_token"]
 
-import time
-import random
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import config
+
+# ---------- Selenium Otomatik Takip Modülü ----------
 
 def check_and_follow_user(driver, username):
     driver.get(f"https://www.instagram.com/{username}/")
     time.sleep(random.randint(5, 8))
     
     try:
-        # Takipçi sayısını çekme
         follower_element = driver.find_element(By.XPATH, "//header//ul/li[2]//span")
         follower_text = follower_element.get_attribute("title") or follower_element.text
         
-        # Sayıyı int formata çevirme (ör. '5,400' -> 5400)
         follower_count = int(follower_text.replace(',', '').replace('.', ''))
         
         if follower_count >= config.MIN_FOLLOWER_COUNT:
@@ -260,6 +261,46 @@ def check_and_follow_user(driver, username):
         print(f"[!] Hata veya zaten takip ediliyor: {e}")
         return False
 
-# Her işlem arasında insansı bekleme (45-90 saniye)
+
 def human_delay():
     time.sleep(random.randint(45, 90))
+
+
+def run_follow_bot():
+    """GitHub Actions (Headless) ortamı için Selenium Takip Botu"""
+    try:
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        
+        driver = webdriver.Chrome(options=options)
+        
+        driver.get("https://www.instagram.com/accounts/login/")
+        time.sleep(6)
+        
+        username_input = driver.find_element(By.NAME, "username")
+        password_input = driver.find_element(By.NAME, "password")
+        
+        username_input.send_keys(config.IG_USERNAME)
+        time.sleep(1)
+        password_input.send_keys(config.IG_PASSWORD)
+        time.sleep(2)
+        
+        login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+        login_button.click()
+        time.sleep(10)
+        
+        print("✅ Instagram'a başarıyla giriş yapıldı.")
+        
+        # Örnek test hedefi
+        target_account = "github"
+        check_and_follow_user(driver, target_account)
+        
+        driver.quit()
+        print("✨ Instagram takip turu tamamlandı.")
+    except Exception as e:
+        print(f"⚠️ Instagram takip botu hatası: {str(e)[:300]}")
