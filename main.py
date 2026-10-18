@@ -81,6 +81,23 @@ def post_linkedin_status(state):
         tg.send(f"⚠️ LinkedIn Status Hatası: {str(e)[:400]}")
 
 
+def upload_youtube(path, title, desc, tags):
+    """YouTube'a yükler. Hata olursa Telegram'a net uyarı yollar ve None döner (akış durmaz)."""
+    try:
+        return youtube.upload(path, title, desc, tags)
+    except Exception as e:
+        msg = str(e)
+        if "invalid_grant" in msg or "RefreshError" in type(e).__name__:
+            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\n"
+                    "1) get_refresh_token.py ile yeni token al\n"
+                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\n"
+                    "3) Google Cloud → OAuth consent screen → 'In production' yap "
+                    "(Testing'de token 7 günde ölür)")
+        else:
+            tg.send(f"⚠️ YouTube yükleme hatası: {msg[:400]}")
+        return None
+
+
 def generate_one(state):
     import script_gen
     import video_maker
@@ -96,11 +113,16 @@ def generate_one(state):
             "hook": script["scenes"][0]["text"]}
 
     if AUTO_APPROVE:
-        vid = youtube.upload(path, title, desc, tags)
-        item.update(status="published", video_id=vid)
-        post_instagram(item, path)
+        vid = upload_youtube(path, title, desc, tags)
+        post_instagram(item, path)   # YouTube başarısız olsa bile Instagram/LinkedIn devam eder
         post_linkedin(item, path)
-        tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
+        if vid:
+            item.update(status="published", video_id=vid)
+            tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
+        else:
+            # Video kaybolmasın: Telegram'a koy, token düzelince ✅ ile sadece YouTube'a yüklenir
+            file_id, mid = tg.send_video(path, f"⚠️ YouTube'a yüklenemedi\n{title}\n\n{desc}", uid)
+            item.update(status="yt_failed", file_id=file_id, message_id=mid)
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
         item.update(file_id=file_id, message_id=mid)
@@ -130,7 +152,7 @@ def li_test(state):
 def handle_callback(state, cq):
     action, uid = cq["data"].split(":")
     item = state["items"].get(uid)
-    if not item or item["status"] != "pending":
+    if not item or item["status"] not in ("pending", "yt_failed"):
         return tg.answer_cb(cq["id"], "Zaten işlendi")
     if action == "no":
         item["status"] = "rejected"
@@ -138,10 +160,14 @@ def handle_callback(state, cq):
         return tg.edit_caption(item["message_id"], f"❌ Reddedildi: {item['title']}")
     tg.answer_cb(cq["id"], "Yükleniyor...")
     path = tg.download(item["file_id"], OUT / f"{uid}.mp4")
-    vid = youtube.upload(path, item["title"], item["description"], item["tags"])
+    vid = upload_youtube(path, item["title"], item["description"], item["tags"])
+    if not vid:
+        return  # durum aynı kalır, token düzelince tekrar onaylanabilir
+    already_posted = item["status"] == "yt_failed"  # Instagram/LinkedIn zaten gitti, tekrar etme
     item.update(status="published", video_id=vid)
-    post_instagram(item, path)
-    post_linkedin(item, path)
+    if not already_posted:
+        post_instagram(item, path)
+        post_linkedin(item, path)
     tg.edit_caption(item["message_id"], f"✅ Yayınlandı: {item['title']}\nhttps://youtube.com/shorts/{vid}")
 
 
@@ -235,6 +261,7 @@ if __name__ == "__main__":
         "igtest": lambda: ig_test(state),
         "lead": run_lead,
         "li_status": lambda: post_linkedin_status(state),
+        "ytcheck": lambda: tg.send(youtube.check_token()[1]),
         "litest": lambda: li_test(state),
     }
 
