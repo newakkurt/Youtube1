@@ -8,3 +8,103 @@ Storm Control: Kullanıcı portlarında broadcast/multicast/unicast storm-contro
 NTP senkronizasyonu: Tüm cihazlar aynı NTP kaynaklarına bağlı olsun ve timezone aynı olsun. Syslog, TACACS+ accounting ve sertifikalar zamana bağlı; saatler kayarsa olay korelasyonu imkansızlaşır, sonradan "hangi değişiklik önce oldu" sorusu cevapsız kalır.
 Config drift tespiti: rConfig ya da Ansible ile "golden config" şablonu tanımla ve periyodik olarak canlı konfigürasyonu şablonla karşılaştır. Biri konsoldan elle yaptığı değişikliği unutursa, aylar sonra neden bir switch'in diğerlerinden farklı davrandığını bulmak saatler alır. Fark çıkınca otomatik düzeltme yerine önce alarm üret.
 Fiziksel port ve MAB/802.1X temposu: FortiNAC ile MAB kullanıyorsan, yazıcı gibi yavaş açılan cihazlar için reauth ve inactivity timer'larını doğru ayarla. Çok agresif timer'lar cihazı sürekli yetkisiz VLAN'a düşürür. Ayrıca fail-open davranışını (RADIUS/NAC sunucusu ulaşılamazken ne olacağı) önceden kararlaştır, yoksa NAC sunucusu çöktüğünde üretim hattı durabilir.
+Kullanıcı masasına gizlice mini switch takarsa tüm ağ kilitlenebilir; cihaz portlarında PortFast ve BPDU Guard açarak portun err-disable olmasını sağlayın ve root bridge ele geçirilme riskini sıfırlayın.
+Err-disable recovery süresini (örneğin 300 saniye) ayarlamazsanız, kapatılan her port için bizzat sahaya gidip manuel müdahale etmek zorunda kalırsınız.
+Trunk bağlantılarda native VLAN ayarını varsayılan VLAN 1'de bırakmak double tagging yani VLAN Hopping saldırılarına kapı açar; her iki uçta da kullanılmayan izole bir VLAN ID tanımlayın.
+Ofisteki kullanılmayan boş portları güvenli bir "blackhole" VLAN'a atıp shutdown durumuna getirin ki yetkisiz kişilerin fiziksel erişimle ağa sızmasını engelleyin.
+Ağınızda bir döngü ya da arızalı bir NIC belirdiğinde oluşan broadcast fırtınası tüm VLAN'ı felç eder; kullanıcı portlarında storm-control eşiği tanımlayıp aksiyon olarak trap veya shutdown seçin.
+Storm-control eşiğini çok agresif tutarsanız, fabrika ortamındaki endüstriyel protokoller veya IP kamera video akışları sebepsiz yere kesilebilir; eşikleri belirlemeden önce trafiği izleyin.
+Untrusted kullanıcı portlarına DHCP Snooping rate-limit (örneğin 15 pps) koyun, aksi halde starvation saldırısı ya da arızalı bir cihaz tüm IP havuzunu tüketip ana sunucuyu kilitler.
+Trusted uplink portlarında DHCP rate-limit sınırlandırması yapmayın; aksi takdirde meşru ana sunucu trafiğini ve IP dağıtımını engellemiş olursunuz.
+DHCP Snooping binding tablosunu flash belleğe ya da TFTP/FTP sunucusuna kaydetmezseniz, switch reload olduğunda tablo tamamen boşalır.
+Binding tablosu boşaldığında IP Source Guard ve DAI, statik IP kullanan cihazları (yazıcılar, PLC'ler, kameralar) ve kirası yenilenmemiş istemcileri anında ağdan düşürür.
+Tüm switch'ler, Firewall'lar ve sunucular aynı NTP kaynaklarına ve aynı timezone'a bağlı olmalıdır; aksi halde zamanı kaymış bir ağda kriz anında log korelasyonu yapılamaz.
+Syslog kayıtları, TACACS+ accounting logları ve sertifikalar zamana dayalı olduğu için saat uyuşmazlığında "Hangi değişiklik önce yapıldı?" sorusu cevapsız kalır.
+Yönetim trafiğini (Management Plane) kesinlikle ayrı bir Management VLAN ve VRF içerisine alın; kullanıcı VLAN'larından switch yönetimine erişimi engelleyin.
+Switch'ler üzerinde Telnet ve HTTP servislerini tamamen kapatıp SSH erişimini sadece ACL veya line vty access-class ile yetkili bir jump host/bastion sunucusundan verin.
+Eski ve güvensiz SNMP v2c community'lerini tamamen kaldırıp, kimlik doğrulama ve şifreleme sunan SNMPv3 (authPriv) yapısına geçin.
+SNMP erişimini sadece NMS (Yönetim Sunucusu) IP'lerine ACL ile kısıtlayın; "public/private" varsayılan string'lerini bırakmak tüm topoloji şemanızın dışarı sızmasına neden olur.
+rConfig, Netmiko veya Ansible kullanarak "golden config" şablonları tanımlayın ve canlı konfigürasyon ile periyodik olarak karşılaştırarak Config Drift durumunu tespit edin.
+Canlı konfigürasyonda şablondan farklı bir değişiklik tespit edildiğinde otomatik düzeltme yapmak yerine önce alarm üretin; anlık müdahaleler planlı istisnaları bozabilir.
+Python ve Netmiko/Napalm kütüphaneleriyle periyodik backup ve komut dağıtım script'leri yazarak yüzlerce cihazın konfigürasyon yönetimini otomatize edin.
+FortiNAC veya RADIUS ile MAB (MAC Authentication Bypass) kullanıyorsanız, yavaş açılan cihazlar için reauth ve inactivity timer'larını doğru yapılandırın.
+Agresif NAC timer'ları, yazıcı ve endüstriyel cihazların sürekli yetkisiz (quarantine) VLAN'a düşmesine ve hizmet kesintilerine yol açar.
+RADIUS/NAC sunucusu ulaşılamaz hale geldiğinde portların fail-open mı yoksa fail-close mu davranacağını önceden kurgulayın; aksi takdirde bir sunucu arızası tüm üretimi durdurur.
+VTY (Virtual Terminal) hatlarına `exec-timeout` süresi tanımlayarak, açık unutulan terminal oturumlarının belirli bir süre sonra otomatik olarak kapanmasını sağlayın.
+Switch konsol portuna güçlü bir şifre koyun ve fiziksel olarak kabine erişebilen kişilerin yetkisiz müdahalelerini engellemek için konsol oturumlarına zaman aşımı ekleyin.
+LLDP (Link Layer Discovery Protocol) ve CDP (Cisco Discovery Protocol) protokollerini sadece uç kullanıcı portlarında değil, gerekiyorsa tamamen kapatarak komşu cihaz keşif sızıntılarını önleyin.
+Unutulmuş veya kullanılmayan VTY hatlarının sayısını sınırlandırarak eşzamanlı brute-force (kaba kuvvet) oturum açma saldırılarını imkansızlaştırın.
+Uyumlu switch'lerde "IP Directed Broadcast" özelliğini global olarak kapatın, aksi takdirde ağınız üzerinden Smurf DDoS saldırıları gerçekleştirilebilir.
+ICMP yönlendirme (Redirects) paketlerini arayüz bazında devre dışı bırakarak potansiyel yönlendirme tablosu zehirlenmelerinin önüne geçin.
+Proxy ARP özelliğini gerekmedikçe tüm L3 arayüzlerde kapatın; bu, gereksiz broadcast trafiğini önler ve ARP tablosunun şişmesini engeller.
+Unicast Reverse Path Forwarding (uRPF) kullanarak kaynak IP adresi sahteciliğini (IP Spoofing) ağ sınırında engelleyin.
+DHCP Server port güvenliği için sadece yetkili switch uplink portlarının DHCP teklifi (Offer/Ack) yapabilmesini DHCP Snooping Trust ayarlarıyla güvence altına alın.
+Spanning Tree protokolünde Root Bridge seçimini şansa bırakmayın; ana omurga switch'leriniz öncelikli (priority) değerlerini manuel olarak en düşük değere çekerek sabitleyin.
+Spanning Tree Loop Guard özelliğini omurga (core/distribution) trunk portlarında aktif edin; aksi takdirde tek yönlü fiber kopmalarında döngüler oluşabilir.
+Spanning Tree UDLD (UniDirectional Link Detection) protokolünü fiber optik bağlantılarda aktif ederek tek yönlü link arızalarından kaynaklanan ağ çökmelerini engelleyin.
+Port Security özelliklerini uç cihaz portlarında maksimum MAC adresi sınırlaması (örneğin max 1 veya 2) ile sınırlandırıp ihlal durumunda portu korumaya alın.
+Dinamik VLAN atamaları ve 802.1X yapılandırmalarında misafir (Guest) VLAN ve karantina (Quarantine) VLAN segmentasyonunu tamamen izole edin.
+WAN veya dışarıya bakan arayüzlerde IP MTU boyutlarını ve Path MTU Discovery mekanizmalarını optimize ederek paket parçalanmalarından kaynaklı performans kayıplarını önleyin.
+IPv6 kullanmıyorsanız, switch ve router'lar üzerinde IPv6 komutlarını ve global IPv6 yönlendirmesini devre dışı bırakarak saldırı yüzeyini daraltın.
+Web tabanlı yönetim arayüzlerini (HTTP/HTTPS) switch'ler üzerinde tamamen kapatın; yönetim sadece CLI (SSH) üzerinden yürütülsün.
+TFTP yerine güvenli ve şifreli dosya transfer protokolleri olan SFTP veya SCP kullanarak konfigürasyon ve imaj yedeklemelerini gerçekleştirin.
+Syslog sunucunuza gönderilen log seviyelerini iyi ayarlayın; her "Debug" seviyesindeki mesajı göndererek ağ cihazının CPU'sunu ve log sunucusunu boğmayın, kritik seviyelerde tutun.
+NetFlow veya sFlow analiz araçlarını omurga switch'lerde aktif ederek anormal trafik hareketlerini, port taramalarını ve bant genişliği sızıntılarını anında tespit edin.
+IP SLA ve Track objeleri tanımlayarak yedekli WAN veya gateway hatlarınızda kesinti olduğunda otomatik olarak yedek rotaya geçiş mekanizmasını kurun.
+HSRP, VRRP veya GLBP gibi ilk hop ağ geçidi (First-Hop Redundancy) protokollerinde kimlik doğrulama (authentication) şifresi kullanarak yetkisiz router eklenmesini önleyin.
+OSPF veya EIGRP gibi dinamik yönlendirme protokollerinde alan (area) şifrelemesi (MD5 veya SHA) kullanarak sahte yönlendirme duyurularını engelleyin.
+Pasif arayüz (Passive Interface) yapılandırmasını erişim katmanındaki OSPF/EIGRP portlarında tanımlayarak gereksiz yönlendirme paketlerinin uç cihazlara gitmesini önleyin.
+BGP peering kullanan edge cihazlarda Maximum Prefix sınırları tanımlayarak komşu sistemlerin size tüm internet tablosunu şişirecek kadar rota basmasını engelleyin.
+AS-Path ACL filtrelemeleri ile BGP üzerinden gelen yanlış veya istenmeyen rota duyurularını (Route Leaking) engelleyin.
+Port Channel (EtherChannel) yapılandırmalarında PAgP yerine endüstri standardı olan LACP (802.3ad) protokolünü tercih edin ve modunu "active" olarak ayarlayın.
+EtherChannel portlarında load-balancing (yük dengeleme) algoritmasını MAC adresi yerine kaynak/hedef IP veya TCP/UDP portlarına göre optimize edin.
+Jumbo Frame (MTU 9000) desteği gereken veri tabanı veya depolama (SAN/NAS) VLAN'larında uçtan uca tüm switch portlarında MTU boyutunu artırın.
+Qos (Quality of Service) politikalarında kritik ses (VoIP) ve video trafiğini kuyruklarda önceliklendirerek (Strict Priority Queuing) yoğun saatlerde paket düşmelerini önleyin.
+CoPP (Control Plane Policing) yapılandırması yaparak switch CPU'suna gelen ICMP, SNMP ve yönetim trafiğini sınırlayın; böylece DoS saldırılarının switch yönetimini kilitlemesini önleyin.
+AAA (Authentication, Authorization, Accounting) mimarisinde birincil TACACS+ sunucusu çöktüğünde yerel (local) veritabanına yedek geçiş (fallback) mekanizmasını mutlaka yapılandırın.
+Python paramiko veya netmiko scriptleri ile toplu şifre değiştirme operasyonu yapmadan önce mutlaka test ortamında veya tek bir switch üzerinde deneme yapın.
+Ansible playbook'larında `any_errors_fatal: true` veya hata yönetimi blokları kullanarak bir cihazda hata çıktığında tüm otomasyon zincirinin durmasını ve bozuk konfigürasyon yayılmasını önleyin.
+Git versiyon kontrol sistemini network konfigürasyon yedekleriniz için kullanarak her değişikliğin kim tarafından ve ne zaman yapıldığını takip edilebilir hale getirin.
+Donanım seviyesinde güç kaynağı (Redundant Power Supply - RPS/PSU) ve fan modüllerinin durumunu SNMP trap'leri ile izleyerek olası donanım arızalarını önceden fark edin.
+Optik Fiber SFP modüllerinin optik dBm değerlerini (DOM - Digital Optical Monitoring) periyodik olarak script'lerle sorgulayıp zayıflayan sinyalleri kesinti olmadan tespit edin.
+Kritik bakım pencereleri dışında otomatik konfigürasyon push eden otomasyon script'lerini cron tab veya GitHub Actions üzerinden kesinlikle çalıştırmayın.
+Erişim katmanındaki portlarda 802.1X yapılandırması yaparken, kimlik doğrulama başarısız olursa cihazın düşeceği bir "Auth-Fail VLAN" veya kısıtlı erişim politikası tanımlayın.
+VLAN isimlerini standartlaştırın (Örn: 10-DATA, 20-VOICE, 30-MGMT); otomasyon script'lerinin yanlış VLAN ID'lerine işlem yapmasını önlemek için adlandırma kurallarına sıkı sıkıya uyun.
+Dinamik yönlendirme protokollerinde (OSPF/EIGRP/BGP) TTL Security (GTSM - Generalized TTL Security Mechanism) mekanizmasını aktif ederek doğrudan komşu olmayan cihazlardan gelebilecek sahte yönlendirme paketlerini (CPU exhaustion) önleyin.
+Switch ve router'larda IP source routing özelliğini global olarak devre dışı bırakarak paketlerin kaynak tarafından rotasının manipüle edilmesini engelleyin.
+NTP servislerinde kimlik doğrulama (NTP Authentication) kullanarak yetkisiz veya kötü niyetli sunucuların ağ cihazlarına yanlış saat bilgisi enjekte etmesini (Time Spoofing) öneyin.
+SNMP community veya kullanıcı şifrelerini periyodik olarak otomasyon script'leri ile güncelleyin ve eski kimlik bilgilerini geçiş sürecinden sonra tamamen devre dışı bırakın.
+Ağ cihazlarının loglama (logging) tampon belleğini (buffer) ve log sunucusuna giden kuyruk boyutunu artırarak yoğun kriz anlarında kritik logların kaybolmasını önleyin.
+Syslog mesajlarında milisaniye hassasiyetini (timestamp milli seconds) aktif ederek eşzamanlı gerçekleşen olayların sırasını hatasız tespit edin.
+Kritik omurga cihazlarında CPU ve bellek kullanım eşikleri için SNMP veya Netmiko tabanlı eşik alarmları (Threshold Alerts) kurgulayın.
+Erişim katmanı switch portlarında BPDU Filter özelliğini dikkatli kullanın; yanlış portlarda aktif edilmesi durumunda ağ döngülerine karşı koruma tamamen devre dışı kalabilir.
+Spanning Tree Root Guard özelliğini erişim portlarında değil, sadece root bridge olmaması gereken edge/distribution trunk bağlantılarında aktif edin.
+Cisco switch'lerde Loop Guard ile UDLD özelliklerinin birbirini tamamlayıcı olduğunu unutmayın; UDLD fiber linkler için, Loop Guard ise fiber ve bakır trunk'lardaki STP mekanizma kopmaları için hayati önem taşır.
+Port Security sticky MAC öğrenme özelliğini kullanırken, switch yeniden başladığında kalıcı olması için konfigürasyonu hafızaya (startup-config) kaydettiğinizden emin olun.
+DHCP Snooping veritabanı dosyası için switch flash'ı üzerinde özel bir dizin belirleyin ve dosya yazma sıklığı (timeout) ayarlarını cihaz performansını yormayacak şekilde optimize edin.
+DAI (Dynamic ARP Inspection) aktif edilen VLAN'larda, trusted port olarak sadece DHCP Snooping trust verilen uplink portlarını ve statik ARP girişlerinin yapıldığı sunucu portlarını tanımlayın.
+IP Source Guard yapılandırmasında sadece IP adresi kontrolü (ip verify source) yerine hem IP hem MAC adresi kontrolü (ip verify source port-security) sağlayan modları tercih edin.
+FortiGate veya diğer firewall cihazlarında inter-VLAN trafiği filtrelerken "Any-Any" kuralı yerine en az yetki prensibiyle (Least Privilege) spesifik port ve protokol bazlı kurallar yazın.
+Firewall high availability (HA) cluster yapılarında kalp atışı (heartbeat) arayüzlerini izole fiziksel portlar üzerinden ve cross-cable doğrudan bağlantı ile kurun.
+Firewall konfigürasyonlarında yönetim (administrative) erişimini sadece belirli güvenli IP bloklarına ve HTTPS/SSH protokollerine sınırlandırın.
+VPN (IPsec/SSL) kullanıcıları için çok faktörlü kimlik doğrulama (MFA / 2FA) zorunluluğu getirin; sadece şifre tabanlı uzaktan erişim kimlik avı (phishing) riskini artırır.
+SSL VPN profillerinde idle timeout sürelerini sıkı tutarak, kullanıcıların açık unuttuğu oturumlar üzerinden yetkisiz kişilerin ağa sızmasını engelleyin.
+IPsec VPN tünellerinde Phase 1 ve Phase 2 algoritmalarında zayıf encryption (DES, 3DES, MD5) yerine AES-256 ve SHA-256/SHA-384 gibi güçlü kriptografik standartları kullanın.
+BGP Route Reflector yapılandırmalarında iBGP tam örgü (full-mesh) maliyetini ortadan kaldırırken, yedeklilik için cluster ID yapılandırmasını eksiksiz yapın.
+MPLS L3VPN ortamlarında VRF leak yaparken import ve export Route Target (RT) politikalarını sıkı ACL ve prefix-list filtreleriyle denetleyin.
+Wireless Controller (WAC) yönetiminde kurumsal AP'ler ile controller arasındaki yönetim trafiğini LWAP veya CAPWAP tünelleri içinde şifreli olarak taşıyın.
+Wi-Fi misafir (Guest) ağlarında istemci izolasyonunu (Client Isolation / Peer-to-Peer Blocking) aktif ederek kablosuz kullanıcıların birbirinin trafiğini dinlemesini engelleyin.
+Kablosuz ağlarda Rogue AP tespit ve engelleme (WIDS/WIPS) özelliklerini devreye alarak sahte erişim noktalarının kurumsal ağı taklit etmesini önleyin.
+802.11r (Fast BSS Transition) yapılandırmasını kurumsal Wi-Fi ağlarında aktif ederek el terminali, VoIP telefon ve mobil cihazların hücre geçişlerindeki kopma sürelerini sıfırlayın.
+Python otomasyon script'lerinde kullanıcı adı ve şifre gibi hassas bilgileri kod içine doğrudan yazmak yerine çevresel değişkenler (Environment Variables) veya şifreli vault (Ansible Vault) araçlarıyla saklayın.
+Netmiko veya Paramiko kullanırken bağlantı zaman aşımı (timeout) parametrelerini ağ koşullarına göre (örneğin 10-15 saniye) optimize ederek script'lerin kilitlenmesini önleyin.
+Python script ile binlerce cihaza komut gönderirken araya time.sleep() koyarak veya eşzamanlı (async/threading) sınırlandırmalar yaparak switch CPU'larının aşırı yüklenmesini engelleyin.
+Git versiyon kontrolüne hassas konfigürasyon dosyalarını (.cfg, .txt) göndermeden önce şifreler, SNMP community string'leri ve IP adreslerini maskeleyecek .gitignore veya pre-commit hook mekanizmaları kurun.
+Ansible ile network otomasyonu yaparken ignore_errors: yes komutunu bilinçsizce kullanmaktan kaçının; hatalı konfigürasyonun sessizce geçiştirilmesi zincirleme kesintilere yol açar.
+SD-WAN veya geleneksel WAN mimarilerinde yedek hat geçiş testlerini (Failover Drill) üretim saatleri dışında periyodik olarak simüle edin.
+UPS (Kesintisiz Güç Kaynağı) ve Jeneratör sistemlerinin akü testi ve devreye girme sürelerini sistem odası altyapı ekibiyle koordineli olarak periyodik test edin.
+Switch iç ortam sıcaklığı (temperature) ve fan devir hızlarını SNMP ile izleyerek tozlanma veya donanım arızası kaynaklı aşırı ısınmaları yangın çıkmadan fark edin.
+Kablolama altyapısında patch panel ve switch port etiketleme standartlarına kesinlikle uyun; acil bir arıza anında kablo izlemek yerine etiket üzerinden saniyeler içinde müdahale edin.
+Fiber optik patch kabloların temizliğine (fiber cleaner/click cleaner) dikkat edin; kirli fiber uçları yüksek dBm kayıplarına ve aralıklı link kopmalarına neden olur.
+Network değişiklik yönetimi (Change Management) süreci oluşturun; her kritik konfigürasyon değişikliği öncesi rollback (geri alma) planı hazırlayın ve onay alın.
+Üretim ortamındaki tüm aktif network topolojisini güncel ve yaşayan bir diyagram (NetBox, LibreNMS veya draw.io şablonları) olarak dokümante edin ve otomasyonla senkronize tutun.
