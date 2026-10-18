@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Dry‑Run First: Safer Switch Config with Ansible",
   "Why Skipping Backups Before Automation Crashes Your Network",
   "Why Sticky MAC Locks Your Port and How to Unlock It",
   "Why Skipping Backups Before Automation Can Crash Your Network",
@@ -100,7 +99,8 @@
   "Why Time Drift Breaks Incident Response – Sync Your NTP",
   "Why Switch Ports Dump Slow Devices Into Guest VLANs",
   "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
-  "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery"
+  "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
+  "Stop Broken Config Spreads: Use any_errors_fatal in Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1579,6 +1579,23 @@
    "hook": "Did your network switch just kick slow printers into quarantine?",
    "video_id": "_V3sITWl4pQ",
    "ig_id": "18152859754547293"
+  },
+  "1c9887ce": {
+   "title": "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
+   "description": "A single device error can corrupt your entire network configuration if the playbook keeps running. Use any_errors_fatal or block/rescue to stop automation instantly and keep your network safe.\n\n#Shorts #AnsibleSafety #NetworkAutomation #CyberSecOps #DevOps #ConfigManagement",
+   "tags": [
+    "AnsibleSafety",
+    "NetworkAutomation",
+    "CyberSecOps",
+    "DevOps",
+    "ConfigManagement",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "When a single device fails, your whole playbook keeps running.",
+   "ig_id": "18147492205572167",
+   "file_id": "BAACAgQAAxkDAAIBSmrUXm80PAnwVo-YihSvEsRYMIkAAzgeAALtL6lSiz2zx6f15Kk9BA",
+   "message_id": 330
   }
  }
 }
