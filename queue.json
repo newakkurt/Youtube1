@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Ansible Dry-Run Saves Your Switch Config Changes",
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
   "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
   "Test Before You Deploy: Safe Switch Configuration in Seconds",
@@ -100,7 +99,8 @@
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
-  "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action"
+  "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
+  "Unused Ports Expose Your LAN: Set a Blackhole VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1664,6 +1664,23 @@
    "ig_id": "18179428264434795",
    "file_id": "BAACAgQAAxkDAAIBW2rUi81i54cRd4PhdnlXZYlzDkC5AAKCHgAC7S-pUh6JJnI90oHRPQQ",
    "message_id": 347
+  },
+  "51dbab55": {
+   "title": "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
+   "description": "Leaving unassigned switch ports on the default VLAN exposes your corporate network to unauthorized physical access. Learn how to isolate dead interfaces into a routing-free blackhole VLAN and shut them down properly.\n\n#Shorts #NetworkHardening #NetworkSecurity #CiscoSwitch #VLAN #SysAdmin",
+   "tags": [
+    "NetworkHardening",
+    "NetworkSecurity",
+    "CiscoSwitch",
+    "VLAN",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave unused switch ports active on default VLAN 1.",
+   "ig_id": "18088620566282982",
+   "file_id": "BAACAgQAAxkDAAIBYWrUkZJ-SMCB8l09CGS0_oe3Xr5xAAKGHgAC7S-pUq__gDmnt-sLPQQ",
+   "message_id": 353
   }
  }
 }
