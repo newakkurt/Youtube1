@@ -1,7 +1,7 @@
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
 Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
-+ Selenium tabanlı gelişmiş otomatik takip botu entegre edilmiştir.
++ Requests tabanlı doğrudan Instagram Otomatik Takip Modülü (Tarayıcısız / %100 Bulut Uyumlu)
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
 """
 import os
@@ -10,16 +10,12 @@ import subprocess
 import time
 import random
 import requests
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import json
 import config
 
 # Reels paylaşımı için doğru endpoint Facebook Graph API'dir
 API = "https://graph.instagram.com/v21.0"
-UA = "Mozilla/5.0 (compatible; reels-bot/1.0)"
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
 
 def _get_env():
@@ -172,13 +168,9 @@ def upload_public(path: str):
 def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     ig_user_id, token = _get_env()
 
-    # 0) IG biçimine çevir
     ig_path = make_ig_compatible(video_path)
-
-    # 1) Videoyu doğrulanmış public linke koy
     video_url, host = upload_public(ig_path)
 
-    # 2) Reels container oluştur
     r = requests.post(
         f"{API}/{ig_user_id}/media",
         data={
@@ -192,7 +184,6 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     _check(r, "container", token)
     container_id = r.json()["id"]
 
-    # 3) Instagram videoyu çekip işleyene kadar bekle
     deadline = time.time() + timeout_s
     while time.time() < deadline:
         sr = requests.get(
@@ -211,7 +202,6 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     else:
         raise TimeoutError("IG video işleme zaman aşımı")
 
-    # 4) Yayınla
     p = requests.post(
         f"{API}/{ig_user_id}/media_publish",
         data={"creation_id": container_id, "access_token": token},
@@ -222,7 +212,6 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
 
 
 def refresh_token() -> str:
-    """Token yenileme fonksiyonu."""
     _, token = _get_env()
     r = requests.get(
         f"{API}/oauth/access_token",
@@ -238,81 +227,10 @@ def refresh_token() -> str:
     return r.json()["access_token"]
 
 
-# ---------- Selenium Otomatik Takip Modülü ----------
-
-def human_delay(min_s=45, max_s=90):
-    """İnsansı hareket ve algoritmaya takılmama için rastgele bekleme"""
-    sleep_time = random.randint(min_s, max_s)
-    time.sleep(sleep_time)
-
-
-def parse_follower_count(text):
-    """'5.4K', '1.2M', '5,400' vb. ifadeleri tamsayıya çevirir."""
-    if not text:
-        return 0
-    text = text.upper().strip().replace(',', '')
-    try:
-        if 'K' in text:
-            return int(float(text.replace('K', '')) * 1000)
-        elif 'M' in text:
-            return int(float(text.replace('M', '')) * 1000000)
-        elif 'B' in text:
-            return int(float(text.replace('B', '')) * 1000000000)
-        else:
-            return int(re.sub(r'[^\d]', '', text))
-    except Exception:
-        return 0
-
-
-def check_and_follow_user(driver, username, min_followers=5000):
-    """Kullanıcının profilini inceleyip 5000'den fazla takipçisi varsa takip eder."""
-    driver.get(f"https://www.instagram.com/{username}/")
-    time.sleep(random.randint(5, 8))
-    
-    try:
-        follower_element = driver.find_element(By.XPATH, "//header//ul/li[2]//span")
-        follower_text = follower_element.get_attribute("title") or follower_element.text
-        follower_count = parse_follower_count(follower_text)
-        
-        if follower_count >= min_followers:
-            follow_button = driver.find_element(
-                By.XPATH, "//button[contains(text(), 'Takip Et') or contains(text(), 'Follow')]"
-            )
-            follow_button.click()
-            print(f"[+] Takip edildi: @{username} (Takipçi Sayısı: {follower_count})")
-            return True
-        else:
-            print(f"[-] Pas geçildi: @{username} (Takipçi < {min_followers}: {follower_count})")
-            return False
-            
-    except Exception as e:
-        print(f"[!] Pas geçildi/Zaten takip ediliyor: @{username}")
-        return False
-
-
-def get_candidates_from_target(driver, target_username):
-    """Hedef hesabın profilinden takipçi/önerilen kullanıcı adlarını çeker."""
-    candidates = []
-    try:
-        driver.get(f"https://www.instagram.com/{target_username}/")
-        time.sleep(6)
-        
-        links = driver.find_elements(By.TAG_NAME, "a")
-        for link in links:
-            href = link.get_attribute("href")
-            if href and "instagram.com/" in href:
-                parts = [p for p in href.split("/") if p]
-                if len(parts) >= 4:
-                    user = parts[3]
-                    if user not in candidates and user not in ["explore", "reels", "direct", "accounts", target_username]:
-                        candidates.append(user)
-    except Exception as e:
-        print(f"⚠️ {target_username} taranırken hata: {e}")
-    return candidates
-
+# ---------- Requests Tabanlı Bulut Uyumlu Otomatik Takip Modülü ----------
 
 def run_follow_bot():
-    """GitHub Actions (Headless) ortamı için Gelişmiş Gizli Takip Botu"""
+    """GitHub Actions (Cloud) için Tarayıcısız API Tabanlı Takip Botu"""
     max_daily_follows = getattr(config, "MAX_DAILY_FOLLOWS", 99)
     min_followers = getattr(config, "MIN_FOLLOWER_COUNT", 5000)
     target_accounts = getattr(config, "TARGET_ACCOUNTS", ["github", "python.hub", "nature"])
@@ -324,93 +242,109 @@ def run_follow_bot():
         print("⚠️ IG_USERNAME veya IG_PASSWORD bulunamadı, bot iptal edildi.")
         return
 
-    print("🤖 Instagram takip botu gizli modda başlatılıyor...")
+    print("🤖 Instagram API takip botu bulut ortamında başlatılıyor...")
     
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--lang=en-US")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
-    
-    driver = webdriver.Chrome(options=options)
-    
-    try:
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-    except Exception:
-        pass
-    
-    wait = WebDriverWait(driver, 20)
-    followed_count = 0
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "X-IG-App-ID": "936619743392459",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+    })
 
     try:
-        driver.get("https://www.instagram.com/accounts/login/?hl=en")
-        time.sleep(7)
+        # 1) Instagram ana sayfasından çerezleri al
+        init_res = session.get("https://www.instagram.com/", timeout=20)
+        csrftoken = session.cookies.get_dict().get("csrftoken", "")
+        
+        session.headers.update({
+            "X-CSRFToken": csrftoken,
+            "X-Requested-With": "XMLHttpRequest",
+            "Referer": "https://www.instagram.com/accounts/login/"
+        })
+
+        # 2) Web tabanlı giriş simülasyonu
+        login_url = "https://www.instagram.com/api/v1/web/accounts/login/ajax/"
+        login_data = {
+            "username": username,
+            "enc_password": f"#PWD_INSTAGRAM_BROWSER:0:{int(time.time())}:{password}",
+            "queryParams": "{}",
+            "optIntoOneTap": "false"
+        }
+        
+        time.sleep(random.uniform(2, 4))
+        login_res = session.post(login_url, data=login_data, timeout=20)
         
         try:
-            cookie_btn = driver.find_element(By.XPATH, "//button[contains(text(), 'Allow') or contains(text(), 'Accept') or contains(text(), 'Kabul')]")
-            cookie_btn.click()
-            print("🍪 Çerez bildirimi kapatıldı.")
-            time.sleep(3)
+            res_json = login_res.json()
         except Exception:
-            pass
-
-        username_input = wait.until(EC.presence_of_element_located((By.NAME, "username")))
-        password_input = wait.until(EC.presence_of_element_located((By.NAME, "password")))
-        
-        username_input.clear()
-        for char in username:
-            username_input.send_keys(char)
-            time.sleep(random.uniform(0.1, 0.3))
-            
-        time.sleep(1)
-        
-        password_input.clear()
-        for char in password:
-            password_input.send_keys(char)
-            time.sleep(random.uniform(0.1, 0.3))
-            
-        time.sleep(2)
-        
-        login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")))
-        login_button.click()
-        
-        print("⏳ Giriş yapılıyor, bekleniyor...")
-        time.sleep(12)
-        
-        current_url = driver.current_url
-        if "login" in current_url:
-            print("❌ Giriş başarısız oldu! Instagram güvenlik duvarı veya şifre kontrolü takıldı.")
+            print(f"⚠️ Instagram yanıtı JSON formatında değil: {login_res.text[:150]}")
             return
-            
-        print("✅ Instagram'a başarıyla giriş yapıldı.")
-        
+
+        if not res_json.get("authenticated"):
+            print(f"❌ Giriş başarısız: {res_json.get('message', 'Bilinmeyen hata / Kontrol noktası')}")
+            return
+
+        print("✅ Instagram'a API üzerinden başarıyla giriş yapıldı.")
+        followed_count = 0
+
+        # 3) Hedef hesapların kullanıcı ID'lerini çözüp takipçilerini tara
         for target in target_accounts:
             if followed_count >= max_daily_follows:
                 break
                 
-            print(f"🔍 Hedef inceleniyor: @{target}")
-            candidates = get_candidates_from_target(driver, target)
+            print(f"🔍 Hedef taranıyor: @{target}")
+            profile_res = session.get(f"https://www.instagram.com/api/v1/users/web_profile_info/?username={target}", timeout=15)
             
-            for candidate in candidates:
+            if not profile_res.ok:
+                print(f"⚠️ @{target} profiline erişilemedi.")
+                continue
+                
+            try:
+                user_data = profile_res.json()["data"]["user"]
+                target_id = user_data["id"]
+            except Exception:
+                continue
+
+            # Hedefin takipçilerini çek
+            followers_res = session.get(f"https://www.instagram.com/api/v1/friendships/{target_id}/followers/?count=12", timeout=15)
+            if not followers_res.ok:
+                continue
+                
+            followers_list = followers_res.json().get("users", [])
+            
+            for user in followers_list:
                 if followed_count >= max_daily_follows:
                     break
                     
-                is_followed = check_and_follow_user(driver, candidate, min_followers=min_followers)
-                if is_followed:
-                    followed_count += 1
-                    human_delay(45, 90)
-                else:
-                    time.sleep(random.randint(5, 10))
+                target_user_id = user["pk"]
+                target_username = user["username"]
+                
+                # Kullanıcı detayını kontrol et (Takipçi sayısı 5000+ mı?)
+                detail_res = session.get(f"https://www.instagram.com/api/v1/users/{target_user_id}/info/", timeout=15)
+                if detail_res.ok:
+                    details = detail_res.json().get("user", {})
+                    follower_count = details.get("follower_count", 0)
+                    is_following = details.get("friendship_status", {}).get("following", False)
+                    
+                    if follower_count >= min_followers and not is_following:
+                        # Takip Et İstegi At
+                        follow_res = session.post(f"https://www.instagram.com/api/v1/friendships/create/{target_user_id}/", timeout=15)
+                        if follow_res.ok:
+                            followed_count += 1
+                            print(f"[+] Takip edildi: @{target_username} (Takipçi: {follower_count}) | Toplam: {followed_count}")
+                            time.sleep(random.randint(45, 90))
+                        else:
+                            print(f"[-] Takip edilemedi: @{target_username}")
+                    else:
+                        print(f"[-] Pas geçildi: @{target_username} (Takipçi: {follower_count})")
+                
+                time.sleep(random.randint(5, 10))
 
         print(f"✨ Instagram takip turu tamamlandı. Bu turda {followed_count} hesap takip edildi.")
-        
+
     except Exception as e:
-        print(f"⚠️ Instagram takip botu hatası: {str(e)[:300]}")
-    finally:
-        driver.quit()
+        print(f"⚠️ API takip botu hatası: {str(e)[:300]}")
