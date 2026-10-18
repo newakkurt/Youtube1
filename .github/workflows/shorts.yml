@@ -11,7 +11,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [generate, process, report, lead, igtest, li_status, litest]
+        options: [generate, process, report, lead, igtest, li_status, litest, ig_follow]
         default: generate
 
 concurrency:
@@ -38,6 +38,8 @@ jobs:
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USERNAME: ${{ secrets.IG_USERNAME }}
+      IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
       LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
       LINKEDIN_TOKEN_DATE: ${{ secrets.LINKEDIN_TOKEN_DATE }}
 
@@ -58,7 +60,7 @@ jobs:
       - name: Install Python Dependencies
         run: |
           pip install -r requirements.txt
-          pip install -U edge-tts gTTS
+          pip install -U edge-tts gTTS selenium webdriver-manager
           pip show edge-tts | grep -i ^version
           pip show gTTS | grep -i ^version
 
@@ -85,7 +87,9 @@ jobs:
           git add queue.json
           if [ -f performance.json ]; then git add performance.json; fi
           git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)
-          - name: Run Instagram Follow Bot
+
+      - name: Run Instagram Follow Bot
+        if: always()
         env:
           IG_USERNAME: ${{ secrets.IG_USERNAME }}
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
