@@ -4,3 +4,5 @@ moviepy==2.1.2
 pillow>=10.4.0
 numpy>=1.26
 gTTS
+selenium>=4.10.0
+webdriver-manager
