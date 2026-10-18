@@ -1,7 +1,7 @@
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
 Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
-+ Selenium tabanlı otomatik takip botu entegre edilmiştir.
++ Selenium tabanlı gelişmiş otomatik takip botu entegre edilmiştir.
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
 """
 import os
@@ -238,56 +238,116 @@ def refresh_token() -> str:
 
 # ---------- Selenium Otomatik Takip Modülü ----------
 
-def check_and_follow_user(driver, username):
+def human_delay(min_s=45, max_s=90):
+    """İnsansı hareket ve algoritmaya takılmama için rastgele bekleme"""
+    sleep_time = random.randint(min_s, max_s)
+    time.sleep(sleep_time)
+
+
+def parse_follower_count(text):
+    """'5.4K', '1.2M', '5,400' vb. ifadeleri tamsayıya çevirir."""
+    if not text:
+        return 0
+    text = text.upper().strip().replace(',', '')
+    try:
+        if 'K' in text:
+            return int(float(text.replace('K', '')) * 1000)
+        elif 'M' in text:
+            return int(float(text.replace('M', '')) * 1000000)
+        elif 'B' in text:
+            return int(float(text.replace('B', '')) * 1000000000)
+        else:
+            return int(re.sub(r'[^\d]', '', text))
+    except Exception:
+        return 0
+
+
+def check_and_follow_user(driver, username, min_followers=5000):
+    """Kullanıcının profilini inceleyip 5000'den fazla takipçisi varsa takip eder."""
     driver.get(f"https://www.instagram.com/{username}/")
     time.sleep(random.randint(5, 8))
     
     try:
+        # Takipçi sayısını bulma
         follower_element = driver.find_element(By.XPATH, "//header//ul/li[2]//span")
         follower_text = follower_element.get_attribute("title") or follower_element.text
+        follower_count = parse_follower_count(follower_text)
         
-        follower_count = int(follower_text.replace(',', '').replace('.', ''))
-        
-        if follower_count >= config.MIN_FOLLOWER_COUNT:
-            follow_button = driver.find_element(By.XPATH, "//button[contains(text(), 'Takip Et') or contains(text(), 'Follow')]")
+        if follower_count >= min_followers:
+            follow_button = driver.find_element(
+                By.XPATH, "//button[contains(text(), 'Takip Et') or contains(text(), 'Follow')]"
+            )
             follow_button.click()
-            print(f"[+] Takip edildi: {username} (Takipçi: {follower_count})")
+            print(f"[+] Takip edildi: @{username} (Takipçi Sayısı: {follower_count})")
             return True
         else:
-            print(f"[-] Pas geçildi: {username} (Takipçi < 5000)")
+            print(f"[-] Pas geçildi: @{username} (Takipçi < {min_followers}: {follower_count})")
             return False
             
     except Exception as e:
-        print(f"[!] Hata veya zaten takip ediliyor: {e}")
+        print(f"[!] Pas geçildi/Zaten takip ediliyor: @{username}")
         return False
 
 
-def human_delay():
-    time.sleep(random.randint(45, 90))
+def get_candidates_from_target(driver, target_username):
+    """Hedef hesabın profilinden takipçi/önerilen kullanıcı adlarını çeker."""
+    candidates = []
+    try:
+        driver.get(f"https://www.instagram.com/{target_username}/")
+        time.sleep(6)
+        
+        # Sayfadaki profil linklerini tarama
+        links = driver.find_elements(By.TAG_NAME, "a")
+        for link in links:
+            href = link.get_attribute("href")
+            if href and "instagram.com/" in href:
+                parts = [p for p in href.split("/") if p]
+                if len(parts) >= 4:
+                    user = parts[3]
+                    if user not in candidates and user not in ["explore", "reels", "direct", "accounts", target_username]:
+                        candidates.append(user)
+    except Exception as e:
+        print(f"⚠️ {target_username} taranırken hata: {e}")
+    return candidates
 
 
 def run_follow_bot():
-    """GitHub Actions (Headless) ortamı için Selenium Takip Botu"""
+    """GitHub Actions (Headless) ortamı için Otomatik Takip Botu"""
+    max_daily_follows = getattr(config, "MAX_DAILY_FOLLOWS", 99)
+    min_followers = getattr(config, "MIN_FOLLOWER_COUNT", 5000)
+    target_accounts = getattr(config, "TARGET_ACCOUNTS", ["github", "python.hub", "nature"])
+    
+    username = os.environ.get("IG_USERNAME") or getattr(config, "IG_USERNAME", None)
+    password = os.environ.get("IG_PASSWORD") or getattr(config, "IG_PASSWORD", None)
+
+    if not username or not password:
+        print("⚠️ IG_USERNAME veya IG_PASSWORD bulunamadı, bot iptal edildi.")
+        return
+
+    print("🤖 Instagram takip botu başlatılıyor...")
+    
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    
+    driver = webdriver.Chrome(options=options)
+    followed_count = 0
+
     try:
-        options = Options()
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-gpu")
-        options.add_argument("--window-size=1920,1080")
-        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-        
-        driver = webdriver.Chrome(options=options)
-        
+        # Giriş Yapma
         driver.get("https://www.instagram.com/accounts/login/")
         time.sleep(6)
         
         username_input = driver.find_element(By.NAME, "username")
         password_input = driver.find_element(By.NAME, "password")
         
-        username_input.send_keys(config.IG_USERNAME)
+        username_input.send_keys(username)
         time.sleep(1)
-        password_input.send_keys(config.IG_PASSWORD)
+        password_input.send_keys(password)
         time.sleep(2)
         
         login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
@@ -296,11 +356,30 @@ def run_follow_bot():
         
         print("✅ Instagram'a başarıyla giriş yapıldı.")
         
-        # Örnek test hedefi
-        target_account = "github"
-        check_and_follow_user(driver, target_account)
+        # Hedef hesapları tarayıp aday toplama ve takip etme döngüsü
+        for target in target_accounts:
+            if followed_count >= max_daily_follows:
+                print(f"🛑 Günlük takip limitine erişildi ({max_daily_follows}). Bitiyor.")
+                break
+                
+            print(f"🔍 Target inceleniyor: @{target}")
+            candidates = get_candidates_from_target(driver, target)
+            
+            for candidate in candidates:
+                if followed_count >= max_daily_follows:
+                    break
+                    
+                is_followed = check_and_follow_user(driver, candidate, min_followers=min_followers)
+                if is_followed:
+                    followed_count += 1
+                    print(f"📊 Toplam Takip Edilen: {followed_count}/{max_daily_follows}")
+                    human_delay(45, 90)  # Algoritmaya takılmamak için insansı bekleme
+                else:
+                    time.sleep(random.randint(5, 10))
+
+        print(f"✨ Instagram takip turu tamamlandı. Bu turda {followed_count} hesap takip edildi.")
         
-        driver.quit()
-        print("✨ Instagram takip turu tamamlandı.")
     except Exception as e:
         print(f"⚠️ Instagram takip botu hatası: {str(e)[:300]}")
+    finally:
+        driver.quit()
