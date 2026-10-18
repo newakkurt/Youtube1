@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Test Before You Deploy: Safe Switch Configuration in Seconds",
   "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
   "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
   "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
@@ -100,7 +99,8 @@
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
   "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
   "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
-  "Syslog Drops Logs in Outages: Enlarge Buffer and Queue"
+  "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
+  "Manual Changes Cause Config Drift: Diff with Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1715,6 +1715,23 @@
    "ig_id": "17971217148187555",
    "file_id": "BAACAgQAAxkDAAIBa2rUtl-Yf7NsXG2qnV26JEy3qwx9AALCHgAC7S-pUlw9dZA7tApzPQQ",
    "message_id": 363
+  },
+  "dcffd3a3": {
+   "title": "Manual Changes Cause Config Drift: Diff with Ansible",
+   "description": "Detect undocumented switch alterations before they trigger unexpected outages or compliance failures. Automate periodic diff checks between live running devices and golden templates with tools like Ansible or Netmiko.\n\n#Shorts #ConfigDrift #NetworkAutomation #Ansible #Netmiko #NetworkEngineering",
+   "tags": [
+    "ConfigDrift",
+    "NetworkAutomation",
+    "Ansible",
+    "Netmiko",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let undocumented switch tweaks sit undetected in your production environment.",
+   "ig_id": "18344700601287845",
+   "file_id": "BAACAgQAAxkDAAIBb2rU1KhJGS0iIDM-mtTG_tzuO6naAAICHwAC7S-pUr10lUNKQjHRPQQ",
+   "message_id": 367
   }
  }
 }
