@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
   "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
   "Test Before You Deploy: Safe Switch Configuration in Seconds",
   "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
@@ -100,7 +99,8 @@
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
-  "Unused Ports Expose Your LAN: Set a Blackhole VLAN"
+  "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
+  "Double-Tagging Exploits Native VLAN 1: Change Trunk ID"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1681,6 +1681,23 @@
    "ig_id": "18088620566282982",
    "file_id": "BAACAgQAAxkDAAIBYWrUkZJ-SMCB8l09CGS0_oe3Xr5xAAKGHgAC7S-pUq__gDmnt-sLPQQ",
    "message_id": 353
+  },
+  "4f8ae47e": {
+   "title": "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
+   "description": "Leaving default native VLAN 1 on your trunk ports exposes your network to double-tagging attacks. Secure your switches by mapping native trunk traffic to an isolated, unused VLAN ID.\n\n#Shorts #VLANHopping #NetworkSecurity #Cisco #NetworkEngineering #CyberSecurity",
+   "tags": [
+    "VLANHopping",
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave your trunk port native VLAN assigned to VLAN 1.",
+   "ig_id": "18431312575150524",
+   "file_id": "BAACAgQAAxkDAAIBZmrUk5cw6_riXSQyMg88SRXabW31AAKHHgAC7S-pUmkOD27p5qXUPQQ",
+   "message_id": 358
   }
  }
 }
