@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
   "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
@@ -100,7 +99,8 @@
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
-  "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID"
+  "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
+  "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1647,6 +1647,23 @@
    "ig_id": "18136883815732040",
    "file_id": "BAACAgQAAxkDAAIBV2rUiYqXFPmZbGVdXGkX-_rV29X5AAJ8HgAC7S-pUpsDXz_W6rJdPQQ",
    "message_id": 343
+  },
+  "e3609d88": {
+   "title": "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
+   "description": "A broadcast storm caused by a loop or faulty NIC can take down an entire VLAN. Configuring storm-control thresholds with trap or shutdown actions on user ports prevents the outage.\n\n#Shorts #StormControlFix #NetworkEngineering #Cybersecurity #Switches #ITOps",
+   "tags": [
+    "StormControlFix",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "Switches",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "A loop or bad NIC can flood your VLAN instantly.",
+   "ig_id": "18179428264434795",
+   "file_id": "BAACAgQAAxkDAAIBW2rUi81i54cRd4PhdnlXZYlzDkC5AAKCHgAC7S-pUh6JJnI90oHRPQQ",
+   "message_id": 347
   }
  }
 }
