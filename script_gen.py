@@ -14,9 +14,9 @@ from config import *
 GEMINI_MODEL = env("GEMINI_MODEL", "gemini-3.8-flash")
 GROQ_MODELS = [m.strip() for m in env(
     "GROQ_MODELS",
-    "llama-3.3-70b-versatile,openai/gpt-oss-120b,llama-3.1-8b-instant",
+    "openai/gpt-oss-120b,openai/gpt-oss-20b",
 ).split(",") if m.strip()]
-OPENROUTER_MODEL = env("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
+OPENROUTER_MODEL = env("OPENROUTER_MODEL", "")  # boşsa OpenRouter atlanır; ücretsiz güncel bir model slug'ı yaz
 GROQ_KEY = env("GROQ_API_KEY")
 OPENROUTER_KEY = env("OPENROUTER_API_KEY")
 
@@ -130,13 +130,14 @@ def _chain(as_json, tier="strong"):
                 f"groq:{m}",
                 lambda p, m=m: _chat("https://api.groq.com/openai/v1/chat/completions", GROQ_KEY, m, p),
             ))
-    if OPENROUTER_KEY:
+    if OPENROUTER_KEY and OPENROUTER_MODEL:
         chain.append((
             f"openrouter:{OPENROUTER_MODEL}",
             lambda p: _chat("https://openrouter.ai/api/v1/chat/completions", OPENROUTER_KEY, OPENROUTER_MODEL, p),
         ))
     chain = [c for c in chain if c[0] not in _dead]
-    is_fast = lambda c: any(mk in c[0] for mk in FAST_MARKS)
+    # işaret kelime başında olmalı: "gpt-oss-120b" içindeki "20b" ve "gemini" içindeki "mini" hızlı model sayılmaz
+    is_fast = lambda c: any(re.search(r"(?<![a-z0-9])" + re.escape(mk), c[0]) for mk in FAST_MARKS)
     # sorted kararlıdır: aynı gruptakiler kendi sırasını korur
     if tier == "fast":
         return sorted(chain, key=lambda c: 0 if is_fast(c) else 1)
@@ -338,14 +339,29 @@ def generate_long(history):
     return best[1]
 
 
-# ---------- LinkedIn'e özel metin postu ----------
-LINKEDIN_FORMATS = {
-    "contrarian": "A contrarian take that challenges a common belief in network engineering, then explains why in 3-4 short lines.",
-    "mistake": "A common mistake engineers make with this topic, why it hurts, and the fix. Start with the mistake.",
-    "checklist": "A tight 4-5 item checklist (one short line each) engineers can screenshot and use.",
-    "peer_question": "Share one practical insight, then ask peers a specific question about how THEY handle it.",
-    "career": "A career lesson for network engineers (certs, learning path, working in industrial/factory environments) tied to the note.",
-}
+# ---------- LinkedIn: genel IT / AI / iş dünyası, EN + TR ----------
+# (konu adı, Google News arama sorgusu)
+LINKEDIN_TOPICS = [
+    ("AI at work", "artificial intelligence AI agents enterprise productivity"),
+    ("IT careers", "IT jobs careers skills engineers hiring"),
+    ("Cybersecurity", "cybersecurity breach ransomware enterprise"),
+    ("Automation", "automation DevOps infrastructure as code network automation"),
+    ("Cloud & infrastructure", "cloud data center infrastructure outage"),
+    ("Industrial IT", "industrial OT IT manufacturing smart factory"),
+    ("Tech & business", "technology business trends enterprise IT"),
+]
+
+
+def news(query, n=6):
+    """Konu bazlı son 3 günün haber başlıkları (Google News RSS). Hata olursa boş liste."""
+    try:
+        q = f"{query} when:3d"
+        feed = feedparser.parse(
+            f"https://news.google.com/rss/search?q={urllib.parse.quote(q)}&hl=en-US&gl=US&ceid=US:en"
+        )
+        return [e.title for e in feed.entries[:n]]
+    except Exception:
+        return []
 
 
 def _li_history():
@@ -355,26 +371,63 @@ def _li_history():
         return []
 
 
-def make_linkedin_post():
-    note = pick_note()
-    kind = random.choice(list(LINKEDIN_FORMATS))
-    prev = _li_history()[-15:]
-    prompt = f"""You write LinkedIn text posts for a network engineer working in a large factory environment (multi-vendor, thousands of devices).
-Audience: network/IT engineers, IT managers, security people. Language: English.
-Base the post on this real field note from the author. Keep its meaning; do NOT invent personal stories, numbers, incidents, CVEs or product claims beyond it:
-"{note}"
-Format: {LINKEDIN_FORMATS[kind]}
+def make_linkedin_bilingual():
+    """Resimli LinkedIn postu için içerik: kart metni + post metni, İngilizce ve Türkçe.
+    Dict döndürür: topic, card_en, card_tr, points_en, points_tr, post_en, post_tr, hashtags, alt_text."""
+    prev = _li_history()[-20:]
+    recent_topics = [p.split("|")[0] for p in prev[-3:]]
+    pool = [t for t in LINKEDIN_TOPICS if t[0] not in recent_topics] or LINKEDIN_TOPICS
+    topic, query = random.choice(pool)
+    heads = news(query)
+    prompt = f"""You write bilingual (English + Turkish) LinkedIn posts for a network/IT engineer who works at a large manufacturing company. The audience is IT professionals, engineers and managers in Turkey and abroad.
+Topic today: {topic}
+Recent headlines for context (real, from the last days): {heads or 'none available'}
 Rules:
-- Line 1 is a hook under 80 characters, no clickbait, no emoji.
-- Short paragraphs of 1-2 lines, blank line between them. 600-1100 characters total.
-- Professional first-person voice, practical, specific (name the feature/setting, not vague advice).
-- Max 3 hashtags at the very end. No emoji spam, no "Subscribe", no mention of videos or Shorts.
-- End with ONE concrete question that invites engineers to answer in comments.
+- Pick ONE relevant headline or trend and give a practical, grounded takeaway for IT professionals. If no headline fits, write an evergreen insight about the topic.
+- Never state facts, numbers, quotes, dates or company claims beyond what the headline itself says. No invented personal stories. No hype, no clickbait.
+- Professional first-person voice. Light perspective of an engineer in an industrial environment is fine, but no made-up anecdotes.
+- Turkish must be natural and fluent (not word-for-word); keep common technical terms in English.
 - Do NOT resemble these earlier posts: {prev}
-Return ONLY the post text."""
-    text = _ask(prompt, as_json=False, tier="strong").strip()
-    LINKEDIN_HISTORY.write_text(json.dumps((_li_history() + [text[:80]])[-60:], ensure_ascii=False), encoding="utf-8")
-    return text
+Return ONLY JSON, no markdown:
+{{"card_en": "image headline, max 80 chars",
+ "card_tr": "Turkish version of the image headline, max 85 chars",
+ "points_en": ["3 key points, each max 55 chars"],
+ "points_tr": ["same 3 points in Turkish, each max 60 chars"],
+ "post_en": "English post, 450-800 chars, short 1-2 line paragraphs separated by blank lines, no hashtags, ends with ONE concrete question",
+ "post_tr": "Turkish post (same message), 450-800 chars, same structure, ends with the same question in Turkish",
+ "hashtags": ["max 4 English hashtags, no spaces"],
+ "alt_text": "one-sentence English image description"}}"""
+    data = json.loads(_ask(prompt, tier="strong"))
+    for k in ("card_en", "card_tr", "post_en", "post_tr"):
+        assert data.get(k), f"missing {k}"
+    data["points_en"] = [str(p)[:70] for p in data.get("points_en", [])][:3]
+    data["points_tr"] = [str(p)[:75] for p in data.get("points_tr", [])][:3]
+    data["hashtags"] = " ".join("#" + str(t).strip().lstrip("#").replace(" ", "") for t in data.get("hashtags", [])[:4])
+    data["alt_text"] = data.get("alt_text") or data["card_en"]
+    data["topic"] = topic
+    LINKEDIN_HISTORY.write_text(
+        json.dumps((_li_history() + [f"{topic}|{data['card_en'][:70]}"])[-60:], ensure_ascii=False), encoding="utf-8"
+    )
+    return data
+
+
+def linkedin_text_from(data):
+    """İngilizce + Türkçe tek post metni."""
+    return (f"{data['post_en'].strip()}\n\n——— Türkçe ———\n\n{data['post_tr'].strip()}\n\n{data.get('hashtags', '')}").strip()
+
+
+def bilingual_caption(title, description=""):
+    """Video postu için EN + TR açıklama. Başarısız olursa İngilizce başlığa düşer."""
+    prompt = f"""Write a short bilingual LinkedIn caption for a video. Video title: "{title}". Video description: "{description}".
+Rules: do NOT add technical claims, numbers or commands that are not in the title/description. English 200-350 chars, then the same message in natural Turkish (keep technical terms in English). Each ends with the SAME short question to engineers (asked in that language). No emoji, max 3 hashtags in total at the very end.
+Return ONLY JSON: {{"en": "...", "tr": "...", "hashtags": ["max 3 English hashtags"]}}"""
+    try:
+        d = json.loads(_ask(prompt, tier="fast"))
+        tags = " ".join("#" + str(t).strip().lstrip("#").replace(" ", "") for t in d.get("hashtags", [])[:3])
+        return f"{d['en'].strip()}\n\n——— Türkçe ———\n\n{d['tr'].strip()}\n\n{tags}".strip()
+    except Exception as e:
+        print("Bilingual caption failed:", str(e)[:150])
+        return f"{title}\n\n{description}".strip()
 
 
 def advice(stats_text):
