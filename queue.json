@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Only Uplink Ports Should Be Trusted When DHCP Snooping Is On",
   "Test Before You Deploy: Safe Switch Configuration in Seconds",
   "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
   "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
@@ -100,7 +99,8 @@
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
   "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
-  "Double-Tagging Exploits Native VLAN 1: Change Trunk ID"
+  "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
+  "Syslog Drops Logs in Outages: Enlarge Buffer and Queue"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1698,6 +1698,23 @@
    "ig_id": "18431312575150524",
    "file_id": "BAACAgQAAxkDAAIBZmrUk5cw6_riXSQyMg88SRXabW31AAKHHgAC7S-pUmkOD27p5qXUPQQ",
    "message_id": 358
+  },
+  "8a08d222": {
+   "title": "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
+   "description": "Default switch logging buffers and transmission queues easily overflow during major traffic storms and incidents. Tune your buffer and queue limits now to retain vital crash logs for troubleshooting.\n\n#Shorts #NetworkEngineering #Syslog #NetworkSecurity #Cisco #NetworkMonitoring",
+   "tags": [
+    "NetworkEngineering",
+    "Syslog",
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkMonitoring",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave default logging buffer sizes on core network switches.",
+   "ig_id": "17971217148187555",
+   "file_id": "BAACAgQAAxkDAAIBa2rUtl-Yf7NsXG2qnV26JEy3qwx9AALCHgAC7S-pUlw9dZA7tApzPQQ",
+   "message_id": 363
   }
  }
 }
