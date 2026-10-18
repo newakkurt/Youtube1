@@ -13,6 +13,8 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import config
 
 # Reels paylaşımı için doğru endpoint Facebook Graph API'dir
@@ -268,7 +270,6 @@ def check_and_follow_user(driver, username, min_followers=5000):
     time.sleep(random.randint(5, 8))
     
     try:
-        # Takipçi sayısını bulma
         follower_element = driver.find_element(By.XPATH, "//header//ul/li[2]//span")
         follower_text = follower_element.get_attribute("title") or follower_element.text
         follower_count = parse_follower_count(follower_text)
@@ -296,7 +297,6 @@ def get_candidates_from_target(driver, target_username):
         driver.get(f"https://www.instagram.com/{target_username}/")
         time.sleep(6)
         
-        # Sayfadaki profil linklerini tarama
         links = driver.find_elements(By.TAG_NAME, "a")
         for link in links:
             href = link.get_attribute("href")
@@ -335,31 +335,28 @@ def run_follow_bot():
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
     
     driver = webdriver.Chrome(options=options)
+    wait = WebDriverWait(driver, 20)
     followed_count = 0
 
     try:
-        # Giriş Yapma
         driver.get("https://www.instagram.com/accounts/login/")
-        time.sleep(6)
         
-        username_input = driver.find_element(By.NAME, "username")
-        password_input = driver.find_element(By.NAME, "password")
+        username_input = wait.until(EC.presence_of_element_located((By.NAME, "username")))
+        password_input = wait.until(EC.presence_of_element_located((By.NAME, "password")))
         
         username_input.send_keys(username)
         time.sleep(1)
         password_input.send_keys(password)
         time.sleep(2)
         
-        login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+        login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")))
         login_button.click()
-        time.sleep(10)
         
+        time.sleep(10)
         print("✅ Instagram'a başarıyla giriş yapıldı.")
         
-        # Hedef hesapları tarayıp aday toplama ve takip etme döngüsü
         for target in target_accounts:
             if followed_count >= max_daily_follows:
-                print(f"🛑 Günlük takip limitine erişildi ({max_daily_follows}). Bitiyor.")
                 break
                 
             print(f"🔍 Target inceleniyor: @{target}")
@@ -372,8 +369,7 @@ def run_follow_bot():
                 is_followed = check_and_follow_user(driver, candidate, min_followers=min_followers)
                 if is_followed:
                     followed_count += 1
-                    print(f"📊 Toplam Takip Edilen: {followed_count}/{max_daily_follows}")
-                    human_delay(45, 90)  # Algoritmaya takılmamak için insansı bekleme
+                    human_delay(45, 90)
                 else:
                     time.sleep(random.randint(5, 10))
 
