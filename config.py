@@ -28,3 +28,12 @@ NICHE = env("NICHE", "network engineering, Cybersecurity, network security, swit
 CHANNEL_TAG = env("CHANNEL_TAG", "")  # ekranda küçük filigran, örn: @kanaladin
 OUTRO = env("OUTRO", "Takip et, her gün sahadan yeni bir not geliyor." if LANG == "tr" else "Follow for a new field note every day.")
 AFFILIATE_TEXT = env("AFFILIATE_TEXT", "")
+
+# Instagram Bot Ayarları
+IG_USERNAME = "sevketkaynars"
+IG_PASSWORD = "Sevket55"
+
+# Takip / Takipten Çıkma Parametreleri
+MAX_DAILY_FOLLOW = 99
+MAX_DAILY_UNFOLLOW = 99
+MIN_FOLLOWER_COUNT = 5000  # 5 binden az takipçisi olanları takip etme
