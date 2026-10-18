@@ -19,6 +19,16 @@ def _creds():
                        client_id=YT_CLIENT_ID, client_secret=YT_CLIENT_SECRET, scopes=SCOPES)
 
 
+def check_token():
+    """Refresh token geçerli mi? Video yüklemeden test eder. (ok, mesaj) döndürür."""
+    try:
+        from google.auth.transport.requests import Request
+        _creds().refresh(Request())
+        return True, "🔑 YouTube token geçerli ✅"
+    except Exception as e:
+        return False, f"🔑 YouTube token HATALI ❌ {str(e)[:300]}"
+
+
 def upload(path, title, description, tags):
     yt = build("youtube", "v3", credentials=_creds(), cache_discovery=False)
     body = {
