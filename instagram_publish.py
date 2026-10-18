@@ -1,9 +1,6 @@
-# Bu kodu instagram_publish.py dosyasına tamamen yapıştırabilirsin.
-# Fonksiyonun eksiksiz, tek parça ve güncellenmiş halidir.
-
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
-Akış: videoyu IG biçimine çevir -> geçici host's yükle -> Reels container -> işle -> yayınla.
+Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
 + Selenium tabanlı gelişmiş otomatik takip botu entegre edilmiştir.
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
 """
@@ -315,7 +312,7 @@ def get_candidates_from_target(driver, target_username):
 
 
 def run_follow_bot():
-    """GitHub Actions (Headless) ortamı için Otomatik Takip Botu"""
+    """GitHub Actions (Headless) ortamı için Gelişmiş Gizli Takip Botu"""
     max_daily_follows = getattr(config, "MAX_DAILY_FOLLOWS", 99)
     min_followers = getattr(config, "MIN_FOLLOWER_COUNT", 5000)
     target_accounts = getattr(config, "TARGET_ACCOUNTS", ["github", "python.hub", "nature"])
@@ -327,7 +324,7 @@ def run_follow_bot():
         print("⚠️ IG_USERNAME veya IG_PASSWORD bulunamadı, bot iptal edildi.")
         return
 
-    print("🤖 Instagram takip botu başlatılıyor...")
+    print("🤖 Instagram takip botu gizli modda başlatılıyor...")
     
     options = Options()
     options.add_argument("--headless=new")
@@ -336,50 +333,68 @@ def run_follow_bot():
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--lang=en-US")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
     
     driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 15)
+    
+    try:
+        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    except Exception:
+        pass
+    
+    wait = WebDriverWait(driver, 20)
     followed_count = 0
 
     try:
-        # 1) Giriş sayfasına git
         driver.get("https://www.instagram.com/accounts/login/?hl=en")
-        time.sleep(5)
+        time.sleep(7)
         
-        # 2) Çerez (Cookie) Pop-up'ı çıkarsa kabul et
         try:
             cookie_btn = driver.find_element(By.XPATH, "//button[contains(text(), 'Allow') or contains(text(), 'Accept') or contains(text(), 'Kabul')]")
             cookie_btn.click()
             print("🍪 Çerez bildirimi kapatıldı.")
-            time.sleep(2)
+            time.sleep(3)
         except Exception:
             pass
 
-        # 3) Kullanıcı adı ve şifre gir
         username_input = wait.until(EC.presence_of_element_located((By.NAME, "username")))
         password_input = wait.until(EC.presence_of_element_located((By.NAME, "password")))
         
         username_input.clear()
-        username_input.send_keys(username)
+        for char in username:
+            username_input.send_keys(char)
+            time.sleep(random.uniform(0.1, 0.3))
+            
         time.sleep(1)
         
         password_input.clear()
-        password_input.send_keys(password)
+        for char in password:
+            password_input.send_keys(char)
+            time.sleep(random.uniform(0.1, 0.3))
+            
         time.sleep(2)
         
         login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")))
         login_button.click()
         
-        time.sleep(10)
+        print("⏳ Giriş yapılıyor, bekleniyor...")
+        time.sleep(12)
+        
+        current_url = driver.current_url
+        if "login" in current_url:
+            print("❌ Giriş başarısız oldu! Instagram güvenlik duvarı veya şifre kontrolü takıldı.")
+            return
+            
         print("✅ Instagram'a başarıyla giriş yapıldı.")
         
-        # 4) Hedef hesapları gez
         for target in target_accounts:
             if followed_count >= max_daily_follows:
                 break
                 
-            print(f"🔍 Target inceleniyor: @{target}")
+            print(f"🔍 Hedef inceleniyor: @{target}")
             candidates = get_candidates_from_target(driver, target)
             
             for candidate in candidates:
