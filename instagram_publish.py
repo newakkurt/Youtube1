@@ -1,6 +1,9 @@
+# Bu kodu instagram_publish.py dosyasına tamamen yapıştırabilirsin.
+# Fonksiyonun eksiksiz, tek parça ve güncellenmiş halidir.
+
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
-Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
+Akış: videoyu IG biçimine çevir -> geçici host's yükle -> Reels container -> işle -> yayınla.
 + Selenium tabanlı gelişmiş otomatik takip botu entegre edilmiştir.
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
 """
@@ -327,25 +330,41 @@ def run_follow_bot():
     print("🤖 Instagram takip botu başlatılıyor...")
     
     options = Options()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument("--lang=en-US")
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
     
     driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 20)
+    wait = WebDriverWait(driver, 15)
     followed_count = 0
 
     try:
-        driver.get("https://www.instagram.com/accounts/login/")
+        # 1) Giriş sayfasına git
+        driver.get("https://www.instagram.com/accounts/login/?hl=en")
+        time.sleep(5)
         
+        # 2) Çerez (Cookie) Pop-up'ı çıkarsa kabul et
+        try:
+            cookie_btn = driver.find_element(By.XPATH, "//button[contains(text(), 'Allow') or contains(text(), 'Accept') or contains(text(), 'Kabul')]")
+            cookie_btn.click()
+            print("🍪 Çerez bildirimi kapatıldı.")
+            time.sleep(2)
+        except Exception:
+            pass
+
+        # 3) Kullanıcı adı ve şifre gir
         username_input = wait.until(EC.presence_of_element_located((By.NAME, "username")))
         password_input = wait.until(EC.presence_of_element_located((By.NAME, "password")))
         
+        username_input.clear()
         username_input.send_keys(username)
         time.sleep(1)
+        
+        password_input.clear()
         password_input.send_keys(password)
         time.sleep(2)
         
@@ -355,6 +374,7 @@ def run_follow_bot():
         time.sleep(10)
         print("✅ Instagram'a başarıyla giriş yapıldı.")
         
+        # 4) Hedef hesapları gez
         for target in target_accounts:
             if followed_count >= max_daily_follows:
                 break
