@@ -228,3 +228,38 @@ def refresh_token() -> str:
     )
     _check(r, "refresh", token)
     return r.json()["access_token"]
+
+import time
+import random
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import config
+
+def check_and_follow_user(driver, username):
+    driver.get(f"https://www.instagram.com/{username}/")
+    time.sleep(random.randint(5, 8))
+    
+    try:
+        # Takipçi sayısını çekme
+        follower_element = driver.find_element(By.XPATH, "//header//ul/li[2]//span")
+        follower_text = follower_element.get_attribute("title") or follower_element.text
+        
+        # Sayıyı int formata çevirme (ör. '5,400' -> 5400)
+        follower_count = int(follower_text.replace(',', '').replace('.', ''))
+        
+        if follower_count >= config.MIN_FOLLOWER_COUNT:
+            follow_button = driver.find_element(By.XPATH, "//button[contains(text(), 'Takip Et') or contains(text(), 'Follow')]")
+            follow_button.click()
+            print(f"[+] Takip edildi: {username} (Takipçi: {follower_count})")
+            return True
+        else:
+            print(f"[-] Pas geçildi: {username} (Takipçi < 5000)")
+            return False
+            
+    except Exception as e:
+        print(f"[!] Hata veya zaten takip ediliyor: {e}")
+        return False
+
+# Her işlem arasında insansı bekleme (45-90 saniye)
+def human_delay():
+    time.sleep(random.randint(45, 90))
