@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
   "The Hidden Reason Secure Switches Block Real Users",
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
   "The Critical DHCP Snooping Rule Most Engineers Forget",
@@ -100,7 +99,8 @@
   "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
   "Manual Changes Cause Config Drift: Diff with Ansible",
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
-  "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open"
+  "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
+  "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1766,6 +1766,23 @@
    "ig_id": "17892690441653393",
    "file_id": "BAACAgQAAxkDAAIBd2rVAAGy3pV7T2-26RCPdvc_twJoKAACAyUAAvMvqVLuumnU6HooGD0E",
    "message_id": 375
+  },
+  "350a033c": {
+   "title": "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
+   "description": "A broadcast storm caused by a loop or faulty NIC can take down an entire VLAN. Setting a 10 % storm‑control threshold and configuring a trap or shutdown action stops the outage before it spreads.\n\n#Shorts #stormcontrol #networking #cybersecurity #Cisco #Juniper",
+   "tags": [
+    "stormcontrol",
+    "networking",
+    "cybersecurity",
+    "Cisco",
+    "Juniper",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop a loop or bad NIC from crashing your VLAN.",
+   "ig_id": "18002349269798960",
+   "file_id": "BAACAgQAAxkDAAIBe2rVNCjyPehWMR9-pXWxZveU5sx0AAJWJQAC8y-pUtevyhXhCLNbPQQ",
+   "message_id": 379
   }
  }
 }
