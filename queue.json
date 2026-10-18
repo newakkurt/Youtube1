@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Skipping Backups Before Automation Can Crash Your Network",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
   "Why Your Switch Drops Good Traffic: DAI & Empty DHCP Snooping Table",
@@ -100,7 +99,8 @@
   "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
-  "Blind ignore_errors Triggers Network Outages: Use Block Rescue"
+  "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
+  "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1630,6 +1630,23 @@
    "ig_id": "18210737947364584",
    "file_id": "BAACAgQAAxkDAAIBU2rUhdOy1xc4zUF_puu9tldMulTLAAJzHgAC7S-pUqQNlrt--LzlPQQ",
    "message_id": 339
+  },
+  "576a3484": {
+   "title": "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
+   "description": "Leaving default VLAN 1 as your native VLAN on trunk links leaves your network vulnerable to double-tagging attacks. Secure your switches by configuring a dedicated, unused VLAN ID on both trunk ends.\n\n#Shorts #vlanhopping #networksecurity #ccna #switching #cybersecurity",
+   "tags": [
+    "vlanhopping",
+    "networksecurity",
+    "ccna",
+    "switching",
+    "cybersecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave trunk ports on default Native VLAN one.",
+   "ig_id": "18136883815732040",
+   "file_id": "BAACAgQAAxkDAAIBV2rUiYqXFPmZbGVdXGkX-_rV29X5AAJ8HgAC7S-pUpsDXz_W6rJdPQQ",
+   "message_id": 343
   }
  }
 }
