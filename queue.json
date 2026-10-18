@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Sticky MAC Locks Your Port and How to Unlock It",
   "Why Skipping Backups Before Automation Can Crash Your Network",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Ansible Dry-Run Saves Your Switch Config Changes",
@@ -100,7 +99,8 @@
   "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
   "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
-  "Syslog Floods Switch CPU: Set Logging Trap Levels"
+  "Syslog Floods Switch CPU: Set Logging Trap Levels",
+  "Blind ignore_errors Triggers Network Outages: Use Block Rescue"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1613,6 +1613,23 @@
    "ig_id": "18317052649304368",
    "file_id": "BAACAgQAAxkDAAIBTmrUb6QaIMPW0u6h2lL7u_fiGAqKAAJEHgAC7S-pUsVbVylK6EUZPQQ",
    "message_id": 334
+  },
+  "9addc027": {
+   "title": "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
+   "description": "Bypassing failed tasks blindly with ignore_errors allows broken configurations to propagate silently across production devices. Use structured block and rescue tasks in Ansible to catch exceptions and execute safe rollbacks.\n\n#Shorts #ansibleautomation #networkengineering #devops #infrastructureascode #netops",
+   "tags": [
+    "ansibleautomation",
+    "networkengineering",
+    "devops",
+    "infrastructureascode",
+    "netops",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop adding ignore_errors yes across your core network automation playbooks.",
+   "ig_id": "18210737947364584",
+   "file_id": "BAACAgQAAxkDAAIBU2rUhdOy1xc4zUF_puu9tldMulTLAAJzHgAC7S-pUqQNlrt--LzlPQQ",
+   "message_id": 339
   }
  }
 }
