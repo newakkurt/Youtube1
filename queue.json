@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How to Safely Configure Switches with Ansible’s Dry‑Run First",
   "Why Only Uplink Ports Get Trust with DHCP Snooping Enabled",
   "Why Sticky MAC Causes Err‑Disable and How to Repair It",
   "Dry‑Run First: Safer Switch Config with Ansible",
@@ -100,7 +99,8 @@
   "Why a Public SNMP Community Can Leak a 3,000-Device Network",
   "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
   "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
-  "Why Time Drift Breaks Incident Response – Sync Your NTP"
+  "Why Time Drift Breaks Incident Response – Sync Your NTP",
+  "Why Switch Ports Dump Slow Devices Into Guest VLANs"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1563,6 +1563,22 @@
    "hook": "A single second off can hide a breach.",
    "video_id": "r798UM2wY_c",
    "ig_id": "18500766613103522"
+  },
+  "d008ff25": {
+   "title": "Why Switch Ports Dump Slow Devices Into Guest VLANs",
+   "description": "Aggressive MAB timers can repeatedly quarantine slow-booting printers into unauthorized VLANs. Learn how proper reauthentication tuning and fail-open settings keep your operations running when servers fail.\n\n#Shorts #NetworkAccessControl #NetworkSecurity #SysAdmin #SwitchConfiguration #CyberSecurity",
+   "tags": [
+    "NetworkAccessControl",
+    "NetworkSecurity",
+    "SysAdmin",
+    "SwitchConfiguration",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "published",
+   "hook": "Did your network switch just kick slow printers into quarantine?",
+   "video_id": "_V3sITWl4pQ",
+   "ig_id": "18152859754547293"
   }
  }
 }
