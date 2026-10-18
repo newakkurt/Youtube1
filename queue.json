@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Sticky MAC Causes Err‑Disable and How to Repair It",
   "Dry‑Run First: Safer Switch Config with Ansible",
   "Why Skipping Backups Before Automation Crashes Your Network",
   "Why Sticky MAC Locks Your Port and How to Unlock It",
@@ -100,7 +99,8 @@
   "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
   "Why Time Drift Breaks Incident Response – Sync Your NTP",
   "Why Switch Ports Dump Slow Devices Into Guest VLANs",
-  "Ansible Spreads Bad Configs: Fix with any_errors_fatal"
+  "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
+  "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery"
  ],
  "items": {
   "dcdc2b1c": {
