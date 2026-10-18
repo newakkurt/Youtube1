@@ -275,3 +275,14 @@ if __name__ == "__main__":
         raise
     finally:
         save(state)
+        modes = {
+        "generate": lambda: generate_one(state),
+        "process": lambda: process(state),
+        "report": lambda: report(state),
+        "igtest": lambda: ig_test(state),
+        "lead": run_lead,
+        "li_status": lambda: post_linkedin_status(state),
+        "ytcheck": lambda: tg.send(youtube.check_token()[1]),
+        "litest": lambda: li_test(state),
+        "ig_follow": lambda: __import__("instagram_bot").run_follow_bot(),  # <--- BURAYI EKLEYİN
+    }
