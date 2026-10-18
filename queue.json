@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Sticky MAC Triggers Err‑Disable: Why Ports Shut Down and How to Restore Them",
   "Why Your Network Might Drop Good Traffic: DAI & Empty DHCP Table",
   "Why Your Network Might Drop Legit Traffic: DAI & Empty DHCP Table",
   "The Hidden Reason Secure Switches Block Real Users",
@@ -100,7 +99,8 @@
   "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
   "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
   "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
-  "Manual Changes Cause Config Drift: Diff with Ansible"
+  "Manual Changes Cause Config Drift: Diff with Ansible",
+  "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1732,6 +1732,23 @@
    "ig_id": "18344700601287845",
    "file_id": "BAACAgQAAxkDAAIBb2rU1KhJGS0iIDM-mtTG_tzuO6naAAICHwAC7S-pUr10lUNKQjHRPQQ",
    "message_id": 367
+  },
+  "df82c6dd": {
+   "title": "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
+   "description": "Unused IPv6 stacks leave network switches vulnerable to rogue router advertisements and neighbor discovery attacks. Learn how disabling IPv6 routing and interface settings reduces your overall attack surface.\n\n#Shorts #IPv6Security #NetworkEngineering #CyberSecurity #Cisco #NetworkSecurity",
+   "tags": [
+    "IPv6Security",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Cisco",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop leaving unused IPv6 stacks active on your network switches.",
+   "ig_id": "18139193626540345",
+   "file_id": "BAACAgQAAxkDAAIBc2rU_I8c7yuMCZao4CMq7UGOCj0OAAL5JAAC8y-pUnFW1FlNoacaPQQ",
+   "message_id": 371
   }
  }
 }
