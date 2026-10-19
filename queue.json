@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Precise Time Sync Is the Unsung Hero of Network Security",
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
@@ -100,7 +99,8 @@
   "Port err-disable from excess MACs? Limit to 1‑2 addresses",
   "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
   "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
-  "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout"
+  "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
+  "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1919,6 +1919,23 @@
    "ig_id": "18118195099999671",
    "file_id": "BAACAgQAAxkDAAIBnGrWdc_vM-7i1QICSvFGkkLDmnuKAALbGwAC8y-5UjAu9tpWSQn5PQQ",
    "message_id": 412
+  },
+  "af4fb986": {
+   "title": "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
+   "description": "Learn how to lock down firewall administrative access to trusted IP ranges and secure protocols. Follow these quick steps to prevent unauthorized login attempts and strengthen your network defense.\n\n#Shorts #AdminIPLockdown #NetworkSecurity #Cybersecurity #Firewall #ITOps",
+   "tags": [
+    "AdminIPLockdown",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "Firewall",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop exposing firewall admin ports to the whole internet.",
+   "ig_id": "18005564042793616",
+   "file_id": "BAACAgQAAxkDAAIBoGrWnKjKVb7sa6vl6iW5dX9J8XqpAAITHAAC8y-5Us9QYt85YNcePQQ",
+   "message_id": 416
   }
  }
 }
