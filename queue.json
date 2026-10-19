@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Hidden Reason Secure Switches Block Real Users",
   "Why Sticky MAC Shuts Down Your Port and How to Restore It",
   "The Critical DHCP Snooping Rule Most Engineers Forget",
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
@@ -100,7 +99,8 @@
   "Manual Changes Cause Config Drift: Diff with Ansible",
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
-  "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action"
+  "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
+  "Python Scripts Spike Switch CPU: Throttle Async Concurrency"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1783,6 +1783,23 @@
    "ig_id": "18002349269798960",
    "file_id": "BAACAgQAAxkDAAIBe2rVNCjyPehWMR9-pXWxZveU5sx0AAJWJQAC8y-pUtevyhXhCLNbPQQ",
    "message_id": 379
+  },
+  "9cfb1a19": {
+   "title": "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
+   "description": "Blasting thousands of switches with unthrottled Python scripts can spike control plane CPUs and drop critical management sessions. Learn how rate limiting with asyncio semaphores and sleep intervals protects your hardware.\n\n#Shorts #NetworkAutomation #Python #NetDevOps #SwitchCPU #NetworkEngineering",
+   "tags": [
+    "NetworkAutomation",
+    "Python",
+    "NetDevOps",
+    "SwitchCPU",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never unleash unthrottled Python scripts across thousands of enterprise network switches.",
+   "ig_id": "18342807247262168",
+   "file_id": "BAACAgQAAxkDAAIBgGrViRgtohys_RQ5oShcsR0K9X4WAAJ-HQAC8y-xUntW0VQQkEuXPQQ",
+   "message_id": 384
   }
  }
 }
