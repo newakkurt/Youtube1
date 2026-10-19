@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Catch Config Drift Before It Cripples Your Network",
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
@@ -100,7 +99,8 @@
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
   "Port err-disable from excess MACs? Limit to 1‑2 addresses",
   "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
-  "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure"
+  "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
+  "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1902,6 +1902,23 @@
    "ig_id": "18119388125092869",
    "file_id": "BAACAgQAAxkDAAIBmGrWUBeUslrd3Lk3pcsyE2Gk_ARlAAIQHwAC8y-xUnhVC73RYnY_PQQ",
    "message_id": 408
+  },
+  "6a212218": {
+   "title": "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
+   "description": "A hidden mini switch can bring down your entire LAN. Enabling PortFast and BPDU Guard on access ports forces an err‑disable and eliminates the risk of a rogue root bridge.\n\n#Shorts #PortFastBPDUGuard #networksecurity #networkengineer #stp #errdisable",
+   "tags": [
+    "PortFastBPDUGuard",
+    "networksecurity",
+    "networkengineer",
+    "stp",
+    "errdisable",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a hidden mini switch lock your entire LAN.",
+   "ig_id": "18118195099999671",
+   "file_id": "BAACAgQAAxkDAAIBnGrWdc_vM-7i1QICSvFGkkLDmnuKAALbGwAC8y-5UjAu9tpWSQn5PQQ",
+   "message_id": 412
   }
  }
 }
