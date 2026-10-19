@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Critical DHCP Snooping Rule Most Engineers Forget",
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
@@ -100,7 +99,8 @@
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
-  "Unlogged Switch Outages: Track Network Configs with Git"
+  "Unlogged Switch Outages: Track Network Configs with Git",
+  "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1817,6 +1817,23 @@
    "ig_id": "18130697695796345",
    "file_id": "BAACAgQAAxkDAAIBhGrVwWToYwL8DAqHivGP8GJhpBmIAAKdHQAC8y-xUuCdHq0bCaCIPQQ",
    "message_id": 388
+  },
+  "ec2392c4": {
+   "title": "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
+   "description": "Unidirectional fiber cuts can silently halt BPDU reception and trigger bridging loops across distribution trunks. Prevent network meltdowns by verifying optical power with diagnostics and enabling spanning-tree guard loop on interfaces.\n\n#Shorts #LoopGuard #NetworkEngineering #SpanningTree #Cisco #CCNA",
+   "tags": [
+    "LoopGuard",
+    "NetworkEngineering",
+    "SpanningTree",
+    "Cisco",
+    "CCNA",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Always enable STP Loop Guard on your core distribution trunk links.",
+   "ig_id": "18140614747617657",
+   "file_id": "BAACAgQAAxkDAAIBiGrV3c-fnLW8NpwPK1sS_bUSrxaYAALhHQAC8y-xUgQISZA0OcTAPQQ",
+   "message_id": 392
   }
  }
 }
