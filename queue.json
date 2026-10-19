@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
   "Catch Config Drift Before It Cripples Your Network",
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
@@ -100,7 +99,8 @@
   "Unlogged Switch Outages: Track Network Configs with Git",
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
-  "Port err-disable from excess MACs? Limit to 1‑2 addresses"
+  "Port err-disable from excess MACs? Limit to 1‑2 addresses",
+  "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1868,6 +1868,23 @@
    "ig_id": "18080345711719030",
    "file_id": "BAACAgQAAxkDAAIBkGrWGtxLNGm8FcwT4OicLUGGrTg2AAJ1HgAC8y-xUn4y7r4PAAHGDT0E",
    "message_id": 400
+  },
+  "05f0b176": {
+   "title": "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
+   "description": "Proper patch panel and switch port labeling cuts outage resolution from minutes to seconds. Verify your labeling before the next maintenance window and keep your network humming.\n\n#Shorts #PatchPanelLabeling #NetworkEngineering #Cybersecurity #DataCenter #ITInfrastructure",
+   "tags": [
+    "PatchPanelLabeling",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "DataCenter",
+    "ITInfrastructure",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop downtime—label your patch panels for instant fault resolution.",
+   "ig_id": "18113988257172099",
+   "file_id": "BAACAgQAAxkDAAIBlGrWTkwqQ5s1G6K-mX4UaHLkZ5M2AAIMHwAC8y-xUmsitw3hToc4PQQ",
+   "message_id": 404
   }
  }
 }
