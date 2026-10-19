@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
   "Catch Config Drift Before It Cripples Your Network",
@@ -100,7 +99,8 @@
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
   "Unlogged Switch Outages: Track Network Configs with Git",
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
-  "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface"
+  "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
+  "Port err-disable from excess MACs? Limit to 1‑2 addresses"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1851,6 +1851,23 @@
    "ig_id": "17994348123107146",
    "file_id": "BAACAgQAAxkDAAIBjGrWB1gq4yZbxJoEEzGFHvqxYebkAAJGHgAC8y-xUqUZvZwfpTnYPQQ",
    "message_id": 396
+  },
+  "7077b752": {
+   "title": "Port err-disable from excess MACs? Limit to 1‑2 addresses",
+   "description": "Learn how unlimited MAC addresses trigger err‑disable on edge ports and how to stop it. We show the exact Port Security settings to limit MACs and automatically shut down violations.\n\n#Shorts #PortSecurity #NetworkEngineering #CyberSecurity #SwitchConfig #ITSecurity",
+   "tags": [
+    "PortSecurity",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SwitchConfig",
+    "ITSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop allowing unlimited MACs on edge ports—they’ll shut down your network.",
+   "ig_id": "18080345711719030",
+   "file_id": "BAACAgQAAxkDAAIBkGrWGtxLNGm8FcwT4OicLUGGrTg2AAJ1HgAC8y-xUn4y7r4PAAHGDT0E",
+   "message_id": 400
   }
  }
 }
