@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
   "When DAI Silently Drops Legit Traffic – The Hidden DHCP Snooping Trap",
   "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
@@ -100,7 +99,8 @@
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
   "Unlogged Switch Outages: Track Network Configs with Git",
-  "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard"
+  "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
+  "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1834,6 +1834,23 @@
    "ig_id": "18140614747617657",
    "file_id": "BAACAgQAAxkDAAIBiGrV3c-fnLW8NpwPK1sS_bUSrxaYAALhHQAC8y-xUgQISZA0OcTAPQQ",
    "message_id": 392
+  },
+  "d4913cda": {
+   "title": "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
+   "description": "Learn how to prevent routing table poisoning by disabling ICMP redirects on each interface. Follow simple Cisco commands to secure your network instantly.\n\n#Shorts #ICMPRedirect #NetworkSecurity #Routing #Cisco #CyberSec",
+   "tags": [
+    "ICMPRedirect",
+    "NetworkSecurity",
+    "Routing",
+    "Cisco",
+    "CyberSec",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop allowing ICMP redirects on any interface – they poison routing tables.",
+   "ig_id": "17994348123107146",
+   "file_id": "BAACAgQAAxkDAAIBjGrWB1gq4yZbxJoEEzGFHvqxYebkAAJGHgAC8y-xUqUZvZwfpTnYPQQ",
+   "message_id": 396
   }
  }
 }
