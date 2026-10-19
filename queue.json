@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How One Faulty NIC Can Crash Your Whole VLAN – Storm Control Tips",
   "Catch Config Drift Before It Cripples Your Network",
   "Why Precise Time Sync Is the Unsung Hero of Network Security",
   "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
@@ -100,7 +99,8 @@
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
   "Port err-disable from excess MACs? Limit to 1‑2 addresses",
-  "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix"
+  "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
+  "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1885,6 +1885,23 @@
    "ig_id": "18113988257172099",
    "file_id": "BAACAgQAAxkDAAIBlGrWTkwqQ5s1G6K-mX4UaHLkZ5M2AAIMHwAC8y-xUmsitw3hToc4PQQ",
    "message_id": 404
+  },
+  "6e7812f7": {
+   "title": "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
+   "description": "Learn how LLDP and CDP can unintentionally expose your network topology and how to lock them down on access ports. Apply per‑port disable commands and keep discovery only where it’s truly required.\n\n#Shorts #LLDPCDP #NetworkSecurity #Cisco #SwitchHardening #CyberSec",
+   "tags": [
+    "LLDPCDP",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchHardening",
+    "CyberSec",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop exposing your network—LLDP and CDP can leak device maps.",
+   "ig_id": "18119388125092869",
+   "file_id": "BAACAgQAAxkDAAIBmGrWUBeUslrd3Lk3pcsyE2Gk_ARlAAIQHwAC8y-xUnhVC73RYnY_PQQ",
+   "message_id": 408
   }
  }
 }
