@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Sticky MAC Shuts Down Your Port and How to Restore It",
   "The Critical DHCP Snooping Rule Most Engineers Forget",
   "The Hidden Rule: Trust Only Uplinks When DHCP Snooping Is On",
   "Why Guessing Network Issues Is Killing Uptime – Use Central Syslog",
@@ -100,7 +99,8 @@
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
-  "Python Scripts Spike Switch CPU: Throttle Async Concurrency"
+  "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
+  "Unlogged Switch Outages: Track Network Configs with Git"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1800,6 +1800,23 @@
    "ig_id": "18342807247262168",
    "file_id": "BAACAgQAAxkDAAIBgGrViRgtohys_RQ5oShcsR0K9X4WAAJ-HQAC8y-xUntW0VQQkEuXPQQ",
    "message_id": 384
+  },
+  "eec732c8": {
+   "title": "Unlogged Switch Outages: Track Network Configs with Git",
+   "description": "Storing switch configurations in raw backup folders makes troubleshooting outages impossible when changes break production. Using Git version control provides instant diff tracking to see exactly who modified a device and when.\n\n#Shorts #NetworkAutomation #NetDevOps #Git #NetworkEngineering #SysAdmin",
+   "tags": [
+    "NetworkAutomation",
+    "NetDevOps",
+    "Git",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop dumping network configuration backups into unversioned flat text folders.",
+   "ig_id": "18130697695796345",
+   "file_id": "BAACAgQAAxkDAAIBhGrVwWToYwL8DAqHivGP8GJhpBmIAAKdHQAC8y-xUuCdHq0bCaCIPQQ",
+   "message_id": 388
   }
  }
 }
