@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How Rogue Desk Switches Crash Networks Without BPDU Guard",
   "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
   "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
   "Why Your NAC Might Lock Out Slow Network Devices",
@@ -100,7 +99,8 @@
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
-  "Stop err-disable caused by excess MACs: limit to 1-2 and shut down"
+  "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
+  "Silent Switch Drift Causes Outages: Alert on Config Diffs"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2021,6 +2021,23 @@
    "ig_id": "18397740997200545",
    "file_id": "BAACAgQAAxkDAAIBtGrXWO8V-W5lS5TjSyCYmm8r_n1zAALZHwACWzG4UkWDgYvOKS2VPQQ",
    "message_id": 436
+  },
+  "b7dfc2b9": {
+   "title": "Silent Switch Drift Causes Outages: Alert on Config Diffs",
+   "description": "Manual console edits silently drift switch configurations away from baseline standards. Schedule periodic golden config audits using Ansible or rConfig to trigger alerts before outages occur.\n\n#Shorts #ConfigDrift #NetworkEngineering #Ansible #NetworkAutomation #SysAdmin",
+   "tags": [
+    "ConfigDrift",
+    "NetworkEngineering",
+    "Ansible",
+    "NetworkAutomation",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never auto-remediate switch config drift without sending an alert first.",
+   "ig_id": "18223776706338743",
+   "file_id": "BAACAgQAAxkDAAIBuGrXiYmGUuF7l0vfInVHs0S6GoASAAIdHwACWzHAUoOKPqSv7LqhPQQ",
+   "message_id": 440
   }
  }
 }
