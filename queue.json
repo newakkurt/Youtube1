@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Broadcast Storms Without Breaking Industrial Traffic",
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
@@ -100,7 +99,8 @@
   "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
-  "Stop Config Drift: Use Golden Config Templates with Alerts"
+  "Stop Config Drift: Use Golden Config Templates with Alerts",
+  "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1953,6 +1953,23 @@
    "ig_id": "18131105791695022",
    "file_id": "BAACAgQAAxkDAAIBpGrW2wyWyTXOvQI3Aj8Um1OvqaEOAAIpHAACWzG4UohrbKZW-xubPQQ",
    "message_id": 420
+  },
+  "436075c4": {
+   "title": "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
+   "description": "Applying DHCP snooping rate limits to trusted trunk ports chokes legitimate server traffic and breaks IP lease distribution across your VLANs. Keep DHCP rate-limiting strictly on untrusted access interfaces and leave your trusted uplinks unthrottled.\n\n#Shorts #DHCPSnooping #NetworkEngineering #CiscoSwitch #SysAdmin #NetworkSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkEngineering",
+    "CiscoSwitch",
+    "SysAdmin",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never apply DHCP snooping rate limits to your trusted uplink ports.",
+   "ig_id": "18640475866044121",
+   "file_id": "BAACAgQAAxkDAAIBqGrXEwvpQd27KS4FSoAR04rGmwOGAAIMHQACWzG4UgY18RILaZf6PQQ",
+   "message_id": 424
   }
  }
 }
