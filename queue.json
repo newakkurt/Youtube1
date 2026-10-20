@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
@@ -100,7 +99,8 @@
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
   "Stop Config Drift: Use Golden Config Templates with Alerts",
-  "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks"
+  "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
+  "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1970,6 +1970,23 @@
    "ig_id": "18640475866044121",
    "file_id": "BAACAgQAAxkDAAIBqGrXEwvpQd27KS4FSoAR04rGmwOGAAIMHQACWzG4UgY18RILaZf6PQQ",
    "message_id": 424
+  },
+  "fb74be9b": {
+   "title": "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
+   "description": "Flooding remote syslog collectors with switch debug messages spikes hardware CPU and overwhelms storage. Learn how to configure logging trap levels and disable console debugging on Cisco IOS.\n\n#Shorts #syslog #networkengineering #cisco #cybersecurity #netadmin",
+   "tags": [
+    "syslog",
+    "networkengineering",
+    "cisco",
+    "cybersecurity",
+    "netadmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never stream raw debug logs directly to your remote syslog collectors.",
+   "ig_id": "18197870095343034",
+   "file_id": "BAACAgQAAxkDAAIBrGrXL3_WQs5eJOyWLlT5AtwTcAABjwAC7R0AAlsxuFJu3lglN1Bc9j0E",
+   "message_id": 428
   }
  }
 }
