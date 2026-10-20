@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
   "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
   "Why Your NAC Might Lock Out Slow Network Devices",
   "Detect Config Drift Early: Golden Templates vs Silent Switch Changes",
@@ -100,7 +99,8 @@
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
-  "Silent Switch Drift Causes Outages: Alert on Config Diffs"
+  "Silent Switch Drift Causes Outages: Alert on Config Diffs",
+  "Avoid network outages: abort on errors with any_errors_fatal"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2038,6 +2038,23 @@
    "ig_id": "18223776706338743",
    "file_id": "BAACAgQAAxkDAAIBuGrXiYmGUuF7l0vfInVHs0S6GoASAAIdHwACWzHAUoOKPqSv7LqhPQQ",
    "message_id": 440
+  },
+  "3b854e56": {
+   "title": "Avoid network outages: abort on errors with any_errors_fatal",
+   "description": "Using ignore_errors: yes without caution can silently skip bad configurations, leading to cascading failures. Set any_errors_fatal: true and use rescue blocks to fail fast and handle expected exceptions safely.\n\n#Shorts #AnsibleFailFast #NetworkAutomation #Cybersecurity #Ansible #DevOps",
+   "tags": [
+    "AnsibleFailFast",
+    "NetworkAutomation",
+    "Cybersecurity",
+    "Ansible",
+    "DevOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never hide network errors with ignore_errors: yes in Ansible.",
+   "ig_id": "17988427730877154",
+   "file_id": "BAACAgQAAxkDAAIBvGrXn4OI40dTj4eNLvTo-BziC4NcAALsHwACWzHAUt-V1_Ppqo1-PQQ",
+   "message_id": 444
   }
  }
 }
