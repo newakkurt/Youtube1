@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Ignoring Native VLAN Settings Lets Hackers Slip Through",
   "Stop Broadcast Storms Without Breaking Industrial Traffic",
   "Stop Network Takeover: PortFast + BPDU Guard in 30 Seconds",
   "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
@@ -100,7 +99,8 @@
   "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
   "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
-  "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall"
+  "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
+  "Stop Config Drift: Use Golden Config Templates with Alerts"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1936,6 +1936,23 @@
    "ig_id": "18005564042793616",
    "file_id": "BAACAgQAAxkDAAIBoGrWnKjKVb7sa6vl6iW5dX9J8XqpAAITHAAC8y-5Us9QYt85YNcePQQ",
    "message_id": 416
+  },
+  "f676cd89": {
+   "title": "Stop Config Drift: Use Golden Config Templates with Alerts",
+   "description": "Manual edits can cause hidden config drift that wastes hours troubleshooting. Use a golden config template, compare it regularly, and let alerts guide you before any auto‑fix.\n\n#Shorts #ConfigDrift #NetworkEngineering #Cybersecurity #Automation #Ansible",
+   "tags": [
+    "ConfigDrift",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "Automation",
+    "Ansible",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop forgetting manual changes – they’ll haunt you months later.",
+   "ig_id": "18131105791695022",
+   "file_id": "BAACAgQAAxkDAAIBpGrW2wyWyTXOvQI3Aj8Um1OvqaEOAAIpHAACWzG4UohrbKZW-xubPQQ",
+   "message_id": 420
   }
  }
 }
