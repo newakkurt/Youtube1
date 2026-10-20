@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
   "Why Your NAC Might Lock Out Slow Network Devices",
   "Detect Config Drift Early: Golden Templates vs Silent Switch Changes",
   "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
@@ -100,7 +99,8 @@
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
-  "Avoid network outages: abort on errors with any_errors_fatal"
+  "Avoid network outages: abort on errors with any_errors_fatal",
+  "Bulk Netmiko Scripts Lock You Out: Test on One Switch"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2055,6 +2055,23 @@
    "ig_id": "17988427730877154",
    "file_id": "BAACAgQAAxkDAAIBvGrXn4OI40dTj4eNLvTo-BziC4NcAALsHwACWzHAUt-V1_Ppqo1-PQQ",
    "message_id": 444
+  },
+  "365dc174": {
+   "title": "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
+   "description": "Running bulk password updates with Paramiko or Netmiko can cause widespread network lockouts if a syntax error hits. Always validate your script on a lab device or single switch before executing across the fleet.\n\n#Shorts #Netmiko #NetworkAutomation #PythonNetworking #NetworkEngineering #SysAdmin",
+   "tags": [
+    "Netmiko",
+    "NetworkAutomation",
+    "PythonNetworking",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never blast automated password updates across your entire fleet at once.",
+   "ig_id": "17953152885295409",
+   "file_id": "BAACAgQAAxkDAAIBwGrXs_mvJqxn51f7ljT07iOtfRv2AAJLIAACWzHAUkJ-jIRTkX9fPQQ",
+   "message_id": 448
   }
  }
 }
