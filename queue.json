@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
   "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
   "Stop Config Drift: How Golden Templates Catch Silent Switch Changes",
@@ -100,7 +99,8 @@
   "Stop Config Drift: Use Golden Config Templates with Alerts",
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
-  "Failed Changes Lock You Out: Use Commit Confirmed 5"
+  "Failed Changes Lock You Out: Use Commit Confirmed 5",
+  "Stop err-disable caused by excess MACs: limit to 1-2 and shut down"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2004,6 +2004,23 @@
    "ig_id": "18335442379273219",
    "file_id": "BAACAgQAAxkDAAIBsGrXVv-7pzohQdG3aBGMhVbnCcrcAAK9HwACWzG4UjGbAiZCwZMTPQQ",
    "message_id": 432
+  },
+  "6a9feabb": {
+   "title": "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
+   "description": "Learn how to lock down edge ports by limiting the number of MAC addresses and automatically shutting down violations. This quick guide prevents rogue devices and keeps your network secure.\n\n#Shorts #PortSecurity #NetworkSecurity #Cisco #Cybersecurity #NetworkEngineers",
+   "tags": [
+    "PortSecurity",
+    "NetworkSecurity",
+    "Cisco",
+    "Cybersecurity",
+    "NetworkEngineers",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never allow unlimited MAC addresses on your access ports.",
+   "ig_id": "18397740997200545",
+   "file_id": "BAACAgQAAxkDAAIBtGrXWO8V-W5lS5TjSyCYmm8r_n1zAALZHwACWzG4UkWDgYvOKS2VPQQ",
+   "message_id": 436
   }
  }
 }
