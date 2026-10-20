@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Your NAC Might Lock Out Slow Network Devices",
   "Detect Config Drift Early: Golden Templates vs Silent Switch Changes",
   "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
   "Why Storm Control Might Silently Kill Factory Networks",
@@ -100,7 +99,8 @@
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
   "Avoid network outages: abort on errors with any_errors_fatal",
-  "Bulk Netmiko Scripts Lock You Out: Test on One Switch"
+  "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
+  "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2072,6 +2072,23 @@
    "ig_id": "17953152885295409",
    "file_id": "BAACAgQAAxkDAAIBwGrXs_mvJqxn51f7ljT07iOtfRv2AAJLIAACWzHAUkJ-jIRTkX9fPQQ",
    "message_id": 448
+  },
+  "b3eb67e6": {
+   "title": "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
+   "description": "A dead RADIUS/NAC server can cripple production if ports default wrong. Learn how to pre‑configure fail‑open or fail‑close to keep traffic flowing.\n\n#Shorts #FailOpenFailClose #NetworkEngineering #Cybersecurity #RADIUS #NAC",
+   "tags": [
+    "FailOpenFailClose",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "RADIUS",
+    "NAC",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a dead RADIUS server halt your entire plant.",
+   "ig_id": "18340035823277032",
+   "file_id": "BAACAgQAAxkDAAIBxGrX4xKEzjX97Lr67cW2JVwAARbeAwACuSAAAlsxwFKn-KsV90XUvj0E",
+   "message_id": 452
   }
  }
 }
