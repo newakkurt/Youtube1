@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How One Faulty NIC Can Crash Your VLAN – Storm Control Basics",
   "Why Untrusted Ports Need DHCP Rate‑Limits – Stop Storms Fast",
   "How Rogue Desk Switches Crash Networks Without BPDU Guard",
   "How PortFast + BPDU Guard Stops Rogue Switches in Seconds",
@@ -100,7 +99,8 @@
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
   "Stop Config Drift: Use Golden Config Templates with Alerts",
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
-  "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap"
+  "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
+  "Failed Changes Lock You Out: Use Commit Confirmed 5"
  ],
  "items": {
   "dcdc2b1c": {
@@ -1987,6 +1987,23 @@
    "ig_id": "18197870095343034",
    "file_id": "BAACAgQAAxkDAAIBrGrXL3_WQs5eJOyWLlT5AtwTcAABjwAC7R0AAlsxuFJu3lglN1Bc9j0E",
    "message_id": 428
+  },
+  "5fc973f2": {
+   "title": "Failed Changes Lock You Out: Use Commit Confirmed 5",
+   "description": "Prevent production network outages by establishing a formal change management process with peer sign-offs. Always test your rollback steps and deploy using timed commit confirmation.\n\n#Shorts #ChangeManagement #NetworkEngineering #NetOps #Cisco #NetworkSecurity",
+   "tags": [
+    "ChangeManagement",
+    "NetworkEngineering",
+    "NetOps",
+    "Cisco",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never push critical network changes without peer-reviewed rollback plans and formal approval.",
+   "ig_id": "18335442379273219",
+   "file_id": "BAACAgQAAxkDAAIBsGrXVv-7pzohQdG3aBGMhVbnCcrcAAK9HwACWzG4UjGbAiZCwZMTPQQ",
+   "message_id": 432
   }
  }
 }
