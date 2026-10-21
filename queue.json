@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
   "The Native VLAN Setting That Stops Double Tagging",
   "The Silent NAC Timer That Halts Production Lines",
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
@@ -100,7 +99,8 @@
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
-  "Replace TFTP with SFTP/SCP for safe backups"
+  "Replace TFTP with SFTP/SCP for safe backups",
+  "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash"
  ],
  "items": {
   "dcdc2b1c": {
