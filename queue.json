@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How One SNMP String Leaks Your Entire Network",
   "The Trunk Port Mistake That Enables VLAN Hopping",
   "The DHCP Snooping Rate Limit That Saves Your CPU",
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
@@ -100,7 +99,8 @@
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
-  "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown"
+  "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
+  "Stop switch crashes: DHCP snooping rate-limit untrusted ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2157,6 +2157,23 @@
    "ig_id": "18007230143989619",
    "file_id": "BAACAgQAAxkDAAIB1GrYqRqkxgH4ERmcHtiKu8t8igAB2QACaCIAAlsxyFLcMnEadgTxgD0E",
    "message_id": 468
+  },
+  "d0679baf": {
+   "title": "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
+   "description": "A single CLI command can shield your switch from catastrophic DHCP storms. Learn the exact steps to enable DHCP snooping, apply rate limits on untrusted ports, and protect critical network resources.\n\n#Shorts #DHCPsnooping #NetworkSecurity #CiscoSwitches #NetworkEngineering #CyberDefense",
+   "tags": [
+    "DHCPsnooping",
+    "NetworkSecurity",
+    "CiscoSwitches",
+    "NetworkEngineering",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Don’t risk a switch crash: block rogue DHCP floods with one CLI command!",
+   "ig_id": "17885516652652665",
+   "file_id": "BAACAgQAAxkDAAIB2GrYqqOhnYK6T4H8jcLEL5VFiBFwAAJyIgACWzHIUkYu-Dm9DM4AAT0E",
+   "message_id": 472
   }
  }
 }
