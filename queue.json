@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Storm Control Might Silently Kill Factory Networks",
   "Why TACACS Won't Save an Exposed Management Plane",
   "How One SNMP String Leaks Your Entire Network",
   "The Trunk Port Mistake That Enables VLAN Hopping",
@@ -100,7 +99,8 @@
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
-  "Legacy IPsec Ciphers Break Security: Upgrade to AES-256"
+  "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
+  "Auto-Revert Breaks Emergency Fixes: Alert on Drift First"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2123,6 +2123,23 @@
    "ig_id": "18127130035851367",
    "file_id": "BAACAgQAAxkDAAIBzGrYZRGVeTiJMcXaxi1rHGW14O2gAAJXHQACWzHIUuOlwVp3C1PgPQQ",
    "message_id": 460
+  },
+  "b23b8bb1": {
+   "title": "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
+   "description": "Automating immediate rollbacks on detected configuration drift can wipe out active emergency fixes and planned exceptions. Always trigger diff alerts first so engineers can review unexpected switch changes before overwriting.\n\n#Shorts #ConfigDrift #NetworkEngineering #NetDevOps #NetworkAutomation #Sysadmin",
+   "tags": [
+    "ConfigDrift",
+    "NetworkEngineering",
+    "NetDevOps",
+    "NetworkAutomation",
+    "Sysadmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let automation instantly overwrite live configuration drift.",
+   "ig_id": "18131891077703056",
+   "file_id": "BAACAgQAAxkDAAIB0GrYgS6YaYvhq0S2XMeTmtN_zw8jAAKBHgACWzHIUtP3xykRAAFNbD0E",
+   "message_id": 464
   }
  }
 }
