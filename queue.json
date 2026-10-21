@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Detect Config Drift Early: Golden Templates vs Silent Switch Changes",
   "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
   "Why Storm Control Might Silently Kill Factory Networks",
   "Why TACACS Won't Save an Exposed Management Plane",
@@ -100,7 +99,8 @@
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
   "Avoid network outages: abort on errors with any_errors_fatal",
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
-  "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running"
+  "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
+  "Idle SSL VPN sessions let hackers in – tighten timeout now"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2089,6 +2089,23 @@
    "ig_id": "18340035823277032",
    "file_id": "BAACAgQAAxkDAAIBxGrX4xKEzjX97Lr67cW2JVwAARbeAwACuSAAAlsxwFKn-KsV90XUvj0E",
    "message_id": 452
+  },
+  "f75adf03": {
+   "title": "Idle SSL VPN sessions let hackers in – tighten timeout now",
+   "description": "Learn how a tight idle timeout in SSL VPN profiles blocks unauthorized access through forgotten sessions. Follow the step‑by‑step guide to configure, locate, and test the setting without disrupting users.\n\n#Shorts #vpnidletimeout #networksecurity #cybersecurity #sslvpn #networkengineer",
+   "tags": [
+    "vpnidletimeout",
+    "networksecurity",
+    "cybersecurity",
+    "sslvpn",
+    "networkengineer",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop leaving SSL VPN sessions idle—close them before attackers strike.",
+   "ig_id": "18107079848212325",
+   "file_id": "BAACAgQAAxkDAAIByGrYLC93dtxmR-oUzAvrL4stGb7iAAL8IAACWzHAUs9A58b0IF_PPQQ",
+   "message_id": 456
   }
  }
 }
