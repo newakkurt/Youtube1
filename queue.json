@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How a Bad NIC Can Shut Down Your Entire VLAN – Storm Control Tips",
   "Why Storm Control Might Silently Kill Factory Networks",
   "Why TACACS Won't Save an Exposed Management Plane",
   "How One SNMP String Leaks Your Entire Network",
@@ -100,7 +99,8 @@
   "Avoid network outages: abort on errors with any_errors_fatal",
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
-  "Idle SSL VPN sessions let hackers in – tighten timeout now"
+  "Idle SSL VPN sessions let hackers in – tighten timeout now",
+  "Legacy IPsec Ciphers Break Security: Upgrade to AES-256"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2106,6 +2106,23 @@
    "ig_id": "18107079848212325",
    "file_id": "BAACAgQAAxkDAAIByGrYLC93dtxmR-oUzAvrL4stGb7iAAL8IAACWzHAUs9A58b0IF_PPQQ",
    "message_id": 456
+  },
+  "2fe76348": {
+   "title": "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
+   "description": "Outdated cryptographic algorithms like DES, 3DES, and MD5 leave IPsec VPN tunnels susceptible to modern attacks. Secure Phase 1 and Phase 2 tunnels by migrating to robust AES-256 encryption with SHA-256 or SHA-384 hashing.\n\n#Shorts #IPsecVPN #NetworkSecurity #Cybersecurity #Cisco #NetworkEngineering",
+   "tags": [
+    "IPsecVPN",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop running legacy DES or 3DES on your IPsec VPN tunnels.",
+   "ig_id": "18127130035851367",
+   "file_id": "BAACAgQAAxkDAAIBzGrYZRGVeTiJMcXaxi1rHGW14O2gAAJXHQACWzHIUuOlwVp3C1PgPQQ",
+   "message_id": 460
   }
  }
 }
