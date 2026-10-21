@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why TACACS Won't Save an Exposed Management Plane",
   "How One SNMP String Leaks Your Entire Network",
   "The Trunk Port Mistake That Enables VLAN Hopping",
   "The DHCP Snooping Rate Limit That Saves Your CPU",
@@ -100,7 +99,8 @@
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
-  "Auto-Revert Breaks Emergency Fixes: Alert on Drift First"
+  "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
+  "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2140,6 +2140,23 @@
    "ig_id": "18131891077703056",
    "file_id": "BAACAgQAAxkDAAIB0GrYgS6YaYvhq0S2XMeTmtN_zw8jAAKBHgACWzHIUtP3xykRAAFNbD0E",
    "message_id": 464
+  },
+  "4cee9912": {
+   "title": "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
+   "description": "A broadcast storm from a loop or faulty NIC can cripple an entire VLAN. Learn how to set storm‑control thresholds and choose trap or shutdown actions to keep your network stable.\n\n#Shorts #StormControl #NetworkEngineering #Cybersecurity #VLAN #BestPractices",
+   "tags": [
+    "StormControl",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "VLAN",
+    "BestPractices",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a loop or bad NIC run unchecked.",
+   "ig_id": "18007230143989619",
+   "file_id": "BAACAgQAAxkDAAIB1GrYqRqkxgH4ERmcHtiKu8t8igAB2QACaCIAAlsxyFLcMnEadgTxgD0E",
+   "message_id": 468
   }
  }
 }
