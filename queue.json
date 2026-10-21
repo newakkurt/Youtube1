@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Native VLAN Setting That Stops Double Tagging",
   "The Silent NAC Timer That Halts Production Lines",
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
   "How Default VLAN Settings Expose Your Entire Network",
@@ -100,7 +99,8 @@
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
   "Replace TFTP with SFTP/SCP for safe backups",
-  "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash"
+  "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
+  "Stop Config Drifts: Use any_errors_fatal in Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2208,6 +2208,23 @@
    "ig_id": "18229734313331276",
    "file_id": "BAACAgQAAxkDAAIB4GrY8MJHYBP28cp5T0McCqgeFuEWAAItHAAC3TbJUly76nNMmhy7PQQ",
    "message_id": 480
+  },
+  "937c6522": {
+   "title": "Stop Config Drifts: Use any_errors_fatal in Ansible",
+   "description": "Learn how to stop broken configurations from spreading by using any_errors_fatal or block/rescue error handling in Ansible. Keep your network automation safe and reliable.\n\n#Shorts #AnsibleSafety #NetworkAutomation #ConfigManagement #Ansible #ITSecurity",
+   "tags": [
+    "AnsibleSafety",
+    "NetworkAutomation",
+    "ConfigManagement",
+    "Ansible",
+    "ITSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a single switch error corrupt your whole rollout.",
+   "ig_id": "18148692853488005",
+   "file_id": "BAACAgQAAxkDAAIB6GrZNi0CAg6y5uRI-CWjuYJhSrnPAALZHAAC3TbJUmJDFWgvAQ3cPQQ",
+   "message_id": 488
   }
  }
 }
