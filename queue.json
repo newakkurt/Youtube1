@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Trunk Port Mistake That Enables VLAN Hopping",
   "The DHCP Snooping Rate Limit That Saves Your CPU",
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
   "The Native VLAN Setting That Stops Double Tagging",
@@ -100,7 +99,8 @@
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
-  "Stop switch crashes: DHCP snooping rate-limit untrusted ports"
+  "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
+  "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2174,6 +2174,23 @@
    "ig_id": "17885516652652665",
    "file_id": "BAACAgQAAxkDAAIB2GrYqqOhnYK6T4H8jcLEL5VFiBFwAAJyIgACWzHIUkYu-Dm9DM4AAT0E",
    "message_id": 472
+  },
+  "dfa445aa": {
+   "title": "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
+   "description": "Improper DHCP Snooping can let rogue devices issue offers and compromise the network. This guide shows how to trust only authorized uplink ports with the correct command.\n\n#Shorts #DHCPTrust #NetworkSecurity #Cisco #DHCP #SwitchConfig",
+   "tags": [
+    "DHCPTrust",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting any port send DHCP offers—secure your uplinks now.",
+   "ig_id": "18137053003670520",
+   "file_id": "BAACAgQAAxkDAAIB3GrY3dIzlyA4HPOAdOHL5u-CBNHUAAIDHAAC3TbJUjCi_4mPeHFdPQQ",
+   "message_id": 476
   }
  }
 }
