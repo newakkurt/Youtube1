@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The DHCP Snooping Rate Limit That Saves Your CPU",
   "Why One Switch Behaves Weirdly: Catching Manual Config Drift",
   "The Native VLAN Setting That Stops Double Tagging",
   "The Silent NAC Timer That Halts Production Lines",
@@ -100,7 +99,8 @@
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
-  "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports"
+  "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
+  "Replace TFTP with SFTP/SCP for safe backups"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2191,6 +2191,23 @@
    "ig_id": "18137053003670520",
    "file_id": "BAACAgQAAxkDAAIB3GrY3dIzlyA4HPOAdOHL5u-CBNHUAAIDHAAC3TbJUjCi_4mPeHFdPQQ",
    "message_id": 476
+  },
+  "a4c887a3": {
+   "title": "Replace TFTP with SFTP/SCP for safe backups",
+   "description": "TFTP sends data in clear text, exposing your configurations to attackers. Switch to encrypted protocols like SFTP or SCP to keep backups safe.\n\n#Shorts #SecureBackups #NetworkSecurity #DataProtection #SysAdmin #Backup",
+   "tags": [
+    "SecureBackups",
+    "NetworkSecurity",
+    "DataProtection",
+    "SysAdmin",
+    "Backup",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never copy configs over plain TFTP again.",
+   "ig_id": "18229734313331276",
+   "file_id": "BAACAgQAAxkDAAIB4GrY8MJHYBP28cp5T0McCqgeFuEWAAItHAAC3TbJUly76nNMmhy7PQQ",
+   "message_id": 480
   }
  }
 }
