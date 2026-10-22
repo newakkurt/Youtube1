@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How Default VLAN Settings Expose Your Entire Network",
   "Catch Config Drift Early with Golden Templates and Alerts",
   "Locking Down Trunk Ports with a Blackhole VLAN",
   "Is Your Switch Management Plane Leaking to Users?",
@@ -100,7 +99,8 @@
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
   "Ansible Cascading Outages: Replace ignore_errors: yes",
-  "Sticky MACs Vanish After Reboot? Save to Startup-Config"
+  "Sticky MACs Vanish After Reboot? Save to Startup-Config",
+  "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2259,6 +2259,23 @@
    "ig_id": "17911309701590757",
    "file_id": "BAACAgQAAxkDAAIB8GrZtf7L5PCoepuobnKTcss4TiXHAAIuIAAC3TbRUvRRB2zVc2M0PQQ",
    "message_id": 496
+  },
+  "19f82e23": {
+   "title": "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
+   "description": "A broadcast storm caused by a loop or a faulty NIC can take down an entire VLAN. Learn how to set storm‑control thresholds and choose trap or shutdown actions to protect your network.\n\n#Shorts #StormControl #NetworkEngineering #Cybersecurity #VLAN #BroadcastStorm",
+   "tags": [
+    "StormControl",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "VLAN",
+    "BroadcastStorm",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a loop or bad NIC run unchecked.",
+   "ig_id": "18130215076698071",
+   "file_id": "BAACAgQAAxkDAAIB9GrZ0dEnYhLozMlfqKIhAznGRx8oAAJRIAAC3TbRUqz3SyqfkrODPQQ",
+   "message_id": 500
   }
  }
 }
