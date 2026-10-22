@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How a Single Manual Switch Change Triggers Network Chaos",
   "How a Single Faulty NIC Can Lock Down an Entire VLAN",
   "How a Tiny Desk Switch Can Crash Your Whole Network – Fast Fix",
   "Why a DHCP Storm Freezes Your Switch CPU",
@@ -100,7 +99,8 @@
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
   "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
   "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
-  "VLAN Down? Apply Storm‑Control Broadcast with Shutdown"
+  "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
+  "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2344,6 +2344,22 @@
    "ig_id": "17964819408217019",
    "file_id": "BAACAgQAAxkDAAICCGraV5JXW8sCaPtbE-LIQ4R0iWn1AAIwIQAC3TbRUpE9y_fxcX4MPQQ",
    "message_id": 520
+  },
+  "04cb1271": {
+   "title": "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
+   "description": "Skipping errors in Ansible can silently corrupt network configs, leading to widespread outages. Use any_errors_fatal to halt the run and protect your infrastructure.\n\n#Shorts #AnsibleSafety #NetworkAutomation #Ansible #DevOps #ITOps",
+   "tags": [
+    "AnsibleSafety",
+    "NetworkAutomation",
+    "Ansible",
+    "DevOps",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let Ansible silently ignore a failed network task.",
+   "file_id": "BAACAgQAAxkDAAICDGrahyyqAq4stjgi-W5FPy7XVJrlAAJ8IQAC3TbRUrOy-H0nEsDMPQQ",
+   "message_id": 524
   }
  }
 }
