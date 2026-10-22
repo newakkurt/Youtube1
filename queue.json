@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Default Native VLANs Leak Traffic Across Trunks",
   "How a Single Manual Switch Change Triggers Network Chaos",
   "How a Single Faulty NIC Can Lock Down an Entire VLAN",
   "How a Tiny Desk Switch Can Crash Your Whole Network – Fast Fix",
@@ -100,7 +99,8 @@
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
   "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
-  "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard"
+  "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
+  "VLAN Down? Apply Storm‑Control Broadcast with Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2327,6 +2327,23 @@
    "ig_id": "17991194865049846",
    "file_id": "BAACAgQAAxkDAAICBGraQiML9oUd5fE6t_4gaFXcLIaTAAIXIQAC3TbRUri3nDmoS89jPQQ",
    "message_id": 516
+  },
+  "294488a9": {
+   "title": "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
+   "description": "A broadcast storm caused by a loop or faulty NIC can cripple an entire VLAN. Use Cisco storm-control with a 10% broadcast limit and set the action to shutdown for immediate protection.\n\n#Shorts #stormcontrol #networkengineering #cisco #networksecurity #troubleshooting",
+   "tags": [
+    "stormcontrol",
+    "networkengineering",
+    "cisco",
+    "networksecurity",
+    "troubleshooting",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a loop or bad NIC take down your VLAN.",
+   "ig_id": "17964819408217019",
+   "file_id": "BAACAgQAAxkDAAICCGraV5JXW8sCaPtbE-LIQ4R0iWn1AAIwIQAC3TbRUpE9y_fxcX4MPQQ",
+   "message_id": 520
   }
  }
 }
