@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Locking Down Trunk Ports with a Blackhole VLAN",
   "Is Your Switch Management Plane Leaking to Users?",
   "Why Default Native VLANs Leak Traffic Across Trunks",
   "How a Single Manual Switch Change Triggers Network Chaos",
@@ -100,7 +99,8 @@
   "Ansible Cascading Outages: Replace ignore_errors: yes",
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
-  "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It"
+  "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
+  "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2293,6 +2293,23 @@
    "ig_id": "17987380986073265",
    "file_id": "BAACAgQAAxkDAAIB-GrZ-2QeHsTRUMEnrgIFk45kRXQQAAKMIAAC3TbRUj5ygdjG1o3DPQQ",
    "message_id": 504
+  },
+  "10eddc11": {
+   "title": "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
+   "description": "Leaving HSRP or VRRP unauthenticated lets rogue routers hijack your default gateway with spoofed priority packets. Secure your first-hop redundancy by enforcing MD5 authentication across all participating router interfaces.\n\n#Shorts #HSRP #NetworkEngineering #CyberSecurity #Cisco #NetworkSecurity",
+   "tags": [
+    "HSRP",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Cisco",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "One rogue router can quietly hijack your default gateway traffic.",
+   "ig_id": "17906057421348032",
+   "file_id": "BAACAgQAAxkDAAICAAFq2jAn3fOedGWpYZ1aeNgHN1NVSwAC9iAAAt020VLPIrjONUvIqD0E",
+   "message_id": 512
   }
  }
 }
