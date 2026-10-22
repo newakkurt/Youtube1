@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Is Your Switch Management Plane Leaking to Users?",
   "Why Default Native VLANs Leak Traffic Across Trunks",
   "How a Single Manual Switch Change Triggers Network Chaos",
   "How a Single Faulty NIC Can Lock Down an Entire VLAN",
@@ -100,7 +99,8 @@
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
-  "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication"
+  "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
+  "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2310,6 +2310,23 @@
    "ig_id": "17906057421348032",
    "file_id": "BAACAgQAAxkDAAICAAFq2jAn3fOedGWpYZ1aeNgHN1NVSwAC9iAAAt020VLPIrjONUvIqD0E",
    "message_id": 512
+  },
+  "42d7eab3": {
+   "title": "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
+   "description": "Enabling PortFast and BPDU Guard on user ports stops accidental loops caused by plugged‑in mini switches. Also set an err‑disable recovery timer so the port restores itself without manual intervention.\n\n#Shorts #BPDUGuard #NetworkSecurity #Cisco #SwitchConfig #ITOps",
+   "tags": [
+    "BPDUGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchConfig",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave user ports without PortFast and BPDU Guard.",
+   "ig_id": "17991194865049846",
+   "file_id": "BAACAgQAAxkDAAICBGraQiML9oUd5fE6t_4gaFXcLIaTAAIXIQAC3TbRUri3nDmoS89jPQQ",
+   "message_id": 516
   }
  }
 }
