@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Catch Config Drift Early with Golden Templates and Alerts",
   "Locking Down Trunk Ports with a Blackhole VLAN",
   "Is Your Switch Management Plane Leaking to Users?",
   "Why Default Native VLANs Leak Traffic Across Trunks",
@@ -100,7 +99,8 @@
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
   "Ansible Cascading Outages: Replace ignore_errors: yes",
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
-  "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown"
+  "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
+  "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2276,6 +2276,23 @@
    "ig_id": "18130215076698071",
    "file_id": "BAACAgQAAxkDAAIB9GrZ0dEnYhLozMlfqKIhAznGRx8oAAJRIAAC3TbRUqz3SyqfkrODPQQ",
    "message_id": 500
+  },
+  "45465625": {
+   "title": "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
+   "description": "Improper MAB reauth and inactivity timers push devices into an unauthorized VLAN, and an unplanned fail‑open can shut down production when the NAC server disappears. Adjust timers to safe values and enforce a fail‑close policy to keep your network running.\n\n#Shorts #MABTimers #NetworkSecurity #NAC #FortiNAC #NetworkEngineering",
+   "tags": [
+    "MABTimers",
+    "NetworkSecurity",
+    "NAC",
+    "FortiNAC",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop using default MAB timers on slow‑boot devices.",
+   "ig_id": "17987380986073265",
+   "file_id": "BAACAgQAAxkDAAIB-GrZ-2QeHsTRUMEnrgIFk45kRXQQAAKMIAAC3TbRUj5ygdjG1o3DPQQ",
+   "message_id": 504
   }
  }
 }
