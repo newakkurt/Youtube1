@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How a 15 PPS DHCP Limit Protects Your Switch CPU",
   "How Default VLAN Settings Expose Your Entire Network",
   "Catch Config Drift Early with Golden Templates and Alerts",
   "Locking Down Trunk Ports with a Blackhole VLAN",
@@ -100,7 +99,8 @@
   "Replace TFTP with SFTP/SCP for safe backups",
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
-  "Ansible Cascading Outages: Replace ignore_errors: yes"
+  "Ansible Cascading Outages: Replace ignore_errors: yes",
+  "Sticky MACs Vanish After Reboot? Save to Startup-Config"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2242,6 +2242,23 @@
    "ig_id": "18441475708183064",
    "file_id": "BAACAgQAAxkDAAIB7GrZfc1IR_-EfYhs4hJ2pg3dTbEwAAIkHQAC3TbJUgHAJMxjD6uBPQQ",
    "message_id": 492
+  },
+  "00f9c807": {
+   "title": "Sticky MACs Vanish After Reboot? Save to Startup-Config",
+   "description": "Sticky MAC addresses are lost if you reboot without saving. Save the running configuration to startup-config to make them permanent.\n\n#Shorts #StickyMAC #NetworkSecurity #CiscoSwitches #PortSecurity #NetworkEngineering",
+   "tags": [
+    "StickyMAC",
+    "NetworkSecurity",
+    "CiscoSwitches",
+    "PortSecurity",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never lose sticky MACs after a reboot—keep them persistent.",
+   "ig_id": "17911309701590757",
+   "file_id": "BAACAgQAAxkDAAIB8GrZtf7L5PCoepuobnKTcss4TiXHAAIuIAAC3TbRUvRRB2zVc2M0PQQ",
+   "message_id": 496
   }
  }
 }
