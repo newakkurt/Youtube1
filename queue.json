@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "The Silent NAC Timer That Halts Production Lines",
   "How a 15 PPS DHCP Limit Protects Your Switch CPU",
   "How Default VLAN Settings Expose Your Entire Network",
   "Catch Config Drift Early with Golden Templates and Alerts",
@@ -100,7 +99,8 @@
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
   "Replace TFTP with SFTP/SCP for safe backups",
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
-  "Stop Config Drifts: Use any_errors_fatal in Ansible"
+  "Stop Config Drifts: Use any_errors_fatal in Ansible",
+  "Ansible Cascading Outages: Replace ignore_errors: yes"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2225,6 +2225,23 @@
    "ig_id": "18148692853488005",
    "file_id": "BAACAgQAAxkDAAIB6GrZNi0CAg6y5uRI-CWjuYJhSrnPAALZHAAC3TbJUmJDFWgvAQ3cPQQ",
    "message_id": 488
+  },
+  "c9a96797": {
+   "title": "Ansible Cascading Outages: Replace ignore_errors: yes",
+   "description": "Blindly using ignore_errors: yes in Ansible can hide critical switch configuration failures and trigger cascading network downtime. Use block and rescue error handling to halt automation before bad configs propagate.\n\n#Shorts #AnsibleAutomation #NetworkAutomation #DevNet #NetworkEngineering #InfrastructureAsCode",
+   "tags": [
+    "AnsibleAutomation",
+    "NetworkAutomation",
+    "DevNet",
+    "NetworkEngineering",
+    "InfrastructureAsCode",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never set ignore_errors to yes across your core Ansible network playbooks.",
+   "ig_id": "18441475708183064",
+   "file_id": "BAACAgQAAxkDAAIB7GrZfc1IR_-EfYhs4hJ2pg3dTbEwAAIkHQAC3TbJUgHAJMxjD6uBPQQ",
+   "message_id": 492
   }
  }
 }
