@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why a DHCP Storm Freezes Your Switch CPU",
   "Why Enabling BPDU Guard on User Ports Saves Your Network",
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
   "Why Strong Auth Fails Without Management Plane Isolation",
@@ -100,7 +99,8 @@
   "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
-  "Single Device Failure Stops Automation? Use any_errors_fatal to Abort"
+  "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
+  "Random STP Root Bridge? Fix It by Setting Lowest Priority"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2394,6 +2394,23 @@
    "ig_id": "17993286672065068",
    "file_id": "BAACAgQAAxkDAAICFGrbByX7_GKLiYFyuyqp-B2vXCs0AAJcIgACJtHZUqvQZf21j9ftPQQ",
    "message_id": 532
+  },
+  "0053a945": {
+   "title": "Random STP Root Bridge? Fix It by Setting Lowest Priority",
+   "description": "Leaving the root bridge to chance can cause unpredictable topology changes. Manually set the lowest priority on your core switches to lock the root and keep the network stable.\n\n#Shorts #STPpriority #networking #cybersecurity #stp #networkengineer",
+   "tags": [
+    "STPpriority",
+    "networking",
+    "cybersecurity",
+    "stp",
+    "networkengineer",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let STP pick a random root bridge.",
+   "ig_id": "18177733606440609",
+   "file_id": "BAACAgQAAxkDAAICGGrbI6EtLnOFrquXria2fu75ohcJAAJ5IgACJtHZUv2APJMfpiQOPQQ",
+   "message_id": 536
   }
  }
 }
