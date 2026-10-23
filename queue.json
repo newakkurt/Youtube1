@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How a Tiny Desk Switch Can Crash Your Whole Network – Fast Fix",
   "Why a DHCP Storm Freezes Your Switch CPU",
   "Why Enabling BPDU Guard on User Ports Saves Your Network",
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
@@ -100,7 +99,8 @@
   "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
   "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
-  "Prevent Rogue Route Injection: Enable OSPF MD5 Auth"
+  "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
+  "Single Device Failure Stops Automation? Use any_errors_fatal to Abort"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2377,6 +2377,23 @@
    "ig_id": "18098477666436006",
    "file_id": "BAACAgQAAxkDAAICEGra0CgAAVJXB7wecp5Iw6jt7m7hRAACvhwAAt022VLT-uS-WL_KTj0E",
    "message_id": 528
+  },
+  "32521acc": {
+   "title": "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
+   "description": "A single error in an Ansible run can corrupt multiple devices. Learn how any_errors_fatal and block/rescue keep your network safe.\n\n#Shorts #AnsibleSafety #NetworkAutomation #DevOps #ConfigManagement #ITOps",
+   "tags": [
+    "AnsibleSafety",
+    "NetworkAutomation",
+    "DevOps",
+    "ConfigManagement",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting a single device error wreck your entire rollout.",
+   "ig_id": "17993286672065068",
+   "file_id": "BAACAgQAAxkDAAICFGrbByX7_GKLiYFyuyqp-B2vXCs0AAJcIgACJtHZUqvQZf21j9ftPQQ",
+   "message_id": 532
   }
  }
 }
