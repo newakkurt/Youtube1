@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Enabling BPDU Guard on User Ports Saves Your Network",
   "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
   "Why Strong Auth Fails Without Management Plane Isolation",
   "Why Aggressive Storm Control Drops Good Multicast Traffic",
@@ -100,7 +99,8 @@
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
   "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
-  "Random STP Root Bridge? Fix It by Setting Lowest Priority"
+  "Random STP Root Bridge? Fix It by Setting Lowest Priority",
+  "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2411,6 +2411,23 @@
    "ig_id": "18177733606440609",
    "file_id": "BAACAgQAAxkDAAICGGrbI6EtLnOFrquXria2fu75ohcJAAJ5IgACJtHZUv2APJMfpiQOPQQ",
    "message_id": 536
+  },
+  "65c1373d": {
+   "title": "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
+   "description": "Never leave STP root bridge election to default priority values. Configure manual priority tiers on core switches to ensure deterministic Spanning Tree topologies.\n\n#Shorts #spanningtree #networkengineering #cisco #switchconfig #neteng",
+   "tags": [
+    "spanningtree",
+    "networkengineering",
+    "cisco",
+    "switchconfig",
+    "neteng",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let random defaults elect an edge switch as STP root bridge.",
+   "ig_id": "18109724114231048",
+   "file_id": "BAACAgQAAxkDAAICHGrbSrJFiYBK2G3cU6r5XTl07x-cAAKbIgACJtHZUiJGzhFATrW8PQQ",
+   "message_id": 540
   }
  }
 }
