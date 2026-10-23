@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Slow Printers Can Crash Your Production Line with FortiNAC",
   "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
   "Why Switch Reload Drops Static Devices: Binding Persistence",
   "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
@@ -100,7 +99,8 @@
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
-  "NTP Clock Drift Breaks Event Correlation – Sync All Devices"
+  "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
+  "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2496,6 +2496,23 @@
    "ig_id": "18044806361830590",
    "file_id": "BAACAgQAAxkDAAICLGrbpsmyqPAo4rSRezonOjsY-WWPAAJqIwACJtHZUtfnO4YjNXJTPQQ",
    "message_id": 556
+  },
+  "467875b4": {
+   "title": "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
+   "description": "Applying DHCP snooping rate limits to trusted uplinks throttles legitimate responses from your central DHCP servers. Keep rate limiting strictly confined to untrusted edge ports to prevent client starvation.\n\n#Shorts #DHCPSnooping #NetworkEngineering #Cisco #CyberSecurity #SysAdmin",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkEngineering",
+    "Cisco",
+    "CyberSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never configure DHCP snooping rate limits on your trusted uplinks.",
+   "ig_id": "18112756001463763",
+   "file_id": "BAACAgQAAxkDAAICMGrb1bnVldosKSWWgaJ_htsLyyOtAAKoIwACJtHZUpUou09SidxrPQQ",
+   "message_id": 560
   }
  }
 }
