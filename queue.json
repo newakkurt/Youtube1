@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Mismatched Native VLANs Unlock Double‑Tagging Attacks",
   "Why Strong Auth Fails Without Management Plane Isolation",
   "Why Aggressive Storm Control Drops Good Multicast Traffic",
   "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
@@ -100,7 +99,8 @@
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
   "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
   "Random STP Root Bridge? Fix It by Setting Lowest Priority",
-  "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0"
+  "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
+  "Guard Untrusted Ports with DHCP Snooping Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2428,6 +2428,23 @@
    "ig_id": "18109724114231048",
    "file_id": "BAACAgQAAxkDAAICHGrbSrJFiYBK2G3cU6r5XTl07x-cAAKbIgACJtHZUiJGzhFATrW8PQQ",
    "message_id": 540
+  },
+  "b4a3779b": {
+   "title": "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
+   "description": "Enable DHCP snooping globally, then set a per‑port rate limit on untrusted links. Avoid limiting trusted uplinks and adjust the limit to match real traffic.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #SwitchConfig #DHCP #ITOps",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "SwitchConfig",
+    "DHCP",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a rogue DHCP flood silently shut down your core switch.",
+   "ig_id": "18094712909465519",
+   "file_id": "BAACAgQAAxkDAAICIGrbTcg5NFrh20OBkV9tUpHK5bDXAAKfIgACJtHZUkhr4V9bBYXXPQQ",
+   "message_id": 544
   }
  }
 }
