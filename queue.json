@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
   "Why Slow Printers Can Crash Your Production Line with FortiNAC",
   "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
   "Why Switch Reload Drops Static Devices: Binding Persistence",
@@ -100,7 +99,8 @@
   "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
-  "Prevent Sticky MAC Loss After Reboot – Save Startup-Config"
+  "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
+  "NTP Clock Drift Breaks Event Correlation – Sync All Devices"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2479,6 +2479,23 @@
    "ig_id": "18034896152850957",
    "file_id": "BAACAgQAAxkDAAICKGrblCSG7UppzzW-FGzh0ReFelKPAAIyIwACJtHZUt-9RcMEphyyPQQ",
    "message_id": 552
+  },
+  "a95a96b1": {
+   "title": "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
+   "description": "Clock drift can cripple your logging and authentication audits, making it impossible to tell which change happened first. Keep every device on the same NTP source and timezone to guarantee accurate event correlation.\n\n#Shorts #NTPsync #networkengineer #cybersecurity #timemanagement #eventcorrelation",
+   "tags": [
+    "NTPsync",
+    "networkengineer",
+    "cybersecurity",
+    "timemanagement",
+    "eventcorrelation",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting clocks drift across your network.",
+   "ig_id": "18044806361830590",
+   "file_id": "BAACAgQAAxkDAAICLGrbpsmyqPAo4rSRezonOjsY-WWPAAJqIwACJtHZUtfnO4YjNXJTPQQ",
+   "message_id": 556
   }
  }
 }
