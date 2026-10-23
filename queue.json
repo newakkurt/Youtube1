@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Aggressive Storm Control Drops Good Multicast Traffic",
   "Why Isolated Management VLAN Saves Your Switch From TACACS+ Failure",
   "Why Slow Printers Can Crash Your Production Line with FortiNAC",
   "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
@@ -100,7 +99,8 @@
   "Random STP Root Bridge? Fix It by Setting Lowest Priority",
   "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
-  "Uplink DHCP Offers Blocked? Trust Only Authorized Ports"
+  "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
+  "Prevent Sticky MAC Loss After Reboot – Save Startup-Config"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2462,6 +2462,23 @@
    "ig_id": "18139630159722620",
    "file_id": "BAACAgQAAxkDAAICJGrbfpQ3RI6CcrlEc1zeMXUI3p4UAAL_IgACJtHZUlKLnk2i-1crPQQ",
    "message_id": 548
+  },
+  "9477f351": {
+   "title": "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
+   "description": "Learn why sticky MAC entries disappear after a reboot and how to make them permanent. Save your port-security configuration to startup-config and avoid unexpected port shutdowns.\n\n#Shorts #StickyMACSave #NetworkEngineering #CyberSecurity #PortSecurity #ITOps",
+   "tags": [
+    "StickyMACSave",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "PortSecurity",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never lose learned MACs after a switch reboot.",
+   "ig_id": "18034896152850957",
+   "file_id": "BAACAgQAAxkDAAICKGrblCSG7UppzzW-FGzh0ReFelKPAAIyIwACJtHZUt-9RcMEphyyPQQ",
+   "message_id": 552
   }
  }
 }
