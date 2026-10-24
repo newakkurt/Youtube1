@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
   "Why Mystery Switch Glitches Happen: Stopping Config Drift",
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
   "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
@@ -100,7 +99,8 @@
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
   "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
-  "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD"
+  "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
+  "Corrupt Config Spreading Across Fleet? Use any_errors_fatal"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2666,6 +2666,23 @@
    "ig_id": "17998658673032504",
    "file_id": "BAACAgQAAxkDAAICVGrc7L6jidW2Gssw9FQ8a2gCeVPPAAIkJAACYrvpUmvVOZRFJAS-PQQ",
    "message_id": 596
+  },
+  "3e34e112": {
+   "title": "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
+   "description": "Prevent failed Ansible tasks from spreading invalid configurations across production network devices. Use any_errors_fatal and structured block rescue routines to halt automation runs safely.\n\n#Shorts #ansible #networkautomation #neteng #devnet #cybersecurity",
+   "tags": [
+    "ansible",
+    "networkautomation",
+    "neteng",
+    "devnet",
+    "cybersecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting a single switch failure push broken syntax across your network.",
+   "ig_id": "18095108363692496",
+   "file_id": "BAACAgQAAxkDAAICWGrdIEgQNguoF5Gmc_L9zryxRheEAAKMIgACYrvxUtmAyA5_T1wuPQQ",
+   "message_id": 600
   }
  }
 }
