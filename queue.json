@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
@@ -100,7 +99,8 @@
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
-  "IP Source Guard Dropping Static Hosts? Add Static Bindings"
+  "IP Source Guard Dropping Static Hosts? Add Static Bindings",
+  "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2547,6 +2547,23 @@
    "ig_id": "18249266890311269",
    "file_id": "BAACAgQAAxkDAAICOGrcWT6xq051evCHu3aAqsfRN8n2AAK5IAACJtHhUvhN5B_kcVXPPQQ",
    "message_id": 568
+  },
+  "a6015907": {
+   "title": "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
+   "description": "Leaving IP source routing enabled lets attackers dictate packet paths. Disabling it globally on all switches and routers blocks this manipulation and hardens your network.\n\n#Shorts #SourceRouting #NetworkSecurity #Cisco #Juniper #CyberDefense",
+   "tags": [
+    "SourceRouting",
+    "NetworkSecurity",
+    "Cisco",
+    "Juniper",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave IP source routing enabled on any switch or router.",
+   "ig_id": "18104747132021304",
+   "file_id": "BAACAgQAAxkDAAICPGrcdO14AQq2Ln0l4aVp0mLfe9_RAAIZIQACJtHhUmn5vo6z-Ah0PQQ",
+   "message_id": 572
   }
  }
 }
