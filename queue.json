@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why BPDU Guard Triggers Err-Disable and How to Auto-Heal It",
   "Why Switch Reload Drops Static Devices: Binding Persistence",
   "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
@@ -100,7 +99,8 @@
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
-  "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks"
+  "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
+  "Stop rogue DHCP offers: Trust only authorized uplink ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2513,6 +2513,23 @@
    "ig_id": "18112756001463763",
    "file_id": "BAACAgQAAxkDAAICMGrb1bnVldosKSWWgaJ_htsLyyOtAAKoIwACJtHZUpUou09SidxrPQQ",
    "message_id": 560
+  },
+  "0d0cbb84": {
+   "title": "Stop rogue DHCP offers: Trust only authorized uplink ports",
+   "description": "Learn how to lock down DHCP server ports so only authorized uplink ports can send offers and acknowledgments. Follow the quick steps to enable DHCP Snooping and set trusted ports for rock‑solid protection.\n\n#Shorts #DHCPTrust #NetworkSecurity #Cisco #DHCP #Switches",
+   "tags": [
+    "DHCPTrust",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "Switches",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let any port broadcast DHCP offers.",
+   "ig_id": "18168845458475518",
+   "file_id": "BAACAgQAAxkDAAICNGrcIFcnEpxwFwqtQd2pRDxSak_JAAKJIAACJtHhUp6RkCqV1pSkPQQ",
+   "message_id": 564
   }
  }
 }
