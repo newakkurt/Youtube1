@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your Whole Network",
   "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
@@ -100,7 +99,8 @@
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
-  "Open Console Sessions Invite Tampering: Configure Exec-Timeout"
+  "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
+  "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2598,6 +2598,23 @@
    "ig_id": "17933913348409473",
    "file_id": "BAACAgQAAxkDAAICRGrcn6RPyFBHrHJDPYQLZpDqDC8ZAAJoIQACJtHhUo3LcaLzZMq_PQQ",
    "message_id": 580
+  },
+  "e83f4d63": {
+   "title": "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
+   "description": "Learn how to stop rogue route injections by enabling MD5 or SHA authentication on OSPF and EIGRP. Follow the exact CLI steps and remember to upgrade to SHA‑256 when your platform allows.\n\n#Shorts #RoutingAuth #NetworkSecurity #Routing #OSPF #EIGRP",
+   "tags": [
+    "RoutingAuth",
+    "NetworkSecurity",
+    "Routing",
+    "OSPF",
+    "EIGRP",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop trusting unauthenticated OSPF and EIGRP updates.",
+   "ig_id": "17894234388614416",
+   "file_id": "BAACAgQAAxkDAAICSGrcpaLMZCyWuX9P_V-gIDBTX9-yAAJqIQACJtHhUoZ-yAwZI3lhPQQ",
+   "message_id": 584
   }
  }
 }
