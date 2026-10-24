@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One Native VLAN Mistake Lets Hackers Jump Networks",
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your Whole Network",
@@ -100,7 +99,8 @@
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
-  "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies"
+  "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
+  "Open Console Sessions Invite Tampering: Configure Exec-Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2581,6 +2581,23 @@
    "ig_id": "18031504013910099",
    "file_id": "BAACAgQAAxkDAAICQGrck1-aAjrSETcy6Ag0wbwJfra1AAJKIQACJtHhUgFo3cI73ZHvPQQ",
    "message_id": 576
+  },
+  "ba3ec5e6": {
+   "title": "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
+   "description": "Physical rack access can expose your switches if console sessions remain open. Secure line con 0 with a robust password and strict exec-timeout to prevent tampering.\n\n#Shorts #SwitchSecurity #NetworkEngineering #Cisco #CyberSecurity #SysAdmin",
+   "tags": [
+    "SwitchSecurity",
+    "NetworkEngineering",
+    "Cisco",
+    "CyberSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave an active console session logged in inside your server rack.",
+   "ig_id": "17933913348409473",
+   "file_id": "BAACAgQAAxkDAAICRGrcn6RPyFBHrHJDPYQLZpDqDC8ZAAJoIQACJtHhUo3LcaLzZMq_PQQ",
+   "message_id": 580
   }
  }
 }
