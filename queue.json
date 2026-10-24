@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Switch Reload Drops Static Devices: Binding Persistence",
   "Why Unisolated Management Plane Lets Attackers Bypass TACACS+",
   "Why Slow Printers Can Crash Your Factory With FortiNAC",
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
@@ -100,7 +99,8 @@
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
-  "Stop rogue DHCP offers: Trust only authorized uplink ports"
+  "Stop rogue DHCP offers: Trust only authorized uplink ports",
+  "IP Source Guard Dropping Static Hosts? Add Static Bindings"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2530,6 +2530,23 @@
    "ig_id": "18168845458475518",
    "file_id": "BAACAgQAAxkDAAICNGrcIFcnEpxwFwqtQd2pRDxSak_JAAKJIAACJtHhUp6RkCqV1pSkPQQ",
    "message_id": 564
+  },
+  "12128bac": {
+   "title": "IP Source Guard Dropping Static Hosts? Add Static Bindings",
+   "description": "When DHCP snooping tables clear, IP Source Guard and Dynamic ARP Inspection immediately isolate static endpoints like printers and PLCs. Always define static IP source bindings or ARP access lists to protect non-DHCP devices from unexpected drops.\n\n#Shorts #IPSourceGuard #NetworkSecurity #Cisco #CCNA #SysAdmin",
+   "tags": [
+    "IPSourceGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "CCNA",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never run Dynamic ARP Inspection without defining static bindings for IoT devices.",
+   "ig_id": "18249266890311269",
+   "file_id": "BAACAgQAAxkDAAICOGrcWT6xq051evCHu3aAqsfRN8n2AAK5IAACJtHhUvhN5B_kcVXPPQQ",
+   "message_id": 568
   }
  }
 }
