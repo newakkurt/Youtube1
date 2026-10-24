@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
   "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
   "Why Mystery Switch Glitches Happen: Stopping Config Drift",
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
@@ -100,7 +99,8 @@
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
-  "STP Root Hijacked? Apply Root Guard to Downlink Trunks"
+  "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
+  "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2649,6 +2649,23 @@
    "ig_id": "18099123902659547",
    "file_id": "BAACAgQAAxkDAAICUGrc5h-w0PqRK1DJIB3CIUThqTN-AAIKJAACYrvpUsUdxZ000HnVPQQ",
    "message_id": 592
+  },
+  "d9b2b755": {
+   "title": "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
+   "description": "Packet fragmentation across WAN links can severely degrade throughput and trigger silent black holes. Learn how to optimize IP MTU, configure TCP MSS clamping, and allow ICMP PMTUD messages.\n\n#Shorts #MTU #NetworkEngineering #FirewallSecurity #CiscoNetworking #CyberSecurity",
+   "tags": [
+    "MTU",
+    "NetworkEngineering",
+    "FirewallSecurity",
+    "CiscoNetworking",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never drop ICMP unreachable messages on your edge WAN firewalls.",
+   "ig_id": "17998658673032504",
+   "file_id": "BAACAgQAAxkDAAICVGrc7L6jidW2Gssw9FQ8a2gCeVPPAAIkJAACYrvpUmvVOZRFJAS-PQQ",
+   "message_id": 596
   }
  }
 }
