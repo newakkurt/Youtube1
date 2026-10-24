@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Slow Printers Can Crash Your Factory With FortiNAC",
   "Why One Native VLAN Mistake Lets Hackers Jump Networks",
   "How PortFast + BPDU Guard Stops Tiny Switch Hijacks",
   "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
@@ -100,7 +99,8 @@
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
-  "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking"
+  "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
+  "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2564,6 +2564,23 @@
    "ig_id": "18104747132021304",
    "file_id": "BAACAgQAAxkDAAICPGrcdO14AQq2Ln0l4aVp0mLfe9_RAAIZIQACJtHhUmn5vo6z-Ah0PQQ",
    "message_id": 572
+  },
+  "62c70bd0": {
+   "title": "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
+   "description": "Broad Any-Any firewall rules between internal VLANs create severe lateral movement risks if a single host is compromised. Learn how to scope FortiGate inter-VLAN policies using explicit ports and least privilege.\n\n#Shorts #FortiGate #NetworkSecurity #Firewall #VLAN #SysAdmin",
+   "tags": [
+    "FortiGate",
+    "NetworkSecurity",
+    "Firewall",
+    "VLAN",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop routing inter-VLAN traffic with broad Any-Any firewall rules in production.",
+   "ig_id": "18031504013910099",
+   "file_id": "BAACAgQAAxkDAAICQGrck1-aAjrSETcy6Ag0wbwJfra1AAJKIQACJtHhUgFo3cI73ZHvPQQ",
+   "message_id": 576
   }
  }
 }
