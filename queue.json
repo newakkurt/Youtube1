@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Untrusted Ports Need a DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your Whole Network",
   "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
   "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
@@ -100,7 +99,8 @@
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
-  "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication"
+  "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
+  "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2615,6 +2615,23 @@
    "ig_id": "17894234388614416",
    "file_id": "BAACAgQAAxkDAAICSGrcpaLMZCyWuX9P_V-gIDBTX9-yAAJqIQACJtHhUoZ-yAwZI3lhPQQ",
    "message_id": 584
+  },
+  "733da5b7": {
+   "title": "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
+   "description": "Legacy SNMPv2c community strings travel in plaintext and expose critical device metrics to packet sniffers. Replace insecure communities with SNMPv3 authPriv to mandate cryptographic authentication and AES encryption.\n\n#Shorts #SNMPv3 #NetworkSecurity #Cisco #NetworkEngineering #SysAdmin",
+   "tags": [
+    "SNMPv3",
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop sending plaintext SNMPv2c community strings across your network management VLAN.",
+   "ig_id": "17955241449038151",
+   "file_id": "BAACAgQAAxkDAAICTGrcvVPH8AVXQxQvUCGgsMu7RrVdAAKIIQACJtHhUm_xMuntKqjRPQQ",
+   "message_id": 588
   }
  }
 }
