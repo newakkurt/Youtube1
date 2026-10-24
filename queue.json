@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One SNMP String Can Leak Your Whole Network",
   "Why Isolated Management VLAN Stops Hackers Even When TACACS Fails",
   "How Ignoring SNMPv3 Turns Your Network Into an Open Book",
   "Why Mystery Switch Glitches Happen: Stopping Config Drift",
@@ -100,7 +99,8 @@
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
-  "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv"
+  "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
+  "STP Root Hijacked? Apply Root Guard to Downlink Trunks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2632,6 +2632,23 @@
    "ig_id": "17955241449038151",
    "file_id": "BAACAgQAAxkDAAICTGrcvVPH8AVXQxQvUCGgsMu7RrVdAAKIIQACJtHhUm_xMuntKqjRPQQ",
    "message_id": 588
+  },
+  "eba30cfa": {
+   "title": "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
+   "description": "Spanning Tree Root Guard belongs on distribution trunks, not access ports. Learn where to properly configure Root Guard versus BPDU Guard to protect your STP topology.\n\n#Shorts #rootguard #spanningtree #cisco #networkengineering #ccna",
+   "tags": [
+    "rootguard",
+    "spanningtree",
+    "cisco",
+    "networkengineering",
+    "ccna",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never deploy Spanning Tree Root Guard on end-user access ports.",
+   "ig_id": "18099123902659547",
+   "file_id": "BAACAgQAAxkDAAICUGrc5h-w0PqRK1DJIB3CIUThqTN-AAIKJAACYrvpUsUdxZ000HnVPQQ",
+   "message_id": 592
   }
  }
 }
