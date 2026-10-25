@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Mystery Switch Glitches Happen: Stopping Config Drift",
   "Why a Single Storm Can Lock Down Your Entire VLAN – Fix It Fast",
   "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
   "Why One Forgotten Switch Change Triggers Hours of Chaos",
@@ -100,7 +99,8 @@
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
   "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
   "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
-  "Corrupt Config Spreading Across Fleet? Use any_errors_fatal"
+  "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
+  "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2683,6 +2683,23 @@
    "ig_id": "18095108363692496",
    "file_id": "BAACAgQAAxkDAAICWGrdIEgQNguoF5Gmc_L9zryxRheEAAKMIgACYrvxUtmAyA5_T1wuPQQ",
    "message_id": 600
+  },
+  "b23c1100": {
+   "title": "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
+   "description": "Routing firewall HA heartbeats through intermediate switches invites split-brain conditions during traffic spikes. Isolate heartbeat interfaces with direct crossover cabling to maintain reliable cluster stability.\n\n#Shorts #firewallha #networkengineering #cybersecurity #highavailability #sysadmin",
+   "tags": [
+    "firewallha",
+    "networkengineering",
+    "cybersecurity",
+    "highavailability",
+    "sysadmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never route firewall HA heartbeats through an intermediate transit switch.",
+   "ig_id": "17917187268464463",
+   "file_id": "BAACAgQAAxkDAAICXGrdch2KQ1ucEKseDgIpHV4wlIcoAAKlIgACYrvxUuwHI4jSBz19PQQ",
+   "message_id": 604
   }
  }
 }
