@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One SNMP String Can Leak Your Entire 3,000-Device Network",
   "Why One Forgotten Switch Change Triggers Hours of Chaos",
   "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
   "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
@@ -100,7 +99,8 @@
   "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
   "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
-  "Evil Twin Spoofing Your SSID? Tune WIPS Containment"
+  "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
+  "Rack Tampering Risk: Secure Console Ports With Exec-Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2717,6 +2717,23 @@
    "ig_id": "18466587010141257",
    "file_id": "BAACAgQAAxkDAAICYGrdrDoOaSM8lr4dnlmXp3D1u2P0AAK6IgACYrvxUpyy-QABPu33MD0E",
    "message_id": 608
+  },
+  "a84465af": {
+   "title": "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
+   "description": "Unattended switch console ports allow anyone with physical rack access to alter critical network configurations. Configure unique encrypted credentials and an idle exec-timeout on line console 0 to lock down device sessions.\n\n#Shorts #NetworkSecurity #CiscoCLI #NetworkEngineering #SysAdmin #CyberSecurity",
+   "tags": [
+    "NetworkSecurity",
+    "CiscoCLI",
+    "NetworkEngineering",
+    "SysAdmin",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave open switch console sessions unattended inside accessible server racks.",
+   "ig_id": "18091993181222743",
+   "file_id": "BAACAgQAAxkDAAICZGrdx5npOPZE7Kmse7GDcLqniMiHAAL0IgACYrvxUhK8Vpu38FUHPQQ",
+   "message_id": 612
   }
  }
 }
