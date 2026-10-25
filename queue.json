@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Config Drift Sneaks In and How to Spot It Fast",
   "Why Clock Drift Lets Attackers Hide Their Trail",
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
@@ -100,7 +99,8 @@
   "Manual Config Drift Breaks Network? Compare Golden Templates",
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
-  "Port-security max MACs: stop rogue devices with restrict mode"
+  "Port-security max MACs: stop rogue devices with restrict mode",
+  "Config Drift Detected? Automate Golden-Config Checks with Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2802,6 +2802,23 @@
    "ig_id": "17909368830567718",
    "file_id": "BAACAgQAAxkDAAICdGreP3Ny3pwNyptyDapjJBIPR-VWAAL0HQACYrv5UqF8I0eAzIGZPQQ",
    "message_id": 628
+  },
+  "b3a5d51b": {
+   "title": "Config Drift Detected? Automate Golden-Config Checks with Ansible",
+   "description": "Learn how to define golden-config templates with rConfig or Ansible and automatically compare them to live device configurations using Netmiko. Regular drift detection keeps your network secure and consistent.\n\n#Shorts #ConfigDrift #NetworkAutomation #CyberSecurity #DevOps #Ansible",
+   "tags": [
+    "ConfigDrift",
+    "NetworkAutomation",
+    "CyberSecurity",
+    "DevOps",
+    "Ansible",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting hidden config drift break your network security.",
+   "ig_id": "17910098508486373",
+   "file_id": "BAACAgQAAxkDAAICeGrecZN4vGnMo7tfi3BqY_kH4EkZAAJ5HgACYrv5UpX08CC1XW23PQQ",
+   "message_id": 632
   }
  }
 }
