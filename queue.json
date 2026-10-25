@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
   "Why One SNMP String Can Leak a 3,000-Device Network",
   "Why Config Drift Sneaks In and How to Spot It Fast",
   "Why Clock Drift Lets Attackers Hide Their Trail",
@@ -100,7 +99,8 @@
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
   "Manual Config Drift Breaks Network? Compare Golden Templates",
-  "Cable Tracing Delays Repairs – Use Standard Port Labeling"
+  "Cable Tracing Delays Repairs – Use Standard Port Labeling",
+  "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2768,6 +2768,23 @@
    "ig_id": "17916831294466267",
    "file_id": "BAACAgQAAxkDAAICbGrd8K2gqFYpJ-aXEFS9Y9xWE_yOAAJCIwACYrvxUtIh0PMyGK94PQQ",
    "message_id": 620
+  },
+  "077e4b25": {
+   "title": "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
+   "description": "Learn how to prevent DHCP snooping from overloading your switch flash by assigning a dedicated directory and fine‑tuning the write timeout. This quick fix keeps performance high and avoids unexpected drops.\n\n#Shorts #DHCPsnooping #NetworkEngineering #SwitchOptimization #SecurityBestPractices #ITInfrastructure",
+   "tags": [
+    "DHCPsnooping",
+    "NetworkEngineering",
+    "SwitchOptimization",
+    "SecurityBestPractices",
+    "ITInfrastructure",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting DHCP snooping fill flash and slow your switch.",
+   "ig_id": "18019018964970771",
+   "file_id": "BAACAgQAAxkDAAICcGreFD7U6AKn08ZN-b_LdAEQbTeWAAKDHQACYrv5UoKpBHID2ZzoPQQ",
+   "message_id": 624
   }
  }
 }
