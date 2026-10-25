@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One Forgotten Switch Change Triggers Hours of Chaos",
   "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
   "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
   "Why One SNMP String Can Leak a 3,000-Device Network",
@@ -100,7 +99,8 @@
   "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
-  "Rack Tampering Risk: Secure Console Ports With Exec-Timeout"
+  "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
+  "Manual Config Drift Breaks Network? Compare Golden Templates"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2734,6 +2734,23 @@
    "ig_id": "18091993181222743",
    "file_id": "BAACAgQAAxkDAAICZGrdx5npOPZE7Kmse7GDcLqniMiHAAL0IgACYrvxUhK8Vpu38FUHPQQ",
    "message_id": 612
+  },
+  "b5aaaf6e": {
+   "title": "Manual Config Drift Breaks Network? Compare Golden Templates",
+   "description": "Manual console tweaks on switches often cause silent config drift that breaks production months later. Define golden configuration templates and alert on differences before applying automated remediation.\n\n#Shorts #ConfigDrift #NetworkEngineering #AnsibleAutomation #NetOps #NetworkAutomation",
+   "tags": [
+    "ConfigDrift",
+    "NetworkEngineering",
+    "AnsibleAutomation",
+    "NetOps",
+    "NetworkAutomation",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting untracked console edits silently drift your production switch configs.",
+   "ig_id": "18103158566161472",
+   "file_id": "BAACAgQAAxkDAAICaGrd7ULTzwTorLaA_43UCF24eFnTAAI2IwACYrvxUk5G9K9e_mkhPQQ",
+   "message_id": 616
   }
  }
 }
