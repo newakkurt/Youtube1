@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One SNMP String Can Leak a 3,000-Device Network",
   "Why Config Drift Sneaks In and How to Spot It Fast",
   "Why Clock Drift Lets Attackers Hide Their Trail",
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
@@ -100,7 +99,8 @@
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
   "Manual Config Drift Breaks Network? Compare Golden Templates",
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
-  "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize"
+  "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
+  "Port-security max MACs: stop rogue devices with restrict mode"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2785,6 +2785,23 @@
    "ig_id": "18019018964970771",
    "file_id": "BAACAgQAAxkDAAICcGreFD7U6AKn08ZN-b_LdAEQbTeWAAKDHQACYrv5UoKpBHID2ZzoPQQ",
    "message_id": 624
+  },
+  "3447fe42": {
+   "title": "Port-security max MACs: stop rogue devices with restrict mode",
+   "description": "Learn how to lock down edge ports by limiting MAC addresses and using the right violation mode. Apply these steps to keep rogue devices out of your network.\n\n#Shorts #PortSecurity #NetworkEngineering #Cybersecurity #Cisco #SwitchConfig",
+   "tags": [
+    "PortSecurity",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "Cisco",
+    "SwitchConfig",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave edge ports without MAC limits.",
+   "ig_id": "17909368830567718",
+   "file_id": "BAACAgQAAxkDAAICdGreP3Ny3pwNyptyDapjJBIPR-VWAAL0HQACYrv5UqF8I0eAzIGZPQQ",
+   "message_id": 628
   }
  }
 }
