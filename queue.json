@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Unsynced Clocks Destroy Your Security Logs (And How to Fix It)",
   "Why Keeping SNMPv2c Exposes Thousands of Devices to Attackers",
   "Why One SNMP String Can Leak a 3,000-Device Network",
   "Why Config Drift Sneaks In and How to Spot It Fast",
@@ -100,7 +99,8 @@
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
-  "Manual Config Drift Breaks Network? Compare Golden Templates"
+  "Manual Config Drift Breaks Network? Compare Golden Templates",
+  "Cable Tracing Delays Repairs – Use Standard Port Labeling"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2751,6 +2751,23 @@
    "ig_id": "18103158566161472",
    "file_id": "BAACAgQAAxkDAAICaGrd7ULTzwTorLaA_43UCF24eFnTAAI2IwACYrvxUk5G9K9e_mkhPQQ",
    "message_id": 616
+  },
+  "a5df54e4": {
+   "title": "Cable Tracing Delays Repairs – Use Standard Port Labeling",
+   "description": "Skipping proper labeling turns a simple fault into a time‑consuming hunt. Follow a strict labeling standard and your team will fix issues in seconds.\n\n#Shorts #PortLabeling #NetworkOps #DataCenter #CableManagement #ITBestPractices",
+   "tags": [
+    "PortLabeling",
+    "NetworkOps",
+    "DataCenter",
+    "CableManagement",
+    "ITBestPractices",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never waste minutes chasing cables—label your patch panels and ports now!",
+   "ig_id": "17916831294466267",
+   "file_id": "BAACAgQAAxkDAAICbGrd8K2gqFYpJ-aXEFS9Y9xWE_yOAAJCIwACYrvxUtIh0PMyGK94PQQ",
+   "message_id": 620
   }
  }
 }
