@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Aggressive MAB Timers Crash Your Production Line",
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
@@ -100,7 +99,8 @@
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
-  "Smurf DDoS risk: globally disable IP Directed Broadcast"
+  "Smurf DDoS risk: globally disable IP Directed Broadcast",
+  "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2938,6 +2938,23 @@
    "ig_id": "18572814670079836",
    "file_id": "BAACAgQAAxkDAAIClWrfsOvUrLHwPtY7MaJzxZBHQswQAAJOHgACJ5D4Uj3SKZaKFZSQPQQ",
    "message_id": 661
+  },
+  "f5617588": {
+   "title": "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
+   "description": "Learn how to activate Generalized TTL Security Mechanism on OSPF, EIGRP, and BGP to block spoofed routing updates. This quick fix prevents CPU exhaustion from non‑adjacent attackers.\n\n#Shorts #TTLsecurity #NetworkSecurity #Routing #Cisco #Engineering",
+   "tags": [
+    "TTLsecurity",
+    "NetworkSecurity",
+    "Routing",
+    "Cisco",
+    "Engineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never accept routing updates from devices that aren't directly adjacent.",
+   "ig_id": "18633788398065405",
+   "file_id": "BAACAgQAAxkDAAICmWrf3qAM8C3KxrwyVYiC0Mv4uTdhAAJ6HgACJ5D4UpTvNm6IZ7d5PQQ",
+   "message_id": 665
   }
  }
 }
