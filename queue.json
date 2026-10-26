@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Relying Only on TACACS+ Leaves Switches Exposed",
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your 3,000-Device Network",
@@ -100,7 +99,8 @@
   "Port-security max MACs: stop rogue devices with restrict mode",
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
-  "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports"
+  "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
+  "Err‑disable ports stay down? Set a recovery timer to auto‑heal"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2853,6 +2853,23 @@
    "ig_id": "18495540199105498",
    "file_id": "BAACAgQAAxkDAAICgWre-3_KG5buAoQmUrC_JO5dubL0AALoGwACJ5DwUnbp3HzUsON5PQQ",
    "message_id": 641
+  },
+  "e42af856": {
+   "title": "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
+   "description": "If you never set the err‑disable recovery timer, each closed port forces you into the field for manual fixes. Apply the ‘errdisable recovery interval 300’ command and let the switch automatically bring ports back online.\n\n#Shorts #errdisable #networking #cybersecurity #networkengineer #automation",
+   "tags": [
+    "errdisable",
+    "networking",
+    "cybersecurity",
+    "networkengineer",
+    "automation",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop walking to every shut port – automate its recovery.",
+   "ig_id": "18146645152570071",
+   "file_id": "BAACAgQAAxkDAAIChWrfGL6ZE6zKPDv9fE-A70guw24cAAI7HQACJ5D4UkPcncQAAVViHj0E",
+   "message_id": 645
   }
  }
 }
