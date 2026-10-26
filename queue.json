@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why One SNMP String Can Leak Your 3,000-Device Network",
   "Why Your Switch Forgets Devices After a Reboot",
   "Why Aggressive MAB Timers Crash Your Production Line",
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
@@ -100,7 +99,8 @@
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
-  "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard"
+  "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
+  "Prevent Config Drift with Golden Templates and Alert‑First Strategy"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2904,6 +2904,23 @@
    "ig_id": "18107620607210069",
    "file_id": "BAACAgQAAxkDAAICjWrfUgcIdZomzskU9lV1Z1-DGHCAAALCHQACJ5D4UoSuzqKVeOcFPQQ",
    "message_id": 653
+  },
+  "6da50aa8": {
+   "title": "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
+   "description": "Config drift can hide for months, causing unpredictable switch behavior. Use a golden‑config template with rConfig or Ansible, schedule diffs, and alert on mismatches before any automatic fixes.\n\n#Shorts #configdrift #network #cybersecurity #automation #devops",
+   "tags": [
+    "configdrift",
+    "network",
+    "cybersecurity",
+    "automation",
+    "devops",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a manual switch change slip by unnoticed.",
+   "ig_id": "18120313981953335",
+   "file_id": "BAACAgQAAxkDAAICkWrfkkjj9V6hoXkSuUl7f3sPwEyyAAIkHgACJ5D4UkpfYHR_j-6CPQQ",
+   "message_id": 657
   }
  }
 }
