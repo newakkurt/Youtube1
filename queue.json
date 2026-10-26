@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your 3,000-Device Network",
   "Why Your Switch Forgets Devices After a Reboot",
@@ -100,7 +99,8 @@
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
-  "Err‑disable ports stay down? Set a recovery timer to auto‑heal"
+  "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
+  "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2870,6 +2870,23 @@
    "ig_id": "18146645152570071",
    "file_id": "BAACAgQAAxkDAAIChWrfGL6ZE6zKPDv9fE-A70guw24cAAI7HQACJ5D4UkPcncQAAVViHj0E",
    "message_id": 645
+  },
+  "85d8bb26": {
+   "title": "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
+   "description": "Learn how to stop hidden manual changes from breaking your switches. Use a golden‑config template with rConfig or Ansible, schedule diff checks, and get alerts before you spend hours troubleshooting.\n\n#Shorts #ConfigDriftAlert #NetworkEngineering #Automation #Cybersecurity #DevOps",
+   "tags": [
+    "ConfigDriftAlert",
+    "NetworkEngineering",
+    "Automation",
+    "Cybersecurity",
+    "DevOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a manual change hide—config drift ruins switch behavior.",
+   "ig_id": "18132113878701765",
+   "file_id": "BAACAgQAAxkDAAICiWrfQ-fUQ1HJP8dcgsDrkszBHmSoAAKEHQACJ5D4Upq0Jd1IcPJcPQQ",
+   "message_id": 649
   }
  }
 }
