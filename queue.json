@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
   "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
@@ -100,7 +99,8 @@
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
   "Port-security max MACs: stop rogue devices with restrict mode",
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
-  "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard"
+  "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
+  "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2836,6 +2836,23 @@
    "ig_id": "18152582101537023",
    "file_id": "BAACAgQAAxkDAAICfWrew-ZeiDrxln3OwRFLtSVqBDE9AAIvHwACYrv5UgoMdrFCkznZPQQ",
    "message_id": 637
+  },
+  "85ed23e6": {
+   "title": "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
+   "description": "In this short we show why a dedicated Auth-Fail VLAN is essential when 802.1X authentication fails on access ports, and how to configure it quickly. Follow the steps to keep unauthenticated devices isolated without disrupting the rest of the network.\n\n#Shorts #AuthFailVLAN #NetworkSecurity #8021X #VLAN #NetworkEngineering",
+   "tags": [
+    "AuthFailVLAN",
+    "NetworkSecurity",
+    "8021X",
+    "VLAN",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a failed 802.1X auth freeze your port.",
+   "ig_id": "18495540199105498",
+   "file_id": "BAACAgQAAxkDAAICgWre-3_KG5buAoQmUrC_JO5dubL0AALoGwACJ5DwUnbp3HzUsON5PQQ",
+   "message_id": 641
   }
  }
 }
