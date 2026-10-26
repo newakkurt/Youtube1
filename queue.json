@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Clock Drift Lets Attackers Hide Their Trail",
   "Why Unsynced Clocks Sabotage Your Security Logs (And How to Fix It)",
   "Why Relying Only on TACACS+ Leaves Switches Exposed",
   "Why a Separate Management VLAN Beats Weak TACACS+ Controls",
@@ -100,7 +99,8 @@
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
   "Port-security max MACs: stop rogue devices with restrict mode",
-  "Config Drift Detected? Automate Golden-Config Checks with Ansible"
+  "Config Drift Detected? Automate Golden-Config Checks with Ansible",
+  "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2819,6 +2819,23 @@
    "ig_id": "17910098508486373",
    "file_id": "BAACAgQAAxkDAAICeGrecZN4vGnMo7tfi3BqY_kH4EkZAAJ5HgACYrv5UpX08CC1XW23PQQ",
    "message_id": 632
+  },
+  "37744e76": {
+   "title": "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
+   "description": "Learn why plugging a mini switch into a user port can shut down the link and how to prevent it with PortFast and BPDU Guard. Follow the exact CLI steps and set a 300‑second recovery timer to keep your network running.\n\n#Shorts #PortFastGuard #networksecurity #cisco #stp #networkengineer",
+   "tags": [
+    "PortFastGuard",
+    "networksecurity",
+    "cisco",
+    "stp",
+    "networkengineer",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never plug a mini switch into a user port without protection.",
+   "ig_id": "18152582101537023",
+   "file_id": "BAACAgQAAxkDAAICfWrew-ZeiDrxln3OwRFLtSVqBDE9AAIvHwACYrv5UgoMdrFCkznZPQQ",
+   "message_id": 637
   }
  }
 }
