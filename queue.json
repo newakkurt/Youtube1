@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Untrusted Ports Need DHCP Rate‑Limit – The Hidden Shield",
   "Why One SNMP String Can Leak Your 3,000-Device Network",
   "Why Your Switch Forgets Devices After a Reboot",
   "Why Aggressive MAB Timers Crash Your Production Line",
@@ -100,7 +99,8 @@
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
-  "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix"
+  "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
+  "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2887,6 +2887,23 @@
    "ig_id": "18132113878701765",
    "file_id": "BAACAgQAAxkDAAICiWrfQ-fUQ1HJP8dcgsDrkszBHmSoAAKEHQACJ5D4Upq0Jd1IcPJcPQQ",
    "message_id": 649
+  },
+  "d1ea9908": {
+   "title": "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
+   "description": "A hidden mini‑switch plugged into a user’s desk can bring down the entire LAN. Enabling PortFast and BPDU Guard on edge ports forces an err‑disable, preventing any rogue switch from becoming the STP root.\n\n#Shorts #PortFastBPDU #networksecurity #cisco #networkengineer #errdisable",
+   "tags": [
+    "PortFastBPDU",
+    "networksecurity",
+    "cisco",
+    "networkengineer",
+    "errdisable",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a hidden mini‑switch lock your entire network.",
+   "ig_id": "18107620607210069",
+   "file_id": "BAACAgQAAxkDAAICjWrfUgcIdZomzskU9lV1Z1-DGHCAAALCHQACJ5D4UoSuzqKVeOcFPQQ",
+   "message_id": 653
   }
  }
 }
