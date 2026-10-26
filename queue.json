@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Your Switch Forgets Devices After a Reboot",
   "Why Aggressive MAB Timers Crash Your Production Line",
   "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
@@ -100,7 +99,8 @@
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
-  "Prevent Config Drift with Golden Templates and Alert‑First Strategy"
+  "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
+  "Smurf DDoS risk: globally disable IP Directed Broadcast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2921,6 +2921,23 @@
    "ig_id": "18120313981953335",
    "file_id": "BAACAgQAAxkDAAICkWrfkkjj9V6hoXkSuUl7f3sPwEyyAAIkHgACJ5D4UkpfYHR_j-6CPQQ",
    "message_id": 657
+  },
+  "bcf9b946": {
+   "title": "Smurf DDoS risk: globally disable IP Directed Broadcast",
+   "description": "IP Directed Broadcast can enable Smurf DDoS attacks if left on. Disable it globally after confirming no legitimate use.\n\n#Shorts #IPDirectedBroadcast #NetworkSecurity #CyberSec #SwitchConfig #DDoSProtection",
+   "tags": [
+    "IPDirectedBroadcast",
+    "NetworkSecurity",
+    "CyberSec",
+    "SwitchConfig",
+    "DDoSProtection",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave IP Directed Broadcast enabled on your switches.",
+   "ig_id": "18572814670079836",
+   "file_id": "BAACAgQAAxkDAAIClWrfsOvUrLHwPtY7MaJzxZBHQswQAAJOHgACJ5D4Uj3SKZaKFZSQPQQ",
+   "message_id": 661
   }
  }
 }
