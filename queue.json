@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
   "Why Silent Config Drift Breaks Switches and How to Detect It",
@@ -100,7 +99,8 @@
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
   "Smurf DDoS risk: globally disable IP Directed Broadcast",
   "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
-  "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer"
+  "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
+  "Switch Reload Drops Traffic: Store Snooping Binding DB"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2971,6 +2971,23 @@
    "hook": "Never let a tiny switch bring your campus down.",
    "file_id": "BAACAgQAAxkDAAICnWrgFKoF8flT3TVNDqkLqub8DPGqAALuJwACJ5AAAVNgIyZ1RZrKtj0E",
    "message_id": 669
+  },
+  "19532553": {
+   "title": "Switch Reload Drops Traffic: Store Snooping Binding DB",
+   "description": "When a switch reloads with an empty DHCP snooping binding table, Dynamic ARP Inspection and IP Source Guard immediately drop valid host traffic. Configure database persistence to flash or remote storage and create static bindings for non-DHCP devices.\n\n#Shorts #DHCPSnooping #NetworkEngineering #Cisco #NetworkSecurity #SysAdmin",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkEngineering",
+    "Cisco",
+    "NetworkSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never reboot switches without persisting the DHCP snooping database.",
+   "ig_id": "18125260669911365",
+   "file_id": "BAACAgQAAxkDAAICoWrgT7qQiYL1ISLHKghPHCn2xXjXAAIPKAACJ5AAAVMQ0tXVMs8Bjz0E",
+   "message_id": 673
   }
  }
 }
