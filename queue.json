@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why a Simple DHCP Rate‑Limit Stops Network Storms",
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
   "Why Silent Config Drift Breaks Switches and How to Detect It",
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
@@ -100,7 +99,8 @@
   "Smurf DDoS risk: globally disable IP Directed Broadcast",
   "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
   "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
-  "Switch Reload Drops Traffic: Store Snooping Binding DB"
+  "Switch Reload Drops Traffic: Store Snooping Binding DB",
+  "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2988,6 +2988,23 @@
    "ig_id": "18125260669911365",
    "file_id": "BAACAgQAAxkDAAICoWrgT7qQiYL1ISLHKghPHCn2xXjXAAIPKAACJ5AAAVMQ0tXVMs8Bjz0E",
    "message_id": 673
+  },
+  "366a5afe": {
+   "title": "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
+   "description": "Rogue access points can impersonate corporate SSIDs and compromise enterprise client connections. Deploying WIDS classification and WIPS containment neutralizes unauthorized access points automatically.\n\n#Shorts #WIPS #NetworkSecurity #WirelessSecurity #SysAdmin #Cisco",
+   "tags": [
+    "WIPS",
+    "NetworkSecurity",
+    "WirelessSecurity",
+    "SysAdmin",
+    "Cisco",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave enterprise wireless controllers running without active WIDS rogue AP detection.",
+   "ig_id": "17966233506078223",
+   "file_id": "BAACAgQAAxkDAAICpWrga8AglRvpd4ohEljNoTSTzizrAAI1KAACJ5AAAVNw-vgXmsOXQj0E",
+   "message_id": 677
   }
  }
 }
