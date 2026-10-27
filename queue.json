@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
   "Why MAB Timers Matter: Protect Printers and Keep Production Running",
   "Why Aggressive Storm Control Silently Drops Industrial Feeds",
   "Why a Switch Reboot Blacklists Cameras and Printers",
@@ -100,7 +99,8 @@
   "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
   "Sticky MAC disappears after reload – save startup-config",
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
-  "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts"
+  "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
+  "Stop rogue BGP route leaks with AS‑Path ACL filters"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3056,6 +3056,23 @@
    "ig_id": "18107089778525551",
    "file_id": "BAACAgQAAxkDAAICsWrgzVCBB1FdwpiAjPkTMEJVZyr1AALKKAACJ5AAAVOjBg3nq0H5gj0E",
    "message_id": 689
+  },
+  "517f17af": {
+   "title": "Stop rogue BGP route leaks with AS‑Path ACL filters",
+   "description": "Learn how to block unwanted route announcements by using AS‑Path ACLs on BGP. This quick guide shows the exact commands to create and apply the filter, keeping your routing table clean.\n\n#Shorts #BGPFilter #NetworkSecurity #BGP #CyberSecurity #Routing",
+   "tags": [
+    "BGPFilter",
+    "NetworkSecurity",
+    "BGP",
+    "CyberSecurity",
+    "Routing",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop letting rogue AS paths flood your BGP tables.",
+   "ig_id": "18120586630767193",
+   "file_id": "BAACAgQAAxkDAAICtWrg2gaAciZCuX5hMfYJ3eyOUEUpAAJlIQACTrcIU6_TYjW4tJE0PQQ",
+   "message_id": 693
   }
  }
 }
