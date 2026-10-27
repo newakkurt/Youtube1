@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Aggressive Storm Control Silently Drops Industrial Feeds",
   "Why a Switch Reboot Blacklists Cameras and Printers",
   "How an Empty Snooping Table Silently Kills Static Devices",
   "Why a Public SNMP Community Can Leak a 3,000-Device Network",
@@ -100,7 +99,8 @@
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
   "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
   "Stop rogue BGP route leaks with AS‑Path ACL filters",
-  "Optimize EtherChannel Load‑Balancing with IP/Port Hashing"
+  "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
+  "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3090,6 +3090,23 @@
    "ig_id": "17890489755621772",
    "file_id": "BAACAgQAAxkDAAICuWrg_Lh1YKPMWyLD4vPSntRPJOStAAK2IQACTrcIU2MiE64h1hc2PQQ",
    "message_id": 697
+  },
+  "7ad36044": {
+   "title": "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
+   "description": "A RADIUS/NAC outage can freeze all production if ports aren't pre‑configured. Learn how to set fail‑close behavior and fallback VLANs to keep traffic flowing.\n\n#Shorts #FailClose #NetworkSecurity #Cybersecurity #NetworkEngineering #ITOps",
+   "tags": [
+    "FailClose",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "NetworkEngineering",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a dead RADIUS server shut down your plant.",
+   "ig_id": "17875844121594691",
+   "file_id": "BAACAgQAAxkDAAICvWrhJ70OzSnh3o-QhJAGkU-aEC4FAAISHgACTrcQU02hI1xkHz8ZPQQ",
+   "message_id": 701
   }
  }
 }
