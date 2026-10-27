@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why MAB Timers Matter: Protect Printers and Keep Production Running",
   "Why Aggressive Storm Control Silently Drops Industrial Feeds",
   "Why a Switch Reboot Blacklists Cameras and Printers",
   "How an Empty Snooping Table Silently Kills Static Devices",
@@ -100,7 +99,8 @@
   "Sticky MAC disappears after reload – save startup-config",
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
   "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
-  "Stop rogue BGP route leaks with AS‑Path ACL filters"
+  "Stop rogue BGP route leaks with AS‑Path ACL filters",
+  "Optimize EtherChannel Load‑Balancing with IP/Port Hashing"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3073,6 +3073,23 @@
    "ig_id": "18120586630767193",
    "file_id": "BAACAgQAAxkDAAICtWrg2gaAciZCuX5hMfYJ3eyOUEUpAAJlIQACTrcIU6_TYjW4tJE0PQQ",
    "message_id": 693
+  },
+  "22a7f693": {
+   "title": "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
+   "description": "Switch your EtherChannel load‑balancing from MAC to IP or port hashing for better traffic distribution. This quick fix keeps your trunk links efficient and avoids congestion.\n\n#Shorts #EtherChannel #networking #Cisco #loadbalancing #networkengineer",
+   "tags": [
+    "EtherChannel",
+    "networking",
+    "Cisco",
+    "loadbalancing",
+    "networkengineer",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop using MAC‑based load‑balancing on EtherChannel trunks!",
+   "ig_id": "17890489755621772",
+   "file_id": "BAACAgQAAxkDAAICuWrg_Lh1YKPMWyLD4vPSntRPJOStAAK2IQACTrcIU2MiE64h1hc2PQQ",
+   "message_id": 697
   }
  }
 }
