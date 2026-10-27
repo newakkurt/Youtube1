@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How a Wrong Native VLAN Creates a Double‑Tagging Door",
   "Why Silent Config Drift Breaks Switches and How to Detect It",
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
   "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
@@ -100,7 +99,8 @@
   "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
   "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
   "Switch Reload Drops Traffic: Store Snooping Binding DB",
-  "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment"
+  "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
+  "Sticky MAC disappears after reload – save startup-config"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3005,6 +3005,23 @@
    "ig_id": "17966233506078223",
    "file_id": "BAACAgQAAxkDAAICpWrga8AglRvpd4ohEljNoTSTzizrAAI1KAACJ5AAAVNw-vgXmsOXQj0E",
    "message_id": 677
+  },
+  "b22849b7": {
+   "title": "Sticky MAC disappears after reload – save startup-config",
+   "description": "Learn the exact CLI steps to make sticky MAC addresses survive a switch reboot. Follow the verification commands to ensure your port-security config is safely stored in startup-config.\n\n#Shorts #StickyMACFix #NetworkEngineering #Cisco #PortSecurity #NetworkOps",
+   "tags": [
+    "StickyMACFix",
+    "NetworkEngineering",
+    "Cisco",
+    "PortSecurity",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never reboot a switch without saving sticky MAC settings.",
+   "ig_id": "18130944037841809",
+   "file_id": "BAACAgQAAxkDAAICqWrglRkAAehSlNfxVURPpAYHPpKfmQACWigAAieQAAFTHo2Gz2XLyPM9BA",
+   "message_id": 681
   }
  }
 }
