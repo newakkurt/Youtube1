@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Silent Config Drift Breaks Switches and How to Detect It",
   "Why a Tiny Storm Control Mistake Can Freeze Your Factory Network",
   "Why PortFast & BPDU Guard Stops Rogue Switch Hijacks",
   "Why MAB Timers Matter: Protect Printers and Keep Production Running",
@@ -100,7 +99,8 @@
   "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
   "Switch Reload Drops Traffic: Store Snooping Binding DB",
   "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
-  "Sticky MAC disappears after reload – save startup-config"
+  "Sticky MAC disappears after reload – save startup-config",
+  "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3022,6 +3022,23 @@
    "ig_id": "18130944037841809",
    "file_id": "BAACAgQAAxkDAAICqWrglRkAAehSlNfxVURPpAYHPpKfmQACWigAAieQAAFTHo2Gz2XLyPM9BA",
    "message_id": 681
+  },
+  "a109ae02": {
+   "title": "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
+   "description": "Learn how to lock down VRF leaks in MPLS L3VPN environments with strict import and export Route Target policies. Use dedicated prefix‑lists and ACLs to keep your traffic where it belongs.\n\n#Shorts #VRFLeakFix #NetworkSecurity #MPLS #NetOps #CyberSec",
+   "tags": [
+    "VRFLeakFix",
+    "NetworkSecurity",
+    "MPLS",
+    "NetOps",
+    "CyberSec",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop leaking routes between VRFs by tightening your RT filters.",
+   "ig_id": "17975546523156395",
+   "file_id": "BAACAgQAAxkDAAICrWrgmL5emrknTfY8IJqJ8m5wSILkAAJeKAACJ5AAAVNF_dwf-zuFsj0E",
+   "message_id": 685
   }
  }
 }
