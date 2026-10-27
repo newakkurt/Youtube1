@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Switch Reload Drops Static Devices: Binding Persistence Explained",
   "Why Untrusted Switch Ports Crash DHCP Without Rate-Limits",
   "Why a Simple DHCP Rate‑Limit Stops Network Storms",
   "How a Wrong Native VLAN Creates a Double‑Tagging Door",
@@ -100,7 +99,8 @@
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
   "Smurf DDoS risk: globally disable IP Directed Broadcast",
-  "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)"
+  "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
+  "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer"
  ],
  "items": {
   "dcdc2b1c": {
@@ -2955,6 +2955,22 @@
    "ig_id": "18633788398065405",
    "file_id": "BAACAgQAAxkDAAICmWrf3qAM8C3KxrwyVYiC0Mv4uTdhAAJ6HgACJ5D4UpTvNm6IZ7d5PQQ",
    "message_id": 665
+  },
+  "27e2fd46": {
+   "title": "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
+   "description": "Secure user ports by combining PortFast with BPDU Guard and an auto‑recovery timer. This stops mini‑switch loops and root bridge hijacks without manual intervention.\n\n#Shorts #PortFastBPDU #NetworkSecurity #Cisco #STP #ErrDisable",
+   "tags": [
+    "PortFastBPDU",
+    "NetworkSecurity",
+    "Cisco",
+    "STP",
+    "ErrDisable",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a tiny switch bring your campus down.",
+   "file_id": "BAACAgQAAxkDAAICnWrgFKoF8flT3TVNDqkLqub8DPGqAALuJwACJ5AAAVNgIyZ1RZrKtj0E",
+   "message_id": 669
   }
  }
 }
