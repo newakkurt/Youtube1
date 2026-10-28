@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Time Drift Breaks Incident Response – Sync Your NTP",
   "Why Switch Ports Dump Slow Devices Into Guest VLANs",
   "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
   "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
@@ -100,7 +99,8 @@
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
-  "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports"
+  "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
+  "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3192,6 +3192,23 @@
    "ig_id": "18210292297368071",
    "file_id": "BAACAgQAAxkDAAIC0Wrh8wFcnJo3lS7294sOaYBrQaCyAAL7HgACTrcQUzuQzH-7fuYEPQQ",
    "message_id": 721
+  },
+  "1252af00": {
+   "title": "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
+   "description": "When FortiNAC uses MAC Authentication Bypass, aggressive re‑authentication or inactivity timers can constantly move slow‑boot devices like printers into an unauthorized VLAN, halting production. Align the MAB re‑auth timer with the device’s boot time, extend the inactivity timer, and pre‑define a fail‑open quarantine VLAN to keep the line running.\n\n#Shorts #MABtimers #NetworkSecurity #NAC #FortiNAC #NetworkEngineering",
+   "tags": [
+    "MABtimers",
+    "NetworkSecurity",
+    "NAC",
+    "FortiNAC",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop dropping printers into the unauthorized VLAN—timer mis‑config kills production.",
+   "ig_id": "18108483602336928",
+   "file_id": "BAACAgQAAxkDAAIC1WriKSUo9F2o2HfEmlx6wCHLey9QAAL2HgACTrcYU3QMf_ivwX36PQQ",
+   "message_id": 725
   }
  }
 }
