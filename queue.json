@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why a Public SNMP Community Can Leak a 3,000-Device Network",
   "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
   "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
   "Why Time Drift Breaks Incident Response – Sync Your NTP",
@@ -100,7 +99,8 @@
   "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
-  "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast"
+  "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
+  "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3141,6 +3141,23 @@
    "ig_id": "17961110145228311",
    "file_id": "BAACAgQAAxkDAAICxWrhoL2nuS9cRL4zvnFklVPMG5m0AAJAHgACTrcQU3SHTo3VtiowPQQ",
    "message_id": 709
+  },
+  "901a8729": {
+   "title": "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
+   "description": "Using only passwords for VPN access makes phishing attacks far easier. Enforce MFA or 2FA on IPsec and SSL VPNs to secure remote connections.\n\n#Shorts #MFAforVPN #NetworkSecurity #VPN #Cybersecurity #MFA",
+   "tags": [
+    "MFAforVPN",
+    "NetworkSecurity",
+    "VPN",
+    "Cybersecurity",
+    "MFA",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let VPN users connect with only a password.",
+   "ig_id": "18104351102642061",
+   "file_id": "BAACAgQAAxkDAAICyWrhuuckzv6RJEJfzjj2NNUAAWCxHwACgB4AAk63EFOex_mCGsoDID0E",
+   "message_id": 713
   }
  }
 }
