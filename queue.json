@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
   "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
   "Why Time Drift Breaks Incident Response – Sync Your NTP",
   "Why Switch Ports Dump Slow Devices Into Guest VLANs",
@@ -100,7 +99,8 @@
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
-  "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA"
+  "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
+  "Pushing Passwords to Git? Block Them with Pre-Commit Hooks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3158,6 +3158,23 @@
    "ig_id": "18104351102642061",
    "file_id": "BAACAgQAAxkDAAICyWrhuuckzv6RJEJfzjj2NNUAAWCxHwACgB4AAk63EFOex_mCGsoDID0E",
    "message_id": 713
+  },
+  "f42dbe72": {
+   "title": "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
+   "description": "Exposing router and switch configurations in Git can inadvertently leak SNMP community strings and device passwords across repositories. Configure .gitignore patterns and git-secrets pre-commit hooks to strip sensitive credentials before every push.\n\n#Shorts #NetDevOps #NetworkSecurity #DevSecOps #CyberSecurity #SysAdmin",
+   "tags": [
+    "NetDevOps",
+    "NetworkSecurity",
+    "DevSecOps",
+    "CyberSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never push raw switch configs straight into your Git repositories.",
+   "ig_id": "18118372394107159",
+   "file_id": "BAACAgQAAxkDAAICzWrh5oXksJlBrhK8etCcJoRa-8mfAALhHgACTrcQU81KHmJsFArSPQQ",
+   "message_id": 717
   }
  }
 }
