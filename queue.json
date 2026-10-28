@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
   "Why Time Drift Breaks Incident Response – Sync Your NTP",
   "Why Switch Ports Dump Slow Devices Into Guest VLANs",
   "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
@@ -100,7 +99,8 @@
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
-  "Pushing Passwords to Git? Block Them with Pre-Commit Hooks"
+  "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
+  "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3175,6 +3175,23 @@
    "ig_id": "18118372394107159",
    "file_id": "BAACAgQAAxkDAAICzWrh5oXksJlBrhK8etCcJoRa-8mfAALhHgACTrcQU81KHmJsFArSPQQ",
    "message_id": 717
+  },
+  "b39df355": {
+   "title": "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
+   "description": "Learn how to stop unnecessary routing packets from reaching end devices by configuring passive interfaces on access‑layer OSPF and EIGRP ports. Follow the exact IOS commands and remember to keep uplink ports active.\n\n#Shorts #PassiveInterface #NetworkSecurity #Routing #OSPF #EIGRP",
+   "tags": [
+    "PassiveInterface",
+    "NetworkSecurity",
+    "Routing",
+    "OSPF",
+    "EIGRP",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop flooding end devices with OSPF and EIGRP routes.",
+   "ig_id": "18210292297368071",
+   "file_id": "BAACAgQAAxkDAAIC0Wrh8wFcnJo3lS7294sOaYBrQaCyAAL7HgACTrcQUzuQzH-7fuYEPQQ",
+   "message_id": 721
   }
  }
 }
