@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why Switch Ports Dump Slow Devices Into Guest VLANs",
   "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
   "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
@@ -100,7 +99,8 @@
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
-  "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth"
+  "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
+  "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3209,6 +3209,23 @@
    "ig_id": "18108483602336928",
    "file_id": "BAACAgQAAxkDAAIC1WriKSUo9F2o2HfEmlx6wCHLey9QAAL2HgACTrcYU3QMf_ivwX36PQQ",
    "message_id": 725
+  },
+  "b1ca3571": {
+   "title": "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
+   "description": "DoS attacks can overwhelm a switch’s CPU with ICMP, SNMP, and management traffic, locking out administrators. Configuring Control Plane Policing (CoPP) limits these packets and keeps your switch reachable.\n\n#Shorts #CoPP #NetworkSecurity #Switching #DoSProtection #Cisco",
+   "tags": [
+    "CoPP",
+    "NetworkSecurity",
+    "Switching",
+    "DoSProtection",
+    "Cisco",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Don't let unmanaged ICMP flood lock your switch.",
+   "ig_id": "18137175088642843",
+   "file_id": "BAACAgQAAxkDAAIC2WriLM_BdAnwoJbm-AslZEAF0mhLAAICHwACTrcYU174032ZzbPAPQQ",
+   "message_id": 729
   }
  }
 }
