@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
@@ -100,7 +99,8 @@
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
-  "Capture Exact Event Order: Enable Millisecond Timestamps"
+  "Capture Exact Event Order: Enable Millisecond Timestamps",
+  "Untracked Config Outages: Audit Switch Backups with Git"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3243,6 +3243,23 @@
    "ig_id": "17907346035668076",
    "file_id": "BAACAgQAAxkDAAIC3WriT5763QiE7HxrqP1vNgmV0QiRAAJ9HwACTrcYU3rd6mYE2LgePQQ",
    "message_id": 733
+  },
+  "66041b8f": {
+   "title": "Untracked Config Outages: Audit Switch Backups with Git",
+   "description": "Storing switch backups in static folders leaves you blind when an outage hits. Track your configuration files in Git to see exactly who changed what and when.\n\n#Shorts #NetworkAutomation #NetworkEngineering #GitOps #SysAdmin #Cisco",
+   "tags": [
+    "NetworkAutomation",
+    "NetworkEngineering",
+    "GitOps",
+    "SysAdmin",
+    "Cisco",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop dumping flat text files into random backup folders without version tracking.",
+   "ig_id": "17888808192485325",
+   "file_id": "BAACAgQAAxkDAAIC4WrifZmBwjrc550wKTy_WZjGcdUcAALOHwACTrcYU1taQrpwj0yvPQQ",
+   "message_id": 737
   }
  }
 }
