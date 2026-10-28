@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Ansible Spreads Bad Configs: Fix with any_errors_fatal",
   "DHCP Storms Crash Switches – Rate‑Limit Untrusted Ports & Enable Recovery",
   "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
@@ -100,7 +99,8 @@
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
-  "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP"
+  "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
+  "Capture Exact Event Order: Enable Millisecond Timestamps"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3226,6 +3226,23 @@
    "ig_id": "18137175088642843",
    "file_id": "BAACAgQAAxkDAAIC2WriLM_BdAnwoJbm-AslZEAF0mhLAAICHwACTrcYU174032ZzbPAPQQ",
    "message_id": 729
+  },
+  "a1d7583a": {
+   "title": "Capture Exact Event Order: Enable Millisecond Timestamps",
+   "description": "Enabling millisecond timestamps lets you accurately order simultaneous syslog events, preventing analysis errors. Use the correct CLI for your platform and check performance impact before deploying.\n\n#Shorts #msTimestamp #Syslog #NetworkEngineering #Logging #Cisco",
+   "tags": [
+    "msTimestamp",
+    "Syslog",
+    "NetworkEngineering",
+    "Logging",
+    "Cisco",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop guessing event order when logs share the same second.",
+   "ig_id": "17907346035668076",
+   "file_id": "BAACAgQAAxkDAAIC3WriT5763QiE7HxrqP1vNgmV0QiRAAJ9HwACTrcYU3rd6mYE2LgePQQ",
+   "message_id": 733
   }
  }
 }
