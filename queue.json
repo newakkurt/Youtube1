@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "How an Empty Snooping Table Silently Kills Static Devices",
   "Why a Public SNMP Community Can Leak a 3,000-Device Network",
   "Why Fast MAB Timers Silently Quarantine Sleeping Printers",
   "Why Mis-Setting Storm Control Can Shut Down an Entire VLAN",
@@ -100,7 +99,8 @@
   "Stop rogue BGP route leaks with AS‑Path ACL filters",
   "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
-  "Stop VLAN Outage from Broadcast Storms with Storm‑Control"
+  "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
+  "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3124,6 +3124,23 @@
    "ig_id": "17924095062443568",
    "file_id": "BAACAgQAAxkDAAICwWrhZj8lWpGsNMg2GFQJEqHvdrgjAAIbHgACTrcQUw7oqpFHG8NOPQQ",
    "message_id": 705
+  },
+  "afcd05ab": {
+   "title": "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
+   "description": "Leaving IP directed broadcast enabled exposes your network to being abused as a Smurf DDoS amplifier. Ensure your layer three switches block directed broadcasts to protect victim subnets from reflected floods.\n\n#Shorts #NetworkSecurity #CyberSecurity #DDoSProtection #NetworkEngineering #CiscoNetworking",
+   "tags": [
+    "NetworkSecurity",
+    "CyberSecurity",
+    "DDoSProtection",
+    "NetworkEngineering",
+    "CiscoNetworking",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave IP directed broadcast enabled on your routed L3 switches.",
+   "ig_id": "17961110145228311",
+   "file_id": "BAACAgQAAxkDAAICxWrhoL2nuS9cRL4zvnFklVPMG5m0AAJAHgACTrcQU3SHTo3VtiowPQQ",
+   "message_id": 709
   }
  }
 }
