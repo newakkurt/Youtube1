@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
   "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
   "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
   "Manual Changes Cause Config Drift: Diff with Ansible",
@@ -100,7 +99,8 @@
   "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
   "Backup WAN Fails During Outages: Run Off-Hours Drills",
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
-  "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow"
+  "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
+  "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3345,6 +3345,23 @@
    "ig_id": "18120405725330723",
    "file_id": "BAACAgQAAxkDAAIC9WrjRoEqkLWHA0dnXo0qGivxEMJOAAJnHgACXmEYUzlUO1brPqyuPQQ",
    "message_id": 757
+  },
+  "ee1cd19e": {
+   "title": "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
+   "description": "Learn how to shrink your attack surface by turning off IPv6 when it's not needed. Simple commands, big security gain.\n\n#Shorts #IPv6Security #NetworkSecurity #CyberDefense #ITOps #RouterConfig",
+   "tags": [
+    "IPv6Security",
+    "NetworkSecurity",
+    "CyberDefense",
+    "ITOps",
+    "RouterConfig",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop exposing IPv6 when you never use it.",
+   "ig_id": "18144560014609707",
+   "file_id": "BAACAgQAAxkDAAIC-WrjfdIBgcAoJAOjrXKuSV4Ui5pfAALxHgACXmEYU1SWZbOdfOoVPQQ",
+   "message_id": 761
   }
  }
 }
