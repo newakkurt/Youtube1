@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Broken Config Spreads: Use any_errors_fatal in Ansible",
   "Syslog Floods Switch CPU: Set Logging Trap Levels",
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
@@ -100,7 +99,8 @@
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
   "Capture Exact Event Order: Enable Millisecond Timestamps",
-  "Untracked Config Outages: Audit Switch Backups with Git"
+  "Untracked Config Outages: Audit Switch Backups with Git",
+  "Unidirectional Links Trigger Loops: Enable STP Loop Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3260,6 +3260,23 @@
    "ig_id": "17888808192485325",
    "file_id": "BAACAgQAAxkDAAIC4WrifZmBwjrc550wKTy_WZjGcdUcAALOHwACTrcYU1taQrpwj0yvPQQ",
    "message_id": 737
+  },
+  "9900b4b2": {
+   "title": "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
+   "description": "Unidirectional fiber failures can silence BPDUs and cause catastrophic Layer 2 loops on your backbone trunks. Enable Spanning Tree Loop Guard on core and distribution switches to keep silent ports blocked.\n\n#Shorts #LoopGuard #SpanningTree #NetworkEngineering #CiscoNetworking #Switching",
+   "tags": [
+    "LoopGuard",
+    "SpanningTree",
+    "NetworkEngineering",
+    "CiscoNetworking",
+    "Switching",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Always enable Spanning Tree Loop Guard on core and distribution trunks.",
+   "ig_id": "17999797241823204",
+   "file_id": "BAACAgQAAxkDAAIC5WriuLWcu7H9746GXzsny_HhGGViAALfHwACTrcYUymX1tfu-TAjPQQ",
+   "message_id": 741
   }
  }
 }
