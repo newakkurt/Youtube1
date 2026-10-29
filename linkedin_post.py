@@ -1,4 +1,4 @@
-"""LinkedIn video paylasimi (kisisel profil).
+"""LinkedIn video paylasimi (kisisel profil) - IT, Network, Siber Guvenlik, AI ve Uzay/Havacilik Odakli.
 
 Gerekli ortam degiskenleri:
   LINKEDIN_ACCESS_TOKEN   (zorunlu)
@@ -20,6 +20,9 @@ import requests
 API = "https://api.linkedin.com"
 TOKEN_LIFETIME_DAYS = 60
 WARN_AT_DAYS_LEFT = 10
+
+# Odaklanilan teknoloji ve bilisim alanlari icin varsayilan hashtag setleri
+TECH_HASHTAGS = "\n\n#InformationTechnology #Networking #CyberSecurity #ArtificialIntelligence #SpaceAndAviation #TechInnovation #NetworkEngineering"
 
 
 def _headers(extra=None):
@@ -138,17 +141,21 @@ def _wait_until_available(video_urn, timeout_s=300):
 
 
 def post_to_linkedin(video_path, caption, title=None):
-    """Videoyu yukler ve profilde paylasir. Post URN'ini dondurur."""
+    """Videoyu yukler ve profilde paylasir. Post URN'ini dondurur.
+    Paylasima otomatik olarak teknoloji, siber guvenlik, AI ve havacilik hashtag'leri ekler."""
     owner = _person_urn()
     video_urn = _upload_video(owner, video_path)
     _wait_until_available(video_urn)
+
+    # Aciklamaya otomatik olarak teknik etiketleri dahil edelim
+    full_caption = caption.strip() + TECH_HASHTAGS
 
     r = requests.post(
         f"{API}/rest/posts",
         headers=_headers({"Content-Type": "application/json"}),
         json={
             "author": owner,
-            "commentary": _escape_commentary(caption)[:3000],
+            "commentary": _escape_commentary(full_caption)[:3000],
             "visibility": "PUBLIC",
             "distribution": {
                 "feedDistribution": "MAIN_FEED",
@@ -175,7 +182,7 @@ def publish_linkedin(video_path, caption):
     src = ig_video if os.path.exists(ig_video) else video_path
     try:
         post_to_linkedin(src, caption)
-        status = "LinkedIn ✅"
+        status = "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
     except Exception as e:
         status = f"LinkedIn ❌ {str(e)[:250]}"
 
