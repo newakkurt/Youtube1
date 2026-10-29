@@ -1,5 +1,6 @@
 """
 Instagram Reels yayıncı — Meta Graph API (Instagram Business/Creator hesabı gerektirir).
+- IT, Network, Siber Güvenlik, Yapay Zeka ve Uzay/Havacılık Odaklı Otomasyon.
 Akış: videoyu IG biçimine çevir -> geçici host'a yükle -> Reels container -> işle -> yayınla.
 + Requests tabanlı doğrudan Instagram Otomatik Takip Modülü (Tarayıcısız / %100 Bulut Uyumlu)
 Gerekli env: IG_USER_ID, IG_ACCESS_TOKEN, IG_USERNAME, IG_PASSWORD
@@ -16,6 +17,9 @@ import config
 # Reels paylaşımı için doğru endpoint Facebook Graph API'dir
 API = "https://graph.instagram.com/v21.0"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+
+# Teknoloji, Network, Siber Güvenlik, Yapay Zeka ve Uzay/Havacılık odaklı sabit hashtag setleri
+TECH_HASHTAGS = "\n\n#InformationTechnology #Networking #CyberSecurity #ArtificialIntelligence #SpaceAndAviation #TechInnovation #NetworkEngineering #DevOps #TechReels"
 
 
 def _get_env():
@@ -171,12 +175,15 @@ def publish_reel(video_path: str, caption: str, timeout_s: int = 420) -> str:
     ig_path = make_ig_compatible(video_path)
     video_url, host = upload_public(ig_path)
 
+    # Açıklamaya otomatik olarak teknoloji, siber güvenlik, AI ve uzay/havacılık etiketlerini ekleyelim
+    full_caption = caption.strip() + TECH_HASHTAGS
+
     r = requests.post(
         f"{API}/{ig_user_id}/media",
         data={
             "media_type": "REELS",
             "video_url": video_url,
-            "caption": caption[:2200],
+            "caption": full_caption[:2200],
             "access_token": token,
         },
         timeout=60,
@@ -230,10 +237,13 @@ def refresh_token() -> str:
 # ---------- Requests Tabanlı Bulut Uyumlu Otomatik Takip Modülü ----------
 
 def run_follow_bot():
-    """GitHub Actions (Cloud) için Tarayıcısız API Tabanlı Takip Botu"""
+    """GitHub Actions (Cloud) için Tarayıcısız API Tabanlı Takip Botu
+    - Hedef hesaplar tamamen Bilgi Teknolojileri ve Network odaklı olacak şekilde optimize edilmiştir.
+    """
     max_daily_follows = getattr(config, "MAX_DAILY_FOLLOWS", 99)
     min_followers = getattr(config, "MIN_FOLLOWER_COUNT", 5000)
-    target_accounts = getattr(config, "TARGET_ACCOUNTS", ["github", "python.hub", "nature"])
+    # Hedefler IT, Network, Siber Güvenlik, AI ve Uzay odaklı sayfalara güncellendi
+    target_accounts = getattr(config, "TARGET_ACCOUNTS", ["python.hub", "cybersecurity.hub", "nasa", "spacex", "networking_pro"])
     
     username = os.environ.get("IG_USERNAME") or getattr(config, "IG_USERNAME", None)
     password = os.environ.get("IG_PASSWORD") or getattr(config, "IG_PASSWORD", None)
