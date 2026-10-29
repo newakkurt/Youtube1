@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Syslog Floods Switch CPU: Set Logging Trap Levels",
   "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
@@ -100,7 +99,8 @@
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
   "Capture Exact Event Order: Enable Millisecond Timestamps",
   "Untracked Config Outages: Audit Switch Backups with Git",
-  "Unidirectional Links Trigger Loops: Enable STP Loop Guard"
+  "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
+  "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3277,6 +3277,23 @@
    "ig_id": "17999797241823204",
    "file_id": "BAACAgQAAxkDAAIC5WriuLWcu7H9746GXzsny_HhGGViAALfHwACTrcYUymX1tfu-TAjPQQ",
    "message_id": 741
+  },
+  "6ef5658d": {
+   "title": "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
+   "description": "Storm storms can lock an entire VLAN when a bad NIC loops traffic. Learn how to set proper thresholds and choose the right action to keep your network running.\n\n#Shorts #stormcontrol #networking #cybersecurity #networks #infrastructure",
+   "tags": [
+    "stormcontrol",
+    "networking",
+    "cybersecurity",
+    "networks",
+    "infrastructure",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never set storm‑control thresholds too low on multicast ports.",
+   "ig_id": "18132970487503835",
+   "file_id": "BAACAgQAAxkDAAIC6Wri8s87Hf2tOSNcbOCcthARkwk6AAKsHQACXmEYU8UHHrNwzTZtPQQ",
+   "message_id": 745
   }
  }
 }
