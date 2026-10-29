@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Blind ignore_errors Triggers Network Outages: Use Block Rescue",
   "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
   "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
@@ -100,7 +99,8 @@
   "Capture Exact Event Order: Enable Millisecond Timestamps",
   "Untracked Config Outages: Audit Switch Backups with Git",
   "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
-  "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions"
+  "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
+  "Backup WAN Fails During Outages: Run Off-Hours Drills"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3294,6 +3294,23 @@
    "ig_id": "18132970487503835",
    "file_id": "BAACAgQAAxkDAAIC6Wri8s87Hf2tOSNcbOCcthARkwk6AAKsHQACXmEYU8UHHrNwzTZtPQQ",
    "message_id": 745
+  },
+  "c51b4ab9": {
+   "title": "Backup WAN Fails During Outages: Run Off-Hours Drills",
+   "description": "Unchecked standby circuits often fail when you need them most. Schedule regular off-hours failover drills in your SD-WAN orchestrator to ensure redundant links hold up during real outages.\n\n#Shorts #sdwan #networking #cisco #networkengineer #cybersecurity",
+   "tags": [
+    "sdwan",
+    "networking",
+    "cisco",
+    "networkengineer",
+    "cybersecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never trust your backup WAN link until you run off-hours failover drills.",
+   "ig_id": "18116875475018125",
+   "file_id": "BAACAgQAAxkDAAIC7WrjD0zfs_hFYldcaOv10D5m1z9yAALeHQACXmEYU0znD2cmUlwjPQQ",
+   "message_id": 749
   }
  }
 }
