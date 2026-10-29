@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Default Native VLAN 1 Invites VLAN Hopping: Set an Unused ID",
   "Broadcast Storm Cripples VLAN? Set Storm-Control Thresholds & Action",
   "Unused Ports Expose Your LAN: Set a Blackhole VLAN",
   "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
@@ -100,7 +99,8 @@
   "Untracked Config Outages: Audit Switch Backups with Git",
   "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
   "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
-  "Backup WAN Fails During Outages: Run Off-Hours Drills"
+  "Backup WAN Fails During Outages: Run Off-Hours Drills",
+  "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3311,6 +3311,23 @@
    "ig_id": "18116875475018125",
    "file_id": "BAACAgQAAxkDAAIC7WrjD0zfs_hFYldcaOv10D5m1z9yAALeHQACXmEYU0znD2cmUlwjPQQ",
    "message_id": 749
+  },
+  "0382d7e0": {
+   "title": "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
+   "description": "Rogue DHCP servers can push invalid default gateways and DNS to clients if ports are misconfigured. Secure your network by enabling DHCP snooping trust only on verified switch uplinks.\n\n#Shorts #DHCPSnooping #NetworkSecurity #Cisco #Switching #SysAdmin",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "Cisco",
+    "Switching",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave access ports trusted when turning on DHCP snooping.",
+   "ig_id": "18133286356685691",
+   "file_id": "BAACAgQAAxkDAAIC8WrjNx3mXsjRpGg8VbKs3Fqpri_YAAJBHgACXmEYU3Azy9-6MJgMPQQ",
+   "message_id": 753
   }
  }
 }
