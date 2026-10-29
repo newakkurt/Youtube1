@@ -1,11 +1,17 @@
+import os
 import json
 from datetime import date, timedelta
+from pathlib import Path
 
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 from config import *
+
+# ROOT tanımlı değilse config'den gelsin veya mevcut dizin olsun
+if 'ROOT' not in globals():
+    ROOT = Path(__file__).resolve().parent
 
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
