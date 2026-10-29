@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Double-Tagging Exploits Native VLAN 1: Change Trunk ID",
   "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
   "Manual Changes Cause Config Drift: Diff with Ansible",
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
@@ -100,7 +99,8 @@
   "Backup WAN Fails During Outages: Run Off-Hours Drills",
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
-  "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface"
+  "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
+  "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3362,6 +3362,23 @@
    "ig_id": "18144560014609707",
    "file_id": "BAACAgQAAxkDAAIC-WrjfdIBgcAoJAOjrXKuSV4Ui5pfAALxHgACXmEYU1SWZbOdfOoVPQQ",
    "message_id": 761
+  },
+  "ea19707e": {
+   "title": "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
+   "description": "Use passive-interface on access-layer ports to stop unnecessary OSPF/EIGRP traffic from reaching end devices. This simple setting reduces routing noise and protects your network from unintended packet storms.\n\n#Shorts #PassiveInterface #NetworkEngineering #RoutingSecurity #OSPF #Cybersecurity",
+   "tags": [
+    "PassiveInterface",
+    "NetworkEngineering",
+    "RoutingSecurity",
+    "OSPF",
+    "Cybersecurity",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop broadcasting OSPF and EIGRP updates into every access port.",
+   "ig_id": "18356452006168117",
+   "file_id": "BAACAgQAAxkDAAIDA2rj0TkWyZhu5WzAT2WE3vWgEVSVAAJlHAACXmEgU3ylG02IpuEYPQQ",
+   "message_id": 771
   }
  }
 }
