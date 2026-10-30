@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
@@ -100,7 +99,8 @@
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
   "Slow Outage Recovery: Standardize Switch Port Labeling",
-  "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix"
+  "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
+  "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3413,6 +3413,23 @@
    "ig_id": "18110094883939474",
    "file_id": "BAACAgQAAxkDAAIDC2rkQebeEkb92qKxH8a7jvNjH8aUAAKuHAACXmEgU-vdcDYp58duPQQ",
    "message_id": 779
+  },
+  "47839738": {
+   "title": "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
+   "description": "Automating configuration rollbacks without alerts can inadvertently wipe out valid emergency overrides and maintenance tweaks. Set your compliance engines to alert-only mode first to review deviations safely.\n\n#Shorts #networkautomation #neteng #networkengineering #sysadmin #devops",
+   "tags": [
+    "networkautomation",
+    "neteng",
+    "networkengineering",
+    "sysadmin",
+    "devops",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never enable automated config remediation without human review first.",
+   "ig_id": "18133500592781440",
+   "file_id": "BAACAgQAAxkDAAIDD2rkX1M0FUM6Bxmq9XvZdXwJ2QPHAALtHAACXmEgU9IHph6Tn6ZrPQQ",
+   "message_id": 783
   }
  }
 }
