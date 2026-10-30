@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
   "Unlogged Switch Outages: Track Network Configs with Git",
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
@@ -100,7 +99,8 @@
   "Slow Outage Recovery: Standardize Switch Port Labeling",
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
-  "Mini Switch Lockout? Enable PortFast & BPDU Guard Now"
+  "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
+  "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3447,6 +3447,23 @@
    "ig_id": "17975006988154866",
    "file_id": "BAACAgQAAxkDAAIDE2rkh_Bcq9IOnvX0QaEnFrsRvsZpAAJFHQACXmEgU-Ts2SnG4PMlPQQ",
    "message_id": 787
+  },
+  "38d62a3d": {
+   "title": "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
+   "description": "Silent control plane exhaustion on core devices can drop critical backbone traffic without warning. Set automated CPU and memory threshold alerts using SNMP or Netmiko scripts to catch resource spikes early.\n\n#Shorts #NetworkMonitoring #NetworkEngineering #NetOps #Cisco #NetworkAutomation",
+   "tags": [
+    "NetworkMonitoring",
+    "NetworkEngineering",
+    "NetOps",
+    "Cisco",
+    "NetworkAutomation",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a core switch silently exhaust CPU and memory.",
+   "ig_id": "18128618224657458",
+   "file_id": "BAACAgQAAxkDAAIDF2rklpRP3cUcowSndvncyO-28Wu7AAJgHQACXmEgU-PS8XRnqlzAPQQ",
+   "message_id": 791
   }
  }
 }
