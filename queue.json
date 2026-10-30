@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
   "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
   "Unlogged Switch Outages: Track Network Configs with Git",
@@ -100,7 +99,8 @@
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
   "Slow Outage Recovery: Standardize Switch Port Labeling",
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
-  "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First"
+  "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
+  "Mini Switch Lockout? Enable PortFast & BPDU Guard Now"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3430,6 +3430,23 @@
    "ig_id": "18133500592781440",
    "file_id": "BAACAgQAAxkDAAIDD2rkX1M0FUM6Bxmq9XvZdXwJ2QPHAALtHAACXmEgU9IHph6Tn6ZrPQQ",
    "message_id": 783
+  },
+  "4a6f5765": {
+   "title": "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
+   "description": "A hidden mini switch can lock down an entire network. Enable PortFast and BPDU Guard to force err‑disable and stop root bridge hijacks.\n\n#Shorts #PortFastGuard #NetworkSecurity #Cisco #SpanningTree #ITOps",
+   "tags": [
+    "PortFastGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "SpanningTree",
+    "ITOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never allow a hidden mini switch on a user port.",
+   "ig_id": "17975006988154866",
+   "file_id": "BAACAgQAAxkDAAIDE2rkh_Bcq9IOnvX0QaEnFrsRvsZpAAJFHQACXmEgU-Ts2SnG4PMlPQQ",
+   "message_id": 787
   }
  }
 }
