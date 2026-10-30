@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Syslog Drops Logs in Outages: Enlarge Buffer and Queue",
   "Manual Changes Cause Config Drift: Diff with Ansible",
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
@@ -100,7 +99,8 @@
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
-  "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface"
+  "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
+  "Slow Outage Recovery: Standardize Switch Port Labeling"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3379,6 +3379,23 @@
    "ig_id": "18356452006168117",
    "file_id": "BAACAgQAAxkDAAIDA2rj0TkWyZhu5WzAT2WE3vWgEVSVAAJlHAACXmEgU3ylG02IpuEYPQQ",
    "message_id": 771
+  },
+  "d91a5a63": {
+   "title": "Slow Outage Recovery: Standardize Switch Port Labeling",
+   "description": "Tracing physical cables during an outage destroys your recovery timeline. Standardize switch port and patch panel labeling to isolate broken links in seconds.\n\n#Shorts #NetworkCabling #NetworkEngineering #SysAdmin #DataCenter #ITInfrastructure",
+   "tags": [
+    "NetworkCabling",
+    "NetworkEngineering",
+    "SysAdmin",
+    "DataCenter",
+    "ITInfrastructure",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Stop hand-tracing cables in the rack during critical network outages.",
+   "ig_id": "18057785105802940",
+   "file_id": "BAACAgQAAxkDAAIDB2rkChY3sKAotNXI3fMm_9NP93FuAAJ7HAACXmEgU9kfwbUeu4l0PQQ",
+   "message_id": 775
   }
  }
 }
