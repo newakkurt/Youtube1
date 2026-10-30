@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Python Scripts Spike Switch CPU: Throttle Async Concurrency",
   "Unlogged Switch Outages: Track Network Configs with Git",
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
@@ -100,7 +99,8 @@
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
-  "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts"
+  "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
+  "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3464,6 +3464,23 @@
    "ig_id": "18128618224657458",
    "file_id": "BAACAgQAAxkDAAIDF2rklpRP3cUcowSndvncyO-28Wu7AAJgHQACXmEgU-PS8XRnqlzAPQQ",
    "message_id": 791
+  },
+  "d3772571": {
+   "title": "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
+   "description": "Learn how to spot configuration drift on Cisco Catalyst 9000 switches using a golden‑config template and automated diff alerts. The video shows the safe workflow: alert, review, and manual remediation.\n\n#Shorts #ConfigDrift #NetworkAutomation #CyberSecurity #ITOps #DevOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkAutomation",
+    "CyberSecurity",
+    "ITOps",
+    "DevOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a manual config change hide—detect drift before a switch misbehaves.",
+   "ig_id": "18047057876684420",
+   "file_id": "BAACAgQAAxkDAAIDG2rkzSmp60Z8SyVI_k_oDOFIzg76AAJqHwACXmEoU5KZaYX1VQ0NPQQ",
+   "message_id": 795
   }
  }
 }
