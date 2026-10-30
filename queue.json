@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Manual Changes Cause Config Drift: Diff with Ansible",
   "Rogue IPv6 RA Attacks: Run No IPv6 Unicast-Routing",
   "Dead RADIUS Shuts Down Access: Configure 802.1X Fail-Open",
   "Stop VLAN Broadcast Storms: Set 10% Storm‑Control and Shutdown Action",
@@ -100,7 +99,8 @@
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
-  "Slow Outage Recovery: Standardize Switch Port Labeling"
+  "Slow Outage Recovery: Standardize Switch Port Labeling",
+  "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3396,6 +3396,23 @@
    "ig_id": "18057785105802940",
    "file_id": "BAACAgQAAxkDAAIDB2rkChY3sKAotNXI3fMm_9NP93FuAAJ7HAACXmEgU9kfwbUeu4l0PQQ",
    "message_id": 775
+  },
+  "6fe9e8ec": {
+   "title": "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
+   "description": "When 802.1X authentication fails, devices should be moved to a dedicated VLAN to prevent unauthorized access. This short shows how to configure an Auth‑Fail VLAN and apply a restrictive policy for a clean, secure network.\n\n#Shorts #AuthFailVLAN #NetworkSecurity #8021X #Cisco #NetworkEngineering",
+   "tags": [
+    "AuthFailVLAN",
+    "NetworkSecurity",
+    "8021X",
+    "Cisco",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a failed 802.1X login stay on the native VLAN.",
+   "ig_id": "18110094883939474",
+   "file_id": "BAACAgQAAxkDAAIDC2rkQebeEkb92qKxH8a7jvNjH8aUAAKuHAACXmEgU-vdcDYp58duPQQ",
+   "message_id": 779
   }
  }
 }
