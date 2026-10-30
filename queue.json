@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Unlogged Switch Outages: Track Network Configs with Git",
   "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
   "Port err-disable from excess MACs? Limit to 1‑2 addresses",
@@ -100,7 +99,8 @@
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
   "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
-  "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts"
+  "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
+  "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3481,6 +3481,23 @@
    "ig_id": "18047057876684420",
    "file_id": "BAACAgQAAxkDAAIDG2rkzSmp60Z8SyVI_k_oDOFIzg76AAJqHwACXmEoU5KZaYX1VQ0NPQQ",
    "message_id": 795
+  },
+  "98be21a7": {
+   "title": "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
+   "description": "Learn why untrusted switch ports need DHCP snooping rate limits and how to configure them on Cisco devices. Follow the latest best practices to protect your DHCP server and CPU while keeping uplink traffic unrestricted.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #DHCP #NetworkEngineering",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never leave untrusted ports without a DHCP snooping rate limit.",
+   "ig_id": "18229389757335103",
+   "file_id": "BAACAgQAAxkDAAIDH2rkz5FztRILwa2OXHoFeZP6LJ99AAJ0HwACXmEoU-d5Tm7EmsR6PQQ",
+   "message_id": 799
   }
  }
 }
