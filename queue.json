@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Unidirectional Fiber Triggers STP Loops: Configure Loop Guard",
   "ICMP Redirects Causing Routing Poisoning? Disable Per‑Interface",
   "Port err-disable from excess MACs? Limit to 1‑2 addresses",
   "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
@@ -100,7 +99,8 @@
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
   "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
   "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
-  "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit"
+  "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
+  "Avoid Massive Outage: Test Bulk Password Change Scripts First"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3498,6 +3498,23 @@
    "ig_id": "18229389757335103",
    "file_id": "BAACAgQAAxkDAAIDH2rkz5FztRILwa2OXHoFeZP6LJ99AAJ0HwACXmEoU-d5Tm7EmsR6PQQ",
    "message_id": 799
+  },
+  "0a25bdaf": {
+   "title": "Avoid Massive Outage: Test Bulk Password Change Scripts First",
+   "description": "Before you mass‑update passwords with Paramiko or Netmiko, test the script in a lab or on a single device. A simple dry‑run saves you from a network‑wide lockout.\n\n#Shorts #BulkPasswordTest #NetworkEngineering #CyberSecurity #PythonAutomation #NetworkOps",
+   "tags": [
+    "BulkPasswordTest",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "PythonAutomation",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never run bulk password scripts on live switches without a dry‑run.",
+   "ig_id": "17977912778934820",
+   "file_id": "BAACAgQAAxkDAAIDI2rk7kfQ4-7S1NRQGugsi8yOJTTXAALSHgAC3PIoUyPYbjty-7t_PQQ",
+   "message_id": 803
   }
  }
 }
