@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Port err-disable from excess MACs? Limit to 1‑2 addresses",
   "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
   "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
@@ -100,7 +99,8 @@
   "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
   "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
-  "PSU Failure Triggers Switch Reload: Fix with Envmon Traps"
+  "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
+  "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3532,6 +3532,23 @@
    "ig_id": "18649549021001570",
    "file_id": "BAACAgQAAxkDAAIDJ2rlH-Ie4CuroaCW9zJ-NMteGw61AAIGHwAC3PIoU6qHawlEIGpYPQQ",
    "message_id": 807
+  },
+  "7d7cad1e": {
+   "title": "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
+   "description": "A hidden mini switch can bring the entire LAN down. Enabling PortFast and BPDU Guard on edge ports forces an err‑disable, eliminating the root bridge takeover risk.\n\n#Shorts #PortFastGuard #NetworkSecurity #Cisco #SwitchHardening #NetworkEngineering",
+   "tags": [
+    "PortFastGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchHardening",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let a user plug a mini switch into a work desk.",
+   "ig_id": "18120117356078209",
+   "file_id": "BAACAgQAAxkDAAIDK2rlW6ICvDmQgPKoLlRqPNovApDvAALEHgAC3PIwU2U-PvBoeTrqPQQ",
+   "message_id": 811
   }
  }
 }
