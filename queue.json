@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Config Drift: Use Golden Config Templates with Alerts",
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
@@ -100,7 +99,8 @@
   "Stop BGP Route Leaks with AS-Path ACL Filters",
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
-  "Manual Port Restores? Set Errdisable Recovery Timers"
+  "Manual Port Restores? Set Errdisable Recovery Timers",
+  "Sticky MAC disappears after reboot? Save it with write memory"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3645,6 +3645,37 @@
    "ig_id": "18100339193539670",
    "file_id": "BAACAgQAAxkDAAIDO2rl4_maRcK2tl3KuAU8cLjQniLcAAJgHwAC3PIwU8fskiqXQCMSPQQ",
    "message_id": 827
+  },
+  "db5b5145": {
+   "title": "Sticky MAC disappears after reboot? Save it with write memory",
+   "description": "Learn how to make sticky MAC entries survive a switch reboot by saving the configuration. A quick CLI example shows the exact commands for Cisco and notes for other vendors.\n\n#Shorts #StickyMAC #NetworkEngineering #CyberSecurity #SwitchConfig #ITOps",
+   "tags": [
+    "StickyMAC",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SwitchConfig",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Sticky MAC disappears after a reboot? Don’t let it slip—enable sticky MAC with `switchport port-security mac-address sticky` and save the change with `write memory` or `copy running-config startup-config`. Save it once and the entry survives reloads. Have you run into sticky MAC persistence issues in production? Tell me in the comments. #StickyMAC #SwitchConfig #NetworkEngineering #CyberSecurity #ITOps",
+   "linkedin_caption": "Ever noticed a sticky MAC vanishing after a reboot? In this quick video I show how to make those entries survive by saving the configuration with write memory. You’ll see a concise CLI walk‑through for Cisco and key notes for other vendors. How do you keep your switch configs persistent?\n\n——— Türkçe ———\n\nSticky MAC bir yeniden başlatmanın ardından kayboldu mu? Bu kısa videoda, yapılandırmayı write memory ile kaydederek bu girişlerin korunmasını gösteriyorum. Cisco için öz bir CLI örneği ve diğer üreticiler için notlar bulacaksınız. Ağ mühendisi olarak konfigürasyonlarınızı nasıl kalıcı tutarsınız?\n\n#StickyMAC #NetworkEngineering #ITOps",
+   "status": "yt_failed",
+   "hook": "Never assume sticky MAC stays after a reboot.",
+   "duration_seconds": 21.93,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17910901191568452"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17910901191568452",
+   "file_id": "BAACAgQAAxkDAAIDQGrmECYzLtRBvkGxCRnCpy8eNZOvAALHHwAC3PIwU9ysCPkWPz0TPQQ",
+   "message_id": 832
   }
  }
 }
