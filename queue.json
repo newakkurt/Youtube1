@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
@@ -100,7 +99,8 @@
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
   "Manual Port Restores? Set Errdisable Recovery Timers",
   "Sticky MAC disappears after reboot? Save it with write memory",
-  "Protect Root Bridge from Rogue Switches: Enable BPDU Guard"
+  "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
+  "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3707,6 +3707,37 @@
    "ig_id": "18133929772705204",
    "file_id": "BAACAgQAAxkDAAIDRGrmNSsRA0cpvT-fE1lkAZrmm7v9AAIRIAAC3PIwUw2gJm_nK3hUPQQ",
    "message_id": 836
+  },
+  "06bb4252": {
+   "title": "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
+   "description": "A faulty NIC or rogue loop can unleash a devastating broadcast storm across your entire VLAN. Configure storm-control broadcast level 0.5 and storm-control action shutdown to quarantine flooding interfaces immediately.\n\n#Shorts #stormcontrol #networkengineering #cisco #ccna #switching",
+   "tags": [
+    "stormcontrol",
+    "networkengineering",
+    "cisco",
+    "ccna",
+    "switching",
+    "Shorts"
+   ],
+   "instagram_caption": "A rogue NIC can freeze an entire VLAN in seconds. Never leave switch ports unprotected against loops or faulty network cards. A bad NIC can flood your VLAN with broadcast storms, freezing every host. Run storm‑control broadcast level 0.5 and storm‑control action shutdown on access and trunk ports—this shuts down storming interfaces instantly before a flood cripples your network. \nWhich of these have you hit in production? Drop a comment or save this for later. #Shorts #stormcontrol #networkengineering #cisco #ccna",
+   "linkedin_caption": "Faulty NIC freezing VLAN? A rogue loop can unleash a broadcast storm. Set storm‑control broadcast level 0.5 and storm‑control action shutdown to isolate flooding interfaces. Have you handled such incidents? #stormcontrol #networkengineering #cisco\n\n——— Türkçe ———\n\nFaulty NIC'in VLAN'i dondurması mı? Rogue loop, yayılma fırtınası yaratabilir. storm-control broadcast level 0.5 ve storm-control action shutdown ile dolanma arayüzlerini izole edin. Böyle bir durumu ele aldınız mı? #stormcontrol #networkengineering #cisco",
+   "status": "yt_failed",
+   "hook": "Never leave switch ports unprotected against rogue loops and faulty network cards.",
+   "duration_seconds": 27.13,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18077497586465089"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18077497586465089",
+   "file_id": "BAACAgQAAxkDAAIDSGrmZOHdAAGa6BKaBL7-PUq3Dq1kBwACGCEAAtzyOFN9ODSb2DsPHj0E",
+   "message_id": 840
   }
  }
 }
