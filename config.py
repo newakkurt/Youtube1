@@ -30,8 +30,8 @@ OUTRO = env("OUTRO", "Takip et, her gün sahadan yeni bir not geliyor." if LANG 
 AFFILIATE_TEXT = env("AFFILIATE_TEXT", "")
 
 # Instagram Bot Ayarları
-IG_USERNAME = "sevketkaynars"
-IG_PASSWORD = "Sevket55"
+IG_USERNAME = env("IG_USERNAME")
+IG_PASSWORD = env("IG_PASSWORD")
 
 # Takip / Takipten Çıkma Parametreleri
 MAX_DAILY_FOLLOW = 99
