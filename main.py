@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import uuid
+import traceback
 import requests
 from moviepy import VideoFileClip
 
@@ -87,15 +88,26 @@ def post_linkedin_status(state):
 
 
 def upload_youtube(path, title, desc, tags):
-    """YouTube'a yükler. Hata olursa Telegram'a net uyarı yollar ve None döner (akış durmaz)."""
+    """YouTube'a yükler. Hataları hem Actions loguna hem Telegram'a yazar."""
     try:
-        return youtube.upload(path, title, desc, tags)
+        video_id = youtube.upload(path, title, desc, tags)
+        print(f"YOUTUBE_UPLOAD_OK: video_id={video_id}", flush=True)
+        return video_id
     except Exception as e:
         msg = str(e)
+        # YouTube hatası daha önce sadece Telegram'a yazıldığı için Actions yeşil
+        # görünüyordu. Ayrıntıyı loga da yaz ki gerçek API sebebi bulunabilsin.
+        print(f"YOUTUBE_UPLOAD_FAILED: {type(e).__name__}: {msg}", flush=True)
+        if getattr(e, "content", None):
+            try:
+                print("YOUTUBE_API_ERROR_BODY:", e.content.decode("utf-8", errors="replace")[:2000], flush=True)
+            except Exception:
+                pass
+        traceback.print_exc()
         if "invalid_grant" in msg or "RefreshError" in type(e).__name__:
-            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\n"
-                    "1) get_refresh_token.py ile yeni token al\n"
-                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\n"
+            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\\n"
+                    "1) get_refresh_token.py ile yeni token al\\n"
+                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\\n"
                     "3) Google Cloud → OAuth consent screen → 'In production' yap "
                     "(Testing'de token 7 günde ölür)")
         else:
