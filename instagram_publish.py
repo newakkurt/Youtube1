@@ -240,6 +240,9 @@ def run_follow_bot():
     """GitHub Actions (Cloud) için Tarayıcısız API Tabanlı Takip Botu
     - Hedef hesaplar tamamen Bilgi Teknolojileri ve Network odaklı olacak şekilde optimize edilmiştir.
     """
+    if os.environ.get("ENABLE_IG_AUTO_FOLLOW", "").strip().lower() != "true":
+        print("🛡️ Instagram otomatik takip kapalı. Reels yayınlama bundan etkilenmez.")
+        return
     max_daily_follows = getattr(config, "MAX_DAILY_FOLLOWS", 99)
     min_followers = getattr(config, "MIN_FOLLOWER_COUNT", 5000)
     # Hedefler IT, Network, Siber Güvenlik, AI ve Uzay odaklı sayfalara güncellendi

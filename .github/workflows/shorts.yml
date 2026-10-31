@@ -11,7 +11,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [generate, process, report, lead, igtest, li_status, litest, ig_follow]
+        options: [generate, long, process, report, lead, igtest, li_status, litest]
         default: generate
 
 concurrency:
@@ -87,12 +87,3 @@ jobs:
           git add queue.json
           if [ -f performance.json ]; then git add performance.json; fi
           git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)
-
-      - name: Run Instagram Follow Bot
-        if: always()
-        env:
-          IG_USERNAME: ${{ secrets.IG_USERNAME }}
-          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py ig_follow
