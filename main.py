@@ -154,6 +154,9 @@ def generate_one(state):
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
         item.update(file_id=file_id, message_id=mid)
+        # Onay bekleyen videoda platform metinlerini de Telegram'da ayrı göster.
+        tg.send("📸 INSTAGRAM AÇIKLAMASI\n\n" + item.get("instagram_caption", "")[:3500])
+        tg.send("💼 LINKEDIN AÇIKLAMASI\n\n" + item.get("linkedin_caption", "")[:3500])
     state["items"][uid] = item
 
 
