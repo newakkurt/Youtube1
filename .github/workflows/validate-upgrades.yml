@@ -1,0 +1,14 @@
+name: Validate safe upgrades
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  python-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile changed Python modules
+        run: python -m py_compile main.py config.py instagram_publish.py script_gen.py video_maker.py
