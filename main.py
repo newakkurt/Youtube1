@@ -3,6 +3,7 @@ import os
 import sys
 import uuid
 import requests
+from moviepy import VideoFileClip
 
 import tg
 import youtube
@@ -33,8 +34,10 @@ def post_instagram(item, path):
         caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
         ig_id = instagram_publish.publish_reel(str(path), caption)
         item["ig_id"] = ig_id
+        item["instagram"] = {"status": "published", "media_id": ig_id}
         tg.send(f"📸 Instagram'a yüklendi: {item['title']}")
     except Exception as e:
+        item["instagram"] = {"status": "failed", "error": str(e)[:300]}
         tg.send(f"⚠️ Instagram hatası: {str(e)[:400]}")
 
 
@@ -44,8 +47,10 @@ def post_linkedin(item, path):
         from linkedin_post import publish_linkedin
         caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
         status = publish_linkedin(str(path), caption)
+        item["linkedin"] = {"status": "published", "result": str(status)[:180]}
         tg.send(f"{status}\n{item['title']}")
     except Exception as e:
+        item["linkedin"] = {"status": "failed", "error": str(e)[:300]}
         tg.send(f"⚠️ LinkedIn hatası: {str(e)[:400]}")
 
 
@@ -106,11 +111,17 @@ def generate_one(state):
     uid = uuid.uuid4().hex[:8]
     OUT.mkdir(exist_ok=True)
     path = video_maker.build(script, OUT / f"{uid}.mp4")
+    with VideoFileClip(str(path)) as rendered_video:
+        duration_seconds = round(float(rendered_video.duration), 2)
     desc, tags = compose(script)
     title = script["title"]
     state["history"] = (state["history"] + [title])[-100:]
     item = {"title": title, "description": desc, "tags": tags, "status": "pending",
-            "hook": script["scenes"][0]["text"]}
+            "hook": script["scenes"][0]["text"], "duration_seconds": duration_seconds,
+            "youtube": {"status": "pending"}, "instagram": {"status": "pending"},
+            "linkedin": {"status": "pending"}}
+    if not 25 <= duration_seconds <= 45:
+        tg.send(f"⚠️ Video süresi hedef aralığın dışında: {duration_seconds} sn (hedef 25–45 sn). Yayın akışı durdurulmadı.")
 
     if AUTO_APPROVE:
         vid = upload_youtube(path, title, desc, tags)
@@ -118,11 +129,13 @@ def generate_one(state):
         post_linkedin(item, path)
         if vid:
             item.update(status="published", video_id=vid)
+            item["youtube"] = {"status": "published", "video_id": vid}
             tg.send(f"✅ Yayınlandı: {title}\nhttps://youtube.com/shorts/{vid}")
         else:
             # Video kaybolmasın: Telegram'a koy, token düzelince ✅ ile sadece YouTube'a yüklenir
             file_id, mid = tg.send_video(path, f"⚠️ YouTube'a yüklenemedi\n{title}\n\n{desc}", uid)
             item.update(status="yt_failed", file_id=file_id, message_id=mid)
+            item["youtube"] = {"status": "failed"}
     else:
         file_id, mid = tg.send_video(path, f"{title}\n\n{desc}", uid)
         item.update(file_id=file_id, message_id=mid)
@@ -165,6 +178,7 @@ def handle_callback(state, cq):
         return  # durum aynı kalır, token düzelince tekrar onaylanabilir
     already_posted = item["status"] == "yt_failed"  # Instagram/LinkedIn zaten gitti, tekrar etme
     item.update(status="published", video_id=vid)
+    item["youtube"] = {"status": "published", "video_id": vid}
     if not already_posted:
         post_instagram(item, path)
         post_linkedin(item, path)
