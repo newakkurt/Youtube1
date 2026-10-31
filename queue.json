@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
   "Stop Config Drift: Use Golden Config Templates with Alerts",
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
@@ -100,7 +99,8 @@
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
   "Stop BGP Route Leaks with AS-Path ACL Filters",
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
-  "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins"
+  "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
+  "Manual Port Restores? Set Errdisable Recovery Timers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3614,6 +3614,37 @@
    "ig_id": "18014932565761109",
    "file_id": "BAACAgQAAxkDAAIDN2rl2aoh2T8EZoYrJgyVqbY9R-6KAAJIHwAC3PIwU-8MDm0RHQ3APQQ",
    "message_id": 823
+  },
+  "386ced40": {
+   "title": "Manual Port Restores? Set Errdisable Recovery Timers",
+   "description": "Leaving err-disable recovery unconfigured forces engineers to make manual site visits for every port flap or violation. Configure automatic recovery timers on your access switches to restore benign ports seamlessly.\n\n#Shorts #ErrDisable #NetworkEngineering #CiscoSwitch #SysAdmin #NetOps",
+   "tags": [
+    "ErrDisable",
+    "NetworkEngineering",
+    "CiscoSwitch",
+    "SysAdmin",
+    "NetOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop driving to the data center just to flip a port back on.\nSet errdisable recovery interval to 300 so switches auto‑restore blocked ports after five minutes.\nEnable recovery cause for bpduguard or port‑security so transient link errors clear without manual intervention.\nAlways automate port recovery so minor cable glitches never demand emergency site visits.\nHave you hit any of these in production? Tell me in the comments! #ErrDisable #NetOps #CiscoSwitch #NetworkEngineering #SysAdmin",
+   "linkedin_caption": "Leaving err-disable recovery unconfigured forces engineers to make manual site visits for every port flap or violation. Configure automatic recovery timers on your access switches to restore benign ports seamlessly instead of handling manual port restores. Do you configure automatic recovery timers?\n\n——— Türkçe ———\n\nerr-disable recovery yapılandırmamak, mühendisleri her port flap veya violation durumunda manuel saha ziyaretleri yapmaya zorlar. Manuel port restores ile uğraşmak yerine benign portları sorunsuz şekilde geri getirmek için access switchlerinizde automatic recovery timers ayarlayın. Siz automatic recovery timers yapılandırıyor musunuz?\n\n#ErrDisable #NetworkEngineering #NetOps",
+   "status": "yt_failed",
+   "hook": "Stop driving on-site just to manually re-enable err-disabled switch ports.",
+   "duration_seconds": 37.97,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18100339193539670"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18100339193539670",
+   "file_id": "BAACAgQAAxkDAAIDO2rl4_maRcK2tl3KuAU8cLjQniLcAAJgHwAC3PIwU8fskiqXQCMSPQQ",
+   "message_id": 827
   }
  }
 }
