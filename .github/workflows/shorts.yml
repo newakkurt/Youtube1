@@ -89,6 +89,7 @@ jobs:
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
-          git add queue.json yt_subscription_state.json
+          git add queue.json
+          if [ -f yt_subscription_state.json ]; then git add yt_subscription_state.json; fi
           if [ -f performance.json ]; then git add performance.json; fi
           git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)
