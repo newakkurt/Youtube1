@@ -340,7 +340,8 @@ if __name__ == "__main__":
         "li_status": lambda: post_linkedin_status(state),
         "ytcheck": lambda: tg.send(youtube.check_token()[1]),
         "litest": lambda: li_test(state),
-        "ig_follow": lambda: __import__("instagram_publish").run_follow_bot(),
+        "yt_subs": lambda: __import__("youtube_subscriptions").run(),
+        "ig_follow": lambda: print("🛡️ Instagram otomatik takip kapalı: resmî Instagram API bu işlemi desteklemiyor."),
     }
 
     try:
