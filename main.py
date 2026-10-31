@@ -155,8 +155,9 @@ def generate_long_one(state):
     uid = "long_" + uuid.uuid4().hex[:8]
     OUT.mkdir(exist_ok=True)
     path, chapters = video_maker.build_long(script, OUT / f"{uid}.mp4")
-    desc, tags = compose(script)
-    desc = (desc + "\n\nChapters:\n" + chapters)[:4900]
+    long_tags = [script.get("local_tag", "")] + script.get("global_tags", [])
+    tags = [str(t).lstrip("#") for t in long_tags if t][:15]
+    desc = (script.get("description", "") + "\n\nChapters:\n" + chapters + "\n\n" + " ".join("#" + t for t in tags))[:4900]
     title = script["title"]
     rendered = VideoFileClip(str(path))
     duration_seconds = round(float(rendered.duration), 2)
@@ -246,10 +247,17 @@ def handle_message(state, msg):
                 "Not: komutlar ~30 dk içinde cevaplanır.")
     elif cmd == "/durum":
         counts = {}
+        platforms = {"youtube": {}, "instagram": {}, "linkedin": {}}
         for it in state["items"].values():
             counts[it["status"]] = counts.get(it["status"], 0) + 1
+            for platform in platforms:
+                status = (it.get(platform) or {}).get("status", "unknown")
+                platforms[platform][status] = platforms[platform].get(status, 0) + 1
         last = [it["title"] for it in list(state["items"].values())[-5:]]
-        tg.send(f"Durum: {counts}\nSon 5:\n" + "\n".join(f"- {t}" for t in last))
+        platform_text = "\n".join(
+            f"{name}: {status_counts}" for name, status_counts in platforms.items()
+        )
+        tg.send(f"Genel durum: {counts}\nPlatformlar:\n{platform_text}\nSon 5:\n" + "\n".join(f"- {t}" for t in last))
     elif cmd == "/trend":
         import script_gen
         tg.send("🔥 Güncel başlıklar:\n" + "\n".join(f"- {h}" for h in script_gen.headlines(10)))
