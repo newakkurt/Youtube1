@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
   "Debug Syslog Overwhelms Switch CPU: Fix Logging Trap",
   "Failed Changes Lock You Out: Use Commit Confirmed 5",
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
@@ -100,7 +99,8 @@
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
   "Manual Port Restores? Set Errdisable Recovery Timers",
-  "Sticky MAC disappears after reboot? Save it with write memory"
+  "Sticky MAC disappears after reboot? Save it with write memory",
+  "Protect Root Bridge from Rogue Switches: Enable BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3676,6 +3676,37 @@
    "ig_id": "17910901191568452",
    "file_id": "BAACAgQAAxkDAAIDQGrmECYzLtRBvkGxCRnCpy8eNZOvAALHHwAC3PIwU9ysCPkWPz0TPQQ",
    "message_id": 832
+  },
+  "add388ad": {
+   "title": "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
+   "description": "Plugging an unauthorized switch into an access port can trigger spanning tree loops and compromise your root bridge. Protect your switching infrastructure by enabling PortFast and BPDU Guard to shut rogue ports down instantly into err-disable.\n\n#Shorts #BPDUGuard #NetworkEngineering #Cisco #SpanningTree #CyberSecurity",
+   "tags": [
+    "BPDUGuard",
+    "NetworkEngineering",
+    "Cisco",
+    "SpanningTree",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Unmanaged desk switch hijacks your root bridge? Stop it fast. \n\nWhen a user plugs in a mini switch, it sends BPDUs that can claim root bridge status. Enable spanning‑tree portfast and bpduguard enable on all access ports to drop rogue devices into err‑disable, keeping the core stable. \n\nWhich of these have you hit in production? Let me know in the comments. \n\n#BPDUGuard #SpanningTree #Cisco #NetworkEngineering #CyberSecurity",
+   "linkedin_caption": "Ever seen a rogue switch jeopardize your root bridge? Protect your network by enabling PortFast and BPDU Guard on access ports. These settings shut down malicious ports instantly, preventing spanning‑tree loops. Do you have a similar setup?\n\n——— Türkçe ———\n\nBir sahte switch root bridge'inizi tehlikeye atıyor mu? PortFast ve BPDU Guard'ı erişim portlarınızda etkinleştirerek ağınızı koruyun. Bu ayarlar kötü niyetli portları anında kapatarak spanning‑tree döngülerini engeller. Benzer bir yapılandırmanız var mı?\n\n#BPDUGuard #NetworkEngineering #Cisco",
+   "status": "yt_failed",
+   "hook": "Never let an unmanaged desk switch hijack your spanning tree topology.",
+   "duration_seconds": 32.9,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18133929772705204"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18133929772705204",
+   "file_id": "BAACAgQAAxkDAAIDRGrmNSsRA0cpvT-fE1lkAZrmm7v9AAIRIAAC3PIwUw2gJm_nK3hUPQQ",
+   "message_id": 836
   }
  }
 }
