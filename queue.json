@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
   "Stop Config Drift: Use Golden Config Templates with Alerts",
   "DHCP Leases Failing? Remove Rate Limits on Trusted Uplinks",
@@ -100,7 +99,8 @@
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
   "Stop BGP Route Leaks with AS-Path ACL Filters",
-  "Automated Config Push Outages: Gate CI/CD Behind Approval Rules"
+  "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
+  "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3583,6 +3583,37 @@
    "ig_id": "17960188620336313",
    "file_id": "BAACAgQAAxkDAAIDM2rlsjscP--l388q83ZJWaZXRgcQAALxHgAC3PIwU_XE60XsepoLPQQ",
    "message_id": 819
+  },
+  "e83d9f7f": {
+   "title": "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
+   "description": "Limiting the number of idle VTY lines prevents attackers from launching simultaneous brute‑force sessions. Configure a tight VTY range and enable login‑block to nullify the threat.\n\n#Shorts #VTYHardening #NetworkSecurity #CyberSec #RouterHardening #InfoSec",
+   "tags": [
+    "VTYHardening",
+    "NetworkSecurity",
+    "CyberSec",
+    "RouterHardening",
+    "InfoSec",
+    "Shorts"
+   ],
+   "instagram_caption": "Think an unused VTY line is harmless? One idle line lets attackers launch parallel brute‑force storms. Limit your range to five or fewer – e.g., 'line vty 0 4' – and turn on login‑block to throttle five attempts for 60 seconds, shutting out the flood. Have you tightened your VTY range in production? Drop a comment or save this tip! #VTYHardening #NetworkSecurity #CyberSec #RouterHardening #InfoSec",
+   "linkedin_caption": "Prevent attackers from launching simultaneous brute‑force sessions by limiting idle VTY lines. Set a tight VTY range and enable login‑block to nullify the threat. How do you safeguard your VTY lines?\n\n——— Türkçe ———\n\nİşlemciler, aynı anda brute‑force oturumları başlatmalarını engellemek için boş VTY satırlarını sınırlayın. Sıkı bir VTY aralığı belirleyin ve login‑block'u etkinleştirerek tehdidi ortadan kaldırın. VTY satırlarınızı nasıl korursunuz?\n\n#VTYHardening #NetworkSecurity #CyberSec",
+   "status": "yt_failed",
+   "hook": "Stop enabling dozens of idle VTY lines on your routers.",
+   "duration_seconds": 25.3,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18014932565761109"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18014932565761109",
+   "file_id": "BAACAgQAAxkDAAIDN2rl2aoh2T8EZoYrJgyVqbY9R-6KAAJIHwAC3PIwU-8MDm0RHQ3APQQ",
+   "message_id": 823
   }
  }
 }
