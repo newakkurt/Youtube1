@@ -32,7 +32,7 @@ def compose(script):
 def post_instagram(item, path):
     try:
         import instagram_publish
-        caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
+        caption = item.get("instagram_caption") or (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
         ig_id = instagram_publish.publish_reel(str(path), caption)
         item["ig_id"] = ig_id
         item["instagram"] = {"status": "published", "media_id": ig_id}
@@ -46,7 +46,7 @@ def post_linkedin(item, path):
     """LinkedIn'e video paylaşır. post_instagram'dan SONRA çağrılmalı (_ig.mp4 dosyasını kullanır)."""
     try:
         from linkedin_post import publish_linkedin
-        caption = (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
+        caption = item.get("linkedin_caption") or (item["title"] + "\n\n" + item["description"]).replace("#Shorts", "").strip()
         status = publish_linkedin(str(path), caption)
         item["linkedin"] = {"status": "published", "result": str(status)[:180]}
         tg.send(f"{status}\n{item['title']}")
@@ -128,8 +128,10 @@ def generate_one(state):
     rendered_video.close()
     desc, tags = compose(script)
     title = script["title"]
+    from platform_captions import build_platform_captions
+    platform_copies = build_platform_captions(script, desc)
     state["history"] = (state["history"] + [title])[-100:]
-    item = {"title": title, "description": desc, "tags": tags, "status": "pending",
+    item = {"title": title, "description": desc, "tags": tags, **platform_copies, "status": "pending",
             "hook": script["scenes"][0]["text"], "duration_seconds": duration_seconds,
             "youtube": {"status": "pending"}, "instagram": {"status": "pending"},
             "linkedin": {"status": "pending"}}
@@ -202,7 +204,9 @@ def ig_test(state):
     OUT.mkdir(exist_ok=True)
     path = video_maker.build(script, OUT / "igtest.mp4")
     desc, tags = compose(script)
-    post_instagram({"title": script["title"], "description": desc}, path)
+    from platform_captions import build_platform_captions
+    copies = build_platform_captions(script, desc)
+    post_instagram({"title": script["title"], "description": desc, **copies}, path)
 
 
 def li_test(state):
@@ -212,7 +216,9 @@ def li_test(state):
     OUT.mkdir(exist_ok=True)
     path = video_maker.build(script, OUT / "litest.mp4")
     desc, tags = compose(script)
-    post_linkedin({"title": script["title"], "description": desc}, path)
+    from platform_captions import build_platform_captions
+    copies = build_platform_captions(script, desc)
+    post_linkedin({"title": script["title"], "description": desc, **copies}, path)
 
 
 def handle_callback(state, cq):
