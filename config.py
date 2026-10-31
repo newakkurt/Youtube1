@@ -29,9 +29,7 @@ CHANNEL_TAG = env("CHANNEL_TAG", "")  # ekranda küçük filigran, örn: @kanala
 OUTRO = env("OUTRO", "Takip et, her gün sahadan yeni bir not geliyor." if LANG == "tr" else "Follow for a new field note every day.")
 AFFILIATE_TEXT = env("AFFILIATE_TEXT", "")
 
-# Instagram Bot Ayarları
-IG_USERNAME = env("IG_USERNAME")
-IG_PASSWORD = env("IG_PASSWORD")
+# Instagram publishing uses the official Graph API token configured separately.
 
 # Takip / Takipten Çıkma Parametreleri
 MAX_DAILY_FOLLOW = 99
