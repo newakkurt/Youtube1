@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Patch Panel Chaos? Enforce Labeling Standards for Instant Fault Fix",
   "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
@@ -100,7 +99,8 @@
   "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
-  "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard"
+  "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
+  "Stop BGP Route Leaks with AS-Path ACL Filters"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3549,6 +3549,23 @@
    "ig_id": "18120117356078209",
    "file_id": "BAACAgQAAxkDAAIDK2rlW6ICvDmQgPKoLlRqPNovApDvAALEHgAC3PIwU2U-PvBoeTrqPQQ",
    "message_id": 811
+  },
+  "eab1142e": {
+   "title": "Stop BGP Route Leaks with AS-Path ACL Filters",
+   "description": "Learn how to block unwanted BGP route announcements using AS‑Path ACL filters. Follow the exact commands to protect your network from route leaking.\n\n#Shorts #BGPLeakFix #NetworkEngineering #CyberSecurity #BGP #ASPathACL",
+   "tags": [
+    "BGPLeakFix",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "BGP",
+    "ASPathACL",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let unknown AS paths flood your BGP table",
+   "ig_id": "18119481938095191",
+   "file_id": "BAACAgQAAxkDAAIDL2rlk0_3AAGD0TE939P2SbBZqhIGSAAC0h4AAtzyMFNhyj-vIt_XhD0E",
+   "message_id": 815
   }
  }
 }
