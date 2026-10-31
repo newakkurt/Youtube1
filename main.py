@@ -105,9 +105,9 @@ def upload_youtube(path, title, desc, tags):
                 pass
         traceback.print_exc()
         if "invalid_grant" in msg or "RefreshError" in type(e).__name__:
-            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\\n"
-                    "1) get_refresh_token.py ile yeni token al\\n"
-                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\\n"
+            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\n"
+                    "1) get_refresh_token.py ile yeni token al\n"
+                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\n"
                     "3) Google Cloud → OAuth consent screen → 'In production' yap "
                     "(Testing'de token 7 günde ölür)")
         else:
