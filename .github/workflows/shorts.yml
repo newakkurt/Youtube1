@@ -11,7 +11,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [generate, long, process, report, lead, igtest, li_status, litest, ytcheck]
+        options: [generate, long, process, report, lead, igtest, li_status, litest, ytcheck, yt_subs]
         default: generate
 
 concurrency:
@@ -36,6 +36,11 @@ jobs:
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      ENABLE_YT_SUBSCRIPTION_MANAGER: ${{ secrets.ENABLE_YT_SUBSCRIPTION_MANAGER }}
+      YT_SUBSCRIPTION_DRY_RUN: ${{ secrets.YT_SUBSCRIPTION_DRY_RUN }}
+      YT_SUBSCRIPTION_DAILY_CAP: ${{ secrets.YT_SUBSCRIPTION_DAILY_CAP }}
+      YT_TARGET_CHANNEL_IDS: ${{ secrets.YT_TARGET_CHANNEL_IDS }}
+      YT_UNSUBSCRIBE_CHANNEL_IDS: ${{ secrets.YT_UNSUBSCRIBE_CHANNEL_IDS }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       IG_USERNAME: ${{ secrets.IG_USERNAME }}
@@ -84,6 +89,6 @@ jobs:
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
-          git add queue.json
+          git add queue.json yt_subscription_state.json
           if [ -f performance.json ]; then git add performance.json; fi
           git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)
