@@ -225,7 +225,7 @@ def handle_callback(state, cq):
     tg.edit_caption(item["message_id"], f"✅ Yayınlandı: {item['title']}\nhttps://youtube.com/shorts/{vid}")
 
 
-def dispatch_generate():
+def dispatch_generate(mode="generate"):
     repo, token = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
     ref = os.environ.get("GITHUB_WORKFLOW_REF", "")
     marker = "/.github/workflows/"
@@ -233,7 +233,7 @@ def dispatch_generate():
     r = requests.post(
         f"https://api.github.com/repos/{repo}/actions/workflows/{wf}/dispatches",
         headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
-        json={"ref": os.environ.get("GITHUB_REF_NAME", "main"), "inputs": {"mode": "generate"}}, timeout=30)
+        json={"ref": os.environ.get("GITHUB_REF_NAME", "main"), "inputs": {"mode": mode}}, timeout=30)
     return r.status_code == 204
 
 
@@ -241,7 +241,7 @@ def handle_message(state, msg):
     cmd = (msg.get("text") or "").split()[0].lower() if msg.get("text") else ""
     if cmd in ("/yardim", "/yardım", "/start"):
         tg.send("Komutlar:\n/durum - kuyruk özeti\n/trend - güncel konu başlıkları\n/analiz - haftalık rapor\n"
-                "/video - hemen yeni video üret\n/iptal - bekleyenleri iptal et\n"
+                "/video - yeni Shorts üret\n/uzunvideo - 5-7 dakikalık video üret\n/iptal - bekleyenleri iptal et\n"
                 "/oneriler - hedef video ve yorum önerileri\n"
                 "Not: komutlar ~30 dk içinde cevaplanır.")
     elif cmd == "/durum":
@@ -256,7 +256,9 @@ def handle_message(state, msg):
     elif cmd == "/analiz":
         tg.send(youtube.stats(7))
     elif cmd == "/video":
-        tg.send("🎬 Üretim başladı, birkaç dakikaya gelir." if dispatch_generate() else "⚠️ Üretim tetiklenemedi (Actions izni?).")
+        tg.send("🎬 Shorts üretimi başladı." if dispatch_generate("generate") else "⚠️ Üretim tetiklenemedi (Actions izni?).")
+    elif cmd == "/uzunvideo":
+        tg.send("🎬 Uzun video üretimi başladı." if dispatch_generate("long") else "⚠️ Uzun video tetiklenemedi (Actions izni?).")
     elif cmd == "/oneriler":
         try:
             from lead_finder import run_lead_finder
@@ -331,14 +333,4 @@ if __name__ == "__main__":
         raise
     finally:
         save(state)
-        modes = {
-        "generate": lambda: generate_one(state),
-        "process": lambda: process(state),
-        "report": lambda: report(state),
-        "igtest": lambda: ig_test(state),
-        "lead": run_lead,
-        "li_status": lambda: post_linkedin_status(state),
-        "ytcheck": lambda: tg.send(youtube.check_token()[1]),
-        "litest": lambda: li_test(state),
-        "ig_follow": lambda: __import__("instagram_bot").run_follow_bot(),  # <--- BURAYI EKLEYİN
-    }
+
