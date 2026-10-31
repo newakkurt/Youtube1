@@ -1,0 +1,32 @@
+name: Content Quality Checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "main.py"
+      - "script_gen.py"
+      - "platform_captions.py"
+      - "tests/**"
+      - ".github/workflows/content-quality.yml"
+  pull_request:
+    paths:
+      - "main.py"
+      - "script_gen.py"
+      - "platform_captions.py"
+      - "tests/**"
+      - ".github/workflows/content-quality.yml"
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile content modules
+        run: python -m compileall -q main.py script_gen.py platform_captions.py
+      - name: Run content tests
+        run: python -m unittest discover -s tests -v
