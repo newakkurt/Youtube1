@@ -43,8 +43,6 @@ jobs:
       YT_UNSUBSCRIBE_CHANNEL_IDS: ${{ secrets.YT_UNSUBSCRIBE_CHANNEL_IDS }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-      IG_USERNAME: ${{ secrets.IG_USERNAME }}
-      IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
       LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
       LINKEDIN_TOKEN_DATE: ${{ secrets.LINKEDIN_TOKEN_DATE }}
 
