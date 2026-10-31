@@ -111,8 +111,9 @@ def generate_one(state):
     uid = uuid.uuid4().hex[:8]
     OUT.mkdir(exist_ok=True)
     path = video_maker.build(script, OUT / f"{uid}.mp4")
-    with VideoFileClip(str(path)) as rendered_video:
-        duration_seconds = round(float(rendered_video.duration), 2)
+    rendered_video = VideoFileClip(str(path))
+    duration_seconds = round(float(rendered_video.duration), 2)
+    rendered_video.close()
     desc, tags = compose(script)
     title = script["title"]
     state["history"] = (state["history"] + [title])[-100:]
@@ -141,6 +142,45 @@ def generate_one(state):
         item.update(file_id=file_id, message_id=mid)
     state["items"][uid] = item
 
+
+
+def generate_long_one(state):
+    """Manually generate and publish a 16:9 long-form YouTube video."""
+    if not AUTO_APPROVE:
+        tg.send("ℹ️ Uzun video modu şu an otomatik yayın gerektiriyor. AUTO_APPROVE=true olmadan yayınlanmadı.")
+        return
+    import script_gen
+    import video_maker
+    script = script_gen.generate_long(state["history"])
+    uid = "long_" + uuid.uuid4().hex[:8]
+    OUT.mkdir(exist_ok=True)
+    path, chapters = video_maker.build_long(script, OUT / f"{uid}.mp4")
+    desc, tags = compose(script)
+    desc = (desc + "\n\nChapters:\n" + chapters)[:4900]
+    title = script["title"]
+    rendered = VideoFileClip(str(path))
+    duration_seconds = round(float(rendered.duration), 2)
+    rendered.close()
+    item = {
+        "title": title, "description": desc, "tags": tags, "status": "pending",
+        "format": "long", "duration_seconds": duration_seconds,
+        "youtube": {"status": "pending"},
+        "instagram": {"status": "skipped", "reason": "16:9 long-form video"},
+        "linkedin": {"status": "skipped", "reason": "long-form distribution not enabled"}
+    }
+    if not 300 <= duration_seconds <= 420:
+        tg.send(f"⚠️ Uzun video süresi hedef 5–7 dk dışında: {duration_seconds} sn. Yayın kararı devam ediyor.")
+    vid = upload_youtube(path, title, desc, tags)
+    if vid:
+        item.update(status="published", video_id=vid)
+        item["youtube"] = {"status": "published", "video_id": vid}
+        tg.send(f"✅ Uzun video yayınlandı: {title}\nhttps://youtube.com/watch?v={vid}")
+    else:
+        item["status"] = "yt_failed"
+        item["youtube"] = {"status": "failed"}
+        tg.send(f"⚠️ Uzun video YouTube'a yüklenemedi: {title}")
+    state["history"] = (state["history"] + [title])[-100:]
+    state["items"][uid] = item
 
 def ig_test(state):
     import script_gen
@@ -270,6 +310,7 @@ if __name__ == "__main__":
 
     modes = {
         "generate": lambda: generate_one(state),
+        "long": lambda: generate_long_one(state),
         "process": lambda: process(state),
         "report": lambda: report(state),
         "igtest": lambda: ig_test(state),
