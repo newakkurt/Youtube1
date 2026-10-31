@@ -26,13 +26,27 @@ def _creds():
 
 
 def check_token():
-    """Refresh token geçerli mi? Video yüklemeden test eder. (ok, mesaj) döndürür."""
+    """OAuth yenilemeyi ve bağlı YouTube kanalına erişimi yükleme yapmadan test eder."""
     try:
         from google.auth.transport.requests import Request
-        _creds().refresh(Request())
-        return True, "🔑 YouTube token geçerli ✅"
+        creds = _creds()
+        creds.refresh(Request())
+        yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        result = yt.channels().list(part="id,snippet", mine=True).execute()
+        channels = result.get("items") or []
+        if not channels:
+            return False, "🔑 OAuth yenilendi ancak mine=true ile YouTube kanalı bulunamadı. OAuth hesabı/kanal veya YouTube API erişimini kontrol et."
+        channel = channels[0]
+        title = channel.get("snippet", {}).get("title", "Kanal adı alınamadı")
+        return True, f"🔑 YouTube OAuth + API erişimi başarılı ✅ Kanal: {title} (ID: {channel.get('id', '?')})"
     except Exception as e:
-        return False, f"🔑 YouTube token HATALI ❌ {str(e)[:300]}"
+        detail = str(e)
+        if getattr(e, "content", None):
+            try:
+                detail += " | API: " + e.content.decode("utf-8", errors="replace")[:1000]
+            except Exception:
+                pass
+        return False, f"🔑 YouTube bağlantı testi başarısız ❌ {type(e).__name__}: {detail[:1200]}"
 
 
 def upload(path, title, description, tags):
