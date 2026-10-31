@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "LLDP/CDP Discovery Leak on Access Ports – Disable to Stop Exposure",
   "Mini Switch Plugged? Enable PortFast & BPDU Guard to Stop Lockout",
   "Limit Admin Access to Trusted IPs and HTTPS/SSH – Fix Open Firewall",
   "Stop Config Drift: Use Golden Config Templates with Alerts",
@@ -100,7 +99,8 @@
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
-  "Stop BGP Route Leaks with AS-Path ACL Filters"
+  "Stop BGP Route Leaks with AS-Path ACL Filters",
+  "Automated Config Push Outages: Gate CI/CD Behind Approval Rules"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3566,6 +3566,23 @@
    "ig_id": "18119481938095191",
    "file_id": "BAACAgQAAxkDAAIDL2rlk0_3AAGD0TE939P2SbBZqhIGSAAC0h4AAtzyMFNhyj-vIt_XhD0E",
    "message_id": 815
+  },
+  "b02899df": {
+   "title": "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
+   "description": "Pushing switch configs via automated pipelines outside change windows risks sudden production downtime. Learn how gating network automation scripts behind manual approvals prevents unscheduled outages.\n\n#Shorts #NetworkAutomation #NetworkEngineering #CICD #NetDevOps #SysAdmin",
+   "tags": [
+    "NetworkAutomation",
+    "NetworkEngineering",
+    "CICD",
+    "NetDevOps",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "status": "yt_failed",
+   "hook": "Never let cron jobs or GitHub Actions push switch configs mid-day.",
+   "ig_id": "17960188620336313",
+   "file_id": "BAACAgQAAxkDAAIDM2rlsjscP--l388q83ZJWaZXRgcQAALxHgAC3PIwU_XE60XsepoLPQQ",
+   "message_id": 819
   }
  }
 }
