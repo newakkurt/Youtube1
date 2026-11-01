@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Silent Switch Drift Causes Outages: Alert on Config Diffs",
   "Avoid network outages: abort on errors with any_errors_fatal",
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
@@ -100,7 +99,8 @@
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
-  "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports"
+  "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
+  "Auth‑Fail VLAN isolates bad devices – 802.1X best practice"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3800,6 +3800,37 @@
    "ig_id": "18155276389530008",
    "file_id": "BAACAgQAAxkDAAIDUWrm1w8ZOllj8GMS_nEvw5t0CFryAAJQIQAC3PI4U77XTECmgfdzPQQ",
    "message_id": 849
+  },
+  "18ba02b3": {
+   "title": "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
+   "description": "Learn how to protect your access layer by assigning an Auth‑Fail VLAN for devices that don't authenticate. This quick guide shows the exact commands and why the practice matters.\n\n#Shorts #AuthFailVLAN #NetworkSecurity #8021X #VLAN #NetworkEngineering",
+   "tags": [
+    "AuthFailVLAN",
+    "NetworkSecurity",
+    "8021X",
+    "VLAN",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Stuck with rogue devices on the network? An Auth‑Fail VLAN can stop them in their tracks. Map a restricted VLAN to every 802.1X port and apply ‘authentication event fail action vlan <id>’ on the access interface so any failed device is isolated. That’s the simplest way to keep bad traffic from roaming. Which of these have you hit in production? Let me know in the comments. #AuthFailVLAN #8021X #NetworkSecurity #VLAN #NetworkEngineering",
+   "linkedin_caption": "Discover the power of an Auth‑Fail VLAN to isolate un‑authenticated devices. This quick guide explains why the practice matters and shows the exact commands to safeguard your access layer. Ready to strengthen your network security? How do you handle Auth‑Fail VLAN in your environment?\n\n——— Türkçe ———\n\nAuth‑Fail VLAN ile kimlik doğrulanamayan cihazları izole etmenin gücünü keşfedin. Bu hızlı rehber, uygulamanın neden önemli olduğunu açıklar ve erişim katmanınızı korumak için gereken tam komutları gösterir. Ağ güvenliğinizi güçlendirmeye hazır mısınız? Auth‑Fail VLAN'i ortamınızda nasıl yönetiyorsunuz?\n\n#AuthFailVLAN #NetworkSecurity #8021X",
+   "status": "yt_failed",
+   "hook": "Never let failed 802.1X devices roam free on the network.",
+   "duration_seconds": 23.97,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17959470957260397"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17959470957260397",
+   "file_id": "BAACAgQAAxkDAAIDVmrm5LsWjOUux12X8nd0D_I2qbzOAAKzHQACtqU4Uyff8KE5bTu4PQQ",
+   "message_id": 854
   }
  }
 }
