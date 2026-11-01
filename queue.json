@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
@@ -100,7 +99,8 @@
   "Rogue Router Joins HSRP? Set Authentication Password Now",
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
-  "Prevent 802.1X auth failures – map to Auth‑Fail VLAN"
+  "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
+  "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3986,6 +3986,37 @@
    "ig_id": "17918390721264544",
    "file_id": "BAACAgQAAxkDAAIDb2rni6u2IiOtDBFZ6CS7DwyR_7G0AAIKHwACtqU4U_Bwtx_1ZbbAPQQ",
    "message_id": 879
+  },
+  "05fbcfef": {
+   "title": "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
+   "description": "Untrusted access ports can quickly consume your DHCP address pool, causing outages. Follow Cisco's recommendation and configure a 10‑15 pps DHCP snooping rate‑limit on each untrusted port to prevent starvation attacks.\n\n#Shorts #DHCPStarvationFix #NetworkSecurity #Cisco #DHCP #SysAdmin",
+   "tags": [
+    "DHCPStarvationFix",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Untrusted ports draining your DHCP pool? Stop it now! Enable DHCP Snooping and set a 15‑pps limit on every untrusted access port to prevent starvation attacks. Have you hit this in production? Tell me in the comments. #DHCPStarvationFix #NetworkSecurity #Cisco #DHCP #SysAdmin",
+   "linkedin_caption": "Guard untrusted ports with 15 pps DHCP snooping rate‑limit to stop address pool starvation. Cisco advises setting a 10‑15 pps limit on each untrusted port to prevent outages. How do you secure your ports against starvation attacks?\n\n——— Türkçe ———\n\nUntrusted portları 15 pps DHCP snooping rate‑limit ile koruyarak adres havuzunu tüketmelerini önleyin. Cisco, her untrusted port için 10‑15 pps limit koymanızı öneriyor, böylece kesintileri engelleyin. Portlarınızı nasıl güvence altına alıyorsunuz?\n\n#NetworkSecurity #DHCPStarvationFix #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop letting untrusted ports drain your DHCP pool!",
+   "duration_seconds": 23.3,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18117572510471386"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18117572510471386",
+   "file_id": "BAACAgQAAxkDAAIDdGrnvCIVVdDkhypfYieVBnqC4jU0AAJnHwACtqU4U8tY09utYUYrPQQ",
+   "message_id": 884
   }
  }
 }
