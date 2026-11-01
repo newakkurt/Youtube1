@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Failed Changes Lock You Out: Use Commit Confirmed 5",
   "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
   "Avoid network outages: abort on errors with any_errors_fatal",
@@ -100,7 +99,8 @@
   "Manual Port Restores? Set Errdisable Recovery Timers",
   "Sticky MAC disappears after reboot? Save it with write memory",
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
-  "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown"
+  "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
+  "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3738,6 +3738,37 @@
    "ig_id": "18077497586465089",
    "file_id": "BAACAgQAAxkDAAIDSGrmZOHdAAGa6BKaBL7-PUq3Dq1kBwACGCEAAtzyOFN9ODSb2DsPHj0E",
    "message_id": 840
+  },
+  "fc04ff5a": {
+   "title": "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
+   "description": "Learn why DAI can drop legitimate traffic and how to fix it by limiting trusted ports. Apply DHCP snooping trust on uplinks and static ARP servers for clean network operation.\n\n#Shorts #DAITrust #networksecurity #cybersecurity #networkengineer #switchconfig",
+   "tags": [
+    "DAITrust",
+    "networksecurity",
+    "cybersecurity",
+    "networkengineer",
+    "switchconfig",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever see legitimate traffic drop when DAI is on? \n\nConfigure DHCP snooping trust only on uplink ports and mark server ports with static ARP entries as trusted. Only these should be DAI trusted.\n\nHave you hit this in production? Drop a comment below. \n#DAITrust #NetworkSecurity #CiscoSwitching #DHCPsnooping #CyberSec",
+   "linkedin_caption": "Discover why DAI can drop legitimate traffic and how to fix it by limiting trusted ports. Apply DHCP‑snooping trust on uplinks and static‑ARP servers for clean network operation. Engineers, how do you handle DAI drops?\n\n——— Türkçe ———\n\nDAI'nin meşru trafiği düşürme nedenini keşfedin ve güvenilen portları sınırlayarak nasıl düzeltebileceğinizi öğrenin. DHCP‑snooping güvenini yüklenici bağlantılara ve static‑ARP sunucularına uygulayın, böylece temiz bir ağ çalışması elde edin. Mühendisler, DAI düşmelerini nasıl ele alıyorsunuz?\n\n#DAITrust #networksecurity #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never trust every port when DAI is enabled.",
+   "duration_seconds": 20.37,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18636459472018624"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18636459472018624",
+   "file_id": "BAACAgQAAxkDAAIDTWrmrFo0eK1pmTHnS3KaUXZXF2KGAAJMIQAC3PI4U7s_9BBqE6w-PQQ",
+   "message_id": 845
   }
  }
 }
