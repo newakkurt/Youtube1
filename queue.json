@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Idle SSL VPN sessions let hackers in – tighten timeout now",
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
@@ -100,7 +99,8 @@
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
   "Rogue Router Joins HSRP? Set Authentication Password Now",
-  "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable"
+  "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
+  "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3924,6 +3924,37 @@
    "ig_id": "18128711491666834",
    "file_id": "BAACAgQAAxkDAAIDYmrnQh-NnaQ-AfGHIS-PSGAlJS5zAAJ7HgACtqU4UzdVB8rahlAaPQQ",
    "message_id": 866
+  },
+  "7bcb7574": {
+   "title": "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
+   "description": "Standardizing VLAN names prevents automation scripts from mis‑applying configurations. Follow a simple numeric‑prefix scheme and lock it into your code for zero‑error deployments.\n\n#Shorts #VLANStandardization #NetworkEngineering #Automation #Cisco #NetworkOps",
+   "tags": [
+    "VLANStandardization",
+    "NetworkEngineering",
+    "Automation",
+    "Cisco",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen a script hit the wrong VLAN in prod? 😬 Lock your naming convention into the code and reject any mismatched IDs. A simple prefix like 10-DATA, 20-VOICE, 30-MGMT keeps automation clean and error‑free forever. Which of these have you hit in production? Drop a comment or save & share if you found this useful! #VLANStandardization #NetworkOps #Automation #Cisco",
+   "linkedin_caption": "Stop wrong VLAN automation errors today. Standardizing VLAN names prevents automation scripts from mis-applying configurations. Follow a simple numeric-prefix scheme and lock it into your code for zero-error deployments. Do you standardize VLAN naming in your automation code?\n\n——— Türkçe ———\n\nVLAN automation hatalarının önüne geçin. VLAN isimlerini standardize etmek, automation script'lerinin yanlış konfigürasyon uygulamasını engeller. Sıfır hatalı deployment için basit bir numeric-prefix şeması izleyin ve bunu kodunuza dahil edin. Automation kodlarınızda VLAN isimlendirmesini standardize ediyor musunuz?\n\n#VLANStandardization #Automation #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Stop scripts from hitting the wrong VLAN IDs in production.",
+   "duration_seconds": 32.63,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18099232163391218"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18099232163391218",
+   "file_id": "BAACAgQAAxkDAAIDZmrncGdLcuCCFT09vO5AsoelL-fXAALLHgACtqU4U7lIAAHCv7Medj0E",
+   "message_id": 870
   }
  }
 }
