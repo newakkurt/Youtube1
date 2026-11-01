@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
@@ -100,7 +99,8 @@
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
-  "Rogue Router Joins HSRP? Set Authentication Password Now"
+  "Rogue Router Joins HSRP? Set Authentication Password Now",
+  "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3893,6 +3893,37 @@
    "ig_id": "18079308218431491",
    "file_id": "BAACAgQAAxkDAAIDXmrnKxbltswnrcEUsjBrQ2L7pBYxAAJFHgACtqU4U3YkrE_AE6ewPQQ",
    "message_id": 862
+  },
+  "fdc623c7": {
+   "title": "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
+   "description": "Unapproved desk switches can claim root bridge status and trigger network-wide spanning tree meltdowns. Enable PortFast and BPDU Guard on all edge ports to force rogue links straight into err-disable.\n\n#Shorts #bpduguard #networkengineering #ciscocertification #cybersecurity #spanningtree",
+   "tags": [
+    "bpduguard",
+    "networkengineering",
+    "ciscocertification",
+    "cybersecurity",
+    "spanningtree",
+    "Shorts"
+   ],
+   "instagram_caption": "Unmanaged desk switches are the silent root bridge hijackers. One rogue BPDU can turn your network into a spanning‑tree meltdown. Protect every access port by turning on PortFast and BPDU Guard—once a malicious switch pushes a BPDU, the port drops into err‑disable. Which of these have you hit in production? Let me know in the comments.\n\n#bpduguard #spanningtree #cybersecurity #networkengineering",
+   "linkedin_caption": "Unapproved desk switches can claim root bridge status and trigger network-wide spanning tree meltdowns. Enable PortFast and BPDU Guard on all edge ports to force rogue links straight into err-disable. Do you enable BPDU Guard on your edge ports?\n\n——— Türkçe ———\n\nOnaysız desk switch'ler root bridge statüsü alarak ağ genelinde spanning tree krizlerini tetikleyebilir. Rogue bağlantıları doğrudan err-disable durumuna zorlamak için tüm edge port'larda PortFast ve BPDU Guard etkinleştirin. Edge port'larınızda BPDU Guard etkinleştiriyor musunuz?\n\n#bpduguard #spanningtree #networkengineering",
+   "status": "yt_failed",
+   "hook": "Never leave access ports unprotected against unauthorized desktop switches.",
+   "duration_seconds": 28.47,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18128711491666834"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18128711491666834",
+   "file_id": "BAACAgQAAxkDAAIDYmrnQh-NnaQ-AfGHIS-PSGAlJS5zAAJ7HgACtqU4UzdVB8rahlAaPQQ",
+   "message_id": 866
   }
  }
 }
