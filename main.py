@@ -104,12 +104,17 @@ def upload_youtube(path, title, desc, tags):
             except Exception:
                 pass
         traceback.print_exc()
-        if "invalid_grant" in msg or "RefreshError" in type(e).__name__:
-            tg.send("🔑 YouTube token'ı geçersiz (invalid_grant).\n"
-                    "1) get_refresh_token.py ile yeni token al\n"
-                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle\n"
-                    "3) Google Cloud → OAuth consent screen → 'In production' yap "
-                    "(Testing'de token 7 günde ölür)")
+        if "unauthorized_client" in msg:
+            tg.send("🔐 YouTube OAuth istemcisi yetkisiz. Bu hata genellikle YT_CLIENT_ID / YT_CLIENT_SECRET eşleşmediğinde veya refresh token başka OAuth istemcisiyle üretildiğinde olur.\n"
+                    "1) Google Cloud'da aynı OAuth istemcisine ait Client ID ve Client Secret'ı kontrol et.\n"
+                    "2) get_refresh_token.py dosyasını bu aynı istemci bilgileriyle yeniden çalıştır.\n"
+                    "3) GitHub Secrets içindeki YT_CLIENT_ID, YT_CLIENT_SECRET ve YT_REFRESH_TOKEN değerlerini birlikte güncelle.\n"
+                    "4) Sonra Actions > Shorts Bot > Run workflow > ytcheck ile yükleme yapmadan bağlantıyı test et.")
+        elif "invalid_grant" in msg or "RefreshError" in type(e).__name__:
+            tg.send("🔑 YouTube refresh token geçersiz veya iptal edilmiş.\n"
+                    "1) get_refresh_token.py ile yeni token al.\n"
+                    "2) GitHub Secrets → YT_REFRESH_TOKEN'ı güncelle.\n"
+                    "3) Google Cloud OAuth consent screen durumunu ve gerekli YouTube scope'larını kontrol et.")
         else:
             tg.send(f"⚠️ YouTube yükleme hatası: {msg[:400]}")
         return None
@@ -263,6 +268,7 @@ def handle_message(state, msg):
     cmd = (msg.get("text") or "").split()[0].lower() if msg.get("text") else ""
     if cmd in ("/yardim", "/yardım", "/start"):
         tg.send("Komutlar:\n/durum - kuyruk özeti\n/trend - güncel konu başlıkları\n/analiz - haftalık rapor\n"
+                "/ytcheck - YouTube OAuth bağlantısını yükleme yapmadan test et\n"
                 "/video - yeni Shorts üret\n/uzunvideo - 5-7 dakikalık video üret\n/iptal - bekleyenleri iptal et\n"
                 "/oneriler - hedef video ve yorum önerileri\n"
                 "Not: komutlar ~30 dk içinde cevaplanır.")
@@ -284,6 +290,9 @@ def handle_message(state, msg):
         tg.send("🔥 Güncel başlıklar:\n" + "\n".join(f"- {h}" for h in script_gen.headlines(10)))
     elif cmd == "/analiz":
         tg.send(youtube.stats(7))
+    elif cmd == "/ytcheck":
+        ok, message = youtube.check_token()
+        tg.send(message)
     elif cmd == "/video":
         tg.send("🎬 Shorts üretimi başladı." if dispatch_generate("generate") else "⚠️ Üretim tetiklenemedi (Actions izni?).")
     elif cmd == "/uzunvideo":
