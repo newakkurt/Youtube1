@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop err-disable caused by excess MACs: limit to 1-2 and shut down",
   "Silent Switch Drift Causes Outages: Alert on Config Diffs",
   "Avoid network outages: abort on errors with any_errors_fatal",
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
@@ -100,7 +99,8 @@
   "Sticky MAC disappears after reboot? Save it with write memory",
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
-  "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers"
+  "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
+  "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3769,6 +3769,37 @@
    "ig_id": "18636459472018624",
    "file_id": "BAACAgQAAxkDAAIDTWrmrFo0eK1pmTHnS3KaUXZXF2KGAAJMIQAC3PI4U7s_9BBqE6w-PQQ",
    "message_id": 845
+  },
+  "f647720d": {
+   "title": "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
+   "description": "Mismatched MTU configurations on transit switch ports cause silent packet drops and poor storage performance. Ensure MTU 9000 is applied end-to-end across all access ports, uplinks, and trunks in your SAN VLAN.\n\n#Shorts #JumboFrames #NetworkEngineering #StorageNetworking #Cisco #DataCenter",
+   "tags": [
+    "JumboFrames",
+    "NetworkEngineering",
+    "StorageNetworking",
+    "Cisco",
+    "DataCenter",
+    "Shorts"
+   ],
+   "instagram_caption": "SAN packet drops? Check your MTU settings.\n\nIf you ever see silent drops or sluggish performance, it’s often a mismatched MTU. A single port stuck at 1500 will fragment or drop SAN traffic, even if the rest of the path is set to 9000.\n\nMake sure every server interface, trunk, and uplink in the storage VLAN is set to 9000. Only then do jumbo frames actually deliver the performance boost.\n\nWhich switches in your network are still at 1500? Drop a comment or share if you’ve fixed it.\n\n#JumboFrames #SAN #NetworkEngineering #StorageNetworking #Cisco",
+   "linkedin_caption": "Mismatched MTU configurations on transit switch ports cause silent packet drops and poor storage performance. Ensure MTU 9000 is applied end-to-end across all access ports, uplinks, and trunks in your SAN VLAN. Have you encountered this issue in your SAN environment?\n\n——— Türkçe ———\n\nTransit switch portlarındaki uyumsuz MTU konfigürasyonları, sessiz packet drop'lara ve düşük storage performansına neden olur. SAN VLAN içerisindeki tüm access portlar, uplinkler ve trunklarda MTU 9000'in end-to-end uygulandığından emin olun. SAN ortamınızda bu sorunla karşılaştınız mı?\n\n#StorageNetworking #JumboFrames #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Never run jumbo frames on storage VLANs without configuring every intermediate switch.",
+   "duration_seconds": 28.13,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18155276389530008"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18155276389530008",
+   "file_id": "BAACAgQAAxkDAAIDUWrm1w8ZOllj8GMS_nEvw5t0CFryAAJQIQAC3PI4U77XTECmgfdzPQQ",
+   "message_id": 849
   }
  }
 }
