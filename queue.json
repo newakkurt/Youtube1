@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
   "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
@@ -100,7 +99,8 @@
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
-  "DHCP Pool Exhaustion: Fix with Snooping Limit Rate"
+  "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
+  "Rogue Router Joins HSRP? Set Authentication Password Now"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3862,6 +3862,37 @@
    "ig_id": "18115099417845176",
    "file_id": "BAACAgQAAxkDAAIDWmrnAhd0BWEt9p5GR2PzFPcqvfKXAALQHQACtqU4Uyk2AkDIAYEKPQQ",
    "message_id": 858
+  },
+  "f1dd243d": {
+   "title": "Rogue Router Joins HSRP? Set Authentication Password Now",
+   "description": "Learn how to lock down HSRP, VRRP, and GLBP with authentication passwords. Prevent unauthorized routers from taking over your first‑hop redundancy.\n\n#Shorts #FHRPauth #networksecurity #routing #cyberdefense #neteng",
+   "tags": [
+    "FHRPauth",
+    "networksecurity",
+    "routing",
+    "cyberdefense",
+    "neteng",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue routers from hijacking your HSRP group—before it’s too late.\nConfigure a standby authentication key on HSRP, vrrp authentication md5 for VRRP, and glbp authentication for GLBP. This locks down your first‑hop redundancy so only approved devices can participate.\nMissing authentication is a silent vulnerability that lets attackers take over the default gateway. Make it a habit to enable authentication on every FHRP.\nHave you enabled authentication on all your FHRPs? Drop a comment.\n#FHRPauth #networksecurity #routing #cyberdefense #neteng",
+   "linkedin_caption": "Rogue Router Joins HSRP? Set Authentication Password Now. Lock down HSRP, VRRP, and GLBP with authentication passwords and keep unauthorized routers out of your first‑hop redundancy. Join us as we walk through the steps, see the pitfalls, and discover why authentication is crucial for network resilience. Got any thoughts?\n\n——— Türkçe ———\n\nRogue Router Joins HSRP? Set Authentication Password Now. HSRP, VRRP ve GLBP'yi authentication passwords ile kilitleyin ve yetkisiz yönlendiricilerin first‑hop redundancy'nizi ele geçirmesini önleyin. Adımları inceleyin, hataları görün ve authentication'ın ağ dayanıklılığı için neden kritik olduğunu keşfedin. Fikrinizi paylaşır mısınız?\n\n#networksecurity #routing #cyberdefense",
+   "status": "yt_failed",
+   "hook": "Never let an unauthenticated router join your HSRP group.",
+   "duration_seconds": 26.9,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18079308218431491"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18079308218431491",
+   "file_id": "BAACAgQAAxkDAAIDXmrnKxbltswnrcEUsjBrQ2L7pBYxAAJFHgACtqU4U3YkrE_AE6ewPQQ",
+   "message_id": 862
   }
  }
 }
