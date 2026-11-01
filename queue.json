@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Avoid network outages: abort on errors with any_errors_fatal",
   "Bulk Netmiko Scripts Lock You Out: Test on One Switch",
   "Fail‑Open vs Fail‑Close RADIUS: Pre‑Plan to Keep Production Running",
   "Idle SSL VPN sessions let hackers in – tighten timeout now",
@@ -100,7 +99,8 @@
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
-  "Auth‑Fail VLAN isolates bad devices – 802.1X best practice"
+  "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
+  "DHCP Pool Exhaustion: Fix with Snooping Limit Rate"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3831,6 +3831,37 @@
    "ig_id": "17959470957260397",
    "file_id": "BAACAgQAAxkDAAIDVmrm5LsWjOUux12X8nd0D_I2qbzOAAKzHQACtqU4Uyff8KE5bTu4PQQ",
    "message_id": 854
+  },
+  "32cdc170": {
+   "title": "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
+   "description": "Prevent rogue devices and DHCP starvation attacks from draining your subnet IP pool. Enforcing a 15 packet per second snooping rate limit on untrusted switchports safeguards your DHCP server.\n\n#Shorts #DHCPSnooping #NetworkEngineering #CiscoSwitch #CyberSecurity #NetEng",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkEngineering",
+    "CiscoSwitch",
+    "CyberSecurity",
+    "NetEng",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen your DHCP server crash in seconds? A rogue device can exhaust all leases faster than Cisco’s five‑packet default. Put a limit on untrusted ports: ip dhcp snooping limit rate 15, and protect your subnet. Have you hit this in production? Drop a comment. #DHCPSnooping #NetworkEngineering #CiscoSwitch #CyberSecurity #NetEng",
+   "linkedin_caption": "Discover how to stop rogue devices from draining your subnet IP pool by enforcing a snooping rate limit. Set a 15 packets‑per‑second cap on untrusted switchports to protect your DHCP server. How do you safeguard your DHCP infrastructure?\n\n——— Türkçe ———\n\nRogue cihazların subnet IP havuzunu tüketmesini önlemek için snooping rate limit uygulayın. 15 packet‑per‑second limiti, güvensiz switchportlarda DHCP sunucunuzu korur. Bu adımlar ağ güvenliğinizi güçlendirir. Ağınızı nasıl koruyorsunuz?\n\n#DHCPSnooping #NetworkEngineering #CiscoSwitch",
+   "status": "yt_failed",
+   "hook": "Stop your DHCP server from crashing in seconds from rogue lease requests.",
+   "duration_seconds": 28.03,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18115099417845176"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18115099417845176",
+   "file_id": "BAACAgQAAxkDAAIDWmrnAhd0BWEt9p5GR2PzFPcqvfKXAALQHQACtqU4Uyk2AkDIAYEKPQQ",
+   "message_id": 858
   }
  }
 }
