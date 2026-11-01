@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Legacy IPsec Ciphers Break Security: Upgrade to AES-256",
   "Auto-Revert Breaks Emergency Fixes: Alert on Drift First",
   "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
@@ -100,7 +99,8 @@
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
   "Rogue Router Joins HSRP? Set Authentication Password Now",
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
-  "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming"
+  "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
+  "Prevent 802.1X auth failures – map to Auth‑Fail VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -3955,6 +3955,37 @@
    "ig_id": "18099232163391218",
    "file_id": "BAACAgQAAxkDAAIDZmrncGdLcuCCFT09vO5AsoelL-fXAALLHgACtqU4U7lIAAHCv7Medj0E",
    "message_id": 870
+  },
+  "92ded749": {
+   "title": "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
+   "description": "Learn how to protect your LAN by directing 802.1X authentication failures to a dedicated VLAN. This quick guide shows the exact commands and best‑practice settings.\n\n#Shorts #AuthFailVLAN #networksecurity #networkengineer #8021X #VLAN",
+   "tags": [
+    "AuthFailVLAN",
+    "networksecurity",
+    "networkengineer",
+    "8021X",
+    "VLAN",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue devices slipping into your network—map 802.1X failures to a lock‑down VLAN. If a device can’t authenticate, keep it out of production. Use the Auth‑Fail VLAN as the fallback for all access‑layer ports and apply the authentication‑failure‑vlan command on each one. Never let a failed device roam in the main VLAN. Have you encountered an auth‑fail on the network? Share your experience or save this tip for next time. #AuthFailVLAN #networksecurity #8021X #VLAN #networkengineer",
+   "linkedin_caption": "Discover a quick, practical way to safeguard your LAN by redirecting 802.1X authentication failures to a dedicated Auth‑Fail VLAN. Follow the guide for precise commands and best‑practice settings, and keep your network secure. What’s your approach to managing 802.1X auth failures?\n\n——— Türkçe ———\n\nLAN’ınızı korumak için 802.1X kimlik doğrulama hatalarını özel bir Auth‑Fail VLAN’a yönlendirme yolunu keşfedin. Kılavuzu takip edin, doğru komutlar ve en iyi uygulama ayarlarını öğrenin, ve ağınızı güvenli tutun. 802.1X kimlik doğrulama hatalarını yönetme konusunda yaklaşımınız nedir?\n\n#AuthFailVLAN #networksecurity #8021X",
+   "status": "yt_failed",
+   "hook": "Never let a device that fails 802.1X stay on the production network.",
+   "duration_seconds": 23.6,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17918390721264544"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17918390721264544",
+   "file_id": "BAACAgQAAxkDAAIDb2rni6u2IiOtDBFZ6CS7DwyR_7G0AAIKHwACtqU4U_Bwtx_1ZbbAPQQ",
+   "message_id": 879
   }
  }
 }
