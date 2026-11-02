@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
   "Replace TFTP with SFTP/SCP for safe backups",
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
@@ -100,7 +99,8 @@
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
-  "Netmiko Bulk Password Lockout? Verify on Single Switch"
+  "Netmiko Bulk Password Lockout? Verify on Single Switch",
+  "RADIUS Outage Freezes Production: Set Critical Auth VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4048,6 +4048,37 @@
    "ig_id": "18141700561715175",
    "file_id": "BAACAgQAAxkDAAIDeWrn_juhWUmVQCqvbysJosgzLoVXAAKXHgACtqVAU0IIQpG1Ac99PQQ",
    "message_id": 889
+  },
+  "ff82d4ec": {
+   "title": "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
+   "description": "When your RADIUS or NAC server goes offline, switch ports default to fail-close and drop all client traffic. Configure authentication event server dead action to map devices to a critical VLAN and prevent production halts.\n\n#Shorts #8021x #networking #cybersecurity #cisco #networkengineer",
+   "tags": [
+    "8021x",
+    "networking",
+    "cybersecurity",
+    "cisco",
+    "networkengineer",
+    "Shorts"
+   ],
+   "instagram_caption": "Your RADIUS crash won’t halt production—if you pre‑configure fail‑open VLANs. Switches default to fail‑close, locking all ports when NAC stops. Set the authentication event server dead action to map clients to a critical VLAN. Keep that config template handy before outages hit.\n\nWhich scenario have you dealt with on the floor? Share in comments.\n\n#Shorts #8021x #networking #cybersecurity #cisco",
+   "linkedin_caption": "When your RADIUS or NAC server goes offline, switch ports drop all client traffic. Set a Critical Auth VLAN to keep production running. Any thoughts?\n\n——— Türkçe ———\n\nRADIUS veya NAC sunucusu çevrimdışı olduğunda, anahtar portları tüm müşteri trafiğini düşürür. Production'ı devam ettirmek için Critical Auth VLAN ayarlayın. Görüşleriniz?\n\n#8021x #networking #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never let a RADIUS server crash halt your entire production floor.",
+   "duration_seconds": 26.87,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18481605844117968"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18481605844117968",
+   "file_id": "BAACAgQAAxkDAAIDfWroN6zB0QWsY89CWwxHx34NRl7NAALEHgACtqVAUxkFZgoAAQwabD0E",
+   "message_id": 893
   }
  }
 }
