@@ -4,7 +4,6 @@ import sys
 import uuid
 import traceback
 import requests
-from moviepy import VideoFileClip
 
 import tg
 import youtube
@@ -128,9 +127,9 @@ def generate_one(state):
     uid = uuid.uuid4().hex[:8]
     OUT.mkdir(exist_ok=True)
     path = video_maker.build(script, OUT / f"{uid}.mp4")
-    rendered_video = VideoFileClip(str(path))
-    duration_seconds = round(float(rendered_video.duration), 2)
-    rendered_video.close()
+    # Render süresini MoviePy nesnesinden al; ffmpeg -i metadata parser'ı bazı
+    # MP4 track-reference/side-data satırlarında hataya düşebiliyor.
+    duration_seconds = round(float(video_maker.LAST_BUILD_DURATION), 2)
     desc, tags = compose(script)
     title = script["title"]
     from platform_captions import build_platform_captions
@@ -181,9 +180,7 @@ def generate_long_one(state):
     tags = [str(t).lstrip("#") for t in long_tags if t][:15]
     desc = (script.get("description", "") + "\n\nChapters:\n" + chapters + "\n\n" + " ".join("#" + t for t in tags))[:4900]
     title = script["title"]
-    rendered = VideoFileClip(str(path))
-    duration_seconds = round(float(rendered.duration), 2)
-    rendered.close()
+    duration_seconds = round(float(video_maker.LAST_BUILD_DURATION), 2)
     item = {
         "title": title, "description": desc, "tags": tags, "status": "pending",
         "format": "long", "duration_seconds": duration_seconds,
