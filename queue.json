@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
   "Ansible Cascading Outages: Replace ignore_errors: yes",
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
@@ -100,7 +99,8 @@
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
-  "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP"
+  "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
+  "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4141,6 +4141,37 @@
    "ig_id": "18127773886856861",
    "file_id": "BAACAgQAAxkDAAIDiGroupetyfcPg_UHr087Zvjnata-AAJgIAACtqVAU-3qTmvq8220PQQ",
    "message_id": 904
+  },
+  "3aba9c4a": {
+   "title": "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
+   "description": "Prevent rogue DHCP servers from hijacking client gateway addresses on your local VLAN. Secure your topology by configuring DHCP Snooping trust strictly on authorized switch uplink ports.\n\n#Shorts #DHCPSnooping #NetworkSecurity #Cisco #Switching #SysAdmin",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "Cisco",
+    "Switching",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your edge switch ports are safe from rogue DHCP? \n\nIf you ever leave a port trusted for incoming DHCP traffic, you’re inviting hijackers. Rogue servers can blast Offer and Ack messages, hijacking gateway settings across your VLAN. The fix? Enable DHCP snooping everywhere, but trust only your authorized uplink interfaces. Any untrusted access port drops those malicious offers before they reach users. \n\nWhich of these have you seen in production? Let me know below! \n\n#DHCPSnooping #NetworkSecurity #Cisco #Switching #SysAdmin",
+   "linkedin_caption": "Discover how to block rogue DHCP offers by setting Snooping Trust only on authorized uplink ports. This approach protects your VLAN from malicious DHCP servers that could hijack client gateway addresses, keeping your network topology secure. How do you ensure DHCP trust on your uplinks?\n\n——— Türkçe ———\n\nRogue DHCP tekliflerini engellemek için sadece yetkili uplink portlarında Snooping Trust ayarlamayı keşfedin. Bu yöntem, istemci geçit adreslerini çalabilecek kötü niyetli DHCP sunucularından VLANınızı koruyarak ağ topolojinizi güvenli tutar. Uplink’lerde DHCP güvenini nasıl sağlıyorsunuz?\n\n#DHCPSnooping #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never leave edge switch ports trusted for incoming DHCP server traffic.",
+   "duration_seconds": 38.16,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17924730141224335"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17924730141224335",
+   "file_id": "BAACAgQAAxkDAAIDjGrow9H5c3CQNBQSlawKjK9l20lQAAKMIAACtqVAU011ei04PoXFPQQ",
+   "message_id": 908
   }
  }
 }
