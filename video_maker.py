@@ -21,7 +21,10 @@ _fr.FFmpegInfosParser.parse_metadata_field_value = _safe_parse
 
 import random
 import shutil
+import subprocess
 import textwrap
+
+import imageio_ffmpeg
 
 import edge_tts
 import numpy as np
@@ -125,11 +128,27 @@ def build_scene(i, scene, tmp):
         kw = random.choice(ALLOWED_KEYWORDS)
     vpath = fetch_clip(kw, tmp / f"v{i}.mp4")
     if vpath:
-        clip = VideoFileClip(str(vpath)).without_audio()
-        scale = max(W / clip.w, H / clip.h)
-        clip = clip.resized(scale)
-        clip = clip.cropped(x_center=clip.w / 2, y_center=clip.h / 2, width=W, height=H)
-        clip = clip.with_effects([Loop(duration=d)]) if clip.duration < d else clip.subclipped(0, d)
+        # Pexels MP4 files may contain QuickTime timecode/track-reference
+        # metadata that breaks MoviePy's ffmpeg parser. Remux only the video
+        # stream first; keep the original clip as a safe fallback.
+        clean_path = tmp / f"v{i}_clean.mp4"
+        try:
+            subprocess.run(
+                [imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-i", str(vpath),
+                 "-map", "0:v:0", "-c:v", "copy", "-an", "-map_metadata", "-1",
+                 "-movflags", "+faststart", str(clean_path)],
+                check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+                timeout=90,
+            )
+            clip = VideoFileClip(str(clean_path)).without_audio()
+        except Exception as exc:
+            print(f"Stock video decode failed; using safe background: {exc}", flush=True)
+            clip = ColorClip((W, H), color=(15, 23, 42), duration=d)
+        if isinstance(clip, VideoFileClip):
+            scale = max(W / clip.w, H / clip.h)
+            clip = clip.resized(scale)
+            clip = clip.cropped(x_center=clip.w / 2, y_center=clip.h / 2, width=W, height=H)
+            clip = clip.with_effects([Loop(duration=d)]) if clip.duration < d else clip.subclipped(0, d)
     else:
         clip = ColorClip((W, H), color=(15, 23, 42), duration=d)
 
