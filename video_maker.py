@@ -28,6 +28,9 @@ from PIL import Image, ImageDraw, ImageFont
 from config import *
 
 W, H = 1080, 1920
+
+# Son render süresi; MoviePy'nin ffmpeg metadata parser'ına tekrar ihtiyaç duyulmaz.
+LAST_BUILD_DURATION = 0.0
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
@@ -137,12 +140,14 @@ def build_scene(i, scene, tmp):
 
 
 def build(script, out_path):
+    global LAST_BUILD_DURATION
     OUT.mkdir(exist_ok=True)
     tmp = OUT / f"tmp_{out_path.stem}"
     tmp.mkdir(exist_ok=True)
     try:
         scenes = [build_scene(i, s, tmp) for i, s in enumerate(script["scenes"])]
         final = concatenate_videoclips(scenes, method="compose")
+        LAST_BUILD_DURATION = float(final.duration)
         final.write_videofile(str(out_path), fps=30, codec="libx264", audio_codec="aac",
                               bitrate="3000k", preset="veryfast", threads=2, logger=None)
         final.close()
@@ -287,6 +292,7 @@ def _ts(sec):
 
 
 def build_long(script, out_path):
+    global LAST_BUILD_DURATION
     """script_gen.generate_long() çıktısından videoyu üretir.
     (yol, chapters_metni) döndürür; chapters'ı YouTube açıklamasına ekle."""
     OUT.mkdir(exist_ok=True)
@@ -299,6 +305,7 @@ def build_long(script, out_path):
             scenes.append(sc)
             durs.append(d)
         final = concatenate_videoclips(scenes, method="compose")
+        LAST_BUILD_DURATION = float(final.duration)
         final.write_videofile(str(out_path), fps=24, codec="libx264", audio_codec="aac",
                               bitrate="2500k", preset="veryfast", threads=2, logger=None)
         final.close()
