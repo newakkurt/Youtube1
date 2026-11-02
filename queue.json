@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "VLAN Down from Loop? Apply Storm‑Control with Trap/Shutdown",
   "Stop switch crashes: DHCP snooping rate-limit untrusted ports",
   "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
   "Replace TFTP with SFTP/SCP for safe backups",
@@ -100,7 +99,8 @@
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
-  "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit"
+  "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
+  "Netmiko Bulk Password Lockout? Verify on Single Switch"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4017,6 +4017,37 @@
    "ig_id": "18117572510471386",
    "file_id": "BAACAgQAAxkDAAIDdGrnvCIVVdDkhypfYieVBnqC4jU0AAJnHwACtqU4U8tY09utYUYrPQQ",
    "message_id": 884
+  },
+  "ec450047": {
+   "title": "Netmiko Bulk Password Lockout? Verify on Single Switch",
+   "description": "Running bulk password updates with Python Netmiko can lock you out of entire network fabrics if a syntax error occurs. Always stage credentials on a single switch and verify authentication before deploying fleet-wide.\n\n#Shorts #Netmiko #NetworkAutomation #Python #NetworkEngineering #CyberSecurity",
+   "tags": [
+    "Netmiko",
+    "NetworkAutomation",
+    "Python",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever accidentally lockout an entire network with a bulk password push?\n\nRunning bulk updates with Python Netmiko can lock you out if a syntax error sneaks in. The safest play? Stage the new creds on a single test switch, verify the login, and only then roll them out to the fleet. If the second connection fails, rollback instantly.\n\nHave you hit a lockout in production? Tell me in the comments. #Netmiko #NetworkAutomation #Python #CyberSecurity #NetworkEngineering",
+   "linkedin_caption": "Running bulk password updates with Python Netmiko can lock you out of an entire network fabric if a syntax error slips through. That’s why I always stage credentials on a single switch first, confirm authentication works, then roll out changes across the fleet. How do you validate bulk changes before deployment?\n\n——— Türkçe ———\n\nPython Netmiko ile toplu şifre güncellemeleri, bir sözdizimi hatası oluşursa tüm ağ kumaşını kilitleyebilir. Bu yüzden kimlik bilgilerini önce tek bir switch üzerinde sahneye koyar, kimlik doğrulamayı doğrular ve ardından değişiklikleri tüm cihazlara yayarım. Nasıl toplu değişiklikleri dağıtımdan önce doğruluyorsunuz?\n\n#Netmiko #NetworkAutomation #Python",
+   "status": "yt_failed",
+   "hook": "Never run bulk password automation scripts across your entire network at once.",
+   "duration_seconds": 30.3,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18141700561715175"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18141700561715175",
+   "file_id": "BAACAgQAAxkDAAIDeWrn_juhWUmVQCqvbysJosgzLoVXAAKXHgACtqVAU0IIQpG1Ac99PQQ",
+   "message_id": 889
   }
  }
 }
