@@ -6,9 +6,14 @@ _orig_parse = _fr.FFmpegInfosParser.parse_metadata_field_value
 
 
 def _safe_parse(self, line):
+    # FFmpeg 6/7 emits MP4 stream-group reference lines that MoviePy 2.1.x
+    # does not understand. They are not required to decode the video stream.
+    if "Stream group" in line or "Track Reference" in line:
+        return "", ""
     try:
         return _orig_parse(self, line)
-    except ValueError:
+    except Exception as exc:
+        print(f"MoviePy metadata line skipped: {line!r} ({type(exc).__name__})", flush=True)
         return "", ""
 
 
