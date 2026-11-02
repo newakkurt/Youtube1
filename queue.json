@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Ansible Cascading Outages: Replace ignore_errors: yes",
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
@@ -100,7 +99,8 @@
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
-  "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit"
+  "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
+  "Flash I/O Spikes? Set DHCP Snooping Database Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4203,6 +4203,37 @@
    "ig_id": "18500829124105732",
    "file_id": "BAACAgQAAxkDAAIDkGro9b5lrGTPDIzq0Hb5NHJRWgToAALaIAACQe9JU2X8sL83fBmxPQQ",
    "message_id": 912
+  },
+  "299c4ce7": {
+   "title": "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
+   "description": "Writing DHCP snooping binding records to switch flash too frequently can exhaust I/O and degrade control plane performance. Create a dedicated storage directory and tune write-delay intervals to keep switches running smoothly.\n\n#Shorts #DHCPSnooping #NetworkEngineering #CiscoSwitch #SysAdmin #NetworkSecurity",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkEngineering",
+    "CiscoSwitch",
+    "SysAdmin",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop your switch from dying on DHCP snoop writes. \n\nWriting DHCP snooping binding records to switch flash too frequently can exhaust I/O and degrade control plane performance. Use a dedicated flash directory with ip dhcp snooping database flash, and bump write-delay and timeout values so that lease updates don’t thrash the storage or spike the CPU.\n\nHave you hit this in production? Tell me in the comments.\n\n#DHCPSnooping #CiscoSwitch #NetworkEngineering #NetworkSecurity #SysAdmin",
+   "linkedin_caption": "Discover why writing DHCP snooping binding records to flash too often can overload I/O and slow your control plane. Learn how to set a dedicated storage directory and adjust the write‑delay interval so your Cisco switches stay responsive. How do you handle flash I/O spikes in your network?\n\n——— Türkçe ———\n\nFlash'e DHCP snooping binding kayıtlarını çok sık yazmanın I/O üzerindeki baskısını ve kontrol düzlemi performansını nasıl etkilediğini keşfedin. Ayrı bir depolama dizini oluşturup yazma gecikme süresini ayarlayarak Cisco anahtarlarınızın sorunsuz çalışmasını sağlayın. Ağınızda flash I/O dalgalanmalarını nasıl yönetiyorsunuz?\n\n#NetworkEngineering #CiscoSwitch #DHCPSnooping",
+   "status": "yt_failed",
+   "hook": "Never dump your DHCP snooping database file directly into root flash.",
+   "duration_seconds": 29.62,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17919265908522874"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17919265908522874",
+   "file_id": "BAACAgQAAxkDAAIDlGrpFVZr3pMqYLzc2ApxaCh2YDAPAAMhAAJB70lTZM8lBsVj99Q9BA",
+   "message_id": 916
   }
  }
 }
