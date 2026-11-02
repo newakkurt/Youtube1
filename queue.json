@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Snooping Trust: Stop Rogue Offers on Uplink Ports",
   "Replace TFTP with SFTP/SCP for safe backups",
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
@@ -100,7 +99,8 @@
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
-  "RADIUS Outage Freezes Production: Set Critical Auth VLAN"
+  "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
+  "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4079,6 +4079,37 @@
    "ig_id": "18481605844117968",
    "file_id": "BAACAgQAAxkDAAIDfWroN6zB0QWsY89CWwxHx34NRl7NAALEHgACtqVAUxkFZgoAAQwabD0E",
    "message_id": 893
+  },
+  "4f7abab3": {
+   "title": "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
+   "description": "Learn how enabling 802.11r Fast BSS Transition can cut handoff latency for phones, VoIP phones, and tablets. Follow the exact steps and precautions to deploy it safely across your corporate Wi‑Fi.\n\n#Shorts #FastBSS #NetworkEngineering #WiFi #CyberSecurity #EnterpriseIT",
+   "tags": [
+    "FastBSS",
+    "NetworkEngineering",
+    "WiFi",
+    "CyberSecurity",
+    "EnterpriseIT",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop losing VoIP calls during Wi‑Fi handoffs. Enable 802.11r Fast BSS Transition on all corporate APs, match WPA2/WPA3 Enterprise, set the same Mobility Domain ID, and test client compatibility. Roll it out only after a pilot on representative devices. Which of these have you hit in production? #FastBSS #NetworkEngineering #WiFi #CyberSecurity #EnterpriseIT",
+   "linkedin_caption": "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition. Learn how enabling it can cut handoff latency for phones, VoIP phones, and tablets. Follow exact steps and precautions to deploy it safely across corporate Wi‑Fi. How will you ensure a smooth rollout?\n\n——— Türkçe ———\n\nEliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition. 802.11r Fast BSS Transition'ı etkinleştirerek telefonlar, VoIP telefonlar ve tabletler için handoff gecikmesini nasıl azaltabileceğinizi öğrenin. Adımları ve önlemleri izleyerek kurumsal Wi‑Fi üzerinde güvenli bir şekilde dağıtın. Nasıl başarılı bir dağıtım sağlarsınız?\n\n#FastBSS #NetworkEngineering #WiFi",
+   "status": "yt_failed",
+   "hook": "Stop losing VoIP calls during Wi‑Fi handoffs.",
+   "duration_seconds": 32.97,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18023133068935541"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18023133068935541",
+   "file_id": "BAACAgQAAxkDAAIDg2rorjtJuB6kWcfZww9fm_yjoECyAAI5IAACtqVAU9ZjOlnCPtilPQQ",
+   "message_id": 899
   }
  }
 }
