@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Config Drifts: Use any_errors_fatal in Ansible",
   "Ansible Cascading Outages: Replace ignore_errors: yes",
   "Sticky MACs Vanish After Reboot? Save to Startup-Config",
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
@@ -100,7 +99,8 @@
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
-  "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks"
+  "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
+  "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4172,6 +4172,37 @@
    "ig_id": "17924730141224335",
    "file_id": "BAACAgQAAxkDAAIDjGrow9H5c3CQNBQSlawKjK9l20lQAAKMIAACtqVAU011ei04PoXFPQQ",
    "message_id": 908
+  },
+  "6fcb0eab": {
+   "title": "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
+   "description": "A rogue device can launch a DHCP starvation attack that overwhelms your server and CPU. Apply a 15 pps rate‑limit on untrusted ports while trusting uplinks to protect the network.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #DHCP #SysAdmin",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue devices from flooding DHCP! Enable DHCP snooping globally and trust only uplink ports. On each access port set a 15 pps rate limit. This keeps untrusted ports from being abused while letting legit traffic flow. Have you hit this in production? Tell me in the comments. #DHCPRateLimit #NetworkSecurity #Cisco #DHCP #SysAdmin",
+   "linkedin_caption": "Rogue devices can flood your DHCP server, causing starvation and high CPU load. By applying a 15 pps rate‑limit on untrusted ports and trusting only uplink connections, you can safeguard the network. How do you protect against DHCP starvation?\n\n——— Türkçe ———\n\nRogue cihazlar DHCP sunucunuzu doldurarak starvation ve yüksek CPU kullanımına neden olabilir. Güvenilmeyen portlarda 15 pps rate‑limit uygulayıp sadece uplink bağlantılarına güvenerek ağı koruyabilirsiniz. DHCP starvation’e karşı nasıl önlem alıyorsunuz?\n\n#DHCPRateLimit #NetworkSecurity #SysAdmin",
+   "status": "yt_failed",
+   "hook": "Never let a rogue device flood DHCP on untrusted ports.",
+   "duration_seconds": 29.45,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18500829124105732"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18500829124105732",
+   "file_id": "BAACAgQAAxkDAAIDkGro9b5lrGTPDIzq0Hb5NHJRWgToAALaIAACQe9JU2X8sL83fBmxPQQ",
+   "message_id": 912
   }
  }
 }
