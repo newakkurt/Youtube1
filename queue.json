@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Replace TFTP with SFTP/SCP for safe backups",
   "Why DHCP Snooping Table Vanishes on Reload – Save It to Flash",
   "Stop Config Drifts: Use any_errors_fatal in Ansible",
   "Ansible Cascading Outages: Replace ignore_errors: yes",
@@ -100,7 +99,8 @@
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
-  "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition"
+  "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
+  "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4110,6 +4110,37 @@
    "ig_id": "18023133068935541",
    "file_id": "BAACAgQAAxkDAAIDg2rorjtJuB6kWcfZww9fm_yjoECyAAI5IAACtqVAU9ZjOlnCPtilPQQ",
    "message_id": 899
+  },
+  "305bd9fa": {
+   "title": "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
+   "description": "If you don't back up the DHCP snooping binding table, a switch reload will clear it and cause DAI drops. Use the IOS command to write the DB to flash or a TFTP server and re‑enable snooping after a reboot.\n\n#Shorts #DHCPsnooping #networking #cybersecurity #networkengineer #Cisco",
+   "tags": [
+    "DHCPsnooping",
+    "networking",
+    "cybersecurity",
+    "networkengineer",
+    "Cisco",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever lose your DHCP snooping table on switch reload? It disappears, causing DAI drops. Save the binding table to flash with ip dhcp snooping database flash:snooping.db, or back it up to a TFTP server with ip dhcp snooping database tftp://<server>/snooping.db before a reboot, then re‑enable snooping afterward. Have you backed up your snooping DB before a reload? Share your experience below! #DHCPsnooping #Cisco #networking #cybersecurity #networkengineer",
+   "linkedin_caption": "When a switch reload erases the DHCP snooping binding table, DAI drops can appear. In this short, I show how to protect the table by writing it to flash or a TFTP server with an IOS command, then re‑enable snooping after the reboot. Have you secured yours?\n\n——— Türkçe ———\n\nBir switch yeniden başlatıldığında DHCP snooping binding tablosu silinir ve DAI düşüşleri meydana gelir. Bu kısa videoda, tabloyu flash veya bir TFTP sunucusuna IOS komutuyla kaydedip, yeniden başlatma sonrası snooping'i yeniden etkinleştirmenin yollarını gösteriyorum. Tabloyu korudunuz mu?\n\n#DHCPsnooping #networking #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop losing DHCP snooping bindings when your switch reloads.",
+   "duration_seconds": 36.94,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18127773886856861"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18127773886856861",
+   "file_id": "BAACAgQAAxkDAAIDiGroupetyfcPg_UHr087Zvjnata-AAJgIAACtqVAU-3qTmvq8220PQQ",
+   "message_id": 904
   }
  }
 }
