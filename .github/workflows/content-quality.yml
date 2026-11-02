@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "main.py"
+      - "video_maker.py"
       - "script_gen.py"
       - "platform_captions.py"
       - "tests/**"
@@ -12,6 +13,7 @@ on:
   pull_request:
     paths:
       - "main.py"
+      - "video_maker.py"
       - "script_gen.py"
       - "platform_captions.py"
       - "tests/**"
@@ -27,6 +29,6 @@ jobs:
         with:
           python-version: "3.11"
       - name: Compile content modules
-        run: python -m compileall -q main.py script_gen.py platform_captions.py
+        run: python -m compileall -q main.py video_maker.py script_gen.py platform_captions.py
       - name: Run content tests
         run: python -m unittest discover -s tests -v
