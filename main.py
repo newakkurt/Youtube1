@@ -18,6 +18,56 @@ def save(state):
     QUEUE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def content_quality_warnings(script, state, captions, duration_seconds):
+    """Non-blocking checks: warn before publishing; never interrupt a working pipeline."""
+    warnings = []
+    title = str(script.get("title", "")).strip()
+    if len(title) < 12 or len(title) > 95:
+        warnings.append(f"Başlık uzunluğu uygun değil ({len(title)} karakter).")
+    normalized = " ".join(title.casefold().split())
+    previous = {" ".join(str(x).casefold().split()) for x in state.get("history", [])}
+    if normalized and normalized in previous:
+        warnings.append("Başlık geçmişteki bir video başlığıyla aynı.")
+    scenes = script.get("scenes") or []
+    if len(scenes) < 3:
+        warnings.append(f"Sahne sayısı düşük ({len(scenes)}).")
+    if not 25 <= duration_seconds <= 45:
+        warnings.append(f"Shorts süresi hedef dışı: {duration_seconds:.1f} sn.")
+    for key, limit in (("instagram_caption", 2200), ("linkedin_caption", 3000)):
+        value = str(captions.get(key, "")).strip()
+        if not value:
+            warnings.append(f"{key} boş.")
+        elif len(value) > limit:
+            warnings.append(f"{key} platform sınırını aşıyor.")
+    return warnings
+
+
+def platform_summary(state, failures_only=False):
+    platforms = ("youtube", "instagram", "linkedin")
+    counts = {p: {} for p in platforms}
+    failures = []
+    for uid, item in state.get("items", {}).items():
+        for platform in platforms:
+            details = item.get(platform) or {}
+            status = details.get("status", "unknown")
+            counts[platform][status] = counts[platform].get(status, 0) + 1
+            if status == "failed":
+                failures.append((platform, item.get("title", uid), details.get("error", "Ayrıntı yok")))
+    if failures_only:
+        if not failures:
+            return "✅ Kayıtlı platform hatası yok."
+        lines = ["⚠️ Platform hataları (son kayıtlar):"]
+        for platform, title, error in failures[-15:]:
+            lines.append(f"- {platform.upper()} | {title[:70]} | {str(error)[:140]}")
+        return "\n".join(lines)
+    lines = ["📊 Çoklu Platform Raporu"]
+    for platform, statuses in counts.items():
+        total = sum(statuses.values())
+        lines.append(f"{platform.upper()}: {total} kayıt — " + ", ".join(f"{k}: {v}" for k, v in sorted(statuses.items())))
+    lines.append(f"Toplam içerik: {len(state.get('items', {}))}")
+    return "\n".join(lines)
+
+
 def compose(script):
     tags = [script.get("local_tag", "")] + script.get("global_tags", [])
     tags = ["#" + t.lstrip("#") for t in tags if t]
@@ -134,6 +184,9 @@ def generate_one(state):
     title = script["title"]
     from platform_captions import build_platform_captions
     platform_copies = build_platform_captions(script, desc)
+    warnings = content_quality_warnings(script, state, platform_copies, duration_seconds)
+    if warnings:
+        tg.send("🧪 Yayın öncesi içerik kontrolü (yayın engellenmedi):\n- " + "\n- ".join(warnings))
     state["history"] = (state["history"] + [title])[-100:]
     item = {"title": title, "description": desc, "tags": tags, **platform_copies, "status": "pending",
             "hook": script["scenes"][0]["text"], "duration_seconds": duration_seconds,
@@ -264,7 +317,8 @@ def dispatch_generate(mode="generate"):
 def handle_message(state, msg):
     cmd = (msg.get("text") or "").split()[0].lower() if msg.get("text") else ""
     if cmd in ("/yardim", "/yardım", "/start"):
-        tg.send("Komutlar:\n/durum - kuyruk özeti\n/trend - güncel konu başlıkları\n/analiz - haftalık rapor\n"
+        tg.send("Komutlar:\n/durum - kuyruk özeti\n/rapor - YouTube + Instagram + LinkedIn durum özeti\n/hatalar - kayıtlı platform hataları\n"
+                "/trend - güncel konu başlıkları\n/analiz - YouTube haftalık rapor\n"
                 "/ytcheck - YouTube OAuth bağlantısını yükleme yapmadan test et\n"
                 "/video - yeni Shorts üret\n/uzunvideo - 5-7 dakikalık video üret\n/iptal - bekleyenleri iptal et\n"
                 "/oneriler - hedef video ve yorum önerileri\n"
@@ -282,6 +336,10 @@ def handle_message(state, msg):
             f"{name}: {status_counts}" for name, status_counts in platforms.items()
         )
         tg.send(f"Genel durum: {counts}\nPlatformlar:\n{platform_text}\nSon 5:\n" + "\n".join(f"- {t}" for t in last))
+    elif cmd == "/rapor":
+        tg.send(platform_summary(state))
+    elif cmd == "/hatalar":
+        tg.send(platform_summary(state, failures_only=True))
     elif cmd == "/trend":
         import script_gen
         tg.send("🔥 Güncel başlıklar:\n" + "\n".join(f"- {h}" for h in script_gen.headlines(10)))
