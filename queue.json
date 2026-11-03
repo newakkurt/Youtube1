@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
   "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
   "Random STP Root Bridge? Fix It by Setting Lowest Priority",
@@ -100,7 +99,8 @@
   "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP",
   "Switch reload drops static IP devices – Save DHCP snooping binding DB",
   "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only",
-  "Stop breach risk: Blackhole VLAN + shutdown for unused ports"
+  "Stop breach risk: Blackhole VLAN + shutdown for unused ports",
+  "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4420,6 +4420,37 @@
    "ig_id": "18111064670337500",
    "file_id": "BAACAgQAAxkDAAIDsGrp73YmxZo2v4YxPd63RVszNOPJAAJtIQACQe9RU3s2YGSW4l4IPQQ",
    "message_id": 944
+  },
+  "54df40cb": {
+   "title": "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports",
+   "description": "A DHCP storm on an untrusted port can overwhelm your switch and CPU. Learn how a simple rate‑limit on those ports stops the attack while keeping legitimate uplink traffic flowing.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #ITOps #CyberSec",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "ITOps",
+    "CyberSec",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen a DHCP storm bring your switch to a halt? Set a 15‑pkt/s rate‑limit on every untrusted port and keep the rest of the network humming. Don’t touch trusted uplinks or you’ll choke legitimate traffic. Which of these have you hit in production? Let me know below. #DHCPRateLimit #NetworkSecurity #Cisco #ITOps #CyberSec",
+   "linkedin_caption": "A DHCP storm on an untrusted port can flood your switch and CPU. In this short video we show how applying a simple rate‑limit to those ports blocks the storm while still allowing legitimate uplink traffic. Have you secured your edge ports?\n\n——— Türkçe ———\n\nGüvenilmeyen bir portta DHCP fırtınası, switch ve CPU'yu tıkar. Bu kısa videoda, bu portlara basit bir rate‑limit uygulayarak saldırıyı engellerken, geçerli uplink trafiğinin devam etmesini gösteriyoruz. Kenar portlarınızı güvenli hâle getirdiniz mi?\n\n#DHCPRateLimit #NetworkSecurity #ITOps",
+   "status": "yt_failed",
+   "hook": "Never let a DHCP storm take down your switch.",
+   "duration_seconds": 21.64,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18235797475324762"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18235797475324762",
+   "file_id": "BAACAgQAAxkDAAIDtmrqFDCLWfclEPCFn5PDjuHEp28NAALJIQACQe9RUyAvR16jcg6YPQQ",
+   "message_id": 950
   }
  }
 }
