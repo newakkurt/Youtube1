@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
   "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
@@ -100,7 +99,8 @@
   "Never auto‑fix config drift—alert first, then remediate",
   "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP",
   "Switch reload drops static IP devices – Save DHCP snooping binding DB",
-  "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only"
+  "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only",
+  "Stop breach risk: Blackhole VLAN + shutdown for unused ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4389,6 +4389,37 @@
    "ig_id": "18181128292445965",
    "file_id": "BAACAgQAAxkDAAIDrGrpzeQnocMM5JvMGGsOyrbjKe5YAAL-IAACQe9RUzcYAAGXyfvhnz0E",
    "message_id": 940
+  },
+  "4bb92bbf": {
+   "title": "Stop breach risk: Blackhole VLAN + shutdown for unused ports",
+   "description": "Secure your campus by moving unused ports into a blackhole VLAN and shutting them down. Regularly audit that VLAN to ensure no legitimate device gets trapped.\n\n#Shorts #BlackholeVLAN #NetworkSecurity #Cisco #CyberDefense #ITOps",
+   "tags": [
+    "BlackholeVLAN",
+    "NetworkSecurity",
+    "Cisco",
+    "CyberDefense",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Never leave a switch port open—it's a gateway for attackers. Assign unused ports to a dedicated blackhole VLAN and use interface range + shutdown to disable them. Keep the VLAN under regular watch to catch mis‑assigned devices. Have you done this in production? Let me know below. #BlackholeVLAN #NetworkSecurity #Cisco #CyberDefense #ITOps",
+   "linkedin_caption": "Stop breach risk: Blackhole VLAN + shutdown for unused ports. Secure your campus by moving idle ports into a blackhole VLAN and shutting them down, then audit the VLAN regularly to confirm no legitimate device is trapped. How do you handle unused ports?\n\n——— Türkçe ———\n\nİhlal riskini durdurun: Blackhole VLAN + kullanılmayan portların kapatılması. Kampüsünüzü, kullanılmayan portları Blackhole VLAN’a taşıyarak ve kapatarak güvence altına alın, ardından VLAN’ı düzenli olarak denetleyerek meşru bir cihazın yakalanmadığını doğrulayın. Kullanılmayan portları nasıl yönetiyorsunuz?\n\n#NetworkSecurity #BlackholeVLAN #CyberDefense",
+   "status": "yt_failed",
+   "hook": "Never leave empty switch ports active—they’re open doors for intruders.",
+   "duration_seconds": 25.78,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18111064670337500"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18111064670337500",
+   "file_id": "BAACAgQAAxkDAAIDsGrp73YmxZo2v4YxPd63RVszNOPJAAJtIQACQe9RU3s2YGSW4l4IPQQ",
+   "message_id": 944
   }
  }
 }
