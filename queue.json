@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
   "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
   "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
@@ -100,7 +99,8 @@
   "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
   "Never auto‑fix config drift—alert first, then remediate",
   "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP",
-  "Switch reload drops static IP devices – Save DHCP snooping binding DB"
+  "Switch reload drops static IP devices – Save DHCP snooping binding DB",
+  "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4358,6 +4358,37 @@
    "ig_id": "18014768774764952",
    "file_id": "BAACAgQAAxkDAAIDpmrppDi5lEXJGoVjGntBryG0pfIDAALaIAACQe9RU7755razICjSPQQ",
    "message_id": 934
+  },
+  "54f480c4": {
+   "title": "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only",
+   "description": "DHCP snooping rate‑limit stops starvation attacks and rogue device storms on untrusted ports. Keep uplinks open to avoid impacting legitimate DHCP traffic.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #SwitchConfig #DHCP",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchConfig",
+    "DHCP",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever had your switch crash from a DHCP storm? The fix? Apply a 15 pps DHCP‑snooping limit on every untrusted port and keep your trusted uplinks unlimited so you don’t choke legitimate traffic. Remember: only the untrusted ports get the rate‑limit. Have you hit this in production? Let me know in the comments! #DHCPRateLimit #NetworkSecurity #CiscoSwitch #DHCPStorms #NetworkEngineering",
+   "linkedin_caption": "DHCP storms can cripple a network, but a targeted rate‑limit on untrusted ports keeps rogue devices at bay while leaving uplink ports unrestricted for genuine DHCP traffic. Learn why focusing the limit makes a difference. How do you protect your DHCP fabric?\n\n——— Türkçe ———\n\nDHCP fırtınaları ağınızı felç edebilir, ancak sadece güvenilmeyen portlarda uygulanan rate‑limit, sahte cihazları engellerken uplink portlarını özgür bırakarak gerçek DHCP trafiğini korur. Sınırlamayı nerede odaklayacağınızı biliyor musunuz? Ağınızda DHCP’yi nasıl koruyorsunuz?\n\n#DHCPRateLimit #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop DHCP storms from taking your switch down.",
+   "duration_seconds": 22.76,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18181128292445965"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18181128292445965",
+   "file_id": "BAACAgQAAxkDAAIDrGrpzeQnocMM5JvMGGsOyrbjKe5YAAL-IAACQe9RUzcYAAGXyfvhnz0E",
+   "message_id": 940
   }
  }
 }
