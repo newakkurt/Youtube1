@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
   "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
   "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
   "Ansible ignore_errors Triggers Cascading Outages – Use any_errors_fatal",
@@ -100,7 +99,8 @@
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
   "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
   "Never auto‑fix config drift—alert first, then remediate",
-  "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP"
+  "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP",
+  "Switch reload drops static IP devices – Save DHCP snooping binding DB"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4327,6 +4327,37 @@
    "ig_id": "17953430715311861",
    "file_id": "BAACAgQAAxkDAAIDomrpiGXZwtX6uHMu9IWQM1AV_CL0AAJKIQACQe9JUxWnnZE11QaDPQQ",
    "message_id": 930
+  },
+  "cd264630": {
+   "title": "Switch reload drops static IP devices – Save DHCP snooping binding DB",
+   "description": "When a switch reloads, the DHCP snooping binding table can be lost, causing IP Source Guard and DAI to block static IP devices and clients without renewed leases. Save the binding DB to flash or TFTP and manually add static bindings to keep your network running.\n\n#Shorts #SwitchReload #NetworkEngineering #CyberSecurity #DHCP #DAI",
+   "tags": [
+    "SwitchReload",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "DHCP",
+    "DAI",
+    "Shorts"
+   ],
+   "instagram_caption": "Reloading a switch and watching your static printers, PLCs, and cameras drop out? 🚨 Before you hit reboot, back up the DHCP snooping binding DB to flash or TFTP/FTP—so IP Source Guard and DAI won’t block them. Then manually configure those static bindings to keep the traffic flowing after the reload.\n\nHave you hit a DAI or IP Source Guard drop post‑reload? Drop a comment or save this for your next reboot.\n\n#SwitchReload #DHCPSnooping #NetworkEngineering #CyberSecurity #IPSourceGuard",
+   "linkedin_caption": "Switch reload can wipe the DHCP snooping binding DB, blocking static IP devices under IP Source Guard and DAI. Safeguard the DB by saving it to flash or TFTP, then manually add static bindings to keep the network alive. How do you handle this?\n\n——— Türkçe ———\n\nSwitch reload, DHCP snooping binding DB’yi silerek statik IP cihazları IP Source Guard ve DAI ile engelliyor. DB’yi flash veya TFTP’ye kaydedip statik binding’leri manuel ekleyerek ağınızı çalışır durumda tutun. Bunu nasıl yönetiyorsunuz?\n\n#SwitchReload #DHCP #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Never forget to back up your DHCP snooping binding database before reload.",
+   "duration_seconds": 28.59,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18014768774764952"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18014768774764952",
+   "file_id": "BAACAgQAAxkDAAIDpmrppDi5lEXJGoVjGntBryG0pfIDAALaIAACQe9RU7755razICjSPQQ",
+   "message_id": 934
   }
  }
 }
