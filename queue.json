@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
   "Random STP Root Bridge? Fix It by Setting Lowest Priority",
   "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
@@ -100,7 +99,8 @@
   "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only",
   "Stop breach risk: Blackhole VLAN + shutdown for unused ports",
   "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports",
-  "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer"
+  "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer",
+  "Avoid manual port restores: set errdisable recovery timer"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4482,6 +4482,37 @@
    "ig_id": "18002133024041677",
    "file_id": "BAACAgQAAxkDAAIDumrqI4qUw9vHRtvlkHZuQy6tsp8FAALoIQACQe9RUxO9EHbbHKSBPQQ",
    "message_id": 954
+  },
+  "37d55421": {
+   "title": "Avoid manual port restores: set errdisable recovery timer",
+   "description": "Learn how setting the errdisable recovery timer saves you from costly field visits. A quick CLI change keeps ports up and your team productive.\n\n#Shorts #errdisable #networking #cybersecurity #networkengineer #ITautomation",
+   "tags": [
+    "errdisable",
+    "networking",
+    "cybersecurity",
+    "networkengineer",
+    "ITautomation",
+    "Shorts"
+   ],
+   "instagram_caption": "Tired of walking to every shut port? 🚶‍♂️ Stop the manual hassle—automate it!  \n\nSet the errdisable recovery timer to 300 seconds and let the switch bring ports back online on its own.  This simple CLI tweak keeps your team in the office and the network running smoothly.  \n\nWhat’s your go‑to recovery timer in production? Let us know in the comments!  \n\n#Shorts #errdisable #networking #cybersecurity #networkengineer",
+   "linkedin_caption": "Stop spending time on manual port restores. A simple errdisable recovery timer setting keeps your ports up automatically and eliminates costly field visits. A quick CLI change keeps your team productive. Ready to automate your network?\n\n——— Türkçe ———\n\nManuel port restore'larını önleyin. errdisable recovery timer ayarı, portlarınızı otomatik olarak açık tutar ve pahalı saha ziyaretlerini ortadan kaldırır. Hızlı bir CLI değişikliği, ekibinizi üretken tutar. Ağınızı otomatikleştirmeye hazır mısınız?\n\n#errdisable #networking #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop walking to every shut port—automate its recovery!",
+   "duration_seconds": 23.9,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18350108869254412"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18350108869254412",
+   "file_id": "BAACAgQAAxkDAAIDwGrqRR9JxVRC0JPUXLNPE0OtOgnGAAIoIgACQe9RU_bjHb_8mtucPQQ",
+   "message_id": 960
   }
  }
 }
