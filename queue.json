@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
   "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
   "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
   "VLAN Down? Apply Storm‑Control Broadcast with Shutdown",
@@ -100,7 +99,8 @@
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
   "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
-  "Never auto‑fix config drift—alert first, then remediate"
+  "Never auto‑fix config drift—alert first, then remediate",
+  "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4296,6 +4296,37 @@
    "ig_id": "18023919806930067",
    "file_id": "BAACAgQAAxkDAAIDnmrpT42LP1piv82MBqgH_rNxERr7AAIvIQACQe9JU-1j0JqpHBPTPQQ",
    "message_id": 926
+  },
+  "ce1906bc": {
+   "title": "Prevent Fake Routing Packets – Enable TTL Security on OSPF/EIGRP/BGP",
+   "description": "TTL Security (GTSM) blocks spoofed routing updates from devices beyond one hop, protecting OSPF, EIGRP, and BGP from CPU‑exhaustion attacks. Enable the proper CLI commands on your routers and remember it only works with direct neighbors.\n\n#Shorts #TTLsecurity #NetworkSecurity #Routing #Cisco #NetworkEngineering",
+   "tags": [
+    "TTLsecurity",
+    "NetworkSecurity",
+    "Routing",
+    "Cisco",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen a rogue router flood your CPU? Stop it in seconds with TTL security. On Cisco, enable it with `ip ospf ttl-security 1`, `router eigrp <asn> ttl-security 1`, or `router bgp <asn> ttl-security 1`. It blocks spoofed routing updates from beyond one hop so your routers stay healthy. Remember GTSM only works with direct neighbors—enable it on the link you control. Which of these have you hit in production? Tell me in the comments.\n\n#TTLsecurity #NetworkSecurity #Cisco #Routing #GTSM",
+   "linkedin_caption": "Prevent fake routing packets: Enable TTL Security on OSPF/EIGRP/BGP. TTL Security (GTSM) stops spoofed updates beyond one hop, protecting routing protocols from CPU‑exhaustion attacks. Enable the CLI commands for direct neighbors. Do you use TTL security in your networks? #TTLsecurity #NetworkSecurity #Routing\n\n——— Türkçe ———\n\nİki atlayı aşan sahte yönlendirme paketlerini önleyin: OSPF/EIGRP/BGP'de TTL Güvenliğini etkinleştirin. TTL Security (GTSM), bir atlayı geçen sahte güncellemeleri engeller, yönlendirme protokollerini CPU‑tükenme saldırılarından korur. CLI komutlarını doğrudan komşular için etkinleştirin. Ağınızda TTL güvenliğini kullanıyor musunuz? #TTLsecurity #NetworkSecurity #Routing\n\n#TTLsecurity #NetworkSecurity #Routing",
+   "status": "yt_failed",
+   "hook": "Never trust routing packets from beyond one hop.",
+   "duration_seconds": 27.88,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17953430715311861"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17953430715311861",
+   "file_id": "BAACAgQAAxkDAAIDomrpiGXZwtX6uHMu9IWQM1AV_CL0AAJKIQACQe9JUxWnnZE11QaDPQQ",
+   "message_id": 930
   }
  }
 }
