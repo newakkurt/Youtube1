@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent Rogue Route Injection: Enable OSPF MD5 Auth",
   "Single Device Failure Stops Automation? Use any_errors_fatal to Abort",
   "Random STP Root Bridge? Fix It by Setting Lowest Priority",
   "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
@@ -100,7 +99,8 @@
   "Switch reload drops static IP devices – Save DHCP snooping binding DB",
   "DHCP Storms? Set Rate‑Limit on Untrusted Ports Only",
   "Stop breach risk: Blackhole VLAN + shutdown for unused ports",
-  "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports"
+  "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports",
+  "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4451,6 +4451,37 @@
    "ig_id": "18235797475324762",
    "file_id": "BAACAgQAAxkDAAIDtmrqFDCLWfclEPCFn5PDjuHEp28NAALJIQACQe9RUyAvR16jcg6YPQQ",
    "message_id": 950
+  },
+  "a28b1e0c": {
+   "title": "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer",
+   "description": "User‑plugged mini switches can create loops and seize the root bridge, causing an err‑disable. Enabling PortFast with BPDU Guard and a 300‑second recovery timer stops the threat automatically.\n\n#Shorts #PortFastGuard #NetworkSecurity #SwitchHardening #Cisco #NetworkEngineering",
+   "tags": [
+    "PortFastGuard",
+    "NetworkSecurity",
+    "SwitchHardening",
+    "Cisco",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Mini switch crash? Don’t let a rogue plug‑in bring your LAN down. Mark every access port as edge with PortFast, then enable BPDU Guard and set a 300‑second err‑disable recovery timer. Together they automatically prevent loops and keep the network stable. Have you implemented all three in your environment? #Shorts #PortFastGuard #NetworkSecurity #SwitchHardening #Cisco",
+   "linkedin_caption": "Mini switches can lock the root bridge and trigger err‑disable. This video shows how enabling PortFast with BPDU Guard and a 300‑second Recovery Timer automatically stops the threat. Watch the steps in the clip and protect your network. Got any tips?\n\n——— Türkçe ———\n\nMini switches root bridge’ini kilitleyebilir ve err‑disable tetikleyebilir. Bu video, PortFast ile BPDU Guard ve 300 saniyelik Recovery Timer’ın tehlikeyi otomatik olarak durdurduğunu gösteriyor. Bu adımların akışını video izleyerek öğrenin ve ağınızı koruyun. Bir öneriniz var mı?\n\n#Shorts #PortFastGuard #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Stop letting a user‑plugged mini switch bring your LAN down.",
+   "duration_seconds": 33.93,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18002133024041677"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18002133024041677",
+   "file_id": "BAACAgQAAxkDAAIDumrqI4qUw9vHRtvlkHZuQy6tsp8FAALoIQACQe9RUxO9EHbbHKSBPQQ",
+   "message_id": 954
   }
  }
 }
