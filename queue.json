@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Random STP Root Bridge? Fix It by Setting Lowest Priority",
   "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
@@ -100,7 +99,8 @@
   "Stop breach risk: Blackhole VLAN + shutdown for unused ports",
   "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports",
   "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer",
-  "Avoid manual port restores: set errdisable recovery timer"
+  "Avoid manual port restores: set errdisable recovery timer",
+  "802.1X auth failures: isolate devices with Auth-Fail VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4513,6 +4513,37 @@
    "ig_id": "18350108869254412",
    "file_id": "BAACAgQAAxkDAAIDwGrqRR9JxVRC0JPUXLNPE0OtOgnGAAIoIgACQe9RU_bjHb_8mtucPQQ",
    "message_id": 960
+  },
+  "cd6229b8": {
+   "title": "802.1X auth failures: isolate devices with Auth-Fail VLAN",
+   "description": "Learn how to protect your network by routing 802.1X authentication failures to a dedicated VLAN. Quick steps to configure and enforce the policy.\n\n#Shorts #AuthFailVLAN #NetworkSecurity #Cisco #8021X #VLAN",
+   "tags": [
+    "AuthFailVLAN",
+    "NetworkSecurity",
+    "Cisco",
+    "8021X",
+    "VLAN",
+    "Shorts"
+   ],
+   "instagram_caption": "Tired of rogue devices slipping through on 802.1X? 🚫\n\nRoute authentication failures to a dedicated Auth‑Fail VLAN. Add the VLAN to the 802.1X policy and on each access port set ‘authentication failure vlan 200’—that keeps bad gear isolated.\n\nHave you set this up in production? Drop a comment or save to remember. #AuthFailVLAN #NetworkSecurity #8021X #Cisco #VLAN",
+   "linkedin_caption": "Discover how to safeguard your network by directing 802.1X authentication failures to a dedicated Auth‑Fail VLAN. This short guide walks you through the essential steps to configure and enforce the policy. What’s your preferred way to handle auth failures?\n\n——— Türkçe ———\n\nAğınızı korumak için 802.1X kimlik doğrulama hatalarını özel bir Auth‑Fail VLAN’a yönlendirmeyi keşfedin. Bu kısa video, politikayı yapılandırma ve uygulama adımlarını gösteriyor. Auth failures ile başa çıkma yönteminiz nedir?\n\n#AuthFailVLAN #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop letting failed 802.1X devices roam your network",
+   "duration_seconds": 22.38,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18084668540708308"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18084668540708308",
+   "file_id": "BAACAgQAAxkDAAIDxmrqcVlbn1MFgEMJcnpz90fDwMKHAAJ1IgACQe9RU_yjvm7sfzhHPQQ",
+   "message_id": 966
   }
  }
 }
