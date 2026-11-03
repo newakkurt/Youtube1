@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Sticky MACs Vanish After Reboot? Save to Startup-Config",
   "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
   "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
@@ -100,7 +99,8 @@
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
-  "Flash I/O Spikes? Set DHCP Snooping Database Timeout"
+  "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
+  "VLAN Hopping Attacks? Change Native VLAN & Blackhole"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4234,6 +4234,37 @@
    "ig_id": "17919265908522874",
    "file_id": "BAACAgQAAxkDAAIDlGrpFVZr3pMqYLzc2ApxaCh2YDAPAAMhAAJB70lTZM8lBsVj99Q9BA",
    "message_id": 916
+  },
+  "54929a0b": {
+   "title": "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
+   "description": "Leaving default native VLAN 1 on 802.1Q trunks creates CDP errors and exposes switches to double-tagging attacks. Secure your trunks with an isolated dummy native VLAN and blackhole all unused access ports.\n\n#Shorts #vlansecurity #networkengineering #cisco #cybersecurity #switchconfig",
+   "tags": [
+    "vlansecurity",
+    "networkengineering",
+    "cisco",
+    "cybersecurity",
+    "switchconfig",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your trunk is safe? The default native VLAN 1 is a hidden attack vector.\n\nNever leave VLAN 1 as your native on trunk links. Assign an unused dummy VLAN as the native and make sure both switch ends match – otherwise you’ll flood the network with CDP errors and expose your fabric to double‑tagging attacks.\n\nMove every unused access port to a blackhole VLAN and shut it down. It’s a quick, hard‑won win.\n\nHave you patched your trunks yet? Drop a comment below! #VLANHopping #NetworkSecurity #SwitchConfig #Cisco #CyberSecurity",
+   "linkedin_caption": "VLAN Hopping Attacks? Change Native VLAN & Blackhole – Leaving default native VLAN 1 on 802.1Q trunks can expose switches to double-tagging attacks and CDP errors. Secure your trunks with an isolated dummy native VLAN and blackhole all unused access ports. Are you ready to harden your network? #vlansecurity #networkengineering #cybersecurity\n\n——— Türkçe ———\n\nVLAN Hopping Attacks? Change Native VLAN & Blackhole – Varsayılan native VLAN 1'in 802.1Q trunk'larda kalması, switch'leri double-tagging saldırılarına ve CDP hatalarına açabilir. Trunk'larınızı izole bir dummy native VLAN ile güvence altına alın ve kullanılmayan access port'ları blackhole'layın. Ağınızı güçlendirmeye hazır mısınız? #vlansecurity #networkengineering #cybersecurity\n\n#vlansecurity #networkengineering #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never leave default VLAN 1 as your native VLAN on trunk links.",
+   "duration_seconds": 32.18,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18099088796117002"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18099088796117002",
+   "file_id": "BAACAgQAAxkDAAIDmGrpNoVFmyKgQ8MO9wZXFmPKH1DmAAIrIQACQe9JUzWwwr97gsf9PQQ",
+   "message_id": 920
   }
  }
 }
