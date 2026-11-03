@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Broadcast Storm Crashing VLAN? Enable Storm‑Control with Trap/Shutdown",
   "MAB Reauth Timers Drop Devices to Unauthorized VLAN – Fix It",
   "Rogue Gateway Takeover: Secure HSRP with MD5 Authentication",
   "User Port err‑disable from Mini Switch? Fix with PortFast + BPDU Guard",
@@ -100,7 +99,8 @@
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
-  "VLAN Hopping Attacks? Change Native VLAN & Blackhole"
+  "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
+  "Never auto‑fix config drift—alert first, then remediate"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4265,6 +4265,37 @@
    "ig_id": "18099088796117002",
    "file_id": "BAACAgQAAxkDAAIDmGrpNoVFmyKgQ8MO9wZXFmPKH1DmAAIrIQACQe9JUzWwwr97gsf9PQQ",
    "message_id": 920
+  },
+  "0b04e060": {
+   "title": "Never auto‑fix config drift—alert first, then remediate",
+   "description": "Learn why automatically correcting live configuration drift can break planned exceptions. Set up alerts first, then manually verify before applying fixes.\n\n#Shorts #ConfigAlert #NetworkSecurity #Automation #ConfigManagement #OpsBestPractices",
+   "tags": [
+    "ConfigAlert",
+    "NetworkSecurity",
+    "Automation",
+    "ConfigManagement",
+    "OpsBestPractices",
+    "Shorts"
+   ],
+   "instagram_caption": "Auto‑fixing config drift? Think again. Trigger an alarm first and enable Config‑Change Alert on your network management system. Disable automatic remediation scripts for template mismatches, then verify before applying fixes—this keeps planned exceptions safe. Have you disabled auto‑remediation for template mismatches in your environment? #ConfigAlert #NetworkSecurity #Automation #OpsBestPractices",
+   "linkedin_caption": "Never auto‑fix config drift—alert first, then remediate. Learn why automatically correcting live configuration drift can break planned exceptions. Set up alerts first, then manually verify before applying fixes. What’s your approach? #ConfigAlert #Automation #OpsBestPractices\n\n——— Türkçe ———\n\nNever auto‑fix config drift — alert first, then remediate. Neden otomatik olarak canlı yapılandırma sürüklemesini (config drift) düzeltmenin planlanmış istisnaları bozabileceğini öğrenin. Önce uyarılar kurun, ardından düzeltmelerden önce manuel doğrulama yapın. Sizin yaklaşımınız nedir? #ConfigAlert #Automation #OpsBestPractices\n\n#ConfigAlert #Automation #OpsBestPractices",
+   "status": "yt_failed",
+   "hook": "Never auto‑fix live config drift—trigger an alarm first.",
+   "duration_seconds": 21.87,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18023919806930067"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18023919806930067",
+   "file_id": "BAACAgQAAxkDAAIDnmrpT42LP1piv82MBqgH_rNxERr7AAIvIQACQe9JU-1j0JqpHBPTPQQ",
+   "message_id": 926
   }
  }
 }
