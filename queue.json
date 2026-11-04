@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
@@ -100,7 +99,8 @@
   "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer",
   "Avoid manual port restores: set errdisable recovery timer",
   "802.1X auth failures: isolate devices with Auth-Fail VLAN",
-  "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks"
+  "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks",
+  "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4575,6 +4575,37 @@
    "ig_id": "18485710003113640",
    "file_id": "BAACAgQAAxkDAAIDymrqoo7iZceYiP045cwoQAdWhtaPAAKkHQACQe9ZU9qVwHFUwDC6PQQ",
    "message_id": 970
+  },
+  "fb8e2e9a": {
+   "title": "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP",
+   "description": "If you don’t explicitly back up the DHCP snooping binding table, a switch reload wipes it out. Use the ip dhcp snooping database command and copy the file to flash or a TFTP server to keep your bindings safe.\n\n#Shorts #DHCPsnooping #NetworkEngineering #Cisco #Security #BestPractices",
+   "tags": [
+    "DHCPsnooping",
+    "NetworkEngineering",
+    "Cisco",
+    "Security",
+    "BestPractices",
+    "Shorts"
+   ],
+   "instagram_caption": "A single switch reload can erase your DHCP snooping bindings if you haven’t saved them.\n\nThe binding table lives in RAM, so before a reload run `ip dhcp snooping database flash:dhcp_snooping.db` and back it up with `copy flash:dhcp_snooping.db tftp:`. Cisco docs say this must be done before reloading to keep your network safe.\n\nHave you had to recover a DHCP snooping DB from flash or TFTP after a reload? Drop a comment.\n\n#DHCPsnooping #Cisco #NetworkEngineering #Security #BestPractices",
+   "linkedin_caption": "Learn how to prevent DHCP Snooping DB loss by backing up to Flash or TFTP. A switch reload without a backup wipes the binding table. Use ip dhcp snooping database and copy the file to Flash or a TFTP server to keep your bindings safe. How do you protect your DHCP snooping DB? #DHCPsnooping #NetworkEngineering #Cisco\n\n——— Türkçe ———\n\nDHCP Snooping DB kaybını önlemek için dosyayı Flash veya TFTP'ye kaydedin. Yeniden başlatıldığında yedekleme yoksa bağlama tablosu silinir. ip dhcp snooping database komutunu kullanarak dosyayı Flash'a veya TFTP sunucusuna kopyalayın. Bindings'ınızı nasıl koruyorsunuz? #DHCPsnooping #NetworkEngineering #Cisco\n\n#DHCPsnooping #NetworkEngineering #Cisco",
+   "status": "yt_failed",
+   "hook": "Never assume write‑memory saves your DHCP snooping bindings.",
+   "duration_seconds": 38.34,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18097291202133773"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18097291202133773",
+   "file_id": "BAACAgQAAxkDAAIDzmrq2XryQ0PnQ50se7hzCjZwpgLAAAJWHgACa1FZU646nMM1nuCiPQQ",
+   "message_id": 974
   }
  }
 }
