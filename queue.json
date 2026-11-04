@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
@@ -100,7 +99,8 @@
   "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks",
   "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP",
   "Encrypt WAC-AP traffic: Use CAPWAP over TLS",
-  "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open"
+  "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open",
+  "Stop auto-config pushes via cron or GitHub – enforce change-control"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4668,6 +4668,37 @@
    "ig_id": "17909961492595071",
    "file_id": "BAACAgQAAxkDAAID1mrrIAR3PkluG3dZCTfkk-mI7z7xAAIRHwACa1FZU2wkhtEn9vhDPQQ",
    "message_id": 982
+  },
+  "d6b4e35d": {
+   "title": "Stop auto-config pushes via cron or GitHub – enforce change-control",
+   "description": "Running config‑push scripts via cron or GitHub Actions outside maintenance can break the network. Use approved change‑control windows and manual approval to keep stability.\n\n#Shorts #configAutomation #NetworkEngineering #CyberSecurity #Automation #ChangeControl",
+   "tags": [
+    "configAutomation",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Automation",
+    "ChangeControl",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen an auto‑push wreck the network during peak hours? Running config‑push scripts via cron or GitHub Actions outside maintenance can break stability. Use an approved change‑control window and manual approval to keep the network safe. Have you blocked auto‑pushes in production? Share your approach!",
+   "linkedin_caption": "Discover why running config‑push scripts through cron or GitHub Actions outside of approved maintenance windows can jeopardize network stability. Learn how enforcing change‑control and requiring manual approval safeguards your infrastructure. How do you handle change control?\n\n——— Türkçe ———\n\nCron veya GitHub Actions üzerinden bakım dışı config‑push betiklerini çalıştırmanın ağ kararlılığını nasıl tehdit ettiğini keşfedin. Değişiklik kontrolünü zorlayarak ve manuel onay talep ederek altyapınızı korumanın yollarını öğrenin. Değişiklik kontrolünü nasıl yönetiyorsunuz?\n\n#configAutomation #ChangeControl #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Stop pushing configs automatically when the network isn’t in maintenance!",
+   "duration_seconds": 24.38,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17990955357099043"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17990955357099043",
+   "file_id": "BAACAgQAAxkDAAID3GrrRDgRhgntK9hAgnR5GMoaq3kQAAJwGgACa1FhUzXK6uM5GCquPQQ",
+   "message_id": 988
   }
  }
 }
