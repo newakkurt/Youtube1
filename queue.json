@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop rogue DHCP offers: Trust only authorized uplink ports",
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
@@ -100,7 +99,8 @@
   "Encrypt WAC-AP traffic: Use CAPWAP over TLS",
   "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open",
   "Stop auto-config pushes via cron or GitHub – enforce change-control",
-  "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive"
+  "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive",
+  "Synchronize NTP sources – prevent event‑correlation chaos"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4730,6 +4730,37 @@
    "ig_id": "18612938752066419",
    "file_id": "BAACAgQAAxkDAAID4GrrZpALMS-1dzXJfjuCjH6uyc53AAK7GgACa1FhU5u9QqVnDo2uPQQ",
    "message_id": 992
+  },
+  "cd518fe9": {
+   "title": "Synchronize NTP sources – prevent event‑correlation chaos",
+   "description": "Clock drift destroys log correlation and breaks accounting. Keep every device on the same NTP source and timezone to stay in sync.\n\n#Shorts #NTPsync #networking #cybersecurity #sysadmin #networkengineer",
+   "tags": [
+    "NTPsync",
+    "networking",
+    "cybersecurity",
+    "sysadmin",
+    "networkengineer",
+    "Shorts"
+   ],
+   "instagram_caption": "Clock drift turns every log into a wild card. If devices point to different NTP servers or time zones, syslog, TACACS+ accounting, and certificates break. Lock every device to a single NTP source and identical time zone—then your logs line up and correlation stays intact. Have you hit this in production? Drop a comment. #Shorts #NTPsync #networking #cybersecurity #sysadmin",
+   "linkedin_caption": "Synchronize NTP sources and prevent event‑correlation chaos. Clock drift destroys log correlation and breaks accounting. Keep every device on the same NTP source and timezone to stay in sync. Are you keeping NTP in sync?\n\n——— Türkçe ———\n\nNTP kaynaklarını senkronize edin ve olay‑korelasyon kaosunu önleyin. Saat kayması, log correlation’u yok eder ve muhasebe sürecini bozar. Her cihazı aynı NTP source ve timezone’da tutarak senkronize kalın. NTP senkronizasyonunu koruyor musunuz?\n\n#Shorts #NTPsync #networking",
+   "status": "yt_failed",
+   "hook": "Stop using different NTP servers across your network.",
+   "duration_seconds": 25.04,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18182836885429077"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18182836885429077",
+   "file_id": "BAACAgQAAxkDAAID5Grrd1WrjIzAX94nI6cO1WND7pzcAAJxGwACa1FhUxZ53apm7uaBPQQ",
+   "message_id": 996
   }
  }
 }
