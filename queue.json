@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
@@ -100,7 +99,8 @@
   "802.1X auth failures: isolate devices with Auth-Fail VLAN",
   "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks",
   "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP",
-  "Encrypt WAC-AP traffic: Use CAPWAP over TLS"
+  "Encrypt WAC-AP traffic: Use CAPWAP over TLS",
+  "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4637,6 +4637,37 @@
    "ig_id": "18389779195227730",
    "file_id": "BAACAgQAAxkDAAID0mrq9YDeMeET6yuteSO0KzyoDRnXAAKBHgACa1FZU0yeFyh8rg3YPQQ",
    "message_id": 978
+  },
+  "ba5b7c8d": {
+   "title": "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open",
+   "description": "Slow‑boot devices like printers can be repeatedly placed in an unauthorized VLAN if MAB timers are too aggressive. Configure a 12‑hour reauth timer, a 30‑minute inactivity timer, and a fail‑open VLAN, then verify RADIUS health before any NAC change.\n\n#Shorts #MABtimers #NetworkSecurity #NAC #FortiNAC #CyberOps",
+   "tags": [
+    "MABtimers",
+    "NetworkSecurity",
+    "NAC",
+    "FortiNAC",
+    "CyberOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Tired of printers trapped in an unauthorized VLAN every minute? \n\nSet your MAB reauth timer to 12 hours (43200 seconds), the inactivity timer to 30 minutes (1800 seconds), and assign a fail‑open VLAN for RADIUS loss. Then double‑check your RADIUS server health before any NAC upgrade.\n\nWhich of these settings have you applied in production? Let me know in the comments! #MABtimers #NetworkSecurity #NAC #CyberOps",
+   "linkedin_caption": "Printers stuck in an unauthorized VLAN? Adjust MAB timers and use a fail‑open VLAN to keep them in the right zone. Verify RADIUS health before any NAC change. Have you handled this before? #MABtimers #NetworkSecurity #NAC\n\n——— Türkçe ———\n\nYetkisiz VLAN’da takılı kalmış yazıcılar mı var? MAB timers’ı ayarlayın ve fail‑open VLAN kullanarak doğru bölgede kalmalarını sağlayın. NAC değişikliği öncesi RADIUS health’ı doğrulayın. Bu durumu daha önce ele aldınız mı? #MABtimers #NetworkSecurity #NAC\n\n#MABtimers #NetworkSecurity #NAC",
+   "status": "yt_failed",
+   "hook": "Stop printers stuck forever in the unauthorized VLAN each minute!",
+   "duration_seconds": 28.92,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17909961492595071"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17909961492595071",
+   "file_id": "BAACAgQAAxkDAAID1mrrIAR3PkluG3dZCTfkk-mI7z7xAAIRHwACa1FZU2wkhtEn9vhDPQQ",
+   "message_id": 982
   }
  }
 }
