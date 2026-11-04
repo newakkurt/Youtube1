@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
   "NTP Clock Drift Breaks Event Correlation – Sync All Devices",
   "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
@@ -100,7 +99,8 @@
   "Avoid manual port restores: set errdisable recovery timer",
   "802.1X auth failures: isolate devices with Auth-Fail VLAN",
   "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks",
-  "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP"
+  "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP",
+  "Encrypt WAC-AP traffic: Use CAPWAP over TLS"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4606,6 +4606,37 @@
    "ig_id": "18097291202133773",
    "file_id": "BAACAgQAAxkDAAIDzmrq2XryQ0PnQ50se7hzCjZwpgLAAAJWHgACa1FZU646nMM1nuCiPQQ",
    "message_id": 974
+  },
+  "4cea8186": {
+   "title": "Encrypt WAC-AP traffic: Use CAPWAP over TLS",
+   "description": "Management traffic between Wireless Controllers and APs should be encrypted. Enabling CAPWAP over TLS replaces legacy LWAPP tunnels and follows vendor recommendations for secure Wi‑Fi.\n\n#Shorts #CAPWAPTLS #NetworkSecurity #Wireless #CyberSec #ITOps",
+   "tags": [
+    "CAPWAPTLS",
+    "NetworkSecurity",
+    "Wireless",
+    "CyberSec",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Still sending WAC‑AP management traffic unencrypted? Switch to CAPWAP over TLS. Enabling the ‘CAPWAP over TLS’ option on your controller and each AP replaces legacy LWAPP tunnels, meeting vendor recommendations and securing corporate Wi‑Fi. Have you migrated your AP fleet yet? Drop a comment or save this reel for your next hardening sprint! #CAPWAPTLS #NetworkSecurity #Wireless #CyberSec #ITOps",
+   "linkedin_caption": "Encrypt WAC‑AP traffic with CAPWAP over TLS – the modern, secure alternative to legacy LWAPP tunnels. Management traffic between Wireless Controllers and APs is protected, aligning with vendor guidance for safer Wi‑Fi. Ready to secure your network? #CAPWAPTLS #NetworkSecurity #Wireless\n\n——— Türkçe ———\n\nCAPWAP over TLS ile WAC‑AP trafiğini şifreleyin – eski LWAPP tünellerinin modern, güvenli alternatifi. Wireless Controllers ve AP'ler arasındaki yönetim trafiği korunur, satıcı önerilerine uygun şekilde daha güvenli Wi‑Fi sağlanır. Ağınızı güvence altına almaya hazır mısınız? #CAPWAPTLS #NetworkSecurity #Wireless\n\n#CAPWAPTLS #NetworkSecurity #Wireless",
+   "status": "yt_failed",
+   "hook": "Never let WAC‑AP management traffic travel unencrypted.",
+   "duration_seconds": 26.47,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18389779195227730"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18389779195227730",
+   "file_id": "BAACAgQAAxkDAAID0mrq9YDeMeET6yuteSO0KzyoDRnXAAKBHgACa1FZU0yeFyh8rg3YPQQ",
+   "message_id": 978
   }
  }
 }
