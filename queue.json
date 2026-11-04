@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Edge Switch Hijacks STP Root? Hardcode Core Priority to 0",
   "Guard Untrusted Ports with DHCP Snooping Rate‑Limit",
   "Uplink DHCP Offers Blocked? Trust Only Authorized Ports",
   "Prevent Sticky MAC Loss After Reboot – Save Startup-Config",
@@ -100,7 +99,8 @@
   "DHCP Storms Crash Switch? Set Rate‑Limit on Untrusted Ports",
   "Mini Switch Crash? Enable PortFast, BPDU Guard & Recovery Timer",
   "Avoid manual port restores: set errdisable recovery timer",
-  "802.1X auth failures: isolate devices with Auth-Fail VLAN"
+  "802.1X auth failures: isolate devices with Auth-Fail VLAN",
+  "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4544,6 +4544,37 @@
    "ig_id": "18084668540708308",
    "file_id": "BAACAgQAAxkDAAIDxmrqcVlbn1MFgEMJcnpz90fDwMKHAAJ1IgACQe9RU_yjvm7sfzhHPQQ",
    "message_id": 966
+  },
+  "efb62874": {
+   "title": "Git Exposing Switch Configs? Block Secrets with Pre-Commit Hooks",
+   "description": "Committing raw router and switch configurations to version control risks leaking sensitive credentials and IP schemes. Protect your network by enforcing pre-commit hooks and strict ignore rules before pushing files.\n\n#Shorts #NetworkAutomation #NetworkSecurity #GitOps #SysAdmin #DevOps",
+   "tags": [
+    "NetworkAutomation",
+    "NetworkSecurity",
+    "GitOps",
+    "SysAdmin",
+    "DevOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever accidentally commit raw switch configs to Git? Raw running configs can leak enable secrets, SNMP community strings, and internal IP subnets. Add sensitive extensions to .gitignore or run pre-commit hooks to sanitize credentials automatically before push.\n\nAlways clean every backup before committing so production credentials stay safe. Have you run into this in production? Tell me below! #GitOps #NetworkSecurity #SysAdmin #DevOps #NetworkAutomation",
+   "linkedin_caption": "Git Exposing Switch Configs? Block secrets with pre‑commit hooks. Committing raw router and switch configurations can leak sensitive credentials and IP schemes. Protect your network by enforcing pre‑commit hooks and strict ignore rules before pushing. Is your team safeguarding configs? #NetworkSecurity #GitOps #DevOps\n\n——— Türkçe ———\n\nGit Exposing Switch Configs? Block secrets with pre‑commit hooks. Sürüme raw router ve switch konfigürasyonlarını göndermek hassas kimlik bilgilerini ve IP şemalarını sızdırma riskini taşır. Ağınızı korumak için pre‑commit hooks ve katı ignore kurallarını zorunlu kılın. Konfigürasyonlarınızı koruyor musunuz? #NetworkSecurity #GitOps #DevOps\n\n#NetworkSecurity #GitOps #DevOps",
+   "status": "yt_failed",
+   "hook": "Never push raw switch configs straight into a Git repository.",
+   "duration_seconds": 35.78,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18485710003113640"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18485710003113640",
+   "file_id": "BAACAgQAAxkDAAIDymrqoo7iZceYiP045cwoQAdWhtaPAAKkHQACQe9ZU9qVwHFUwDC6PQQ",
+   "message_id": 970
   }
  }
 }
