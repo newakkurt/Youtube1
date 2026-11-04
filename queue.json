@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
@@ -100,7 +99,8 @@
   "Stop auto-config pushes via cron or GitHub – enforce change-control",
   "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive",
   "Synchronize NTP sources – prevent event‑correlation chaos",
-  "Ansible Playbooks Stop on Errors: Enable any_errors_fatal"
+  "Ansible Playbooks Stop on Errors: Enable any_errors_fatal",
+  "Primary TACACS+ down? Enable local fallback now"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4792,6 +4792,37 @@
    "ig_id": "18113580854189795",
    "file_id": "BAACAgQAAxkDAAID6mrrms-cRTHaeEDvIdvBb4d6K1sFAALmGwACa1FhUwHFdSzwpjtHPQQ",
    "message_id": 1002
+  },
+  "128384c1": {
+   "title": "Primary TACACS+ down? Enable local fallback now",
+   "description": "When the primary TACACS+ server crashes, engineers can be locked out unless a local fallback is configured. This short shows the exact AAA lines, the fallback command, and a quick test to keep access reliable.\n\n#Shorts #TACACSfallback #NetworkSecurity #Cisco #AAA #CyberOps",
+   "tags": [
+    "TACACSfallback",
+    "NetworkSecurity",
+    "Cisco",
+    "AAA",
+    "CyberOps",
+    "Shorts"
+   ],
+   "instagram_caption": "TACACS+ crashes? Engineers could get locked out. Add ‘aaa authentication login default group tacacs+ local’ and set ‘tacacs server <name> fallback local’ to switch automatically to your local DB. Test by disabling the primary TACACS+ and confirming local login before you go live. Which of these have you hit in production? Tell me in the comments. #TACACSfallback #NetworkSecurity #Cisco #AAA #CyberOps",
+   "linkedin_caption": "If the primary TACACS+ server crashes, engineers risk lockout. This short demonstrates the exact AAA lines, how to enable the local fallback command, and a quick test to ensure reliable access. Don’t wait for an outage—configure fallback today. Ready to add the safety net?\n\n——— Türkçe ———\n\nBirincil TACACS+ sunucusu çöktüğünde mühendisler kilitlenme riskiyle karşılaşır. Bu kısa videoda tam AAA satırları, yerel fallback komutunun nasıl etkinleştirileceği ve erişimin güvenilirliğini test etme adımları gösteriliyor. Kesintiyi beklemeyin—fallback’i bugün yapılandırın. Bu güvenlik önlemini eklemeye hazır mısınız?\n\n#TACACSfallback #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never let a TACACS+ outage lock out engineers",
+   "duration_seconds": 26.4,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18154290670536894"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18154290670536894",
+   "file_id": "BAACAgQAAxkDAAID7mrrxvogajlXoxDbcdvkguoRI-LQAALzGwACa1FhU3QHFQUb8LzQPQQ",
+   "message_id": 1006
   }
  }
 }
