@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Leases Failing? Never Rate-Limit Trusted Uplinks",
   "Stop rogue DHCP offers: Trust only authorized uplink ports",
   "IP Source Guard Dropping Static Hosts? Add Static Bindings",
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
@@ -100,7 +99,8 @@
   "Prevent DHCP Snooping DB Loss: Save to Flash or TFTP",
   "Encrypt WAC-AP traffic: Use CAPWAP over TLS",
   "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open",
-  "Stop auto-config pushes via cron or GitHub – enforce change-control"
+  "Stop auto-config pushes via cron or GitHub – enforce change-control",
+  "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4699,6 +4699,37 @@
    "ig_id": "17990955357099043",
    "file_id": "BAACAgQAAxkDAAID3GrrRDgRhgntK9hAgnR5GMoaq3kQAAJwGgACa1FhUzXK6uM5GCquPQQ",
    "message_id": 988
+  },
+  "3a4ea8c2": {
+   "title": "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive",
+   "description": "Unidirectional fiber failures can silently break Spanning Tree and trigger devastating loops. Enable UDLD aggressive mode across fiber uplinks to automatically shut down one-way links before an outage occurs.\n\n#Shorts #UDLD #NetworkEngineering #Cisco #SpanningTree #CyberSecurity",
+   "tags": [
+    "UDLD",
+    "NetworkEngineering",
+    "Cisco",
+    "SpanningTree",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Silent fiber cuts can blind Spanning Tree and create catastrophic loops—unless you enable UDLD aggressive. It flags one‑way failures before STP meltdowns. Set UDLD aggressive on every fiber uplink to keep the fabric stable. Have you faced a silent one‑way failure in production? Tell me in the comments! #UDLD #SpanningTree #NetworkEngineering #Cisco #CyberSecurity",
+   "linkedin_caption": "Unidirectional fiber failures can silently break Spanning Tree and cause catastrophic loops. By enabling UDLD aggressive mode on fiber uplinks, you can automatically shut down one‑way links before an outage spreads. Have you secured your fiber links?\n\n——— Türkçe ———\n\nTek yönlü fiber arızaları Spanning Tree'i sessizce kırabilir ve yıkıcı döngülere neden olabilir. Fiber uplink'lerde UDLD aggressive modu etkinleştirerek tek yönlü bağlantıları otomatik olarak kapatabilirsiniz. Fiber bağlantılarınızı korudunuz mu?\n\n#UDLD #NetworkEngineering #Cisco",
+   "status": "yt_failed",
+   "hook": "Never deploy fiber optic switch uplinks without enabling UDLD.",
+   "duration_seconds": 34.83,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18612938752066419"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18612938752066419",
+   "file_id": "BAACAgQAAxkDAAID4GrrZpALMS-1dzXJfjuCjH6uyc53AAK7GgACa1FhU5u9QqVnDo2uPQQ",
+   "message_id": 992
   }
  }
 }
