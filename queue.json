@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "IP Source Guard Dropping Static Hosts? Add Static Bindings",
   "IP Source Routing Attacks? Disable Globally to Stop Packet Hijacking",
   "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
@@ -100,7 +99,8 @@
   "Printers stuck in unauthorized VLAN? Fix with MAB timers & fail‑open",
   "Stop auto-config pushes via cron or GitHub – enforce change-control",
   "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive",
-  "Synchronize NTP sources – prevent event‑correlation chaos"
+  "Synchronize NTP sources – prevent event‑correlation chaos",
+  "Ansible Playbooks Stop on Errors: Enable any_errors_fatal"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4761,6 +4761,37 @@
    "ig_id": "18182836885429077",
    "file_id": "BAACAgQAAxkDAAID5Grrd1WrjIzAX94nI6cO1WND7pzcAAJxGwACa1FhUxZ53apm7uaBPQQ",
    "message_id": 996
+  },
+  "a058b187": {
+   "title": "Ansible Playbooks Stop on Errors: Enable any_errors_fatal",
+   "description": "Learn how to protect your network automation by stopping playbooks on the first device error. Use any_errors_fatal or block/rescue to prevent bad configurations from propagating.\n\n#Shorts #AnsibleFailFast #NetworkAutomation #Ansible #DevOps #ConfigurationManagement",
+   "tags": [
+    "AnsibleFailFast",
+    "NetworkAutomation",
+    "Ansible",
+    "DevOps",
+    "ConfigurationManagement",
+    "Shorts"
+   ],
+   "instagram_caption": "Got a single bad device and your entire playbook fails? Don’t let a rogue config derail your rollout. Add any_errors_fatal: true to stop on the first error, or wrap tasks in block/rescue to catch failures and abort. Fail fast, fix fast, and keep your network clean. What’s your go‑to error‑handling technique in production? Share below! #AnsibleFailFast #NetworkAutomation #Ansible #DevOps #ConfigurationManagement",
+   "linkedin_caption": "Discover how to safeguard your network automation by stopping Ansible playbooks at the first device error. In this short, we show the use of any_errors_fatal and block/rescue patterns to prevent unwanted configurations from spreading. Are you ready to fail fast?\n\n——— Türkçe ———\n\nAnsible playbook'ların ilk cihaz hatasında durdurularak ağ otomasyonunuzu korumanın yollarını keşfedin. Bu kısa videoda any_errors_fatal ve block/rescue desenlerini kullanarak hatalı yapılandırmaların yayılmasını nasıl engelleyeceğimizi gösteriyoruz. Hızlı başarısız olmaya hazır mısınız?\n\n#AnsibleFailFast #NetworkAutomation #DevOps",
+   "status": "yt_failed",
+   "hook": "Never let a single device error ruin your entire rollout.",
+   "duration_seconds": 24.43,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18113580854189795"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18113580854189795",
+   "file_id": "BAACAgQAAxkDAAID6mrrms-cRTHaeEDvIdvBb4d6K1sFAALmGwACa1FhUwHFdSzwpjtHPQQ",
+   "message_id": 1002
   }
  }
 }
