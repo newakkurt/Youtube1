@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
   "Manual Config Drift Breaks Network? Compare Golden Templates",
@@ -100,7 +99,8 @@
   "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely",
   "Secure DHCP offers: trust only uplink ports with DHCP snooping",
   "SNMP default community leaks topology – lock down with ACL",
-  "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover"
+  "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover",
+  "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5040,6 +5040,37 @@
    "ig_id": "17920654155458601",
    "file_id": "BAACAgQAAxkDAAIEEGrsyZ_CosOA6jt6E0velPQnCEK_AAJ8HgACa1FpU1xWyqKeYJ-xPQQ",
    "message_id": 1040
+  },
+  "e3770453": {
+   "title": "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN",
+   "description": "Learn how to quarantine devices that fail 802.1X authentication by assigning them to a dedicated VLAN. This quick fix keeps your production network safe without disabling ports.\n\n#Shorts #AuthFailVLAN #NetworkSecurity #8021X #CiscoSwitches #NetworkEngineering",
+   "tags": [
+    "AuthFailVLAN",
+    "NetworkSecurity",
+    "8021X",
+    "CiscoSwitches",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting auth‑failed devices slip through—keep them isolated! Create a dedicated Auth‑Fail VLAN (e.g., VLAN 999) and configure each port with `authentication event fail action set vlan 999`. This keeps your production network safe without pulling the plug on ports. \n\nWhich VLAN or strategy are you using to quarantine auth‑failed devices in your environment? Share below or save for later. \n\n#AuthFailVLAN #NetworkSecurity #8021X #CiscoSwitches #NetworkEngineering",
+   "linkedin_caption": "Struggling with devices that fail 802.1X authentication but remain active? In this short video I show how assigning those devices to an Auth‑Fail VLAN isolates them, preserving production traffic without turning ports off. Keep your network safe and compliant. How do you handle auth‑fail devices in your network?\n\n——— Türkçe ———\n\n802.1X kimlik doğrulaması başarısız ama cihazlar hâlâ bağlı mı? Bu kısa videoda, başarısız cihazları bir Auth‑Fail VLAN’ına yönlendirerek izole etmeyi ve portları kapatmadan üretim trafiğini korumayı gösteriyorum. Ağınızı nasıl güvenli tutuyorsunuz? Ağınızdaki kimlik doğrulama hatalı cihazları nasıl yönetiyorsunuz?\n\n#AuthFailVLAN #NetworkSecurity #8021X",
+   "status": "yt_failed",
+   "hook": "Stop letting failed 802.1X authentication keep devices on the production network.",
+   "duration_seconds": 35.49,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18384308941224456"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18384308941224456",
+   "file_id": "BAACAgQAAxkDAAIEFGrs8fqIJ0A9LPAgeTCXxIs8qMvzAAIvHwACAQlpU45xJuiXbGI8PQQ",
+   "message_id": 1044
   }
  }
 }
