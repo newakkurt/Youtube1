@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Firewall Any-Any Exposes VLANs: Enforce Port-Based Policies",
   "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
@@ -100,7 +99,8 @@
   "Fiber Tx Cut Crashes STP: Enable UDLD Aggressive",
   "Synchronize NTP sources – prevent event‑correlation chaos",
   "Ansible Playbooks Stop on Errors: Enable any_errors_fatal",
-  "Primary TACACS+ down? Enable local fallback now"
+  "Primary TACACS+ down? Enable local fallback now",
+  "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4823,6 +4823,37 @@
    "ig_id": "18154290670536894",
    "file_id": "BAACAgQAAxkDAAID7mrrxvogajlXoxDbcdvkguoRI-LQAALzGwACa1FhU3QHFQUb8LzQPQQ",
    "message_id": 1006
+  },
+  "beed46c7": {
+   "title": "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout",
+   "description": "Leaving terminal sessions open on switch VTY lines creates a security vulnerability and exhausts available access slots. Configure exec-timeout across all virtual lines to ensure idle connections drop automatically.\n\n#Shorts #NetworkEngineering #CiscoCLI #NetworkSecurity #SysAdmin #CyberSecurity",
+   "tags": [
+    "NetworkEngineering",
+    "CiscoCLI",
+    "NetworkSecurity",
+    "SysAdmin",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Still leaving VTY lines open? It’s a silent threat. When you forget to set an exec-timeout, an idle terminal stays connected, draining switch lines and giving attackers a foothold. Set exec-timeout to five zero on all line vty 0 15 and you’re good—idle admins will drop automatically. What’s your exec-timeout value? Drop it in comments or save this for next time. #Shorts #NetworkEngineering #CiscoCLI #NetworkSecurity #CyberSecurity",
+   "linkedin_caption": "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout. Leaving terminal sessions open on switch VTY lines creates a security risk and consumes access slots. By configuring exec-timeout on all virtual lines, idle connections drop automatically. How do you handle idle VTY sessions in your network?\n\n——— Türkçe ———\n\nIdle VTY Sessions Lock Admin Access: Set Exec-Timeout. Switch VTY hatlarında terminal oturumlarını açık bırakmak güvenlik açığı oluşturur ve erişim slotlarını tüketir. Tüm sanal hatlarda exec-timeout ayarlayarak boşta kalan bağlantıların otomatik olarak sonlandırılmasını sağlayın. Ağınızda boşta kalan VTY oturumlarını nasıl yönetiyorsunuz?\n\n#NetworkEngineering #CiscoCLI #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Never leave active VTY lines without an explicit idle session timer.",
+   "duration_seconds": 27.96,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18010444719005895"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18010444719005895",
+   "file_id": "BAACAgQAAxkDAAID8mrr85VsONz3UXISIiHBUUdd7yRsAAL6GwACa1FhU8nI6C-ApLDwPQQ",
+   "message_id": 1010
   }
  }
 }
