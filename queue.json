@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
   "Manual Config Drift Breaks Network? Compare Golden Templates",
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
@@ -100,7 +99,8 @@
   "Secure DHCP offers: trust only uplink ports with DHCP snooping",
   "SNMP default community leaks topology – lock down with ACL",
   "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover",
-  "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN"
+  "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN",
+  "TFTP Leaks Config Secrets: Switch to SCP and SFTP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5071,6 +5071,37 @@
    "ig_id": "18384308941224456",
    "file_id": "BAACAgQAAxkDAAIEFGrs8fqIJ0A9LPAgeTCXxIs8qMvzAAIvHwACAQlpU45xJuiXbGI8PQQ",
    "message_id": 1044
+  },
+  "ec8494ae": {
+   "title": "TFTP Leaks Config Secrets: Switch to SCP and SFTP",
+   "description": "Unencrypted TFTP transfers expose sensitive device configs, passwords, and system images to anyone sniffing the wire. Enforce secure protocols like SFTP or SCP to keep administrative credentials fully encrypted during backups.\n\n#Shorts #NetworkSecurity #CyberSecurity #SysAdmin #NetworkEngineering #SSH",
+   "tags": [
+    "NetworkSecurity",
+    "CyberSecurity",
+    "SysAdmin",
+    "NetworkEngineering",
+    "SSH",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop using TFTP – it leaks every password in plain text. Switch to SFTP or SCP with SSH keys to keep config backups encrypted. Are you still running TFTP in production or have you moved to a secure protocol? Save this tip and share it with your network crew! #NetworkSecurity #CyberSecurity #SysAdmin #NetworkEngineering #SSH",
+   "linkedin_caption": "TFTP leaks configuration secrets, exposing device configs, passwords, and system images to anyone monitoring the traffic. Switch to SCP or SFTP to ensure backups are fully encrypted and credentials stay protected. How are you securing your network backups?\n\n——— Türkçe ———\n\nTFTP, konfigürasyon gizli bilgilerini sızdırıyor; cihaz ayarları, şifreler ve sistem görüntüleri trafiği izleyen herkes tarafından görülebilir. SCP veya SFTP'ye geçerek yedeklerin tam şifreli olmasını ve kimlik bilgilerinizin korunmasını sağlayın. Ağ yedeklerinizi nasıl güvence altına alıyorsunuz?\n\n#NetworkSecurity #CyberSecurity #SysAdmin",
+   "status": "yt_failed",
+   "hook": "Stop using TFTP to back up your switch configurations and images.",
+   "duration_seconds": 31.97,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18149302894576402"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18149302894576402",
+   "file_id": "BAACAgQAAxkDAAIEGGrtF-SJEScBm4jzbg0efx7z2otVAAKAHwACAQlpU-pqUJgd2TGhPQQ",
+   "message_id": 1048
   }
  }
 }
