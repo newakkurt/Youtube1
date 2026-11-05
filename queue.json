@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
   "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
@@ -100,7 +99,8 @@
   "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast",
   "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely",
   "Secure DHCP offers: trust only uplink ports with DHCP snooping",
-  "SNMP default community leaks topology – lock down with ACL"
+  "SNMP default community leaks topology – lock down with ACL",
+  "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5009,6 +5009,37 @@
    "ig_id": "18026007545921994",
    "file_id": "BAACAgQAAxkDAAIEDGrst9-_qfmDiWYUMuCC1QTpE1u_AAJUHgACa1FpU-W6vPpEON04PQQ",
    "message_id": 1036
+  },
+  "384d53f1": {
+   "title": "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover",
+   "description": "Regular UPS and generator battery tests with the infrastructure team keep your network running when power falters. Skipping these checks can expose devices to known flaws such as CVE‑2024‑27834, so remediate any failure before a real outage.\n\n#Shorts #PowerResilience #NetworkEngineering #DataCenter #UPS #CyberSecurity",
+   "tags": [
+    "PowerResilience",
+    "NetworkEngineering",
+    "DataCenter",
+    "UPS",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Your 10‑second UPS switchover is a hard deadline—never skip the test. Schedule coordinated battery runtime verification with the infrastructure team, log switchover times, and compare against your SLA target. If a test fails, remediate before the next outage—skipping checks can expose devices to flaws like CVE‑2024‑27834. Which of these have you hit in production? Comment below! #PowerResilience #NetworkEngineering #DataCenter #UPS #CyberSecurity",
+   "linkedin_caption": "Skipping UPS and generator battery tests jeopardizes network uptime. Our infrastructure team shows why a 10‑second switchover matters and how to catch failures before a real outage, especially with threats like CVE‑2024‑27834. Are you testing your UPS batteries?\n\n——— Türkçe ———\n\nUPS ve jeneratör batarya testlerini atlamak ağ kesintilerini riske atar. Altyapı ekibimiz, 10 saniyelik geçişin önemini ve CVE‑2024‑27834 gibi tehditlere karşı gerçek bir kesinti öncesinde hataları nasıl yakalayabileceğinizi gösteriyor. UPS bataryalarınızı test ediyor musunuz?\n\n#PowerResilience #NetworkEngineering #UPS",
+   "status": "yt_failed",
+   "hook": "Never skip UPS battery and generator switchover tests.",
+   "duration_seconds": 25.42,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17920654155458601"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17920654155458601",
+   "file_id": "BAACAgQAAxkDAAIEEGrsyZ_CosOA6jt6E0velPQnCEK_AAJ8HgACa1FpU1xWyqKeYJ-xPQQ",
+   "message_id": 1040
   }
  }
 }
