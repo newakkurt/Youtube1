@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
   "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
   "Evil Twin Spoofing Your SSID? Tune WIPS Containment",
@@ -100,7 +99,8 @@
   "IPv6 left enabled? Disable it to shrink attack surface",
   "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast",
   "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely",
-  "Secure DHCP offers: trust only uplink ports with DHCP snooping"
+  "Secure DHCP offers: trust only uplink ports with DHCP snooping",
+  "SNMP default community leaks topology – lock down with ACL"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4978,6 +4978,37 @@
    "ig_id": "17959969860257992",
    "file_id": "BAACAgQAAxkDAAIEBmrslu210B2Pd-KVdzFD9Bbp34p_AAIFHgACa1FpU7r9YQhfT53MPQQ",
    "message_id": 1030
+  },
+  "39a314fb": {
+   "title": "SNMP default community leaks topology – lock down with ACL",
+   "description": "Leaving SNMP community strings at their defaults exposes your entire network topology. Restrict SNMP to trusted NMS IPs with an ACL and remove the public/private defaults.\n\n#Shorts #SNMPsecurity #NetworkSecurity #Cybersecurity #ITOps #SysAdmin",
+   "tags": [
+    "SNMPsecurity",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Still using SNMP's default 'public' and 'private' strings? Your topology is leaking. The fix? Delete or rename those defaults and create an ACL that only lets your NMS IPs hit UDP 161/162. Rule: SNMP access must be limited to trusted management hosts. Have you run into this in production? Drop a comment! #Shorts #SNMPsecurity #NetworkSecurity #Cybersecurity #ITOps",
+   "linkedin_caption": "Default SNMP community strings can unintentionally reveal your full network layout. By limiting SNMP access to trusted NMS IP addresses with an ACL and eliminating the public and private defaults, you tighten security. How do you protect SNMP in your environment?\n\n——— Türkçe ———\n\nVarsayılan SNMP community stringleri ağ topolojinizi fark edilmeden ortaya çıkarabilir. SNMP erişimini güvenilir NMS IP adresleriyle bir ACL kullanarak sınırlandırıp, public ve private varsayılanları kaldırarak güvenliği artırın. Ortamınızda SNMP'yi nasıl koruyorsunuz?\n\n#SNMPsecurity #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never leave SNMP community strings at their defaults.",
+   "duration_seconds": 24.14,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18026007545921994"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18026007545921994",
+   "file_id": "BAACAgQAAxkDAAIEDGrst9-_qfmDiWYUMuCC1QTpE1u_AAJUHgACa1FpU-W6vPpEON04PQQ",
+   "message_id": 1036
   }
  }
 }
