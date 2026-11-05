@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
   "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
   "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
   "HA Cluster Split-Brain: Wire Heartbeats Back-to-Back",
@@ -100,7 +99,8 @@
   "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout",
   "IPv6 left enabled? Disable it to shrink attack surface",
   "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast",
-  "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely"
+  "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely",
+  "Secure DHCP offers: trust only uplink ports with DHCP snooping"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4947,6 +4947,37 @@
    "ig_id": "18121911223970766",
    "file_id": "BAACAgQAAxkDAAIEAmrscUPDl7Dr0b-YpeQIzrWBiSwbAALOHQACa1FpU64cNuyg917_PQQ",
    "message_id": 1026
+  },
+  "d4eb15ec": {
+   "title": "Secure DHCP offers: trust only uplink ports with DHCP snooping",
+   "description": "Learn how to lock down DHCP offers by enabling DHCP snooping, defining VLANs, and trusting only uplink ports. Follow the exact commands to protect your network from rogue DHCP servers.\n\n#Shorts #DHCPsnooping #NetworkSecurity #Cisco #SysAdmin #ITOps",
+   "tags": [
+    "DHCPsnooping",
+    "NetworkSecurity",
+    "Cisco",
+    "SysAdmin",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue DHCPs in their tracks—only your uplinks should send offers. Enable global snooping, scope it to the VLANs you care about, and trust just the uplink ports. Once in place, all downstream traffic is shielded from rogue DHCP servers. Which of these have you hit in production? Tell me in the comments. #DHCPsnooping #NetworkSecurity #Cisco #SysAdmin #ITOps",
+   "linkedin_caption": "Secure DHCP offers: trust only uplink ports with DHCP snooping. Learn to lock down offers by enabling snooping, defining VLANs, and trusting uplink ports only. Follow exact commands to protect from rogue DHCP servers. What steps are you taking to secure your DHCP environment?\n\n——— Türkçe ———\n\nSecure DHCP offers: trust only uplink ports with DHCP snooping. Öğrenin, DHCP snooping'i etkinleştirerek, VLAN'ları tanımlayarak ve yalnızca uplink portlarını güvenleştirerek teklifleri nasıl kilitleyeceğinizi. Gerçek komutları takip edin, sahte DHCP sunucularına karşı korunun. DHCP ortamınızı nasıl korumaya çalışıyorsunuz?\n\n#DHCPsnooping #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop letting any port send DHCP offers—only uplinks should.",
+   "duration_seconds": 39.63,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17959969860257992"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17959969860257992",
+   "file_id": "BAACAgQAAxkDAAIEBmrslu210B2Pd-KVdzFD9Bbp34p_AAIFHgACa1FpU7r9YQhfT53MPQQ",
+   "message_id": 1030
   }
  }
 }
