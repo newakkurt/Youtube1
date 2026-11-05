@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
   "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
   "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
   "Corrupt Config Spreading Across Fleet? Use any_errors_fatal",
@@ -100,7 +99,8 @@
   "Primary TACACS+ down? Enable local fallback now",
   "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout",
   "IPv6 left enabled? Disable it to shrink attack surface",
-  "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast"
+  "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast",
+  "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4916,6 +4916,37 @@
    "ig_id": "18118891426796238",
    "file_id": "BAACAgQAAxkDAAID_mrsR7r09OzcI7u_MjTe2Ru54BYSAAJqHQACa1FpU5upKzz1KEScPQQ",
    "message_id": 1022
+  },
+  "4da76941": {
+   "title": "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely",
+   "description": "Storm storms can lock entire VLANs if thresholds are mis‑set. Follow the steps to set safe storm‑control limits and keep multicast traffic alive.\n\n#Shorts #StormControl #NetworkSecurity #SwitchConfig #DataCenter #CyberOps",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "SwitchConfig",
+    "DataCenter",
+    "CyberOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever accidentally shut down your own VLAN with a mis‑configured storm‑control?\n\nIf you set thresholds too low, a broadcast, multicast, or unicast storm can lock an entire VLAN. Start by configuring the storm‑control to send a trap or shut down, verify syntax, set realistic baseline thresholds, and enable SNMP monitoring. Monitor the traffic first, then tighten limits—this keeps legitimate multicast alive while protecting your network.\n\nWhich of these have you hit in production? Drop a comment below.\n\n#StormControl #NetworkSecurity #SwitchConfig #CyberOps #DataCenter",
+   "linkedin_caption": "Broadcast Storm Shutdown: Tune Storm-Control Thresholds Safely. Storms can lock entire VLANs if thresholds mis‑set. Follow these steps to set safe limits and keep multicast traffic alive. Engineers, how do you ensure storm‑control is balanced?\n\n——— Türkçe ———\n\nBroadcast Storm Shutdown: Tune Storm-Control Thresholds Safely. Storms can lock entire VLANs if thresholds mis‑set. Follow these steps to set safe limits and keep multicast traffic alive. Mühendisler, storm‑control'un dengede olduğundan nasıl emin olursunuz?\n\n#Shorts #StormControl #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Never set storm‑control thresholds too low on user ports.",
+   "duration_seconds": 25.46,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18121911223970766"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18121911223970766",
+   "file_id": "BAACAgQAAxkDAAIEAmrscUPDl7Dr0b-YpeQIzrWBiSwbAALOHQACa1FpU64cNuyg917_PQQ",
+   "message_id": 1026
   }
  }
 }
