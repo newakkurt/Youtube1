@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Open Console Sessions Invite Tampering: Configure Exec-Timeout",
   "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
   "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
@@ -100,7 +99,8 @@
   "Synchronize NTP sources – prevent event‑correlation chaos",
   "Ansible Playbooks Stop on Errors: Enable any_errors_fatal",
   "Primary TACACS+ down? Enable local fallback now",
-  "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout"
+  "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout",
+  "IPv6 left enabled? Disable it to shrink attack surface"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4854,6 +4854,37 @@
    "ig_id": "18010444719005895",
    "file_id": "BAACAgQAAxkDAAID8mrr85VsONz3UXISIiHBUUdd7yRsAAL6GwACa1FhU8nI6C-ApLDwPQQ",
    "message_id": 1010
+  },
+  "91f7951d": {
+   "title": "IPv6 left enabled? Disable it to shrink attack surface",
+   "description": "Leaving IPv6 enabled on devices you never use gives attackers an extra foothold. Disable IPv6 routing and commands to shrink your attack surface instantly.\n\n#Shorts #IPv6Hardening #NetworkSecurity #CyberSecurity #NetworkEngineering #ITOps",
+   "tags": [
+    "IPv6Hardening",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "NetworkEngineering",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop exposing IPv6 on gear you never use – it widens attack surface. In global config mode, turn off the IPv6 routing process and disable all IPv6 commands on each interface to lock down the device. Remember: never enable IPv6 on equipment that doesn’t need it. Have you already hit this in production? Drop a comment or save this reel for your next hardening checklist. #IPv6Hardening #NetworkSecurity #CyberSecurity #NetworkEngineering #ITOps",
+   "linkedin_caption": "Leaving IPv6 enabled on devices you never use gives attackers an extra foothold. By disabling IPv6 routing and related commands you can instantly shrink your attack surface. Are you ready to harden your network today?\n\n——— Türkçe ———\n\nHiç kullanmadığınız cihazlarda IPv6'yı etkin bırakmak, saldırganlara ek bir ayaklanma noktası sağlar. IPv6 yönlendirmesini ve ilgili komutları devre dışı bırakarak saldırı yüzeyinizi anında küçültebilirsiniz. Ağınızı bugün güçlendirmeye hazır mısınız?\n\n#IPv6Hardening #NetworkSecurity #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Stop exposing IPv6 on gear you never use – it widens attack surface.",
+   "duration_seconds": 23.64,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17965730556212964"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17965730556212964",
+   "file_id": "BAACAgQAAxkDAAID-GrsKzMBfKs9BDN86FKcikUzbAdUAAISHAACa1FhUzkbwDqac6fRPQQ",
+   "message_id": 1016
   }
  }
 }
