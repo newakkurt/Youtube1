@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent Fake Route Announcements: OSPF/EIGRP MD5 & SHA Authentication",
   "SNMPv2c Leaking Network Data? Migrate to SNMPv3 authPriv",
   "STP Root Hijacked? Apply Root Guard to Downlink Trunks",
   "WAN Fragmentation Drops Traffic: Fix With MSS Clamping & PMTUD",
@@ -100,7 +99,8 @@
   "Ansible Playbooks Stop on Errors: Enable any_errors_fatal",
   "Primary TACACS+ down? Enable local fallback now",
   "Idle VTY Sessions Lock Admin Access: Set Exec-Timeout",
-  "IPv6 left enabled? Disable it to shrink attack surface"
+  "IPv6 left enabled? Disable it to shrink attack surface",
+  "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast"
  ],
  "items": {
   "dcdc2b1c": {
@@ -4885,6 +4885,37 @@
    "ig_id": "17965730556212964",
    "file_id": "BAACAgQAAxkDAAID-GrsKzMBfKs9BDN86FKcikUzbAdUAAISHAACa1FhUzkbwDqac6fRPQQ",
    "message_id": 1016
+  },
+  "61da2676": {
+   "title": "Storm-Control Shutdowns: Set Thresholds Without Breaking Multicast",
+   "description": "Storm‑control can inadvertently lock an entire VLAN if thresholds are set too low. Learn the proper steps to configure thresholds and choose the right action without disrupting multicast‑dependent applications.\n\n#Shorts #StormControl #NetworkSecurity #Cisco #SwitchConfig #ITOps",
+   "tags": [
+    "StormControl",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchConfig",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Set storm‑control too low and your VLAN goes dark. On user ports, define separate thresholds for broadcast, multicast, and unicast, then choose whether to trap or shut. First, watch traffic, then tighten thresholds gradually to keep critical apps running. Which action do you pick when thresholds hit? #StormControl #NetworkSecurity #Cisco #SwitchConfig #ITOps",
+   "linkedin_caption": "Storm‑control shutdowns can unintentionally lock a VLAN when thresholds are set too low. In this short, discover how to configure thresholds and pick the proper action so multicast‑dependent applications stay online. How do you ensure your thresholds protect without impacting multicast?\n\n——— Türkçe ———\n\nStorm‑control kapatmaları, eşik değerleri çok düşük ayarlandığında tüm VLAN’ı kilitleyebilir. Bu kısa videoda, eşikleri doğru şekilde yapılandırmayı ve multicast‑bağlı uygulamaların kesintisiz kalmasını sağlayacak doğru eylemi seçmeyi öğrenin. Eşiklerinizi koruyarak multicast'i etkilememesini nasıl sağlıyorsunuz?\n\n#StormControl #NetworkSecurity #ITOps",
+   "status": "yt_failed",
+   "hook": "Never set storm‑control too low or you’ll lock the entire VLAN.",
+   "duration_seconds": 23.26,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18118891426796238"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18118891426796238",
+   "file_id": "BAACAgQAAxkDAAID_mrsR7r09OzcI7u_MjTe2Ru54BYSAAJqHQACa1FpU5upKzz1KEScPQQ",
+   "message_id": 1022
   }
  }
 }
