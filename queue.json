@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rack Tampering Risk: Secure Console Ports With Exec-Timeout",
   "Manual Config Drift Breaks Network? Compare Golden Templates",
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
@@ -100,7 +99,8 @@
   "SNMP default community leaks topology – lock down with ACL",
   "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover",
   "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN",
-  "TFTP Leaks Config Secrets: Switch to SCP and SFTP"
+  "TFTP Leaks Config Secrets: Switch to SCP and SFTP",
+  "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5102,6 +5102,37 @@
    "ig_id": "18149302894576402",
    "file_id": "BAACAgQAAxkDAAIEGGrtF-SJEScBm4jzbg0efx7z2otVAAKAHwACAQlpU-pqUJgd2TGhPQQ",
    "message_id": 1048
+  },
+  "310f9ba3": {
+   "title": "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable",
+   "description": "Rogue desktop switches can send superior BPDUs and seize the spanning tree root bridge, knocking your entire local network offline. Configure PortFast and BPDU Guard on edge ports to drop unauthorized switches straight into err-disable.\n\n#Shorts #bpduguard #networkengineering #cisco #spanningtree #cybersecurity",
+   "tags": [
+    "bpduguard",
+    "networkengineering",
+    "cisco",
+    "spanningtree",
+    "cybersecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Got a rogue switch that can hijack your spanning‑tree root? Keep edge ports locked with BPDU Guard. A rogue desktop can broadcast superior BPDUs and seize the root bridge instantly. Enable PortFast and bpduguard enable so any unauthorized switch is dropped into err‑disable and stays offline. Have you enforced BPDU Guard on all edge ports in production? Let me know below. #bpduguard #networkengineering #cisco #spanningtree #cybersecurity",
+   "linkedin_caption": "Rogue desktop switches can send superior BPDUs and seize the spanning‑tree root bridge, taking down your whole local network. By applying PortFast and BPDU Guard on edge ports, you force unauthorized switches into err‑disable. How do you protect your edge ports?\n\n——— Türkçe ———\n\nRogue masaüstü switch'leri üstün BPDUs göndererek spanning‑tree root bridge'i ele geçirip tüm yerel ağınızı devre dışı bırakabilir. Edge portlarda PortFast ve BPDU Guard uygulayarak yetkisiz switch'leri err‑disable durumuna zorlayabilirsiniz. Edge portlarınızı nasıl koruyorsunuz?\n\n#bpduguard #networkengineering #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never leave edge access ports running without active BPDU Guard.",
+   "duration_seconds": 36.3,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18135090979689059"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18135090979689059",
+   "file_id": "BAACAgQAAxkDAAIEHGrtRjY8wpZobb-Tvwzp8teLsv0BAAKNHwACAQlpUztuDHTsjSDqPQQ",
+   "message_id": 1052
   }
  }
 }
