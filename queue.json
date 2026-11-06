@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
   "Port-security max MACs: stop rogue devices with restrict mode",
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
@@ -100,7 +99,8 @@
   "TFTP Leaks Config Secrets: Switch to SCP and SFTP",
   "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable",
   "RADIUS outage: configure fail-open/close to keep ports up",
-  "Weak Console Password? Enforce Strong Secret and Idle‑Timeout"
+  "Weak Console Password? Enforce Strong Secret and Idle‑Timeout",
+  "Don't use ignore_errors: yes – stops silent network outages"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5195,6 +5195,37 @@
    "ig_id": "18039826724891255",
    "file_id": "BAACAgQAAxkDAAIEKGrtmGsWjOjvzZwjpDtXa6Kw2ZftAAKlHwACAQlxU9qyVMZuAa2YPQQ",
    "message_id": 1064
+  },
+  "9d30d650": {
+   "title": "Don't use ignore_errors: yes – stops silent network outages",
+   "description": "Using ignore_errors: yes in Ansible can hide faulty network configurations, leading to cascading outages. Replace it with check mode or proper error handling to keep your network resilient.\n\n#Shorts #AnsibleNetwork #NetworkAutomation #CyberSecurity #DevOps #Ansible",
+   "tags": [
+    "AnsibleNetwork",
+    "NetworkAutomation",
+    "CyberSecurity",
+    "DevOps",
+    "Ansible",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting silent failures kill your network. Using ignore_errors: yes in Ansible quietly skips bad configs, letting a single mistake spread and cause multiple device outages. Switch to check mode or add explicit error handling to keep the network resilient. Which silent outage has you worried in production? #AnsibleNetwork #NetworkAutomation #CyberSecurity #DevOps #Ansible",
+   "linkedin_caption": "Using ignore_errors: yes in Ansible can hide faulty network configurations, leading to silent outages. Switch to check mode or proper error handling to keep your network resilient. How can you prevent silent outages in your network?\n\n——— Türkçe ———\n\nUsing ignore_errors: yes in Ansible hatalı network yapılandırmalarını gizleyebilir, bu da sessiz kesintilere yol açar. Check mode veya proper error handling ile network'unuzu dayanıklı tutun. Sessiz kesintileri önlemek için hangi adımları atacaksınız?\n\n#AnsibleNetwork #NetworkAutomation #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Stop using ignore_errors: yes in Ansible network playbooks.",
+   "duration_seconds": 23.88,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18112393514614950"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18112393514614950",
+   "file_id": "BAACAgQAAxkDAAIELmrtxMnzGG_xHWGs2DWIbQXEAdDPAALcHwACAQlxU9eBmZDVm1k4PQQ",
+   "message_id": 1070
   }
  }
 }
