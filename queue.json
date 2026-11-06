@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Config Drift Detected? Automate Golden-Config Checks with Ansible",
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
@@ -100,7 +99,8 @@
   "RADIUS outage: configure fail-open/close to keep ports up",
   "Weak Console Password? Enforce Strong Secret and Idle‑Timeout",
   "Don't use ignore_errors: yes – stops silent network outages",
-  "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access"
+  "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access",
+  "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5257,6 +5257,37 @@
    "ig_id": "17996551340844667",
    "file_id": "BAACAgQAAxkDAAIEMmrt5EM9FI2ESamTIdnyEeLUw8rGAAIyIAACAQlxU9LTwC3XysEZPQQ",
    "message_id": 1074
+  },
+  "a4186c1f": {
+   "title": "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks",
+   "description": "A single device error can corrupt your entire network deployment. Learn how to use any_errors_fatal and block‑rescue in Ansible to halt automation and protect configurations.\n\n#Shorts #AnsibleSafety #NetworkAutomation #Cybersecurity #DevOps #ConfigurationManagement",
+   "tags": [
+    "AnsibleSafety",
+    "NetworkAutomation",
+    "Cybersecurity",
+    "DevOps",
+    "ConfigurationManagement",
+    "Shorts"
+   ],
+   "instagram_caption": "Tired of a single device failure derailing your entire rollout? Set any_errors_fatal: true in every Ansible playbook to abort on error, or wrap tasks in block: rescue to catch errors and halt the run. A single failed task should stop the chain, not spread bad config. Which of these have you hit in production? Drop a comment below! #AnsibleSafety #NetworkAutomation #Cybersecurity #DevOps #ConfigurationManagement",
+   "linkedin_caption": "One device error can disrupt the entire network. Discover how any_errors_fatal and block‑rescue in Ansible can halt automation and protect configs. Stop config sprawl—are you ready to stop the spread?\n\n——— Türkçe ———\n\nBir cihaz hatası tüm ağı etkileyebilir. Ansible'de any_errors_fatal ve block‑rescue ile otomasyonu durdurarak konfigürasyonları koruyabilirsiniz. Konfigürasyon yayılımını durdurmaya hazır mısınız?\n\n#AnsibleSafety #NetworkAutomation #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop letting one device failure ruin your entire rollout.",
+   "duration_seconds": 23.72,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17989912190878866"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17989912190878866",
+   "file_id": "BAACAgQAAxkDAAIEOGruDVWFE192W_d6pKughcTCYat4AAKMIAACAQlxU_SNtVn_OwfzPQQ",
+   "message_id": 1080
   }
  }
 }
