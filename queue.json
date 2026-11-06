@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Manual Config Drift Breaks Network? Compare Golden Templates",
   "Cable Tracing Delays Repairs – Use Standard Port Labeling",
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
   "Port-security max MACs: stop rogue devices with restrict mode",
@@ -100,7 +99,8 @@
   "Never Skip UPS Battery Tests – Ensure 10‑Second Switchover",
   "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN",
   "TFTP Leaks Config Secrets: Switch to SCP and SFTP",
-  "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable"
+  "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable",
+  "RADIUS outage: configure fail-open/close to keep ports up"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5133,6 +5133,37 @@
    "ig_id": "18135090979689059",
    "file_id": "BAACAgQAAxkDAAIEHGrtRjY8wpZobb-Tvwzp8teLsv0BAAKNHwACAQlpUztuDHTsjSDqPQQ",
    "message_id": 1052
+  },
+  "dedd82a2": {
+   "title": "RADIUS outage: configure fail-open/close to keep ports up",
+   "description": "If your RADIUS/NAC server goes down, ports can either stay open or shut down. Pre-configure the fail-open or fail-close setting to prevent a single point of failure from halting production.\n\n#Shorts #FailMode #NetworkEngineering #Cybersecurity #DataCenter #ITOps",
+   "tags": [
+    "FailMode",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "DataCenter",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "🚨 Don’t let a dead RADIUS server shut down your plant! Configure the port’s fail‑open or fail‑close mode in your NAC policy with `radius-server dead-criteria <open|close>` to lock the behavior. Plan it ahead so a server fault never stops traffic.\n\nHave you set fail‑mode in production? Drop a comment or save this for quick reference! #FailMode #NetworkEngineering #Cybersecurity #DataCenter #ITOps",
+   "linkedin_caption": "Your RADIUS/NAC server can bring ports to life or lock them down when it fails. By pre‑configuring fail‑open or fail‑close, you keep the network running and avoid a single point of failure. How do you configure fail‑open/close in your environment? #NetworkEngineering #Cybersecurity #ITOps\n\n——— Türkçe ———\n\nRADIUS/NAC sunucunuz başarısız olduğunda, portlar ya açık kalır ya da kapanır. fail‑open veya fail‑close’u önceden yapılandırarak ağınızın çalışmaya devam etmesini sağlayabilir ve tek bir noktadan başarısızlığa karşı koruyabilirsiniz. Çevrenizde fail‑open/close nasıl yapılandırıyorsunuz? #NetworkEngineering #Cybersecurity #ITOps\n\n#NetworkEngineering #Cybersecurity #ITOps",
+   "status": "yt_failed",
+   "hook": "Never let a dead RADIUS server shut down your plant!",
+   "duration_seconds": 21.78,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17972772189187743"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17972772189187743",
+   "file_id": "BAACAgQAAxkDAAIEImrtfZpkQclS5WS9FQ_lBnhQWUMlAAJ3HwACAQlxU6YMUhAtH51pPQQ",
+   "message_id": 1058
   }
  }
 }
