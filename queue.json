@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Cable Tracing Delays Repairs – Use Standard Port Labeling",
   "DHCP Snooping DB Timeout Overload? Set Custom Directory & Optimize",
   "Port-security max MACs: stop rogue devices with restrict mode",
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
@@ -100,7 +99,8 @@
   "Failed 802.1X Auth Devices Stay Connected? Use an Auth‑Fail VLAN",
   "TFTP Leaks Config Secrets: Switch to SCP and SFTP",
   "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable",
-  "RADIUS outage: configure fail-open/close to keep ports up"
+  "RADIUS outage: configure fail-open/close to keep ports up",
+  "Weak Console Password? Enforce Strong Secret and Idle‑Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5164,6 +5164,37 @@
    "ig_id": "17972772189187743",
    "file_id": "BAACAgQAAxkDAAIEImrtfZpkQclS5WS9FQ_lBnhQWUMlAAJ3HwACAQlxU6YMUhAtH51pPQQ",
    "message_id": 1058
+  },
+  "ebec1032": {
+   "title": "Weak Console Password? Enforce Strong Secret and Idle‑Timeout",
+   "description": "A weak console password and missing idle timeout let anyone in the rack take control of your switch. Secure the console with a strong secret and configure an automatic timeout to stop unauthorized access.\n\n#Shorts #ConsoleSecurity #NetworkSecurity #Cisco #CyberSec #ITOps",
+   "tags": [
+    "ConsoleSecurity",
+    "NetworkSecurity",
+    "Cisco",
+    "CyberSec",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "🚨 Stop leaving your switch console port unprotected! Apply a strong secret on the console line—like enable secret My$tr0ngPwd—and add an idle‑timeout (e.g., 5 min) to auto‑logoff idle sessions. Remember: always enforce a strong console password and timeout. Which of these have you hit in production? Tell me in the comments. #ConsoleSecurity #NetworkSecurity #Cisco #CyberSec #ITOps",
+   "linkedin_caption": "Many rack‑side engineers overlook a weak console password and the absence of an idle‑timeout, leaving switches vulnerable to takeover. Strengthen the console with a strong secret and set an automatic timeout to block unauthorized sessions. How do you protect your console?\n\n——— Türkçe ———\n\nBirçok rack‑yanı mühendisi zayıf console password ve idle‑timeout eksikliğini göz ardı ederek switchlerin ele geçirilmesine yol açıyor. Console’u güçlü bir secret ile koruyun ve yetkisiz oturumları engellemek için otomatik bir timeout ayarlayın. Konsolunuzu nasıl koruyorsunuz?\n\n#ConsoleSecurity #NetworkSecurity #CyberSec",
+   "status": "yt_failed",
+   "hook": "Stop leaving your switch console port unprotected.",
+   "duration_seconds": 22.66,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18039826724891255"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18039826724891255",
+   "file_id": "BAACAgQAAxkDAAIEKGrtmGsWjOjvzZwjpDtXa6Kw2ZftAAKlHwACAQlxU9qyVMZuAa2YPQQ",
+   "message_id": 1064
   }
  }
 }
