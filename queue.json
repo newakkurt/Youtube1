@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
@@ -100,7 +99,8 @@
   "Don't use ignore_errors: yes – stops silent network outages",
   "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access",
   "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks",
-  "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout"
+  "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout",
+  "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5319,6 +5319,37 @@
    "ig_id": "17972312433193536",
    "file_id": "BAACAgQAAxkDAAIEPmruEoQ-4f0kexe4yKlXvcPwUnt9AAKcIAACAQlxUyhr3EXD1jvcPQQ",
    "message_id": 1086
+  },
+  "156a39ed": {
+   "title": "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout",
+   "description": "Leaving open VTY sessions on network switches creates an easy entry point for unauthorized access when terminals are left unattended. Enforce exec-timeout across all VTY lines to drop idle administrative sessions automatically.\n\n#Shorts #NetworkSecurity #Cisco #NetworkEngineering #SysAdmin #CyberSecurity",
+   "tags": [
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "SysAdmin",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your switches are secure? Think again. When engineers walk away, SSH sessions can stay open, giving anyone nearby a privileged CLI. Enforce a mandatory disconnect timer—set a five‑minute exec‑timeout on all VTY lines to drop idle sessions automatically. Have you applied exec‑timeout everywhere on your network? Share your experience or save this tip for later.\n#NetworkSecurity #Cisco #NetworkEngineering #SysAdmin #CyberSecurity",
+   "linkedin_caption": "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout – Unattended terminals on switches expose VTY sessions to unauthorized access. Set exec-timeout on all VTY lines to automatically drop idle admin sessions. Ready to secure your VTY lines?\n\n——— Türkçe ———\n\nOpen SSH Sessions Left Unattended: Enforce Line Exec-Timeout – Switchlerde boşta kalan terminaller, VTY sessions'ları yetkisiz erişime açık bırakır. exec-timeout'u tüm VTY lines'ına uygulayarak boşta duran admin sessions'ı otomatik olarak drop edin. VTY hatlarınızı korumaya hazır mısınız?\n\n#Shorts #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never leave active VTY lines running without a mandatory disconnect timer.",
+   "duration_seconds": 29.84,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17879246766651289"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17879246766651289",
+   "file_id": "BAACAgQAAxkDAAIEQmruZIRUdEI5WH8Eg6ra8Y3xfkEdAALIHgACAQl5U2hDlv02g44oPQQ",
+   "message_id": 1090
   }
  }
 }
