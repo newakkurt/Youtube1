@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
   "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
@@ -100,7 +99,8 @@
   "Weak Console Password? Enforce Strong Secret and Idle‑Timeout",
   "Don't use ignore_errors: yes – stops silent network outages",
   "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access",
-  "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks"
+  "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks",
+  "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5288,6 +5288,37 @@
    "ig_id": "17989912190878866",
    "file_id": "BAACAgQAAxkDAAIEOGruDVWFE192W_d6pKughcTCYat4AAKMIAACAQlxU_SNtVn_OwfzPQQ",
    "message_id": 1080
+  },
+  "51bf6f1e": {
+   "title": "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout",
+   "description": "Storing the DHCP snooping database in the root flash can wear the filesystem and slow the switch. Use a custom folder and a short timeout, then back up the DB to maintain performance.\n\n#Shorts #DHCPsnooping #NetworkEngineering #CyberSecurity #SwitchConfig #PerformanceTuning",
+   "tags": [
+    "DHCPsnooping",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SwitchConfig",
+    "PerformanceTuning",
+    "Shorts"
+   ],
+   "instagram_caption": "⚠️ Stop your switch from crashing with a simple folder tweak. Storing the DHCP snooping DB in the root flash can wear the filesystem and slow the switch. Move it to a dedicated folder—e.g., snooping-db flash:/dhcp_snoop/—and set a short timeout (5 minutes) to keep write load down. Backup the DB before moving and keep the timeout low. Have you already moved your DHCP snooping DB to a custom folder? Let me know below! #DHCPsnooping #NetworkEngineering #CyberSecurity #SwitchConfig #PerformanceTuning",
+   "linkedin_caption": "Storing the DHCP snooping database in the root flash can wear the filesystem and slow the switch. Instead, use a custom folder and a short timeout, then back up the DB to keep performance high. How do you handle DHCP snooping DB storage in your environments? #DHCPsnooping #NetworkEngineering #PerformanceTuning\n\n——— Türkçe ———\n\nDHCP snooping database'ını root flash'a depolamak dosya sistemini aşındırabilir ve switch'i yavaşlatabilir. Bunun yerine, özel bir klasör ve kısa bir timeout kullanın, ardından DB'yi yedekleyerek performansı koruyun. DHCP snooping DB depolamasını nasıl yönetiyorsunuz? #DHCPsnooping #NetworkEngineering #PerformanceTuning\n\n#DHCPsnooping #NetworkEngineering #PerformanceTuning",
+   "status": "yt_failed",
+   "hook": "Never store DHCP snooping DB in the root flash folder.",
+   "duration_seconds": 23.26,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17972312433193536"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17972312433193536",
+   "file_id": "BAACAgQAAxkDAAIEPmruEoQ-4f0kexe4yKlXvcPwUnt9AAKcIAACAQlxUyhr3EXD1jvcPQQ",
+   "message_id": 1086
   }
  }
 }
