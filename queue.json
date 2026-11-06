@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Port-security max MACs: stop rogue devices with restrict mode",
   "Config Drift Detected? Automate Golden-Config Checks with Ansible",
   "Mini Switch triggers err-disable? Turn on PortFast + BPDU Guard",
   "Auth-Fail VLAN: Stop 802.1X Lockouts on Access Ports",
@@ -100,7 +99,8 @@
   "Rogue Switch Steals Root Bridge: Enforce BPDU Guard Err-Disable",
   "RADIUS outage: configure fail-open/close to keep ports up",
   "Weak Console Password? Enforce Strong Secret and Idle‑Timeout",
-  "Don't use ignore_errors: yes – stops silent network outages"
+  "Don't use ignore_errors: yes – stops silent network outages",
+  "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5226,6 +5226,37 @@
    "ig_id": "18112393514614950",
    "file_id": "BAACAgQAAxkDAAIELmrtxMnzGG_xHWGs2DWIbQXEAdDPAALcHwACAQlxU9eBmZDVm1k4PQQ",
    "message_id": 1070
+  },
+  "3eca4127": {
+   "title": "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access",
+   "description": "Learn how to secure unused switch ports by moving them to a dedicated blackhole VLAN and shutting them down safely. Follow the quick steps to avoid accidental outages and keep physical intruders out.\n\n#Shorts #BlackholeVLAN #NetworkSecurity #CyberDefense #SwitchHardening #PhysicalSecurity",
+   "tags": [
+    "BlackholeVLAN",
+    "NetworkSecurity",
+    "CyberDefense",
+    "SwitchHardening",
+    "PhysicalSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop leaving unused ports active— they’re open doors for attackers. Create a discard VLAN (e.g., VLAN 999) with no uplink, assign the idle interfaces to it, and shut them down after confirming no services need them. Quarantine idle ports in a blackhole VLAN, then shut them off— that’s the rule. Which of these steps have you already applied in your environment? Drop a comment or save this for your next switch hardening session. #BlackholeVLAN #SwitchHardening #CyberDefense #NetworkSecurity #PhysicalSecurity",
+   "linkedin_caption": "Secure your unused switch ports by moving them to a dedicated blackhole VLAN and shutting them down safely. Follow these quick steps to prevent accidental outages and keep physical intruders out. Any thoughts? #Shorts #BlackholeVLAN #NetworkSecurity\n\n——— Türkçe ———\n\nKullanılmayan switch portlarını güvenli hale getirmek için onları özel bir blackhole VLAN'ına taşıyın ve güvenli bir şekilde kapatın. Bu hızlı adımları izleyerek beklenmedik kesintileri önleyin ve fiziksel girişimleri engelleyin. İlginiz var mı? #Shorts #BlackholeVLAN #NetworkSecurity\n\n#Shorts #BlackholeVLAN #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Stop leaving unused ports active— they’re open doors for attackers.",
+   "duration_seconds": 26.24,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17996551340844667"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17996551340844667",
+   "file_id": "BAACAgQAAxkDAAIEMmrt5EM9FI2ESamTIdnyEeLUw8rGAAIyIAACAQlxU9LTwC3XysEZPQQ",
+   "message_id": 1074
   }
  }
 }
