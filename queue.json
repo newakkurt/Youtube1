@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
   "Sticky MAC disappears after reload – save startup-config",
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
   "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
@@ -100,7 +99,8 @@
   "CDP & LLDP Leak Topology: Disable Discovery on Ports",
   "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports",
   "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills",
-  "IPv6 not needed? Disable global routing on switches and routers"
+  "IPv6 not needed? Disable global routing on switches and routers",
+  "Stop Using ignore_errors:yes – Prevent Silent Network Outages"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5598,6 +5598,37 @@
    "ig_id": "17911024275604255",
    "file_id": "BAACAgQAAxkDAAIEaWrvclTKraFmxdGExxryjPIAATf0eAACgB4AAiNneFMAAWW3u5K0CE89BA",
    "message_id": 1129
+  },
+  "a742e3ca": {
+   "title": "Stop Using ignore_errors:yes – Prevent Silent Network Outages",
+   "description": "Using ignore_errors:yes in Ansible masks configuration failures, leading to silent network outages. Switch to fail‑fast settings or manual validation to keep your fabric reliable.\n\n#Shorts #AnsibleFailFast #NetworkAutomation #CyberSecurity #DevOps #Ansible",
+   "tags": [
+    "AnsibleFailFast",
+    "NetworkAutomation",
+    "CyberSecurity",
+    "DevOps",
+    "Ansible",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting Ansible swallow your errors! The ignore_errors: yes flag hides config failures that can ripple into multi‑site outages. Switch to fail‑fast settings or manual checks so you never miss a problem. Have you seen silent outages caused by this? Drop a comment below! #AnsibleFailFast #NetworkAutomation #CyberSecurity #DevOps",
+   "linkedin_caption": "Stop using ignore_errors:yes – it hides configuration failures that cause silent network outages. Switch to fail‑fast or manual checks to keep your network reliable. Have you considered switching to fail‑fast? #AnsibleFailFast #NetworkAutomation #CyberSecurity\n\n——— Türkçe ———\n\nignore_errors:yes kullanmak yapılandırma hatalarını gizleyerek sessiz ağ arızalarına yol açar. Fail‑fast veya manuel doğrulamaya geçerek ağınızı güvenilir tutun. Fail‑fast'e geçmeyi düşündünüz mü? #AnsibleFailFast #NetworkAutomation #CyberSecurity\n\n#AnsibleFailFast #NetworkAutomation #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Never let Ansible ignore a failed network task.",
+   "duration_seconds": 21.0,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18025226717713010"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18025226717713010",
+   "file_id": "BAACAgQAAxkDAAIEb2rvo-yAAAE68hoRFS898oxyvqRERgAC3h0AAiNngFO2WCaJc6V1gT0E",
+   "message_id": 1135
   }
  }
 }
