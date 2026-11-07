@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
   "Smurf DDoS risk: globally disable IP Directed Broadcast",
   "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
@@ -100,7 +99,8 @@
   "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout",
   "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout",
   "Avoid lockouts: Configure local AAA fallback when TACACS+ fails",
-  "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown"
+  "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown",
+  "DHCP Snooping storm? Rate‑limit untrusted ports to protect servers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5412,6 +5412,37 @@
    "ig_id": "18384177376227190",
    "file_id": "BAACAgQAAxkDAAIETmruzwbQtusS3wM3MTk-K6pDxZQkAAIkHwACAQl5U7yc9eVEPEfXPQQ",
    "message_id": 1102
+  },
+  "a489cdca": {
+   "title": "DHCP Snooping storm? Rate‑limit untrusted ports to protect servers",
+   "description": "A DHCP storm on an untrusted port can overwhelm your switch and server. Rate‑limiting those ports with a modest 15 pps threshold keeps the network stable and protects CPU resources.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #Switching #DHCP",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "Switching",
+    "DHCP",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting DHCP storms cripple your switch. Apply a rate‑limit on untrusted ports, e.g., 15 packets per second. Without the limit, a rogue device can starve DHCP, crashing CPU. Always set DHCP snooping rate‑limit on every access port. Which of these have you hit in production? Tell me in the comments. #DHCPRateLimit #NetworkSecurity #Cisco #Switching #DHCP",
+   "linkedin_caption": "Ever faced a DHCP storm on an untrusted port? A sudden surge can overload your switch and server. By rate‑limiting that port to a modest 15 pps threshold you keep the network stable and protect CPU resources. Are you ready to guard your infrastructure?\n\n——— Türkçe ———\n\nBir DHCP storm (DHCP fırtınası) bir untrusted port (güvenilmeyen port) üzerinde mi karşılaştınız? Ani bir yükseliş switch ve serverınızı aşırı yükleyebilir. Portu 15 pps (per second) sınırına kadar rate‑limiting (hız sınırlama) yaparak, ağı istikrarlı tutar ve CPU kaynaklarını korursunuz. Altyapınızı korumaya hazır mısınız?\n\n#Shorts #DHCPRateLimit #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Stop letting DHCP storms cripple your switch.",
+   "duration_seconds": 21.93,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17993569209062642"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17993569209062642",
+   "file_id": "BAACAgQAAxkDAAIEVGru6e-IyMjJsfyjgb12ENoQLh6mAAKbHQACI2d4UzsFIZNpeD_yPQQ",
+   "message_id": 1108
   }
  }
 }
