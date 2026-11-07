@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
   "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
   "Switch Reload Drops Traffic: Store Snooping Binding DB",
   "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
@@ -100,7 +99,8 @@
   "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown",
   "DHCP Snooping storm? Rate‑limit untrusted ports to protect servers",
   "Switch Web GUI Risks: Disable HTTP Server and Enforce SSH",
-  "CDP & LLDP Leak Topology: Disable Discovery on Ports"
+  "CDP & LLDP Leak Topology: Disable Discovery on Ports",
+  "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5505,6 +5505,37 @@
    "ig_id": "17998482369103815",
    "file_id": "BAACAgQAAxkDAAIEXGrvJTOkzoeIGyRiyMvLWvFKYacrAALzHQACI2d4U8DZTJxmKwzpPQQ",
    "message_id": 1116
+  },
+  "de76fd56": {
+   "title": "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports",
+   "description": "Protect your switch CPU and DHCP server from starvation attacks by configuring rate limits on untrusted edge interfaces. Remember to keep trusted uplinks unthrottled so legitimate DHCP traffic passes without drops.\n\n#Shorts #DHCPSnooping #NetworkSecurity #Cisco #NetworkEngineering #SysAdmin",
+   "tags": [
+    "DHCPSnooping",
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "⚡️ DHCP starvation is a silent killer—an errant client or targeted flood can max out your switch CPU before you know it. The fix? Rate‑limit DHCP snooping on every untrusted edge port (e.g., ip dhcp snooping limit rate fifteen) while leaving uplinks unlimited. This cuts off rogue flooders before legit traffic drops. Have you dealt with CPU crashes from DHCP? Share in the comments! #DHCPSnooping #SwitchSecurity #NetworkEngineering #Cisco #SysAdmin",
+   "linkedin_caption": "DHCP starvation attacks can crush your switch CPU and DHCP server. Protect your network by configuring rate limits on untrusted edge interfaces, while keeping trusted uplinks unthrottled so legitimate DHCP traffic passes without drops. Do you rate limit edge ports in your network?\n\n——— Türkçe ———\n\nDHCP starvation saldırıları switch CPU'nuzu ve DHCP server'ınızı çökertebilir. Untrusted edge interface'lerde rate limit yapılandırarak koruma sağlayın ve meşru DHCP trafiğinin drop olmadan geçmesi için trusted uplink'leri unthrottled bırakın. Ağınızda edge port'lara rate limit uyguluyor musunuz?\n\n#DHCPSnooping #NetworkSecurity #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Always rate-limit DHCP snooping traffic on your untrusted access ports.",
+   "duration_seconds": 29.04,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18039529640852508"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18039529640852508",
+   "file_id": "BAACAgQAAxkDAAIEYGrvWCNOdHK6CsErEZoroTYgsrFWAAJfHgACI2d4U6aru-TTHV_CPQQ",
+   "message_id": 1120
   }
  }
 }
