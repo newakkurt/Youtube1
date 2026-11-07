@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Smurf DDoS risk: globally disable IP Directed Broadcast",
   "Fake Route Packets Crash CPUs – Enable TTL Security (GTSM)",
   "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
   "Switch Reload Drops Traffic: Store Snooping Binding DB",
@@ -100,7 +99,8 @@
   "Avoid lockouts: Configure local AAA fallback when TACACS+ fails",
   "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown",
   "DHCP Snooping storm? Rate‑limit untrusted ports to protect servers",
-  "Switch Web GUI Risks: Disable HTTP Server and Enforce SSH"
+  "Switch Web GUI Risks: Disable HTTP Server and Enforce SSH",
+  "CDP & LLDP Leak Topology: Disable Discovery on Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5474,6 +5474,37 @@
    "ig_id": "18126671492313109",
    "file_id": "BAACAgQAAxkDAAIEWGrvFEOHNqgV61CGT6pLicbQJQABCAAC1h0AAiNneFMGKqgHZLuLSj0E",
    "message_id": 1112
+  },
+  "e2fdaa3e": {
+   "title": "CDP & LLDP Leak Topology: Disable Discovery on Ports",
+   "description": "Leaving discovery protocols active broadcasts sensitive switch model and OS details to unauthorized users. Disable CDP and LLDP across untrusted ports or globally to stop network topology leaks.\n\n#Shorts #NetworkSecurity #Cisco #NetworkEngineering #CyberSecurity #SysAdmin",
+   "tags": [
+    "NetworkSecurity",
+    "Cisco",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Did you know your access ports are broadcasting your topology? Stop that chatter. Disable CDP with 'no cdp enable' on each access interface and shut down LLDP transmit/receive. If you need a global kill switch, issue 'no lldp run' or the vendor equivalent—keep discovery off wherever device inventory isn't required, especially on voice or untrusted links. Which of these have you hit in production? Tell me below. #NetworkSecurity #Cisco #LLDP #CDP #SysAdmin",
+   "linkedin_caption": "Discover how leaving CDP and LLDP enabled can expose your switch model and OS to unauthorized eyes. Learn why disabling discovery on untrusted or all ports is essential to protect your network topology. What steps will you take to secure your ports?\n\n——— Türkçe ———\n\nCDP ve LLDP'nin etkin bırakılması, switch modelinizi ve işletim sistemi bilgilerinizi yetkisiz kişilere açığa çıkarabilir. Güvenilmeyen ya da tüm portlarda keşif protokollerini devre dışı bırakmanın ağ topolojinizi korumada neden kritik olduğunu öğrenin. Hangi adımları atarak portlarınızı güvence altına alacaksınız?\n\n#NetworkSecurity #CyberSecurity #SysAdmin",
+   "status": "yt_failed",
+   "hook": "Stop broadcasting your internal topology through access ports with CDP and LLDP.",
+   "duration_seconds": 36.39,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17998482369103815"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17998482369103815",
+   "file_id": "BAACAgQAAxkDAAIEXGrvJTOkzoeIGyRiyMvLWvFKYacrAALzHQACI2d4U8DZTJxmKwzpPQQ",
+   "message_id": 1116
   }
  }
 }
