@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Switch Reload Drops Traffic: Store Snooping Binding DB",
   "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
   "Sticky MAC disappears after reload – save startup-config",
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
@@ -100,7 +99,8 @@
   "Switch Web GUI Risks: Disable HTTP Server and Enforce SSH",
   "CDP & LLDP Leak Topology: Disable Discovery on Ports",
   "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports",
-  "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills"
+  "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills",
+  "IPv6 not needed? Disable global routing on switches and routers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5567,6 +5567,37 @@
    "ig_id": "18073559627774573",
    "file_id": "BAACAgQAAxkDAAIEY2rvW_9zYKiVk2CsezT7tMu_xc1PAAJiHgACI2d4U0GSulZzei5bPQQ",
    "message_id": 1123
+  },
+  "e033b9fc": {
+   "title": "IPv6 not needed? Disable global routing on switches and routers",
+   "description": "Leaving IPv6 enabled on switches and routers widens your attack surface. Disable global IPv6 routing and per‑port IPv6 to harden your network.\n\n#Shorts #IPv6Security #NetworkSecurity #CyberSec #ITOps #Infrastructure",
+   "tags": [
+    "IPv6Security",
+    "NetworkSecurity",
+    "CyberSec",
+    "ITOps",
+    "Infrastructure",
+    "Shorts"
+   ],
+   "instagram_caption": "Is your switch quietly leaking into the IPv6 world?\\n\\nTurn off global IPv6 routing with ‘no ipv6 unicast-routing’ and disable per‑port IPv6 with ‘no ipv6 enable’ on each interface. Keeping IPv6 off shrinks your attack surface.\\n\\nHave you disabled IPv6 on your production switches yet? Drop a comment or share to help secure the network.\\n#IPv6Security #NetworkSecurity #CyberSec #ITOps #Infrastructure",
+   "linkedin_caption": "IPv6 not needed? In many environments keeping IPv6 active on switches and routers expands the attack surface. By disabling global IPv6 routing and per‑port IPv6, you can strengthen your network security. How would you approach this on your infrastructure?\n\n——— Türkçe ———\n\nIPv6 gereksiz mi? Çoğu ortamda switch ve router’larda IPv6’yı etkin bırakmak saldırı yüzeyini genişletir. Global IPv6 yönlendirmesini ve port bazında IPv6’yı devre dışı bırakarak ağ güvenliğinizi artırabilirsiniz. Altyapınızda bunu nasıl uygularsınız?\n\n#IPv6Security #NetworkSecurity #CyberSec",
+   "status": "yt_failed",
+   "hook": "Stop leaving IPv6 active on devices you never use.",
+   "duration_seconds": 24.19,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17911024275604255"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17911024275604255",
+   "file_id": "BAACAgQAAxkDAAIEaWrvclTKraFmxdGExxryjPIAATf0eAACgB4AAiNneFMAAWW3u5K0CE89BA",
+   "message_id": 1129
   }
  }
 }
