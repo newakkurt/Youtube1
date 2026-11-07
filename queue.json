@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
   "Smurf DDoS risk: globally disable IP Directed Broadcast",
@@ -100,7 +99,8 @@
   "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks",
   "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout",
   "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout",
-  "Avoid lockouts: Configure local AAA fallback when TACACS+ fails"
+  "Avoid lockouts: Configure local AAA fallback when TACACS+ fails",
+  "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5381,6 +5381,37 @@
    "ig_id": "17965728912216942",
    "file_id": "BAACAgQAAxkDAAIESGrulWjqGV8Rjh8kbOwcqKqelve-AALQHgACAQl5U6YFsj38sIYDPQQ",
    "message_id": 1096
+  },
+  "dfd12629": {
+   "title": "Isolate Unused Switch Ports with Blackhole VLAN and Shutdown",
+   "description": "Learn how to lock down unused switch ports by moving them to a blackhole VLAN and optionally shutting them down. This quick guide also shows why enabling port‑security on every idle port is essential to prevent physical intrusion.\n\n#Shorts #BlackholeVLAN #NetworkSecurity #Cisco #PortSecurity #CyberDefense",
+   "tags": [
+    "BlackholeVLAN",
+    "NetworkSecurity",
+    "Cisco",
+    "PortSecurity",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "instagram_caption": "Unplug the silent threats: never leave a switch port idle. Switch into the interface, drop it into VLAN 999 – the blackhole for stray traffic – then shutdown and enable port‑security. Every unused port becomes a closed door against physical intrusions. Have you applied this in your environment yet? Save & share with your team. #Shorts #BlackholeVLAN #NetworkSecurity #Cisco #PortSecurity",
+   "linkedin_caption": "Discover how to isolate unused switch ports by moving them to a blackhole VLAN and optionally shutting them down. This quick guide also explains why enabling port‑security on every idle port is vital to block physical intrusion. How do you secure idle ports in your network?\n\n——— Türkçe ———\n\nBoşta olan switch portlarını blackhole VLAN’a taşıyarak ve isteğe bağlı olarak kapatarak izole etmeyi öğrenin. Bu kısa rehber, her boş portta port‑security’i etkinleştirmenin fiziksel girişimi engellemedeki önemini de açıklar. Ağınızda boş portları nasıl koruyorsunuz?\n\n#NetworkSecurity #Cisco #PortSecurity",
+   "status": "yt_failed",
+   "hook": "Never leave unused ports active; they’re a backdoor into your network.",
+   "duration_seconds": 24.51,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18384177376227190"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18384177376227190",
+   "file_id": "BAACAgQAAxkDAAIETmruzwbQtusS3wM3MTk-K6pDxZQkAAIkHwACAQl5U7yc9eVEPEfXPQQ",
+   "message_id": 1102
   }
  }
 }
