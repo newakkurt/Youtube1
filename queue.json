@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent Loops & Root Hijack: PortFast + BPDU Guard with Recovery Timer",
   "Switch Reload Drops Traffic: Store Snooping Binding DB",
   "Rogue APs Impersonating Enterprise Wi-Fi: Enable WIPS Containment",
   "Sticky MAC disappears after reload – save startup-config",
@@ -100,7 +99,8 @@
   "DHCP Snooping storm? Rate‑limit untrusted ports to protect servers",
   "Switch Web GUI Risks: Disable HTTP Server and Enforce SSH",
   "CDP & LLDP Leak Topology: Disable Discovery on Ports",
-  "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports"
+  "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports",
+  "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5536,6 +5536,37 @@
    "ig_id": "18039529640852508",
    "file_id": "BAACAgQAAxkDAAIEYGrvWCNOdHK6CsErEZoroTYgsrFWAAJfHgACI2d4U6aru-TTHV_CPQQ",
    "message_id": 1120
+  },
+  "e1248eef": {
+   "title": "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills",
+   "description": "Unverified backup links create silent outages when primary circuits drop unexpectedly. Always schedule off-peak failover drills to ensure routing and tunnels switch over cleanly.\n\n#Shorts #WANfailover #networking #networkengineer #sdwan #sysadmin",
+   "tags": [
+    "WANfailover",
+    "networking",
+    "networkengineer",
+    "sdwan",
+    "sysadmin",
+    "Shorts"
+   ],
+   "instagram_caption": "What if your backup WAN silently fails when you need it most? Never assume your backup link works until an actual outage strikes. Run failover drills on both SD‑WAN and traditional router uplinks, pulling primary circuits during maintenance windows to verify BFD sessions, routing reconvergence, and tunnel failover. Validate redundant WAN paths off‑hours before production traffic discovers broken routes for you. Which failover scenarios have you hit in prod? Save this reel or share with a colleague who needs to test their failover now.\n\n#WANfailover #networking #sdwan #sysadmin",
+   "linkedin_caption": "Silent WAN Failover Crashes Sites: Schedule Off‑Peak Drills\n\nUnverified backup links create silent outages when primary circuits drop unexpectedly. Always schedule off‑peak failover drills to ensure routing and tunnels switch over cleanly. How are you handling silent failovers?\n\n——— Türkçe ———\n\nSilent WAN Failover Crashes Sites: Schedule Off‑Peak Drills\n\nUnverified backup links create silent outages when primary circuits drop unexpectedly. Always schedule off‑peak failover drills to ensure routing and tunnels switch over cleanly. Sessiz failoverları nasıl yönetiyorsunuz?\n\n#WANfailover #networking #sdwan",
+   "status": "yt_failed",
+   "hook": "Never assume your backup WAN link works until an actual outage strikes.",
+   "duration_seconds": 28.71,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18073559627774573"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18073559627774573",
+   "file_id": "BAACAgQAAxkDAAIEY2rvW_9zYKiVk2CsezT7tMu_xc1PAAJiHgACI2d4U0GSulZzei5bPQQ",
+   "message_id": 1123
   }
  }
 }
