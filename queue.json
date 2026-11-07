@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Err‑disable ports stay down? Set a recovery timer to auto‑heal",
   "Detect Config Drift Fast: Golden Template Alerts, No Auto‑Fix",
   "Stop Mini‑Switch Attacks: Secure Ports with PortFast and BPDU Guard",
   "Prevent Config Drift with Golden Templates and Alert‑First Strategy",
@@ -100,7 +99,8 @@
   "Unused Ports: Blackhole VLAN + Shutdown to Stop Physical Access",
   "Stop Config Sprawl: Use any_errors_fatal in Ansible Playbooks",
   "Prevent Switch Performance Drop: Custom DHCP Snooping DB & Timeout",
-  "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout"
+  "Open SSH Sessions Left Unattended: Enforce Line Exec-Timeout",
+  "Avoid lockouts: Configure local AAA fallback when TACACS+ fails"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5350,6 +5350,37 @@
    "ig_id": "17879246766651289",
    "file_id": "BAACAgQAAxkDAAIEQmruZIRUdEI5WH8Eg6ra8Y3xfkEdAALIHgACAQl5U2hDlv02g44oPQQ",
    "message_id": 1090
+  },
+  "c321f630": {
+   "title": "Avoid lockouts: Configure local AAA fallback when TACACS+ fails",
+   "description": "Learn why a failing primary TACACS+ server can lock you out and how to set up a local AAA fallback. Follow the exact CLI steps to keep your network secure and accessible.\n\n#Shorts #AAAFallback #NetworkSecurity #Cybersecurity #SysAdmin #ITOps",
+   "tags": [
+    "AAAFallback",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "SysAdmin",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever been locked out when TACACS+ takes a tumble? Don't let a server crash freeze your network.\n\nThe fix is simple: enable a local AAA fallback and create a local admin account. Run 'aaa authentication login default group tacacs+ local', then add 'username admin secret MyPass'. Do this before you go live, and you keep access even if TACACS+ is down.\n\nHave you set this up yet? Drop your experience in the comments.\n\n#AAAFallback #NetworkSecurity #Cybersecurity #SysAdmin #ITOps",
+   "linkedin_caption": "Avoid lockouts: Configure local AAA fallback when TACACS+ fails. Learn why a failing primary TACACS+ server can lock you out and how to set up a local AAA fallback. Follow the exact CLI steps to keep your network secure and accessible. Yedek planınızı düşündünüz mü?\n\n——— Türkçe ———\n\nLockout'ları önleyin: TACACS+ başarısız olduğunda local AAA fallback'i yapılandırın. Başarısız ana TACACS+ sunucusunun sizi kilitleyebileceğini ve yerel AAA yedek ayarının nasıl yapılacağını öğrenin. Ağı güvenli ve erişilebilir tutmak için tam CLI adımlarını izleyin. Yedek planınızı düşündünüz mü?\n\n#Shorts #AAAFallback #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Never assume your network stays up when the TACACS+ server crashes.",
+   "duration_seconds": 22.44,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17965728912216942"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17965728912216942",
+   "file_id": "BAACAgQAAxkDAAIESGrulWjqGV8Rjh8kbOwcqKqelve-AALQHgACAQl5U6YFsj38sIYDPQQ",
+   "message_id": 1096
   }
  }
 }
