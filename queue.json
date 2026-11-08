@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop rogue BGP route leaks with AS‑Path ACL filters",
   "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
@@ -100,7 +99,8 @@
   "Stop Using ignore_errors:yes – Prevent Silent Network Outages",
   "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication",
   "VLAN Hopping Risks on Trunks: Change Native VLAN 1",
-  "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports"
+  "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports",
+  "Hardcoded Passwords in Python: Use Environment Variables"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5722,6 +5722,37 @@
    "ig_id": "18289295023294575",
    "file_id": "BAACAgQAAxkDAAIEe2rwPEAda57pdG07DGHD8cxzBS7OAAJ0HgACI2eAU894QCio20jwPQQ",
    "message_id": 1147
+  },
+  "4d1c16ae": {
+   "title": "Hardcoded Passwords in Python: Use Environment Variables",
+   "description": "Hardcoding credentials into automation scripts exposes your switches to unauthorized access. Learn how to secure your network logins using environment variables and Ansible Vault.\n\n#Shorts #NetworkAutomation #Python #NetDevOps #CyberSecurity #Ansible",
+   "tags": [
+    "NetworkAutomation",
+    "Python",
+    "NetDevOps",
+    "CyberSecurity",
+    "Ansible",
+    "Shorts"
+   ],
+   "instagram_caption": "Hardcoding passwords in Python is a quick route to a security breach. If anyone can pull your repo, they get full switch access. Use os.environ or Ansible Vault to pull secrets at runtime and keep credentials out of your code. Have you dealt with this in production? Drop a comment below or save this tip for next time. #NetworkAutomation #Python #NetDevOps #CyberSecurity #Ansible",
+   "linkedin_caption": "Hardcoding credentials into automation scripts exposes your switches to unauthorized access. Learn how to secure your network logins using environment variables and Ansible Vault instead of hardcoded passwords in Python. How do you protect credentials in your scripts?\n\n——— Türkçe ———\n\nAutomation script'lerine credential'ları hardcode etmek, switch'lerinizi yetkisiz erişime maruz bırakır. Python'da hardcoded password'ler yerine environment variables ve Ansible Vault kullanarak network login'lerinizi nasıl koruyacağınızı öğrenin. Script'lerinizde credential'ları nasıl koruyorsunuz?\n\n#NetworkAutomation #Python #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Stop hardcoding network switch passwords directly into your Python scripts.",
+   "duration_seconds": 25.52,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18003318077809963"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18003318077809963",
+   "file_id": "BAACAgQAAxkDAAIEf2rwZxk6CzQR5yTe91FU7vK5PpM2AAKuHgACI2eAU5IEKOKB2wvoPQQ",
+   "message_id": 1151
   }
  }
 }
