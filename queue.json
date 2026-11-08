@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
   "Stop rogue BGP route leaks with AS‑Path ACL filters",
   "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
@@ -100,7 +99,8 @@
   "IPv6 not needed? Disable global routing on switches and routers",
   "Stop Using ignore_errors:yes – Prevent Silent Network Outages",
   "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication",
-  "VLAN Hopping Risks on Trunks: Change Native VLAN 1"
+  "VLAN Hopping Risks on Trunks: Change Native VLAN 1",
+  "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5691,6 +5691,37 @@
    "ig_id": "18133292611875809",
    "file_id": "BAACAgQAAxkDAAIEd2rwIBD_2-qyiNVaY2WtTjviPwfXAAI6HgACI2eAUxuPvLgkVmNLPQQ",
    "message_id": 1143
+  },
+  "8708122e": {
+   "title": "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports",
+   "description": "Routing firewall high availability heartbeats through shared switches risks dropped keepalives and split-brain active-active states. Always configure dedicated physical ports with direct crossover connections between cluster nodes.\n\n#Shorts #FirewallHA #NetworkSecurity #HighAvailability #NetworkEngineering #Firewall",
+   "tags": [
+    "FirewallHA",
+    "NetworkSecurity",
+    "HighAvailability",
+    "NetworkEngineering",
+    "Firewall",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen a split‑brain when HA heartbeats cross a shared switch? The congestion or spanning‑tree loops on the shared access switch can drop cluster keepalives and trigger a catastrophic split‑brain failover. The fix? Isolate the HA heartbeat traffic onto dedicated, back‑to‑back physical interfaces and connect the firewall nodes with a crossover cable. Which of these have you hit in production? Drop a comment or share this with your network crew.\n#FirewallHA #HighAvailability #NetworkEngineering #SplitBrain #NetworkSecurity",
+   "linkedin_caption": "HA Split‑Brain outage risk: routing firewall HA heartbeats through shared switches can drop keepalives and trigger split‑brain active‑active states. Isolate heartbeats on dedicated physical ports with direct crossover links between cluster nodes. How do you handle this?\n\n——— Türkçe ———\n\nHA Split‑Brain çıkışı riski: Routing firewall HA heartbeats shared switches üzerinden geçerse keepalives düşebilir ve split‑brain active‑active durumları ortaya çıkabilir. Heartbeats’ı dedicated physical ports ile direct crossover bağlantılarıyla izole edin. Bu durumu nasıl ele alıyorsunuz?\n\n#FirewallHA #NetworkSecurity #HighAvailability",
+   "status": "yt_failed",
+   "hook": "Never run firewall HA heartbeat links across shared access switches.",
+   "duration_seconds": 28.64,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18289295023294575"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18289295023294575",
+   "file_id": "BAACAgQAAxkDAAIEe2rwPEAda57pdG07DGHD8cxzBS7OAAJ0HgACI2eAU894QCio20jwPQQ",
+   "message_id": 1147
   }
  }
 }
