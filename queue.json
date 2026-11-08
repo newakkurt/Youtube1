@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
@@ -100,7 +99,8 @@
   "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports",
   "Hardcoded Passwords in Python: Use Environment Variables",
   "Silent Switch Config Drift: Audit Golden Config with Ansible",
-  "Restrict Admin Access to Trusted IPs and HTTPS/SSH"
+  "Restrict Admin Access to Trusted IPs and HTTPS/SSH",
+  "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5815,6 +5815,37 @@
    "ig_id": "18077882489468919",
    "file_id": "BAACAgQAAxkDAAIEjmrwxOPN8gynOOGW4MQDIbeG7aUhAAKjIQACI2eIU8sc7NebB8UyPQQ",
    "message_id": 1166
+  },
+  "440f9b52": {
+   "title": "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early",
+   "description": "Use SNMP traps to watch power supplies and fans before they fail. Proactive monitoring keeps your network up and secure.\n\n#Shorts #HardwareMonitoring #NetworkEngineering #SNMP #DataCenter #ProactiveOps",
+   "tags": [
+    "HardwareMonitoring",
+    "NetworkEngineering",
+    "SNMP",
+    "DataCenter",
+    "ProactiveOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever missed a PSU failure because of silent traps? Enable redundant power supply and fan status SNMP traps, set your NMS to fire instant alerts for critical severities, and monitor hardware health every day. Catch failures before they crash. Which hardware traps have you hit in production? Let me know in the comments. #SNMP #HardwareMonitoring #NetworkEngineering #DataCenter #ProactiveOps",
+   "linkedin_caption": "Discover how SNMP traps can keep an eye on your power supplies and fans before they fail. Early detection means a more reliable, secure network and less surprise downtime. Proactive monitoring is key to maintaining uptime. Are you ready to act? #HardwareMonitoring #NetworkEngineering #SNMP\n\n——— Türkçe ———\n\nSNMP trap'leri, güç kaynaklarınızı ve fanlarınızı arızalanmadan önce izlemenizi sağlar. Erken tespit, daha güvenilir bir ağ ve sürpriz kesintileri azaltır. Proaktif izleme, çalışma süresini korumanın anahtarıdır. Hazır mısınız? #HardwareMonitoring #NetworkEngineering #SNMP\n\n#HardwareMonitoring #NetworkEngineering #SNMP",
+   "status": "yt_failed",
+   "hook": "Stop ignoring PSU and fan SNMP traps – they warn of failures.",
+   "duration_seconds": 23.88,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18650351464024353"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18650351464024353",
+   "file_id": "BAACAgQAAxkDAAIElGrw-AUIGGlCmF6cwMV4x5fc3G9oAAIRIQACp1aIU4n6AAG6L9oUYT0E",
+   "message_id": 1172
   }
  }
 }
