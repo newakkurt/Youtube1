@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Sticky MAC disappears after reload – save startup-config",
   "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
   "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
   "Stop rogue BGP route leaks with AS‑Path ACL filters",
@@ -100,7 +99,8 @@
   "DHCP Starvation Crushes Switch CPU: Rate Limit Edge Ports",
   "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills",
   "IPv6 not needed? Disable global routing on switches and routers",
-  "Stop Using ignore_errors:yes – Prevent Silent Network Outages"
+  "Stop Using ignore_errors:yes – Prevent Silent Network Outages",
+  "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5629,6 +5629,37 @@
    "ig_id": "18025226717713010",
    "file_id": "BAACAgQAAxkDAAIEb2rvo-yAAAE68hoRFS898oxyvqRERgAC3h0AAiNngFO2WCaJc6V1gT0E",
    "message_id": 1135
+  },
+  "c5fb07b5": {
+   "title": "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication",
+   "description": "Unauthenticated dynamic routing protocols allow rogue devices to inject fake routes and hijack traffic. Protect your OSPF and EIGRP domains by enforcing MD5 or SHA cryptographic authentication.\n\n#Shorts #ospf #networkengineering #cybersecurity #routingprotocols #ciscocertification",
+   "tags": [
+    "ospf",
+    "networkengineering",
+    "cybersecurity",
+    "routingprotocols",
+    "ciscocertification",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue routes hijacking your production traffic—here’s why authentication matters. Unauthenticated OSPF or EIGRP lets any rogue device inject fake routes and silently poison your entire routing table. Apply MD5 or SHA cryptographic authentication directly on the OSPF area or EIGRP interface to reject untrusted updates before they hijack traffic. Have you seen this in your network? Drop a comment or save/share if you’re ready to lock down routing protocols. #OSPF #EIGRP #cybersecurity #networkengineering #routingauth",
+   "linkedin_caption": "Unauthenticated dynamic routing protocols allow rogue devices to inject fake routes, poison routing tables, and hijack traffic. Protect your OSPF and EIGRP domains from rogue routes by enforcing MD5 or SHA cryptographic authentication. Do you enforce cryptographic authentication in your routing domains?\n\n——— Türkçe ———\n\nKimlik doğrulaması bulunmayan dynamic routing protocols, rogue cihazların sahte route enjekte etmesine, routing table zehirlemesine ve trafiği ele geçirmesine yol açar. OSPF ve EIGRP domainlerinizi MD5 veya SHA cryptographic authentication ile koruyun. Routing domainlerinizde cryptographic authentication uyguluyor musunuz?\n\n#ospf #networkengineering #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop running unauthenticated OSPF or EIGRP across your core network.",
+   "duration_seconds": 29.38,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18201538231389678"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18201538231389678",
+   "file_id": "BAACAgQAAxkDAAIEc2rv6DFGQz3SO8mrNhk2VIZedUDwAAIEHgACI2eAU86fK2A2Yt36PQQ",
+   "message_id": 1139
   }
  }
 }
