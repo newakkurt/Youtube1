@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent VRF Route Leaks in MPLS L3VPN: Tight Import/Export Filters",
   "Config Drift Making Switches Misbehave? Use Golden‑Config Alerts",
   "Stop rogue BGP route leaks with AS‑Path ACL filters",
   "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
@@ -100,7 +99,8 @@
   "Silent WAN Failover Crashes Sites: Schedule Off-Peak Drills",
   "IPv6 not needed? Disable global routing on switches and routers",
   "Stop Using ignore_errors:yes – Prevent Silent Network Outages",
-  "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication"
+  "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication",
+  "VLAN Hopping Risks on Trunks: Change Native VLAN 1"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5660,6 +5660,37 @@
    "ig_id": "18201538231389678",
    "file_id": "BAACAgQAAxkDAAIEc2rv6DFGQz3SO8mrNhk2VIZedUDwAAIEHgACI2eAU86fK2A2Yt36PQQ",
    "message_id": 1139
+  },
+  "277faee8": {
+   "title": "VLAN Hopping Risks on Trunks: Change Native VLAN 1",
+   "description": "Leaving native VLAN 1 on trunk links exposes switches to double-tagging attacks and STP discrepancies. Enforce an isolated dummy native VLAN across peers and isolate idle ports in a blackhole VLAN.\n\n#Shorts #VLANHopping #NetworkSecurity #Cisco #Switching #CyberSecurity",
+   "tags": [
+    "VLANHopping",
+    "NetworkSecurity",
+    "Cisco",
+    "Switching",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "STOP leaving VLAN 1 on trunk links—your switches are vulnerable to double‑tagging attacks, STP loops, and CDP errors. Move every trunk to a dedicated, unused dummy VLAN and put idle access ports into a blackhole VLAN, then shut them down. Have you dealt with this in production? Tell me below. #VLANHopping #NetworkSecurity #SwitchSecurity #CiscoSwitches #CyberSecurity",
+   "linkedin_caption": "Leaving native VLAN 1 on trunk links exposes switches to double-tagging attacks and STP discrepancies. To mitigate VLAN hopping risks, enforce an isolated dummy native VLAN across peers and isolate idle ports in a blackhole VLAN. How do you handle native VLAN 1 on your trunks?\n\n——— Türkçe ———\n\nTrunk linklerde native VLAN 1 bırakmak, switch'leri double-tagging ataklarına ve STP uyumsuzluklarına maruz bırakır. VLAN hopping risklerine karşı peer'lar arasında izole bir dummy native VLAN uygulayın ve boş portları bir blackhole VLAN içinde toplayın. Trunk linklerinizde native VLAN 1'i nasıl yönetiyorsunuz?\n\n#VLANHopping #NetworkSecurity #Switching",
+   "status": "yt_failed",
+   "hook": "Never leave your 802.1Q trunk native VLAN set to default VLAN 1.",
+   "duration_seconds": 29.72,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18133292611875809"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18133292611875809",
+   "file_id": "BAACAgQAAxkDAAIEd2rwIBD_2-qyiNVaY2WtTjviPwfXAAI6HgACI2eAUxuPvLgkVmNLPQQ",
+   "message_id": 1143
   }
  }
 }
