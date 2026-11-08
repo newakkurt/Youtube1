@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
@@ -100,7 +99,8 @@
   "VLAN Hopping Risks on Trunks: Change Native VLAN 1",
   "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports",
   "Hardcoded Passwords in Python: Use Environment Variables",
-  "Silent Switch Config Drift: Audit Golden Config with Ansible"
+  "Silent Switch Config Drift: Audit Golden Config with Ansible",
+  "Restrict Admin Access to Trusted IPs and HTTPS/SSH"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5784,6 +5784,37 @@
    "ig_id": "17991880791084749",
    "file_id": "BAACAgQAAxkDAAIEhGrwqtapxML2k99AXKltemk4OfnDAAJ-IQACI2eIU23IKygtFKrAPQQ",
    "message_id": 1156
+  },
+  "ab0d3149": {
+   "title": "Restrict Admin Access to Trusted IPs and HTTPS/SSH",
+   "description": "Learn how to tighten firewall management by allowing only specific IP ranges and HTTPS/SSH protocols. Apply these simple ACL steps to stop unauthorized admin access.\n\n#Shorts #FirewallAdminLockdown #NetworkSecurity #Cybersecurity #Firewall #ITOps",
+   "tags": [
+    "FirewallAdminLockdown",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "Firewall",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting any IP manage your firewall—limit admin access now! Configure an ACL that permits only your trusted IP blocks, then restrict management protocols to HTTPS and SSH only. Admin access = trusted IPs + HTTPS/SSH, nothing else. Which of these have you hit in production? Tell me in the comments. #FirewallAdminLockdown #NetworkSecurity #Cybersecurity #ITOps #HTTPSSSH",
+   "linkedin_caption": "Restrict Admin Access to Trusted IPs and HTTPS/SSH. Learn how to tighten firewall management by allowing only specific IP ranges and HTTPS/SSH protocols. Apply these simple ACL steps to stop unauthorized admin access. How will you secure admin access?\n\n——— Türkçe ———\n\nRestrict Admin Access to Trusted IPs and HTTPS/SSH. Yalnızca güvenilir IP aralıkları ve HTTPS/SSH protokolleriyle firewall yönetimini sıkılaştırmayı öğrenin. Bu basit ACL adımlarıyla yetkisiz admin erişimini durdurun. Yönetici erişimini nasıl güvence altına alırsınız?\n\n#FirewallAdminLockdown #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop letting any IP manage your firewall—limit admin access now!",
+   "duration_seconds": 23.74,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18077882489468919"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18077882489468919",
+   "file_id": "BAACAgQAAxkDAAIEjmrwxOPN8gynOOGW4MQDIbeG7aUhAAKjIQACI2eIU8sc7NebB8UyPQQ",
+   "message_id": 1166
   }
  }
 }
