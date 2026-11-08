@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Optimize EtherChannel Load‑Balancing with IP/Port Hashing",
   "Ports Default to Fail‑Open? Set Explicit Fail‑Close to Avoid Outage",
   "Stop VLAN Outage from Broadcast Storms with Storm‑Control",
   "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
@@ -100,7 +99,8 @@
   "Rogue Routes Poison Routing Tables: Enable OSPF SHA Authentication",
   "VLAN Hopping Risks on Trunks: Change Native VLAN 1",
   "HA Split-Brain Outage: Isolate Heartbeat on Direct Ports",
-  "Hardcoded Passwords in Python: Use Environment Variables"
+  "Hardcoded Passwords in Python: Use Environment Variables",
+  "Silent Switch Config Drift: Audit Golden Config with Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5753,6 +5753,37 @@
    "ig_id": "18003318077809963",
    "file_id": "BAACAgQAAxkDAAIEf2rwZxk6CzQR5yTe91FU7vK5PpM2AAKuHgACI2eAU5IEKOKB2wvoPQQ",
    "message_id": 1151
+  },
+  "c9f8f0fe": {
+   "title": "Silent Switch Config Drift: Audit Golden Config with Ansible",
+   "description": "Manual console changes introduce silent configuration drift that can take hours to troubleshoot months down the road. Use Ansible or rConfig golden templates to audit running configurations and trigger alerts before auto-remediating.\n\n#Shorts #networkautomation #networkengineering #ansible #sysadmin #devops",
+   "tags": [
+    "networkautomation",
+    "networkengineering",
+    "ansible",
+    "sysadmin",
+    "devops",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever spent hours chasing a switch that silently drifted after an out‑of‑band change? Manual console tweaks can sneak into production and leave you scrambling months later. The fix? Define a golden config template in Ansible (or rConfig), schedule regular diffs, and trigger an alert when drift appears—so you can remediate before overwriting live gear. Have you seen this in production? Drop a comment or save this for next time.\n#networkautomation #ansible #networkengineering #sysadmin #devops",
+   "linkedin_caption": "Manual console changes introduce silent configuration drift that can take hours to troubleshoot months down the road. Use Ansible or rConfig golden templates to audit running configurations and trigger alerts before auto-remediating. How do you audit configuration drift in your network?\n\n——— Türkçe ———\n\nManuel console değişiklikleri, aylar sonra troubleshoot etmesi saatler sürebilen sessiz configuration drift yaratır. Running configuration denetimi yapmak ve auto-remediation öncesi alert tetiklemek için Ansible veya rConfig golden template kullanın. Ağınızdaki configuration drift durumunu nasıl denetliyorsunuz?\n\n#networkautomation #ansible #networkengineering",
+   "status": "yt_failed",
+   "hook": "Never let manual console changes silently drift your production switch configs.",
+   "duration_seconds": 31.71,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17991880791084749"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17991880791084749",
+   "file_id": "BAACAgQAAxkDAAIEhGrwqtapxML2k99AXKltemk4OfnDAAJ-IQACI2eIU23IKygtFKrAPQQ",
+   "message_id": 1156
   }
  }
 }
