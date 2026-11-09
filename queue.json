@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
   "Capture Exact Event Order: Enable Millisecond Timestamps",
   "Untracked Config Outages: Audit Switch Backups with Git",
   "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
@@ -100,7 +99,8 @@
   "Config drift making switches misbehave? Set golden config alerts",
   "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication",
   "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface",
-  "NAC Outage Freezes Switch Ports: Set Critical Auth"
+  "NAC Outage Freezes Switch Ports: Set Critical Auth",
+  "Unused Switch Ports: Blackhole VLAN + Shutdown Policy"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6001,6 +6001,37 @@
    "ig_id": "17959679706269664",
    "file_id": "BAACAgQAAxkDAAIEq2rx-oQipWoRi6D_4WHi6-OOEduOAAKEIQACp1aQU9Kks0wIJh_MPQQ",
    "message_id": 1195
+  },
+  "d2543250": {
+   "title": "Unused Switch Ports: Blackhole VLAN + Shutdown Policy",
+   "description": "Learn how to secure unused switch ports by moving them to an isolated blackhole VLAN and shutting them down. Follow a documented decommission policy to prevent unauthorized physical network access.\n\n#Shorts #BlackholeVLAN #NetworkSecurity #Cisco #SwitchHardening #CyberDefense",
+   "tags": [
+    "BlackholeVLAN",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchHardening",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "instagram_caption": "Idle switch ports are a hacker’s playground. Never leave an idle port active—physically unplugged attackers love them. Assign the port to a dedicated blackhole VLAN with no IP or routing: interface GigabitEthernet1/0/5, switchport access vlan 999, shutdown. Document a decommission policy: verify no future use before blackholing. Have you encountered any of these in your network? Share your experience below! #BlackholeVLAN #SwitchHardening #CyberDefense #NetworkSecurity #Cisco",
+   "linkedin_caption": "Discover how to secure unused switch ports by moving them to an isolated blackhole VLAN and shutting them down. Follow a documented decommission policy to stop unauthorized physical access. Any best practices you recommend?\n\n——— Türkçe ———\n\nUnused switch ports’ı izole bir blackhole VLAN’a taşıyarak ve shutdown policy ile kapatarak nasıl güvence altına alabileceğinizi keşfedin. Belgelendirilmiş decommission policy izleyerek yetkisiz fiziksel erişimi engelleyin. En iyi uygulamalarınız var mı?\n\n#Shorts #BlackholeVLAN #NetworkSecurity",
+   "status": "yt_failed",
+   "hook": "Never leave an idle port active—physically unplugged attackers love them.",
+   "duration_seconds": 31.18,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18117144881024192"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18117144881024192",
+   "file_id": "BAACAgQAAxkDAAIEr2rx_hgeVjdDY6uh1KTlCtIg8_GXAAKaIQACp1aQU36hx-f9Rc9TPQQ",
+   "message_id": 1199
   }
  }
 }
