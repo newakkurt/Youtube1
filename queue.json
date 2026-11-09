@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
@@ -100,7 +99,8 @@
   "Silent Switch Config Drift: Audit Golden Config with Ansible",
   "Restrict Admin Access to Trusted IPs and HTTPS/SSH",
   "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early",
-  "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs"
+  "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs",
+  "Config drift making switches misbehave? Set golden config alerts"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5877,6 +5877,37 @@
    "ig_id": "17993342843861022",
    "file_id": "BAACAgQAAxkDAAIEmWrxOY2iRt3o3RmSpG2MDIAkffduAAImIQACp1aIUzu3YMj218HUPQQ",
    "message_id": 1177
+  },
+  "c1da13ef": {
+   "title": "Config drift making switches misbehave? Set golden config alerts",
+   "description": "Config drift can hide for months and cause erratic switch behavior. Use a golden config template and alert‑first monitoring to catch drift before it hurts your network.\n\n#Shorts #ConfigDrift #NetworkAutomation #Ansible #Cisco #NetworkOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkAutomation",
+    "Ansible",
+    "Cisco",
+    "NetworkOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever wonder why a switch suddenly misbehaves after months of silence? Drift can hide for months and cause erratic behavior. Define a golden config template with rConfig or Ansible, schedule periodic compares, and get an alert before auto‑fix. Alert first, then decide—never auto‑correct unseen drift. What’s your biggest drift headache? #ConfigDrift #NetworkAutomation #Ansible #Cisco #NetworkOps",
+   "linkedin_caption": "Config drift can stay hidden for months, leading to unpredictable switch behavior. By defining a golden config template and enabling alert‑first monitoring, you can spot drift early and protect your network performance. How are you handling config drift today?\n\n——— Türkçe ———\n\nConfig drift aylarca gizli kalabilir ve switch’lerde tutarsız davranışlara yol açar. Golden config şablonu oluşturup alert‑first izleme ile drift’i erken yakalayarak ağınızı koruyabilirsiniz. Config drift'i bugün nasıl yönetiyorsunuz?\n\n#ConfigDrift #NetworkAutomation #Cisco",
+   "status": "yt_failed",
+   "hook": "Never forget a manual config change—drift hides for months.",
+   "duration_seconds": 22.04,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17966331621235448"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17966331621235448",
+   "file_id": "BAACAgQAAxkDAAIEn2rxcL8qjlQFyJg7itJQG6VEjYV4AAJiIAACp1aQU8KzoP5-raptPQQ",
+   "message_id": 1183
   }
  }
 }
