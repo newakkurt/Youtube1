@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
@@ -100,7 +99,8 @@
   "Restrict Admin Access to Trusted IPs and HTTPS/SSH",
   "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early",
   "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs",
-  "Config drift making switches misbehave? Set golden config alerts"
+  "Config drift making switches misbehave? Set golden config alerts",
+  "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5908,6 +5908,37 @@
    "ig_id": "17966331621235448",
    "file_id": "BAACAgQAAxkDAAIEn2rxcL8qjlQFyJg7itJQG6VEjYV4AAJiIAACp1aQU8KzoP5-raptPQQ",
    "message_id": 1183
+  },
+  "b7d6cf89": {
+   "title": "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication",
+   "description": "Unauthenticated OSPF or EIGRP updates can let attackers inject bogus routes. Enabling MD5 or SHA authentication on areas and interfaces blocks fake announcements on untrusted links.\n\n#Shorts #RoutingAuth #NetworkSecurity #Routing #Cisco #Cybersecurity",
+   "tags": [
+    "RoutingAuth",
+    "NetworkSecurity",
+    "Routing",
+    "Cisco",
+    "Cybersecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Got rogue route announcements? Don’t let unprotected OSPF/EIGRP updates slip through.\n\nEnabling OSPF area authentication with MD5 and applying EIGRP MD5 on the interface blocks attackers from injecting bogus routes on untrusted subnets.\n\nSecure every link that isn’t fully trusted—quick changes keep your routing table honest. Which of these have you hit in production? #RoutingAuth #NetworkSecurity #OSPF #EIGRP #Cisco",
+   "linkedin_caption": "Unauthenticated OSPF or EIGRP updates can let attackers inject bogus routes into your network. Enabling MD5 or SHA authentication on areas and interfaces blocks fake route announcements on untrusted links. Do you enable routing authentication in your network?\n\n——— Türkçe ———\n\nDoğrulanmamış OSPF veya EIGRP güncellemeleri, saldırganların sahte rotalar enjekte etmesine neden olabilir. Area ve interface üzerinde MD5 veya SHA authentication kullanmak, güvenilmeyen linklerdeki sahte anonsları engeller. Ağınızda routing authentication kullanıyor musunuz?\n\n#RoutingAuth #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop trusting OSPF or EIGRP updates from unprotected subnets.",
+   "duration_seconds": 32.91,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17939850522128427"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17939850522128427",
+   "file_id": "BAACAgQAAxkDAAIEo2rxjyPmIUIP3cI0sjefrg1jVUp8AAKTIAACp1aQU_HQG8ZlR3Z4PQQ",
+   "message_id": 1187
   }
  }
 }
