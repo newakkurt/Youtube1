@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Smurf DDoS Flooding Subnets: Disable IP Directed Broadcast",
   "Password‑Only VPN Access Increases Phishing – Enforce MFA/2FA",
   "Pushing Passwords to Git? Block Them with Pre-Commit Hooks",
   "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
@@ -100,7 +99,8 @@
   "Hardcoded Passwords in Python: Use Environment Variables",
   "Silent Switch Config Drift: Audit Golden Config with Ansible",
   "Restrict Admin Access to Trusted IPs and HTTPS/SSH",
-  "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early"
+  "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early",
+  "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5846,6 +5846,37 @@
    "ig_id": "18650351464024353",
    "file_id": "BAACAgQAAxkDAAIElGrw-AUIGGlCmF6cwMV4x5fc3G9oAAIRIQACp1aIU4n6AAG6L9oUYT0E",
    "message_id": 1172
+  },
+  "4dd54a88": {
+   "title": "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs",
+   "description": "In MPLS L3VPNs, a careless import/export RT configuration can cause VRF leaks. This short shows the exact route‑map commands and a quick checklist to lock down those leaks.\n\n#Shorts #VRFLeakFix #NetworkSecurity #MPLS #BGP #CyberOps",
+   "tags": [
+    "VRFLeakFix",
+    "NetworkSecurity",
+    "MPLS",
+    "BGP",
+    "CyberOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop leaking VRFs before they hit customers. In MPLS L3VPN a careless import/export RT can bleed VRFs. Use a route‑map on the VRF import: route‑map IMPORT‑VRF permit 10 match ip address prefix‑list PL‑VRF. Pair it with an export filter: route‑map EXPORT‑VRF permit 10 match community RT‑EXPORT. Always lock the import and export with prefix‑list checks. Have you seen this in production? Tell me in the comments. #Shorts #VRFLeakFix #NetworkSecurity #MPLS #BGP",
+   "linkedin_caption": "In MPLS L3VPNs, a careless import/export RT configuration can open the door to VRF leaks. This short video walks through the exact route‑map commands and provides a quick checklist to lock down those leaks, ensuring your network stays secure. How do you secure your RT ACLs?\n\n——— Türkçe ———\n\nMPLS L3VPN'lerde, dikkatsiz bir import/export RT yapılandırması VRF sızıntılarına yol açabilir. Bu kısa video, tam route‑map komutlarını gösteriyor ve bu sızıntıları kapatmak için hızlı bir kontrol listesi sunuyor, ağınızı korumanıza yardımcı oluyor. RT ACL'lerinizi nasıl güvence altına alıyorsunuz?\n\n#VRFLeakFix #NetworkSecurity #MPLS",
+   "status": "yt_failed",
+   "hook": "Stop leaking VRFs by ignoring import/export RT filters.",
+   "duration_seconds": 29.6,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17993342843861022"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17993342843861022",
+   "file_id": "BAACAgQAAxkDAAIEmWrxOY2iRt3o3RmSpG2MDIAkffduAAImIQACp1aIUzu3YMj218HUPQQ",
+   "message_id": 1177
   }
  }
 }
