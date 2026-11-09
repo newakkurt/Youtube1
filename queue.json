@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Unwanted OSPF/EIGRP Traffic with Passive‑Interface on Access Ports",
   "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
   "Capture Exact Event Order: Enable Millisecond Timestamps",
@@ -100,7 +99,8 @@
   "Stop Ignoring PSU & Fan SNMP Traps – Detect Hardware Failures Early",
   "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs",
   "Config drift making switches misbehave? Set golden config alerts",
-  "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication"
+  "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication",
+  "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5939,6 +5939,37 @@
    "ig_id": "17939850522128427",
    "file_id": "BAACAgQAAxkDAAIEo2rxjyPmIUIP3cI0sjefrg1jVUp8AAKTIAACp1aQU_HQG8ZlR3Z4PQQ",
    "message_id": 1187
+  },
+  "1305f928": {
+   "title": "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface",
+   "description": "If your network runs only IPv4, turning off IPv6 on switches and routers shrinks the attack surface. Follow vendor‑specific commands and ensure no services depend on IPv6 before disabling.\n\n#Shorts #IPv6Hygiene #NetworkSecurity #Cisco #Juniper #AttackSurface",
+   "tags": [
+    "IPv6Hygiene",
+    "NetworkSecurity",
+    "Cisco",
+    "Juniper",
+    "AttackSurface",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your IPv4‑only network is safe? A hidden IPv6 stack on a switch can still be a doorway for attackers.\n\nOn Cisco switches just run ‘no ipv6 unicast-routing’ to shut off global IPv6; on Juniper, use ‘delete protocols ipv6’ and disable the interfaces. Verify no services depend on IPv6 before you make the change.\n\nHave you disabled IPv6 on your production switches yet? Save this, share with your team, or comment below.\n\n#IPv6Hygiene #NetworkSecurity #Cisco #Juniper #AttackSurface",
+   "linkedin_caption": "If your network runs only IPv4, turning off IPv6 routing on switches and routers shrinks the attack surface. Follow vendor-specific commands and ensure no services depend on IPv6 before disabling it. Do you disable unused IPv6 in your network?\n\n——— Türkçe ———\n\nNetwork altyapınız yalnızca IPv4 kullanıyorsa, switch ve router cihazlarında IPv6 routing özelliğini kapatmak attack surface alanını daraltır. Kapatmadan önce vendor-specific komutları izleyin ve IPv6'ya bağlı servis olmadığını doğrulayın. Network altyapınızda kullanılmayan IPv6'yı kapatıyor musunuz?\n\n#NetworkSecurity #IPv6Hygiene #AttackSurface",
+   "status": "yt_failed",
+   "hook": "Stop leaving IPv6 enabled on IPv4‑only networks.",
+   "duration_seconds": 31.91,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17997617754059727"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17997617754059727",
+   "file_id": "BAACAgQAAxkDAAIEp2rxug1qzNIr9hYovKfI8nOhc00xAALUIAACp1aQU5CoCFsV6thiPQQ",
+   "message_id": 1191
   }
  }
 }
