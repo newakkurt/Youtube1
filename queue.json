@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Capture Exact Event Order: Enable Millisecond Timestamps",
   "Untracked Config Outages: Audit Switch Backups with Git",
   "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
   "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
@@ -100,7 +99,8 @@
   "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication",
   "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface",
   "NAC Outage Freezes Switch Ports: Set Critical Auth",
-  "Unused Switch Ports: Blackhole VLAN + Shutdown Policy"
+  "Unused Switch Ports: Blackhole VLAN + Shutdown Policy",
+  "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6032,6 +6032,37 @@
    "ig_id": "18117144881024192",
    "file_id": "BAACAgQAAxkDAAIEr2rx_hgeVjdDY6uh1KTlCtIg8_GXAAKaIQACp1aQU36hx-f9Rc9TPQQ",
    "message_id": 1199
+  },
+  "d9f848cc": {
+   "title": "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition",
+   "description": "Eliminate roaming drops for mobile barcode scanners and VoIP handsets by configuring 802.11r Fast BSS Transition. Ensure you test legacy client compatibility in a lab environment before deploying across enterprise WLANs.\n\n#Shorts #fastroaming #networkengineering #wifi #enterprisewifi #wireless",
+   "tags": [
+    "fastroaming",
+    "networkengineering",
+    "wifi",
+    "enterprisewifi",
+    "wireless",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting VoIP calls drop during enterprise Wi‑Fi roaming. Enable 802.11r Fast BSS Transition on your wireless controller to cache keys across APs, cutting 802.1X re‑auth delays and keeping scanners and voice handsets connected instantly between cells. Always lab‑test legacy client compatibility before enforcing Fast BSS Transition across production SSIDs. Have you run into roaming drops in production? Drop a comment below or save this for your next WLAN rollout. #fastroaming #networkengineering #wifi #enterprisewifi #wireless",
+   "linkedin_caption": "Eliminate roaming drops for mobile barcode scanners and VoIP handsets by configuring 802.11r Fast BSS Transition. Make sure to test legacy client compatibility in a lab before rolling out to enterprise WLANs. Engineers, is your network ready for seamless roaming?\n\n——— Türkçe ———\n\nMobil barkod tarayıcıları ve VoIP cihazlar için 802.11r Fast BSS Transition yapılandırarak roaming düşüşlerini ortadan kaldırın. Değişikliği üretime almadan önce lab ortamında eski istemci uyumluluğunu test ettiğinizden emin olun. Mühendisler, ağınız kesintisiz roaming için hazır mı?\n\n#fastroaming #networkengineering #wifi",
+   "status": "yt_failed",
+   "hook": "Stop letting VoIP calls drop during enterprise Wi-Fi roaming.",
+   "duration_seconds": 38.33,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18389647597228876"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18389647597228876",
+   "file_id": "BAACAgQAAxkDAAIEs2ryOJFUfqEtHd1T8eEbzew31K7fAAIZIgACp1aQU6tebHrULDiaPQQ",
+   "message_id": 1203
   }
  }
 }
