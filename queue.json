@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Aggressive MAB timers put printers in unauthorized VLAN – fix re‑auth",
   "Switch Lockout from DoS? Configure CoPP to Limit ICMP & SNMP",
   "Capture Exact Event Order: Enable Millisecond Timestamps",
   "Untracked Config Outages: Audit Switch Backups with Git",
@@ -100,7 +99,8 @@
   "Prevent VRF Leak in MPLS L3VPN: Enforce RT ACLs",
   "Config drift making switches misbehave? Set golden config alerts",
   "Fake Route Announcements? Stop Them with OSPF/EIGRP MD5 Authentication",
-  "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface"
+  "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface",
+  "NAC Outage Freezes Switch Ports: Set Critical Auth"
  ],
  "items": {
   "dcdc2b1c": {
@@ -5970,6 +5970,37 @@
    "ig_id": "17997617754059727",
    "file_id": "BAACAgQAAxkDAAIEp2rxug1qzNIr9hYovKfI8nOhc00xAALUIAACp1aQU5CoCFsV6thiPQQ",
    "message_id": 1191
+  },
+  "9b4d952d": {
+   "title": "NAC Outage Freezes Switch Ports: Set Critical Auth",
+   "description": "An unexpected RADIUS outage can lock out every edge port and halt production entirely. Configure critical authentication fallback before your NAC servers become unreachable.\n\n#Shorts #8021x #networking #cybersecurity #networkengineer #cisco",
+   "tags": [
+    "8021x",
+    "networking",
+    "cybersecurity",
+    "networkengineer",
+    "cisco",
+    "Shorts"
+   ],
+   "instagram_caption": "RADIUS gone? Your switch ports freeze!  \nNever deploy 802.1X without an unreachable RADIUS fallback policy.  \nIf your NAC server goes down, default switch ports will lock out all new client authentications—halt your production line.  \nSet up critical authentication recovery to grant fail‑open access or push devices into a restricted remediation VLAN.  \nWhich approach did you choose—fail‑open or fail‑close?  \n#8021x #networking #cybersecurity #networkengineer #NAC",
+   "linkedin_caption": "An unexpected RADIUS outage can freeze switch ports, lock out edge ports, and halt production entirely. Configure critical authentication fallback before your NAC servers become unreachable. Is your critical authentication fallback ready?\n\n——— Türkçe ———\n\nBeklenmedik bir RADIUS outage durumu switch portlarını dondurabilir, edge portları kilitleyebilir ve üretimi tamamen durdurabilir. NAC sunucularınız erişilemez olmadan önce critical authentication fallback yapılandırın. Critical authentication fallback yapılandırmanız hazır mı?\n\n#networking #cybersecurity #networkengineer",
+   "status": "yt_failed",
+   "hook": "Never deploy 802.1X without defining an unreachable RADIUS fallback policy.",
+   "duration_seconds": 34.21,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17959679706269664"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17959679706269664",
+   "file_id": "BAACAgQAAxkDAAIEq2rx-oQipWoRi6D_4WHi6-OOEduOAAKEIQACp1aQU9Kks0wIJh_MPQQ",
+   "message_id": 1195
   }
  }
 }
