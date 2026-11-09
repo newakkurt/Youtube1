@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Untracked Config Outages: Audit Switch Backups with Git",
   "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
   "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
   "Backup WAN Fails During Outages: Run Off-Hours Drills",
@@ -100,7 +99,8 @@
   "Unused IPv6 on Switches? Disable Routing to Reduce Attack Surface",
   "NAC Outage Freezes Switch Ports: Set Critical Auth",
   "Unused Switch Ports: Blackhole VLAN + Shutdown Policy",
-  "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition"
+  "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition",
+  "TFTP Exposes Passwords: Secure Config Backups with SCP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6063,6 +6063,37 @@
    "ig_id": "18389647597228876",
    "file_id": "BAACAgQAAxkDAAIEs2ryOJFUfqEtHd1T8eEbzew31K7fAAIZIgACp1aQU6tebHrULDiaPQQ",
    "message_id": 1203
+  },
+  "47c388c5": {
+   "title": "TFTP Exposes Passwords: Secure Config Backups with SCP",
+   "description": "Cleartext TFTP leaves sensitive switch configurations and credentials exposed across the wire. Transition your image and config backups to encrypted SFTP or SCP to protect your infrastructure.\n\n#Shorts #NetworkSecurity #NetEng #SysAdmin #Cisco #CyberSecurity",
+   "tags": [
+    "NetworkSecurity",
+    "NetEng",
+    "SysAdmin",
+    "Cisco",
+    "CyberSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop sending passwords in plain text! TFTP exposes device passwords, secrets, and firmware over the wire without any encryption or authentication. Switch your automated backup jobs to SFTP or SCP and let SSH encrypt data in transit. Always use encrypted SFTP or SCP to protect running configs and binary images.\n\nWhich backup method do you rely on in production? Let me know in the comments!\n\n#NetworkSecurity #NetEng #SysAdmin #Cisco #CyberSecurity",
+   "linkedin_caption": "TFTP exposes passwords: secure config backups with SCP. Cleartext TFTP leaves switch configurations and credentials exposed across the wire. Switch your image and config backups to encrypted SFTP or SCP to protect your infrastructure. Are you ready to secure your network?\n\n——— Türkçe ———\n\nTFTP, şifreleri açığa çıkarıyor: SCP ile güvenli konfigürasyon yedekleri. Cleartext TFTP, anahtar yapılandırmaları ve kimlik bilgilerini kablo üzerinden ifşa ediyor. Görüntü ve konfigürasyon yedeklerinizi şifreli SFTP veya SCP ile değiştirerek altyapınızı koruyun. Ağınızı güvence altına almaya hazır mısınız?\n\n#NetworkSecurity #SysAdmin #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Stop using cleartext TFTP to back up your switch configurations.",
+   "duration_seconds": 29.72,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17942388546377769"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17942388546377769",
+   "file_id": "BAACAgQAAxkDAAIEt2ryWE8y0lIVCzlbRBo0OwABh0bLEQACKCIAAqdWkFOSyzlNksUi9T0E",
+   "message_id": 1207
   }
  }
 }
