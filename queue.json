@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Unidirectional Links Trigger Loops: Enable STP Loop Guard",
   "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
   "Backup WAN Fails During Outages: Run Off-Hours Drills",
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
@@ -100,7 +99,8 @@
   "NAC Outage Freezes Switch Ports: Set Critical Auth",
   "Unused Switch Ports: Blackhole VLAN + Shutdown Policy",
   "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition",
-  "TFTP Exposes Passwords: Secure Config Backups with SCP"
+  "TFTP Exposes Passwords: Secure Config Backups with SCP",
+  "Default SNMP Leaks Topology: Restrict Access to NMS ACLs"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6094,6 +6094,37 @@
    "ig_id": "17942388546377769",
    "file_id": "BAACAgQAAxkDAAIEt2ryWE8y0lIVCzlbRBo0OwABh0bLEQACKCIAAqdWkFOSyzlNksUi9T0E",
    "message_id": 1207
+  },
+  "d9b59672": {
+   "title": "Default SNMP Leaks Topology: Restrict Access to NMS ACLs",
+   "description": "Leaving default SNMP community strings exposes your entire device inventory and topology mapping to unauthorized hosts. Secure your infrastructure by binding standard ACLs to SNMP community configurations to limit polling strictly to authorized NMS servers.\n\n#Shorts #SNMPSecurity #NetworkEngineering #CyberSecurity #Cisco #NetworkSecurity",
+   "tags": [
+    "SNMPSecurity",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Cisco",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Default SNMP community strings? That’s a free map of your network for anyone on the LAN.\n\nStop leaving default public community strings active on production switches. They expose your routing table, interface inventory, and topology to anyone on the LAN.\n\nBind a standard ACL to your snmp-server community command so only trusted NMS IPs can poll. Always enforce strict IP filtering on management protocols before deploying any switch to production.\n\nWhich of these have you hit in production? Tell me in the comments.\n\n#SNMPSecurity #NetworkEngineering #CyberSecurity #Cisco #NetworkSecurity",
+   "linkedin_caption": "Default SNMP community strings can reveal your whole device inventory and topology to unauthorized hosts. Protect your network by binding standard ACLs to SNMP configurations, ensuring only authorized NMS servers can poll. How do you secure SNMP in your environment?\n\n——— Türkçe ———\n\nVarsayılan SNMP community stringleri, tüm cihaz envanterinizi ve topolojiyi yetkisiz hostlara açığa çıkarabilir. Ağınızı korumak için SNMP yapılandırmalarına standart ACL'leri bağlayın ve sadece yetkili NMS sunucularının sorgulama yapmasını sağlayın. Ortamınızda SNMP güvenliğini nasıl sağlıyorsunuz?\n\n#SNMPSecurity #NetworkEngineering #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Stop leaving default public community strings active on production network switches.",
+   "duration_seconds": 30.33,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18145271956610477"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18145271956610477",
+   "file_id": "BAACAgQAAxkDAAIEu2ryejbBAhHuobShGqNKJuEzXtaxAAJMHQACp1aYU2ugT7nEPIc1PQQ",
+   "message_id": 1211
   }
  }
 }
