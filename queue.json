@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
   "Slow Outage Recovery: Standardize Switch Port Labeling",
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
@@ -100,7 +99,8 @@
   "Root Bridge Election Storms: Hardcode STP Priority on Core",
   "Auto-config push outside maintenance window? Disable cron & GitHub Actions",
   "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU",
-  "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix"
+  "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix",
+  "Stop Root Guard Misuse – Enable Only on Trunk Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6249,6 +6249,37 @@
    "ig_id": "18121424944749203",
    "file_id": "BAACAgQAAxkDAAIE0WrzCD59RcteVzitMvKB9HQJZSm5AAL3HAACX_mYU7Nj6njAmsCCPQQ",
    "message_id": 1233
+  },
+  "f9d225c7": {
+   "title": "Stop Root Guard Misuse – Enable Only on Trunk Ports",
+   "description": "Root Guard should protect only trunk ports where a rogue root could appear. Keep access ports clean and avoid spanning‑tree disruptions.\n\n#Shorts #RootGuard #NetworkEngineering #Cisco #STP #Security",
+   "tags": [
+    "RootGuard",
+    "NetworkEngineering",
+    "Cisco",
+    "STP",
+    "Security",
+    "Shorts"
+   ],
+   "instagram_caption": "⚠️ Root Guard on an access port? That breaks connectivity.\n\nKeep it only on edge and distribution trunk interfaces—root guard stays off access ports to avoid spanning‑tree disruptions.\n\nHave you seen this in production? Drop a comment or save for quick reference. #RootGuard #NetworkEngineering #Cisco #STP #Security",
+   "linkedin_caption": "In this short video we explain why Root Guard belongs only on trunk ports. Applying it to access ports can introduce unnecessary spanning‑tree instability. Keep your design clean and let the protocol do its job where it matters most. Do you enable Root Guard only on trunks?\n\n——— Türkçe ———\n\nKısa videomuzda Root Guard’ın yalnızca trunk portlarda bulunması gerektiğini anlatıyoruz. Access portlarda etkinleştirmek gereksiz spanning‑tree karışıklığı yaratabilir. Tasarımınızı sade tutun ve protokolün doğru yerde çalışmasını sağlayın. Trunk portlarda sadece Root Guard etkinleştiriyor musunuz?\n\n#RootGuard #NetworkEngineering #Security",
+   "status": "yt_failed",
+   "hook": "Stop enabling Root Guard on access ports – it breaks connectivity.",
+   "duration_seconds": 26.59,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18075452762774570"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18075452762774570",
+   "file_id": "BAACAgQAAxkDAAIE1WrzMk7kgAI6nw29Q7cH7VdDctAEAAJMHQACX_mYU2jWdpxvwHUDPQQ",
+   "message_id": 1237
   }
  }
 }
