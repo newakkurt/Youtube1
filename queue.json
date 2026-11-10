@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
   "Slow Outage Recovery: Standardize Switch Port Labeling",
@@ -100,7 +99,8 @@
   "Default SNMP Leaks Topology: Restrict Access to NMS ACLs",
   "Root Bridge Election Storms: Hardcode STP Priority on Core",
   "Auto-config push outside maintenance window? Disable cron & GitHub Actions",
-  "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU"
+  "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU",
+  "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6218,6 +6218,37 @@
    "ig_id": "18073197683617265",
    "file_id": "BAACAgQAAxkDAAIEy2ry3qU__NgD351kzvw9X3xoSbqCAAKdHAACX_mYU26iDUhSV-22PQQ",
    "message_id": 1227
+  },
+  "5cc3e3ee": {
+   "title": "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix",
+   "description": "Unused switch ports are a silent entry point for physical attackers. Move them to a blackhole VLAN and shut them down to eliminate the risk.\n\n#Shorts #PortSecurity #NetworkSecurity #CyberSecurity #ITOps #Infrastructure",
+   "tags": [
+    "PortSecurity",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "ITOps",
+    "Infrastructure",
+    "Shorts"
+   ],
+   "instagram_caption": "Never leave an empty port active—lock it down now! Assign unused ports to a dedicated blackhole VLAN and shut the interface down to block all traffic. That’s the only way to stop physical attackers from using a vacant port as a backdoor. Have you blackholed unused ports in your network? Let me know in the comments. #PortSecurity #NetworkSecurity #CyberSecurity #ITOps #Infrastructure",
+   "linkedin_caption": "Unsecured switch ports can let attackers slip in. Shift them to a blackhole VLAN and shut them down – that’s the fix. How do you secure your ports? #PortSecurity #NetworkSecurity #CyberSecurity\n\n——— Türkçe ———\n\nKullanılmayan switch portları saldırganların girişi için sessiz bir kapıdır. Onları blackhole VLAN’e taşıyın ve kapatın – risk ortadan kalkar. Portlarınızı nasıl güvence altına alıyorsunuz? #PortSecurity #NetworkSecurity #CyberSecurity\n\n#PortSecurity #NetworkSecurity #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Never leave an empty port active—lock it down now!",
+   "duration_seconds": 22.3,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18121424944749203"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18121424944749203",
+   "file_id": "BAACAgQAAxkDAAIE0WrzCD59RcteVzitMvKB9HQJZSm5AAL3HAACX_mYU7Nj6njAmsCCPQQ",
+   "message_id": 1233
   }
  }
 }
