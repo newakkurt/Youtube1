@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
   "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
   "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
@@ -100,7 +99,8 @@
   "Stop Root Guard Misuse – Enable Only on Trunk Ports",
   "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL",
   "Stop using TFTP for backups – Switch to SFTP or SCP",
-  "Switch Reboot Wipes Sticky MACs: Run Write Memory"
+  "Switch Reboot Wipes Sticky MACs: Run Write Memory",
+  "Firewall GUI Exposed: Restrict Admin Access to Secure IPs"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6373,6 +6373,37 @@
    "ig_id": "18429497173150391",
    "file_id": "BAACAgQAAxkDAAIE4Grzhmvmb-Kx_Tc9wHmLKf9qekvOAAL1GwACX_mgUxhR3qtARwHSPQQ",
    "message_id": 1248
+  },
+  "d8a08c2d": {
+   "title": "Firewall GUI Exposed: Restrict Admin Access to Secure IPs",
+   "description": "Exposing firewall administrative interfaces to untrusted networks invites credential attacks and remote exploitation. Restrict management access strictly to trusted source IP prefixes and enforce encrypted HTTPS or SSH protocols.\n\n#Shorts #FirewallSecurity #NetworkSecurity #CyberSecurity #SysAdmin #Firewall",
+   "tags": [
+    "FirewallSecurity",
+    "NetworkSecurity",
+    "CyberSecurity",
+    "SysAdmin",
+    "Firewall",
+    "Shorts"
+   ],
+   "instagram_caption": "Exposing the firewall admin portal is the fastest path to a breach. Attackers scour for open admin ports and brute‑force credentials. Lock it down: only your management subnet, enforce HTTPS/SSH, and block all others before you plug in the interface. Which of these have you hit in production? Tell me in the comments. #FirewallSecurity #NetworkSecurity #CyberSecurity #SysAdmin #Firewall",
+   "linkedin_caption": "Firewall GUI Exposed: Restrict Admin Access to Secure IPs. Exposing firewall administrative interfaces to untrusted networks invites credential attacks and remote exploitation. Restrict management access strictly to trusted source IP prefixes and enforce encrypted HTTPS or SSH protocols. Do you secure admin access?\n\n——— Türkçe ———\n\nFirewall GUI Exposed: Restrict Admin Access to Secure IPs. Firewall yönetici arayüzleri, güvensiz ağlara açıldığında kimlik bilgisi saldırıları ve uzaktan sömürülmeleri davet eder. Yönetim erişimini yalnızca güvenilir kaynak IP öneklerine kısıtlayın ve HTTPS veya SSH protokollerini şifreli olarak zorunlu kılın. Yönetici erişimini güvenli kılıyorsunuz mu?\n\n#FirewallSecurity #NetworkSecurity #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Never leave your firewall management interface open to any IP address.",
+   "duration_seconds": 36.75,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18117470117043474"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18117470117043474",
+   "file_id": "BAACAgQAAxkDAAIE5GrzrrKex2LUtde0u6fjgYspGvSuAAINHAACX_mgU0yqGEf9PLuFPQQ",
+   "message_id": 1252
   }
  }
 }
