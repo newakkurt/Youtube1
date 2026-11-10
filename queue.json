@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Slow Outage Recovery: Standardize Switch Port Labeling",
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
@@ -100,7 +99,8 @@
   "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU",
   "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix",
   "Stop Root Guard Misuse – Enable Only on Trunk Ports",
-  "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL"
+  "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL",
+  "Stop using TFTP for backups – Switch to SFTP or SCP"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6311,6 +6311,37 @@
    "ig_id": "18123623485944064",
    "file_id": "BAACAgQAAxkDAAIE2WrzT3DJ-ZL7G5XjEIelyASNsKBZAAJ0HQACX_mYU_fzWgX9UNF1PQQ",
    "message_id": 1241
+  },
+  "761ea6e9": {
+   "title": "Stop using TFTP for backups – Switch to SFTP or SCP",
+   "description": "TFTP sends unencrypted data, exposing credentials and configurations. Switch to SFTP or SCP with SSH to keep backups secure.\n\n#Shorts #SecureBackups #networksecurity #cybersecurity #networkengineer #backup",
+   "tags": [
+    "SecureBackups",
+    "networksecurity",
+    "cybersecurity",
+    "networkengineer",
+    "backup",
+    "Shorts"
+   ],
+   "instagram_caption": "Still using TFTP for backups? That’s a security blind spot. TFTP sends data in clear‑text, exposing credentials and config files. Switch to SFTP or SCP over SSH – both encrypt traffic and credentials. Enable SSH on your device and run SFTP/SCP commands for a secure backup process. Never back up configs over plaintext again. Which protocol do you rely on in production? Let me know in the comments.\n#SecureBackups #networksecurity #cybersecurity #networkengineer #backup",
+   "linkedin_caption": "Stop using TFTP for backups. TFTP sends unencrypted data, exposing credentials and configurations. Switch to SFTP or SCP with SSH to keep backups secure. Do you still use TFTP for backups, or have you switched to SFTP or SCP?\n\n——— Türkçe ———\n\nBackup için TFTP kullanmayı bırakın. TFTP şifrelenmemiş veri göndererek credentials ve configuration bilgilerini açığa çıkarır. Backup güvenliğini sağlamak için SSH ile SFTP veya SCP'ye geçin. Backup için hâlâ TFTP mi kullanıyorsunuz, yoksa SFTP veya SCP'ye geçtiniz mi?\n\n#SecureBackups #networksecurity #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop using TFTP to back up configs and images.",
+   "duration_seconds": 26.11,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17917059984556188"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17917059984556188",
+   "file_id": "BAACAgQAAxkDAAIE3WrzZh4qdholpJu09kCCRL26pgPnAAKtHQACX_mYU-Me3fDKHm5_PQQ",
+   "message_id": 1245
   }
  }
 }
