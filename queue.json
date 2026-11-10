@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
   "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
@@ -100,7 +99,8 @@
   "TFTP Exposes Passwords: Secure Config Backups with SCP",
   "Default SNMP Leaks Topology: Restrict Access to NMS ACLs",
   "Root Bridge Election Storms: Hardcode STP Priority on Core",
-  "Auto-config push outside maintenance window? Disable cron & GitHub Actions"
+  "Auto-config push outside maintenance window? Disable cron & GitHub Actions",
+  "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6187,6 +6187,37 @@
    "ig_id": "18186944356423876",
    "file_id": "BAACAgQAAxkDAAIExWrywuSdslbQPteYoyIBq_efiidpAAJlHQACp1aYUyaGCfClJVcePQQ",
    "message_id": 1221
+  },
+  "d830103f": {
+   "title": "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU",
+   "description": "A DHCP starvation attack can flood a switch, maxing out CPU and taking down services. Apply a 15 pps rate‑limit on untrusted ports while keeping uplink traffic unrestricted.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #DHCP #Switches",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "DHCP",
+    "Switches",
+    "Shorts"
+   ],
+   "instagram_caption": "Think a rogue DHCP storm can bring your core to a halt? A single untrusted port can max out the CPU. The fix? Enable DHCP snooping on every VLAN, mark uplinks as trusted, and apply a 15 pps rate‑limit with `ip dhcp snooping limit rate 15` on edge ports only. Keep uplinks unrestricted so you don't choke legitimate traffic. Have you had to deploy this in production? Drop a comment and share this with your network team.\n#DHCPRateLimit #NetworkSecurity #Cisco #DHCP #Switches",
+   "linkedin_caption": "Discover how a simple DHCP starvation attack can bring a switch to its knees by overloading the CPU and knocking services offline. Learn how a 15 pps rate‑limit on untrusted ports protects the device while letting uplink traffic flow freely. Have you faced this issue?\n\n——— Türkçe ———\n\nBir DHCP starvation saldırısının, CPU'yu aşırı yükleyip hizmetleri keserek bir switch'i çöktüğünü keşfedin. 15 pps rate‑limit'in, güvensiz portları korurken uplink trafiğinin serbestçe akmasına izin verdiğini görün. Benzer durumla karşılaştınız mı?\n\n#DHCPRateLimit #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never let a rogue DHCP storm crash your core switch.",
+   "duration_seconds": 24.5,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18073197683617265"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18073197683617265",
+   "file_id": "BAACAgQAAxkDAAIEy2ry3qU__NgD351kzvw9X3xoSbqCAAKdHAACX_mYU26iDUhSV-22PQQ",
+   "message_id": 1227
   }
  }
 }
