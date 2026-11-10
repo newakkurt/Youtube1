@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Avoid VLAN Blackouts: Tighten Storm-Control Thresholds & Actions",
   "Backup WAN Fails During Outages: Run Off-Hours Drills",
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
@@ -100,7 +99,8 @@
   "Unused Switch Ports: Blackhole VLAN + Shutdown Policy",
   "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition",
   "TFTP Exposes Passwords: Secure Config Backups with SCP",
-  "Default SNMP Leaks Topology: Restrict Access to NMS ACLs"
+  "Default SNMP Leaks Topology: Restrict Access to NMS ACLs",
+  "Root Bridge Election Storms: Hardcode STP Priority on Core"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6125,6 +6125,37 @@
    "ig_id": "18145271956610477",
    "file_id": "BAACAgQAAxkDAAIEu2ryejbBAhHuobShGqNKJuEzXtaxAAJMHQACp1aYU2ugT7nEPIc1PQQ",
    "message_id": 1211
+  },
+  "1aab040c": {
+   "title": "Root Bridge Election Storms: Hardcode STP Priority on Core",
+   "description": "Leaving Spanning Tree root election to default priorities risks an access switch taking over your core network topology. Manually configure the lowest priority on your backbone switches to ensure deterministic Layer 2 forwarding paths.\n\n#Shorts #spanningtree #networkengineering #cisco #switchconfig #ccna",
+   "tags": [
+    "spanningtree",
+    "networkengineering",
+    "cisco",
+    "switchconfig",
+    "ccna",
+    "Shorts"
+   ],
+   "instagram_caption": "Did an access switch reboot hijack your core? Never leave STP Root Bridge election to defaults. If an access switch boots with a lower MAC, it can claim the root role. Manually set your core switch priority to 0 or 4096 to lock the topology and keep traffic paths predictable. Have you faced an unexpected root takeover in production? Drop a comment below or share if this saved you a storm. #spanningtree #networkengineering #cisco #switchconfig #ccna",
+   "linkedin_caption": "In many designs the default Spanning Tree root election can let an access switch seize the core topology. By hard‑coding the lowest STP priority on your backbone switches you lock in deterministic Layer 2 forwarding paths. How do you safeguard your core from unintended root elections?\n\n——— Türkçe ———\n\nBirçok tasarımda varsayılan Spanning Tree root seçimine bırakmak, bir erişim anahtarının çekirdek topolojisini ele geçirmesine neden olabilir. Çekirdek anahtarlarınızda en düşük STP önceliğini sabitleyerek belirleyici Katman 2 yönlendirme yollarını garanti altına alırsınız. Çekirdeğinizi istenmeyen root seçimlerinden nasıl koruyorsunuz?\n\n#spanningtree #networkengineering #cisco",
+   "status": "yt_failed",
+   "hook": "Never leave STP Root Bridge election to default priority values.",
+   "duration_seconds": 25.27,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18075877397602738"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18075877397602738",
+   "file_id": "BAACAgQAAxkDAAIEv2ryjJZg5n5rcHisP6xGCF0SndACAAJNHQACp1aYUydbU5Y2gaTUPQQ",
+   "message_id": 1215
   }
  }
 }
