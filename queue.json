@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Block OSPF/EIGRP Hellos on Access Ports – Use Passive-Interface",
   "Slow Outage Recovery: Standardize Switch Port Labeling",
   "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
@@ -100,7 +99,8 @@
   "Auto-config push outside maintenance window? Disable cron & GitHub Actions",
   "DHCP starvation crashes switch? Rate‑limit untrusted ports to protect CPU",
   "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix",
-  "Stop Root Guard Misuse – Enable Only on Trunk Ports"
+  "Stop Root Guard Misuse – Enable Only on Trunk Ports",
+  "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6280,6 +6280,37 @@
    "ig_id": "18075452762774570",
    "file_id": "BAACAgQAAxkDAAIE1WrzMk7kgAI6nw29Q7cH7VdDctAEAAJMHQACX_mYU2jWdpxvwHUDPQQ",
    "message_id": 1237
+  },
+  "26d14f2b": {
+   "title": "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL",
+   "description": "SNMPv2c community strings expose your entire network layout to anyone on the same subnet. Switching to SNMPv3 with authPriv and locking access with an ACL eliminates that single point of failure.\n\n#Shorts #SNMPv3Security #NetworkSecurity #SNMP #CyberDefense #ITOps",
+   "tags": [
+    "SNMPv3Security",
+    "NetworkSecurity",
+    "SNMP",
+    "CyberDefense",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Did you know your SNMPv2c community strings are leaking your entire topology? Switch to SNMPv3 authPriv—set a user, use SHA authentication, and AES privacy. Then lock it down with an ACL that allows only your NMS IPs. No more default ‘public/private’ strings; enforce SNMPv3 and ACL together. What challenges did you face when moving to SNMPv3 in production? #SNMPv3Security #NetworkSecurity #CyberDefense #ITOps #SNMP",
+   "linkedin_caption": "Discover how SNMPv2c community strings can inadvertently reveal your entire network topology to anyone on the same subnet. By migrating to SNMPv3 with authPriv and enforcing an ACL, you remove this single point of failure and strengthen your defenses. Are you ready to upgrade your SNMP security?\n\n——— Türkçe ———\n\nSNMPv2c community string'lerinin aynı alt ağdaki herkese ağ topolojinizi açığa çıkardığını fark ettiniz mi? SNMPv3 authPriv ve bir ACL ile geçiş yaparak bu tek hatayı ortadan kaldırır, güvenliğinizi pekiştirebilirsiniz. SNMP güvenliğinizi yükseltmeye hazır mısınız?\n\n#SNMPv3Security #NetworkSecurity #CyberDefense",
+   "status": "yt_failed",
+   "hook": "Stop using SNMPv2c community strings; they broadcast your entire topology.",
+   "duration_seconds": 34.51,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18123623485944064"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18123623485944064",
+   "file_id": "BAACAgQAAxkDAAIE2WrzT3DJ-ZL7G5XjEIelyASNsKBZAAJ0HQACX_mYU_fzWgX9UNF1PQQ",
+   "message_id": 1241
   }
  }
 }
