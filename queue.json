@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Backup WAN Fails During Outages: Run Off-Hours Drills",
   "Rogue DHCP Hijacking Clients? Set DHCP Snooping Trust",
   "Hidden Bandwidth Leaks: Spot Port Scans with NetFlow",
   "Unneeded IPv6 on Switches? Disable It to Shrink Attack Surface",
@@ -100,7 +99,8 @@
   "VoIP Roaming Drops: Enable 802.11r Fast BSS Transition",
   "TFTP Exposes Passwords: Secure Config Backups with SCP",
   "Default SNMP Leaks Topology: Restrict Access to NMS ACLs",
-  "Root Bridge Election Storms: Hardcode STP Priority on Core"
+  "Root Bridge Election Storms: Hardcode STP Priority on Core",
+  "Auto-config push outside maintenance window? Disable cron & GitHub Actions"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6156,6 +6156,37 @@
    "ig_id": "18075877397602738",
    "file_id": "BAACAgQAAxkDAAIEv2ryjJZg5n5rcHisP6xGCF0SndACAAJNHQACp1aYUydbU5Y2gaTUPQQ",
    "message_id": 1215
+  },
+  "a8cce3e0": {
+   "title": "Auto-config push outside maintenance window? Disable cron & GitHub Actions",
+   "description": "Running configuration scripts via cron or GitHub Actions outside planned maintenance can unintentionally disrupt services. Use a change‑management schedule and manual approvals to push configs only during approved windows.\n\n#Shorts #NoAutoPush #NetworkEngineering #Cybersecurity #Automation #ChangeManagement",
+   "tags": [
+    "NoAutoPush",
+    "NetworkEngineering",
+    "Cybersecurity",
+    "Automation",
+    "ChangeManagement",
+    "Shorts"
+   ],
+   "instagram_caption": "Auto‑push during peak hours? That’s a silent outage waiting to happen. Don’t let cron or GitHub Actions push configs outside a maintenance window—use an approved change‑management schedule and manual approvals instead. What’s the biggest auto‑push mishap you’ve seen in production? Drop a comment below. #NoAutoPush #NetworkEngineering #Cybersecurity #ChangeManagement #Automation",
+   "linkedin_caption": "Discover why letting auto‑config pushes run via cron or GitHub Actions outside the maintenance window can unintentionally disrupt services. Adopt a change‑management schedule and require manual approvals so configurations are applied only during approved windows. How do you prevent unintended pushes?\n\n——— Türkçe ———\n\nAuto‑config push'ların cron veya GitHub Actions üzerinden plan dışı bakım penceresinde çalışmasının hizmetleri istemeden aksatabileceğini keşfedin. Değişiklik yönetim takvimi ve manuel onaylar ile konfigürasyonların yalnızca onaylı pencerelerde uygulanmasını sağlayın. Kasıtlı olmayan itmeleri nasıl önlersiniz?\n\n#NetworkEngineering #ChangeManagement #Automation",
+   "status": "yt_failed",
+   "hook": "Never auto‑push configs outside a maintenance window!",
+   "duration_seconds": 22.36,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18186944356423876"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18186944356423876",
+   "file_id": "BAACAgQAAxkDAAIExWrywuSdslbQPteYoyIBq_efiidpAAJlHQACp1aYUyaGCfClJVcePQQ",
+   "message_id": 1221
   }
  }
 }
