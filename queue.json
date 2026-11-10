@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Auth Failures Send Devices to Restricted VLAN – 802.1X Fix",
   "Auto-Rollback Breaks Hotfixes: Alert on Config Drift First",
   "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
   "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
@@ -100,7 +99,8 @@
   "Physical Port Hijack Risk? Blackhole VLAN + Shutdown Fix",
   "Stop Root Guard Misuse – Enable Only on Trunk Ports",
   "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL",
-  "Stop using TFTP for backups – Switch to SFTP or SCP"
+  "Stop using TFTP for backups – Switch to SFTP or SCP",
+  "Switch Reboot Wipes Sticky MACs: Run Write Memory"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6342,6 +6342,37 @@
    "ig_id": "17917059984556188",
    "file_id": "BAACAgQAAxkDAAIE3WrzZh4qdholpJu09kCCRL26pgPnAAKtHQACX_mYU-Me3fDKHm5_PQQ",
    "message_id": 1245
+  },
+  "77f82a60": {
+   "title": "Switch Reboot Wipes Sticky MACs: Run Write Memory",
+   "description": "Enabling sticky MAC learning dynamically places allowed addresses into your running configuration rather than non-volatile storage. Always save running-config to startup-config with write memory so your switch retains port security policies across reboots.\n\n#Shorts #PortSecurity #NetworkSecurity #CiscoSwitch #SysAdmin #CCNA",
+   "tags": [
+    "PortSecurity",
+    "NetworkSecurity",
+    "CiscoSwitch",
+    "SysAdmin",
+    "CCNA",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever lost port‑security MACs after an unexpected reboot? When you enable switchport port‑security mac‑address sticky, the switch writes learned MACs to the running‑config, but they vanish with a power loss or reload because they're only in RAM. Run write memory to persist them in startup‑config and keep unauthorized access out. Have you experienced sticky MAC loss in the field? Drop a comment or save this tip. #PortSecurity #CiscoSwitch #NetworkSecurity #SysAdmin #CCNA",
+   "linkedin_caption": "In this short video I show why a switch reboot clears sticky MAC entries and how running 'write memory' preserves your port‑security configuration. Keep your allowed MACs in the running config so they survive a power cycle. Engineers, have you faced this issue?\n\n——— Türkçe ———\n\nBu kısa videoda bir switch yeniden başlatıldığında sticky MAC girişlerinin silinme nedenini ve 'write memory' komutunun port güvenliği ayarlarınızı nasıl koruduğunu gösteriyorum. İzin verilen MAC'leri running config içinde tutun ki bir güç kesintisinde kaybolmasınlar. Mühendisler, bu sorunu yaşadınız mı?\n\n#PortSecurity #CiscoSwitch #SysAdmin",
+   "status": "yt_failed",
+   "hook": "Lock down edge ports permanently without losing learned addresses during unexpected reboots.",
+   "duration_seconds": 35.81,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18429497173150391"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18429497173150391",
+   "file_id": "BAACAgQAAxkDAAIE4Grzhmvmb-Kx_Tc9wHmLKf9qekvOAAL1GwACX_mgUxhR3qtARwHSPQQ",
+   "message_id": 1248
   }
  }
 }
