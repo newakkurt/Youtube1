@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
   "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
@@ -100,7 +99,8 @@
   "Switch Reboot Wipes Sticky MACs: Run Write Memory",
   "Firewall GUI Exposed: Restrict Admin Access to Secure IPs",
   "Rogue Switches on Edge Ports: Cap Port Security Max MAC",
-  "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication"
+  "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
+  "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6466,6 +6466,37 @@
    "ig_id": "17898776196413485",
    "file_id": "BAACAgQAAxkDAAIE7mr0F3BhHy0o1gQ27wolrZ_ak3qtAAI0HAACX_mgU5WZghOd8fc6PQQ",
    "message_id": 1262
+  },
+  "f12d472c": {
+   "title": "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports",
+   "description": "Learn how to protect your network from DHCP starvation attacks by rate‑limiting untrusted ports and enabling errdisable detection. Follow the exact commands to keep your DHCP server and CPU safe.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #SwitchConfig #CyberDefense",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchConfig",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop rogue DHCP storms before they flood your switch. Enable DHCP snooping globally, trust only uplink ports, and apply a 15 pps rate‑limit on each untrusted port. This stops DHCP starvation attacks and keeps your DHCP server and CPU safe. Run errdisable detect cause dhcp‑snooping so any rogue device triggers an automatic disconnect – only trusted uplinks stay unrestricted. Which of these have you hit in production? Tell me in the comments. #DHCPRateLimit #NetworkSecurity #Cisco #SwitchConfig",
+   "linkedin_caption": "Protect your network from DHCP starvation attacks. Learn how to stop storms by rate-limiting untrusted ports to 15 pps and enabling errdisable detection to keep your DHCP server and CPU safe with exact switch commands. How do you protect your DHCP server against starvation attacks?\n\n——— Türkçe ———\n\nAğınızı DHCP starvation saldırılarına karşı koruyun. Untrusted portlar üzerinde 15 pps rate-limit uygulayarak ve errdisable detection özelliğini açarak DHCP server ve CPU'nuzu nasıl güvende tutacağınızı öğrenin. DHCP server'ınızı starvation saldırılarına karşı nasıl koruyorsunuz?\n\n#DHCPRateLimit #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never let a rogue device flood DHCP – stop it fast",
+   "duration_seconds": 30.75,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18105357461530956"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18105357461530956",
+   "file_id": "BAACAgQAAxkDAAIE8mr0MgABTTN756fyxWfc9lsjpX67LwACXhwAAl_5oFP3c_xagPCYcj0E",
+   "message_id": 1266
   }
  }
 }
