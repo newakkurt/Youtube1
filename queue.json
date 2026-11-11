@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
   "Stop BGP Route Leaks with AS-Path ACL Filters",
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
@@ -100,7 +99,8 @@
   "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
   "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports",
   "Syslog Event Order Confusion: Enable Millisecond Timestamps",
-  "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard"
+  "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard",
+  "Incident Outages Drop Syslog: Expand Switch Buffer and Queue"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6559,6 +6559,37 @@
    "ig_id": "18137074573584090",
    "file_id": "BAACAgQAAxkDAAIE-mr0gmokDwABEKKvmDTJmObXxi-_JAACmB4AAl_5qFM4vS3hV2j4Nz0E",
    "message_id": 1274
+  },
+  "733b182e": {
+   "title": "Incident Outages Drop Syslog: Expand Switch Buffer and Queue",
+   "description": "Small default switch buffers silently overwrite critical forensic logs during high-volume network incidents. Scale up your logging buffer and outbound queue limit to preserve evidence when crises hit.\n\n#Shorts #Syslog #NetworkEngineering #Cisco #CyberSecurity #SysAdmin",
+   "tags": [
+    "Syslog",
+    "NetworkEngineering",
+    "Cisco",
+    "CyberSecurity",
+    "SysAdmin",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever had your critical logs disappear exactly when an outage hits? Default switch buffers quietly drop those packets. Expand the logging buffer and push more memory into the switch so forensic evidence stays intact. Then bump the outbound queue limit—so syslog packets never get tossed in congestion. Size the buffer for worst‑case storms, or you'll walk into a blind spot during a major incident. Have you hit this in production? Drop a comment or share if this saved your day. #Syslog #NetworkEngineering #Cisco #CyberSecurity #SysAdmin",
+   "linkedin_caption": "When incident outages overwhelm a network, the default switch buffers can silently erase vital forensic syslog data. Expanding the switch buffer and outbound queue protects evidence and keeps logs intact during crises. How do you safeguard your logs in high‑stress events?\n\n——— Türkçe ———\n\nAğda büyük kesintiler meydana geldiğinde varsayılan switch tamponları kritik adli syslog verilerini sessizce silebilir. Switch buffer ve outbound queue’u genişletmek, kanıtları korur ve logların kriz anında bütün kalmasını sağlar. Ağ olaylarında loglarınızı nasıl koruyorsunuz?\n\n#Syslog #NetworkEngineering #CyberSecurity",
+   "status": "yt_failed",
+   "hook": "Default logging buffers drop crucial packets right when severe network incidents strike.",
+   "duration_seconds": 35.45,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18131307071478754"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18131307071478754",
+   "file_id": "BAACAgQAAxkDAAIE_mr0osLnGrb_EcnU2NNkztFDauf3AALkHgACX_moUwJJkpWe2L_cPQQ",
+   "message_id": 1278
   }
  }
 }
