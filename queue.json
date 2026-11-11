@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop BGP Route Leaks with AS-Path ACL Filters",
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
   "Manual Port Restores? Set Errdisable Recovery Timers",
@@ -100,7 +99,8 @@
   "Syslog Event Order Confusion: Enable Millisecond Timestamps",
   "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard",
   "Incident Outages Drop Syslog: Expand Switch Buffer and Queue",
-  "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard"
+  "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard",
+  "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6621,6 +6621,37 @@
    "ig_id": "18121786546956215",
    "file_id": "BAACAgQAAxkDAAIFBGr0r1wB1LjIwIoQ3BpLoKVgVeujAAIGHwACX_moU3YqGxgm7AuXPQQ",
    "message_id": 1284
+  },
+  "93ddb0ee": {
+   "title": "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0",
+   "description": "A broadcast loop or faulty NIC can flood a VLAN, causing a full outage. Using storm-control with a 30% broadcast level, shutdown or trap actions, and logging keeps the network stable.\n\n#Shorts #stormcontrol #network #cybersecurity #engineer #switches",
+   "tags": [
+    "stormcontrol",
+    "network",
+    "cybersecurity",
+    "engineer",
+    "switches",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop broadcast storms before they cripple your VLAN! Enable storm-control on every user port with a 30.0 broadcast level, set the action to shutdown or trap, and log all events.\nRule of thumb: always cap broadcast traffic and monitor with traps to keep your network stable.\nHave you hit a storm-control trigger in production? #stormcontrol #networking #cybersecurity #networkengineer #switches",
+   "linkedin_caption": "Facing a broadcast storm that cripples your VLAN? Watch how setting storm‑control to a 30% broadcast level, with shutdown or trap actions and logging, keeps the network stable. What’s your approach to managing broadcast loops? #network #stormcontrol #cybersecurity\n\n——— Türkçe ———\n\nBroadcast storm VLAN’i parçalıyor mu? Videoyu izleyin: storm‑control’ı %30 broadcast seviyesinde ayarlamak, shutdown veya trap aksiyonları ve loglama ile ağı istikrarlı tutuyor. Broadcast loop’ları yönetmek için sizin yaklaşımınız nedir? #network #stormcontrol #cybersecurity\n\n#network #stormcontrol #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never let a broadcast storm take down your VLAN.",
+   "duration_seconds": 26.35,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17931102072180808"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17931102072180808",
+   "file_id": "BAACAgQAAxkDAAIFCGr03WD6WntK2nLLT2MBHk3gJZJxAAJzIAACLRKoU70xOTtxFmozPQQ",
+   "message_id": 1288
   }
  }
 }
