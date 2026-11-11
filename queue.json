@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
@@ -100,7 +99,8 @@
   "Firewall GUI Exposed: Restrict Admin Access to Secure IPs",
   "Rogue Switches on Edge Ports: Cap Port Security Max MAC",
   "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
-  "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports"
+  "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports",
+  "Syslog Event Order Confusion: Enable Millisecond Timestamps"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6497,6 +6497,37 @@
    "ig_id": "18105357461530956",
    "file_id": "BAACAgQAAxkDAAIE8mr0MgABTTN756fyxWfc9lsjpX67LwACXhwAAl_5oFP3c_xagPCYcj0E",
    "message_id": 1266
+  },
+  "3921e0c7": {
+   "title": "Syslog Event Order Confusion: Enable Millisecond Timestamps",
+   "description": "Default syslog configurations only record timestamps down to the nearest second, making concurrent outage events impossible to sequence. Enable millisecond precision to isolate the exact order of link flaps and protocol drops.\n\n#Shorts #SyslogTimestamps #NetworkEngineering #Syslog #Cisco #NetworkTroubleshooting",
+   "tags": [
+    "SyslogTimestamps",
+    "NetworkEngineering",
+    "Syslog",
+    "Cisco",
+    "NetworkTroubleshooting",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever see a BGP drop and link flap logged at the same second? The default one‑second syslog timestamps hide the order of events. Enable millisecond precision on your switches—exact timestamps turn log spam into a clear root‑cause timeline. Which of these scenarios have you faced in production? Share below! #Shorts #SyslogTimestamps #NetworkEngineering #Syslog #Cisco",
+   "linkedin_caption": "Default syslog configurations record timestamps down to the nearest second, making concurrent outage events impossible to sequence. Enable millisecond precision to isolate the exact order of link flaps and protocol drops. How will you handle this?\n\n——— Türkçe ———\n\nDefault syslog configurations, zaman damgalarını en yakın saniyeye kadar kaydeder; bu da eşzamanlı kesinti olaylarını sıralamayı imkansız kılar. Millisecond precision’ı etkinleştirerek link flaps ve protocol drops'ın tam sırasını izole edin. Bunu nasıl yöneteceksiniz?\n\n#SyslogTimestamps #NetworkEngineering #Cisco",
+   "status": "yt_failed",
+   "hook": "Never rely on default one-second syslog timestamps during complex network outages.",
+   "duration_seconds": 32.76,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18119190089122153"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18119190089122153",
+   "file_id": "BAACAgQAAxkDAAIE9mr0XuERbR3aOyBGXiQ4c9kReGiMAAKbHAACX_mgU9F4vk3qmYn6PQQ",
+   "message_id": 1270
   }
  }
 }
