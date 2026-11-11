@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Mini Switch Lockout? Enable PortFast & BPDU Guard Now",
   "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
   "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
   "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
@@ -100,7 +99,8 @@
   "SNMPv2c Communities Leak Topology – Switch to SNMPv3 authPriv and ACL",
   "Stop using TFTP for backups – Switch to SFTP or SCP",
   "Switch Reboot Wipes Sticky MACs: Run Write Memory",
-  "Firewall GUI Exposed: Restrict Admin Access to Secure IPs"
+  "Firewall GUI Exposed: Restrict Admin Access to Secure IPs",
+  "Rogue Switches on Edge Ports: Cap Port Security Max MAC"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6404,6 +6404,37 @@
    "ig_id": "18117470117043474",
    "file_id": "BAACAgQAAxkDAAIE5GrzrrKex2LUtde0u6fjgYspGvSuAAINHAACX_mgU0yqGEf9PLuFPQQ",
    "message_id": 1252
+  },
+  "ccabfb7b": {
+   "title": "Rogue Switches on Edge Ports: Cap Port Security Max MAC",
+   "description": "Leaving access ports unrestricted allows users to attach unmanaged switches and rogue devices. Enforce port security maximum MAC limits and violation actions to protect your access layer.\n\n#Shorts #PortSecurity #NetworkSecurity #CiscoNetworking #Switching #NetworkEngineering",
+   "tags": [
+    "PortSecurity",
+    "NetworkSecurity",
+    "CiscoNetworking",
+    "Switching",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your edge ports are safe? Think again.\n\nLeaving access ports unrestricted lets users plug in unmanaged switches, bypassing NAC and flooding your CAM table. Enable port security, set the maximum MAC to one (or two for VoIP), and choose a violation action like protect or immediate shutdown.\n\nHave you seen a rogue switch breach in your network? Drop a comment. #PortSecurity #NetworkSecurity #CiscoNetworking #Switching #NetworkEngineering",
+   "linkedin_caption": "Rogue switches on edge ports can leave your network vulnerable. Enforce port‑security max MAC limits and violation actions to keep your access layer safe. How do you handle this? #PortSecurity #NetworkSecurity #CiscoNetworking\n\n——— Türkçe ———\n\nEdge portlardaki rogue switch'ler ağınızı açık bırakır. Port‑security max MAC sınırlarını ve ihlal eylemlerini uygulayarak erişim katmanınızı koruyun. Bunu nasıl yönetiyorsunuz? #PortSecurity #NetworkSecurity #CiscoNetworking\n\n#PortSecurity #NetworkSecurity #CiscoNetworking",
+   "status": "yt_failed",
+   "hook": "Stop leaving edge switch ports open to unlimited MAC addresses.",
+   "duration_seconds": 24.98,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18439632454194973"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18439632454194973",
+   "file_id": "BAACAgQAAxkDAAIE6mrz3MBfZm-h6L9FjE_ooElS09yCAAIXHAACX_mgUxt5vEPhXHgdPQQ",
+   "message_id": 1258
   }
  }
 }
