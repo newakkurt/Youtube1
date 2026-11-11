@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Silent Memory Leaks Freeze Core Switches: Set Threshold Alerts",
   "Detect Config Drift on Catalyst 9000 Switches with Golden‑Config Alerts",
   "Stop DHCP Snooping Floods on Untrusted Ports with Rate‑Limit",
   "Avoid Massive Outage: Test Bulk Password Change Scripts First",
@@ -100,7 +99,8 @@
   "Stop using TFTP for backups – Switch to SFTP or SCP",
   "Switch Reboot Wipes Sticky MACs: Run Write Memory",
   "Firewall GUI Exposed: Restrict Admin Access to Secure IPs",
-  "Rogue Switches on Edge Ports: Cap Port Security Max MAC"
+  "Rogue Switches on Edge Ports: Cap Port Security Max MAC",
+  "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6435,6 +6435,37 @@
    "ig_id": "18439632454194973",
    "file_id": "BAACAgQAAxkDAAIE6mrz3MBfZm-h6L9FjE_ooElS09yCAAIXHAACX_mgUxt5vEPhXHgdPQQ",
    "message_id": 1258
+  },
+  "7019cd7c": {
+   "title": "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
+   "description": "Learn how to lock down OSPF and EIGRP with MD5 or SHA authentication, preventing malicious route injections. Follow the exact commands to protect every area and interface in your network.\n\n#Shorts #RouteAuth #NetworkSecurity #Routing #OSPF #EIGRP",
+   "tags": [
+    "RouteAuth",
+    "NetworkSecurity",
+    "Routing",
+    "OSPF",
+    "EIGRP",
+    "Shorts"
+   ],
+   "instagram_caption": "Don’t let rogue routers poison your routing table—lock them out first.\n\nEnable OSPF message‑digest on every interface, then set the key:\nip ospf authentication message-digest\nip ospf message‑digest‑key 1 md5 MySecret. Apply the same level of security to EIGRP with:\nip authentication mode eigrp 100 key-chain MY_KEYS.  Secure each area and interface to stop route hijacks.\n\nWhich of these steps have you already deployed in production? Share your experience in the comments or save this for reference. #RouteAuth #NetworkSecurity #OSPF #EIGRP #Routing",
+   "linkedin_caption": "Learn how to lock down OSPF and EIGRP with MD5 or SHA authentication to prevent malicious route injections. Follow the exact commands to protect every area and interface in your network against fake announcements. Do you use authentication to protect your routing protocols?\n\n——— Türkçe ———\n\nKötü niyetli route injection girişimlerini engellemek için MD5 veya SHA authentication ile OSPF ve EIGRP protokollerini nasıl güvene alacağınızı öğrenin. Ağınızdaki her area ve interface yapısını korumak için adımları takip edin. Routing protokollerinizi korumak için authentication kullanıyor musunuz?\n\n#NetworkSecurity #OSPF #EIGRP",
+   "status": "yt_failed",
+   "hook": "Never let unauthenticated routers inject false routes.",
+   "duration_seconds": 39.03,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17898776196413485"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17898776196413485",
+   "file_id": "BAACAgQAAxkDAAIE7mr0F3BhHy0o1gQ27wolrZ_ak3qtAAI0HAACX_mgU5WZghOd8fc6PQQ",
+   "message_id": 1262
   }
  }
 }
