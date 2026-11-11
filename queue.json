@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Avoid Massive Outage: Test Bulk Password Change Scripts First",
   "PSU Failure Triggers Switch Reload: Fix with Envmon Traps",
   "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
   "Stop BGP Route Leaks with AS-Path ACL Filters",
@@ -100,7 +99,8 @@
   "Rogue Switches on Edge Ports: Cap Port Security Max MAC",
   "Prevent Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
   "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports",
-  "Syslog Event Order Confusion: Enable Millisecond Timestamps"
+  "Syslog Event Order Confusion: Enable Millisecond Timestamps",
+  "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6528,6 +6528,37 @@
    "ig_id": "18119190089122153",
    "file_id": "BAACAgQAAxkDAAIE9mr0XuERbR3aOyBGXiQ4c9kReGiMAAKbHAACX_mgU9F4vk3qmYn6PQQ",
    "message_id": 1270
+  },
+  "1ae24498": {
+   "title": "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard",
+   "description": "Learn why running UDLD aggressive alongside STP Loop Guard is essential on Cisco switches. Protect your copper and fiber trunk links from unidirectional failures and BPDU starvation.\n\n#Shorts #CiscoNetworking #NetworkEngineering #SpanningTree #Switching #NetworkSecurity",
+   "tags": [
+    "CiscoNetworking",
+    "NetworkEngineering",
+    "SpanningTree",
+    "Switching",
+    "NetworkSecurity",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop assuming UDLD alone prevents catastrophic STP trunk loops. Enable Cisco udld aggressive on fiber trunks to detect unidirectional physical layer faults immediately, then configure spanning-tree guard loop to block loops when copper or fiber drops BPDUs. Pair both features together: UDLD catches physical fiber breaks, while Loop Guard stops BPDU starvation. Which of these have you hit in production? Tell me in the comments. #CiscoNetworking #UDLD #STP #LoopGuard #NetworkEngineering",
+   "linkedin_caption": "Discover why enabling UDLD aggressive together with STP Loop Guard on Cisco switches is crucial for protecting copper and fiber trunk links from unidirectional failures and BPDU starvation. Watch the short guide to see the configuration steps and best practices. Strengthen your network resilience. How do you secure your trunk links?\n\n——— Türkçe ———\n\nUDLD aggressive ve STP Loop Guard'ı Cisco anahtarlarınızda etkinleştirmenin, bakır ve fiber trunk linklerini tek yönlü hatalar ve BPDU açlığından korumak için neden kritik olduğunu keşfedin. Kısa kılavuzda yapılandırma adımlarını ve en iyi uygulamaları izleyin. Ağınızın dayanıklılığını artırın. Trunk linklerinizi nasıl güvenli hale getiriyorsunuz?\n\n#CiscoNetworking #NetworkEngineering #SpanningTree",
+   "status": "yt_failed",
+   "hook": "Stop assuming UDLD alone prevents catastrophic STP trunk loops.",
+   "duration_seconds": 37.48,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18137074573584090"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18137074573584090",
+   "file_id": "BAACAgQAAxkDAAIE-mr0gmokDwABEKKvmDTJmObXxi-_JAACmB4AAl_5qFM4vS3hV2j4Nz0E",
+   "message_id": 1274
   }
  }
 }
