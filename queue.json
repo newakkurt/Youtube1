@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent Mini Switch Network Lockout – Enable PortFast & BPDU Guard",
   "Stop BGP Route Leaks with AS-Path ACL Filters",
   "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
@@ -100,7 +99,8 @@
   "DHCP Snooping Rate‑Limit: Stop Storms with 15 pps on Untrusted Ports",
   "Syslog Event Order Confusion: Enable Millisecond Timestamps",
   "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard",
-  "Incident Outages Drop Syslog: Expand Switch Buffer and Queue"
+  "Incident Outages Drop Syslog: Expand Switch Buffer and Queue",
+  "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6590,6 +6590,37 @@
    "ig_id": "18131307071478754",
    "file_id": "BAACAgQAAxkDAAIE_mr0osLnGrb_EcnU2NNkztFDauf3AALkHgACX_moUwJJkpWe2L_cPQQ",
    "message_id": 1278
+  },
+  "af05d682": {
+   "title": "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard",
+   "description": "A hidden mini‑switch on a user’s desk can bring down the whole LAN. Enabling PortFast and BPDU Guard on edge ports forces an err‑disable, keeping the root bridge safe.\n\n#Shorts #PortFastBPDUGuard #NetworkSecurity #Cisco #STP #ErrDisable",
+   "tags": [
+    "PortFastBPDUGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "STP",
+    "ErrDisable",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever had a rogue mini‑switch bring your LAN to a halt? Turn on PortFast on every edge port to speed link‑up, and enable BPDU Guard so a rogue switch triggers an err‑disable. The port shuts down, keeping the root bridge safe. Which of these have you hit in production? #PortFast #BPDUGuard #NetworkSecurity #Cisco #ErrDisable",
+   "linkedin_caption": "Discover how a tiny, hidden mini‑switch on a user’s desk can jeopardize an entire LAN. By enabling PortFast and BPDU Guard on edge ports, the switch triggers an err‑disable, safeguarding the root bridge. How do you protect edge ports?\n\n——— Türkçe ———\n\nKullanıcının masasındaki gizli mini‑switch, tüm LAN’ı tehdit edebilir. Edge portlarda PortFast ve BPDU Guard’ı etkinleştirerek switch, bir err‑disable tetikler ve root bridge’i korur. Kenar portlarını nasıl koruyorsunuz?\n\n#PortFastBPDUGuard #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Never let a hidden mini‑switch lock your network.",
+   "duration_seconds": 23.34,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18121786546956215"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18121786546956215",
+   "file_id": "BAACAgQAAxkDAAIFBGr0r1wB1LjIwIoQ3BpLoKVgVeujAAIGHwACX_moU3YqGxgm7AuXPQQ",
+   "message_id": 1284
   }
  }
 }
