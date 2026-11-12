@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
   "Manual Port Restores? Set Errdisable Recovery Timers",
   "Sticky MAC disappears after reboot? Save it with write memory",
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
@@ -100,7 +99,8 @@
   "Incident Outages Drop Syslog: Expand Switch Buffer and Queue",
   "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard",
   "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0",
-  "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit"
+  "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit",
+  "Stop Syslog Debug Flood: Filter to Critical & Error Only"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6683,6 +6683,37 @@
    "ig_id": "18116967323059473",
    "file_id": "BAACAgQAAxkDAAIFDGr1ErqhnJcc4Lm4he5FKjvUqkziAAKOIAACLRKoU-tP8EdpU4-yPQQ",
    "message_id": 1292
+  },
+  "0e64feb9": {
+   "title": "Stop Syslog Debug Flood: Filter to Critical & Error Only",
+   "description": "Overloading your syslog with debug messages can cripple devices and the logging server. Learn how to filter to error and critical levels on Cisco and Juniper, and verify the setup with a quick test.\n\n#Shorts #SyslogFiltering #NetworkSecurity #Sysadmin #Cisco #Juniper",
+   "tags": [
+    "SyslogFiltering",
+    "NetworkSecurity",
+    "Sysadmin",
+    "Cisco",
+    "Juniper",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen your syslog server crash from a flood of debug messages? Stop sending every debug line—keep only error and critical alerts on Cisco (logging trap warnings) and Juniper (set syslog host … severity error). Verify that only error/critical logs arrive after setting the filter. Have you hit this overload in production? #SyslogFiltering #NetworkSecurity #Cisco #Juniper #Sysadmin",
+   "linkedin_caption": "Debug messages can flood your syslog, slowing devices and the logging server. In this short video I show how to keep only Critical and Error entries on Cisco and Juniper, then run a quick test to confirm the filter works. How do you handle excess logs?\n\n——— Türkçe ———\n\nDebug mesajları syslog'unuzu doldurabilir, cihazları ve kayıt sunucusunu yavaşlatabilir. Bu kısa videoda Cisco ve Juniper'da yalnızca Critical ve Error seviyelerini tutmayı ve filtrenin çalıştığını hızlı bir testle doğrulamayı gösteriyorum. Aşırı logları nasıl yönetiyorsunuz?\n\n#SyslogFiltering #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop sending every debug message to your syslog server.",
+   "duration_seconds": 33.32,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17993179737119565"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17993179737119565",
+   "file_id": "BAACAgQAAxkDAAIFEGr1ZVEHjp-sPt4rgP9QZkwknkALAAKkGwACLRKwU5ZEhOMHV7iMPQQ",
+   "message_id": 1296
   }
  }
 }
