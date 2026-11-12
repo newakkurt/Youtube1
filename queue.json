@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Manual Port Restores? Set Errdisable Recovery Timers",
   "Sticky MAC disappears after reboot? Save it with write memory",
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
@@ -100,7 +99,8 @@
   "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard",
   "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0",
   "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit",
-  "Stop Syslog Debug Flood: Filter to Critical & Error Only"
+  "Stop Syslog Debug Flood: Filter to Critical & Error Only",
+  "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6714,6 +6714,37 @@
    "ig_id": "17993179737119565",
    "file_id": "BAACAgQAAxkDAAIFEGr1ZVEHjp-sPt4rgP9QZkwknkALAAKkGwACLRKwU5ZEhOMHV7iMPQQ",
    "message_id": 1296
+  },
+  "4faec9a0": {
+   "title": "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit",
+   "description": "Untrusted edge ports can flood your DHCP pool, causing a network outage. Learn how a simple 15 pps rate‑limit in DHCP Snooping stops the attack.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #SysAdmin #ITOps",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "SysAdmin",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting untrusted ports drain your DHCP pool.\nEnable DHCP Snooping and set a 15 pps rate‑limit on those ports. Configure the ports as untrusted so the limit only applies where you need it.\nRemember: every untrusted edge port needs a 15 pps DHCP snooping limit.\nWhich of these have you hit in production? Tell me in the comments.\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #SysAdmin",
+   "linkedin_caption": "Prevent DHCP starvation on untrusted ports with a 15 pps rate‑limit. Untrusted edge ports can flood your DHCP pool, causing outages. Learn how a simple 15 pps limit in DHCP Snooping stops the attack. It safeguards your network. Got a similar challenge?\n\n——— Türkçe ———\n\nUntrusted ports üzerindeki DHCP starvation’ı 15 pps rate‑limit ile önleyin. Untrusted edge ports, DHCP havuzunuzu doldurup ağ kesintisine yol açabilir. Basit bir 15 pps limitinin DHCP Snooping’da saldırıyı nasıl durdurduğunu öğrenin. Ağınızı korur. Benzer bir sorununuz var mı?\n\n#DHCPRateLimit #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop letting untrusted ports drain your DHCP pool.",
+   "duration_seconds": 29.28,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18385129360235558"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18385129360235558",
+   "file_id": "BAACAgQAAxkDAAIFFGr1geCSVcUh2fU-MGJPsu-JDyqyAALGGwACLRKwUwnBD955T2DePQQ",
+   "message_id": 1300
   }
  }
 }
