@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
@@ -100,7 +99,8 @@
   "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit",
   "Stop Syslog Debug Flood: Filter to Critical & Error Only",
   "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit",
-  "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256"
+  "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256",
+  "Default SNMP Communities Leak Topology – Lock Access with ACL"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6776,6 +6776,37 @@
    "ig_id": "18119288173821120",
    "file_id": "BAACAgQAAxkDAAIFGGr1q4fEdG55NQKCSfKb6FVsXeAeAAIrHAACLRKwUyuiOxzaw520PQQ",
    "message_id": 1304
+  },
+  "5dd48a27": {
+   "title": "Default SNMP Communities Leak Topology – Lock Access with ACL",
+   "description": "Default SNMP community strings expose your entire topology to anyone on the network. Restrict SNMP to trusted NMS IPs with an ACL and remove the public/private defaults.\n\n#Shorts #SNMPACL #NetworkSecurity #CyberSec #SNMP #NetworkEngineering",
+   "tags": [
+    "SNMPACL",
+    "NetworkSecurity",
+    "CyberSec",
+    "SNMP",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your SNMP community strings are safe? Think again. \n\nDefault public/private strings expose your entire topology to anyone on the network. Lock them behind an ACL that only allows your NMS server IPs to query. Apply the snmp‑server community command with ro and an access‑list, and never leave the defaults.\n\nWhich of these have you hit in production? Share your experiences below.\n\n#SNMP #NetworkSecurity #CyberSec #ACL #NMS",
+   "linkedin_caption": "Default SNMP community strings expose your topology to any network user. Lock access by restricting SNMP to trusted NMS IPs with an ACL and removing default public/private strings. Are you securing SNMP with ACL?\n\n——— Türkçe ———\n\nDefault SNMP community strings, ağdaki her kullanıcıya toplamanızı açıyor. ACL ile SNMP'yi sadece güvenilir NMS IP'lerine kısıtlayarak ve public/private varsayılanlarını kaldırarak erişimi kilitleyin. SNMP trafiğinizi ACL ile koruyor musunuz?\n\n#SNMPACL #NetworkSecurity #CyberSec",
+   "status": "yt_failed",
+   "hook": "Stop exposing your entire network map by using default SNMP strings.",
+   "duration_seconds": 33.21,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17955864270301218"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17955864270301218",
+   "file_id": "BAACAgQAAxkDAAIFHGr13fwKKCvaELSMZv4_ruyWuKJiAAKcHAACLRKwUzIB5iKHj4Z6PQQ",
+   "message_id": 1308
   }
  }
 }
