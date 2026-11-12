@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Automated Config Push Outages: Gate CI/CD Behind Approval Rules",
   "Limit Unused VTY Lines to Stop Parallel Brute‑Force Logins",
   "Manual Port Restores? Set Errdisable Recovery Timers",
   "Sticky MAC disappears after reboot? Save it with write memory",
@@ -100,7 +99,8 @@
   "STP Loops on Trunks: Enable UDLD Aggressive and Loop Guard",
   "Incident Outages Drop Syslog: Expand Switch Buffer and Queue",
   "Mini Switch Hijack Causes Err‑Disable – Enable PortFast & BPDU Guard",
-  "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0"
+  "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0",
+  "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6652,6 +6652,37 @@
    "ig_id": "17931102072180808",
    "file_id": "BAACAgQAAxkDAAIFCGr03WD6WntK2nLLT2MBHk3gJZJxAAJzIAACLRKoU70xOTtxFmozPQQ",
    "message_id": 1288
+  },
+  "805b13ae": {
+   "title": "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit",
+   "description": "Learn why DHCP snooping rate‑limits on untrusted ports are essential to stop DHCP storms. Apply a 15 pps limit and keep your trusted uplinks unrestricted.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #ITOps #CyberSec",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "ITOps",
+    "CyberSec",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop DHCP floods before they crash your switch! 🚫 Untrusted ports can flood your DHCP server and bring down the switch. Enable DHCP snooping and set a 15 pps limit on every untrusted interface—don’t touch trusted uplinks or you’ll choke legit traffic. Which of these have you hit in production? Tell me in the comments. #DHCPRateLimit #NetworkSecurity #Cisco #ITOps #CyberSec",
+   "linkedin_caption": "Prevent DHCP floods on untrusted ports by setting a 15 pps rate‑limit. This keeps DHCP storms from overwhelming your network while allowing trusted uplinks to stay unrestricted. Have you set the 15 pps limit?\n\n——— Türkçe ———\n\nUntrusted portlarda DHCP fırtınalarını önleyin: 15 pps rate‑limit uygulayın. Böylece DHCP stormlar ağınızı aşırı yüklemezken güvenli uplinkler serbest kalır. 15 pps sınırını ayarladınız mı?\n\n#DHCPRateLimit #NetworkSecurity #CyberSec",
+   "status": "yt_failed",
+   "hook": "Untrusted ports can flood your DHCP server and crash the switch.",
+   "duration_seconds": 27.88,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18116967323059473"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18116967323059473",
+   "file_id": "BAACAgQAAxkDAAIFDGr1ErqhnJcc4Lm4he5FKjvUqkziAAKOIAACLRKoU-tP8EdpU4-yPQQ",
+   "message_id": 1292
   }
  }
 }
