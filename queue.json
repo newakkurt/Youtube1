@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
@@ -100,7 +99,8 @@
   "Stop Syslog Debug Flood: Filter to Critical & Error Only",
   "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit",
   "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256",
-  "Default SNMP Communities Leak Topology – Lock Access with ACL"
+  "Default SNMP Communities Leak Topology – Lock Access with ACL",
+  "Zero Roaming Drops: Enable 802.11r Fast BSS Transition"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6807,6 +6807,37 @@
    "ig_id": "17955864270301218",
    "file_id": "BAACAgQAAxkDAAIFHGr13fwKKCvaELSMZv4_ruyWuKJiAAKcHAACLRKwUzIB5iKHj4Z6PQQ",
    "message_id": 1308
+  },
+  "a2885e5e": {
+   "title": "Zero Roaming Drops: Enable 802.11r Fast BSS Transition",
+   "description": "In corporate Wi‑Fi, roaming handoffs often cause brief disconnects for handhelds, VoIP phones, and mobile devices. Enabling 802.11r Fast BSS Transition removes those gaps and keeps users connected.\n\n#Shorts #FastBSS #WiFi #NetworkEngineering #CyberSecurity #Roaming",
+   "tags": [
+    "FastBSS",
+    "WiFi",
+    "NetworkEngineering",
+    "CyberSecurity",
+    "Roaming",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop losing calls and video when users move. Enabling 802.11r Fast BSS Transition in your controller sets a common Mobility Domain ID and allows FT over‑the‑air, keeping devices glued to the network. Always keep Fast BSS on for seamless roaming. Have you rolled 802.11r out in your environment? Comment below or save this post for your next Wi‑Fi upgrade! #FastBSS #WiFi #NetworkEngineering #CyberSecurity #Roaming",
+   "linkedin_caption": "Zero Roaming Drops? Enable 802.11r Fast BSS Transition to keep handhelds, VoIP phones, and mobiles seamlessly connected in corporate Wi‑Fi for all users and reduce dropouts. Any thoughts on deploying this in your network?\n\n——— Türkçe ———\n\nZero Roaming Drops? 802.11r Fast BSS Transition ile corporate Wi‑Fi'de handhelds, VoIP telefonlar ve mobil cihazlar için kesintisiz bağlantı sağlayın, tüm kullanıcılar için bağlantı sürekliliğini artırın. Bu teknolojiyi ağınızda uygulama konusunda ne düşünüyorsunuz?\n\n#FastBSS #WiFi #NetworkEngineering",
+   "status": "yt_failed",
+   "hook": "Stop letting handoffs drop calls, data, or video streams.",
+   "duration_seconds": 28.23,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18161127919511786"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18161127919511786",
+   "file_id": "BAACAgQAAxkDAAIFIGr18wLABcZFMSZ3FlsvTgk7wejEAALLHAACLRKwUxK1Caf0uBDcPQQ",
+   "message_id": 1312
   }
  }
 }
