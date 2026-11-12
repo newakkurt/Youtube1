@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
   "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
@@ -100,7 +99,8 @@
   "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit",
   "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256",
   "Default SNMP Communities Leak Topology – Lock Access with ACL",
-  "Zero Roaming Drops: Enable 802.11r Fast BSS Transition"
+  "Zero Roaming Drops: Enable 802.11r Fast BSS Transition",
+  "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6838,6 +6838,37 @@
    "ig_id": "18161127919511786",
    "file_id": "BAACAgQAAxkDAAIFIGr18wLABcZFMSZ3FlsvTgk7wejEAALLHAACLRKwUxK1Caf0uBDcPQQ",
    "message_id": 1312
+  },
+  "68bdce13": {
+   "title": "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks",
+   "description": "Hardening your Git workflow stops accidental exposure of passwords, SNMP strings, and IP addresses. Use .gitignore and pre‑commit hooks to mask secrets before they ever leave your laptop.\n\n#Shorts #GitSecretMask #NetworkSecurity #GitOps #ConfigManagement #CyberSec",
+   "tags": [
+    "GitSecretMask",
+    "NetworkSecurity",
+    "GitOps",
+    "ConfigManagement",
+    "CyberSec",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever accidentally push your .cfg secrets to Git? \n\nHardening your Git workflow stops accidental exposure of passwords, SNMP community strings, and IP addresses. Add sensitive files to .gitignore or enforce a pre‑commit hook that scrubs secrets before each commit.\n\nWhich approach have you hit in production? Drop a comment and share how you keep secrets out of version control.",
+   "linkedin_caption": "Learn how to stop accidental password leaks in Git by using .gitignore and pre‑commit hooks to mask secrets before they leave your laptop. Hardening your workflow protects passwords, SNMP strings, and IPs. How do you safeguard secrets in your Git workflow?\n\n——— Türkçe ———\n\nGit'teki şifre sızıntılarını önlemenin en iyi yolu .gitignore ve pre‑commit hooklarını kullanarak gizli bilgileri laptopunuzdan ayrılmadan önce gizlemektir. Çalışma akışınızı güçlendirerek şifreleri, SNMP dizilerini ve IP adreslerini koruyabilirsiniz. Git iş akışınızda gizlilikleri nasıl koruyorsunuz?\n\n#GitSecretMask #NetworkSecurity #GitOps",
+   "status": "yt_failed",
+   "hook": "Never push raw .cfg files to your repo—your secrets get exposed.",
+   "duration_seconds": 28.71,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18169436212471014"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18169436212471014",
+   "file_id": "BAACAgQAAxkDAAIFJGr2MDNGw2xkg4QlrYWxqfrP42dHAAJOHAACLRK4U3g6MpdyOsS_PQQ",
+   "message_id": 1316
   }
  }
 }
