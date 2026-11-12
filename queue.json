@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Sticky MAC disappears after reboot? Save it with write memory",
   "Protect Root Bridge from Rogue Switches: Enable BPDU Guard",
   "Faulty NIC Freezing VLAN: Fix with Storm-Control Shutdown",
   "DAI drops? Trust only DHCP‑snooping uplinks & static‑ARP servers",
@@ -100,7 +99,8 @@
   "Broadcast Storm Cripples VLAN – Apply Storm-Control Broadcast Level 30.0",
   "Prevent DHCP Floods on Untrusted Ports – Set 15 pps Rate‑Limit",
   "Stop Syslog Debug Flood: Filter to Critical & Error Only",
-  "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit"
+  "Prevent DHCP starvation on untrusted ports with 15 pps rate‑limit",
+  "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6745,6 +6745,37 @@
    "ig_id": "18385129360235558",
    "file_id": "BAACAgQAAxkDAAIFFGr1geCSVcUh2fU-MGJPsu-JDyqyAALGGwACLRKwUwnBD955T2DePQQ",
    "message_id": 1300
+  },
+  "5f80ea18": {
+   "title": "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256",
+   "description": "Learn why weak algorithms like DES, 3DES, and MD5 are dangerous in IPsec VPNs. Switch to AES-256 encryption and SHA-256/384 integrity for robust Phase 1 and Phase 2 protection.\n\n#Shorts #StrongVPN #NetworkSecurity #Cybersecurity #IPsec #Encryption",
+   "tags": [
+    "StrongVPN",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "IPsec",
+    "Encryption",
+    "Shorts"
+   ],
+   "instagram_caption": "Tired of DES & MD5 in your IPsec tunnels? Stop them now.\nSwitch Phase 1 to AES‑256 encryption and Phase 2 to SHA‑256/384 integrity for robust VPN protection. Enforce on every tunnel and audit regularly.\nWhich upgrade have you already deployed? Share in comments.\n#StrongVPN #NetworkSecurity #IPsec #Encryption #Cybersecurity",
+   "linkedin_caption": "Discover why DES, 3DES and MD5 pose risks in IPsec VPNs. Switch to AES‑256 encryption and SHA‑256/384 integrity for stronger Phase 1/2 protection. Learn the difference in security strength. Secure your business. Is your VPN ready for modern threats?\n\n——— Türkçe ———\n\nDES, 3DES ve MD5'ün IPsec VPN'lerinde risk oluşturduğunu keşfedin. AES‑256 şifreleme ve SHA‑256/384 bütünlük ile Phase 1/2 korumasını güçlendirin. Güvenlik farkını öğrenin, işletmenizi koruyun. VPN'iniz modern tehditlere hazır mı?\n\n#StrongVPN #NetworkSecurity #Encryption",
+   "status": "yt_failed",
+   "hook": "Stop using DES or MD5 in your IPsec tunnels!",
+   "duration_seconds": 28.49,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18119288173821120"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18119288173821120",
+   "file_id": "BAACAgQAAxkDAAIFGGr1q4fEdG55NQKCSfKb6FVsXeAeAAIrHAACLRKwUyuiOxzaw520PQQ",
+   "message_id": 1304
   }
  }
 }
