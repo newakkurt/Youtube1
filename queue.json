@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Netmiko Bulk Password Lockout? Verify on Single Switch",
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
@@ -100,7 +99,8 @@
   "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
   "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops",
   "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs",
-  "Clean Fiber Patch Cables to Stop High dBm Losses"
+  "Clean Fiber Patch Cables to Stop High dBm Losses",
+  "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7055,6 +7055,37 @@
    "ig_id": "18099832946448243",
    "file_id": "BAACAgQAAxkDAAIFRGr3UoA6rP2k-Q16gGrkviI2yzCoAAKbIQACU6W5U-pvt2ASAAF2jj0E",
    "message_id": 1348
+  },
+  "c6dab20f": {
+   "title": "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit",
+   "description": "Learn how to protect your switches from DHCP flood attacks by applying a 15 pps rate‑limit on untrusted ports. The guide includes exact CLI commands and tips for tuning the limit to suit larger guest or IoT deployments.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #Cisco #SwitchConfig #CyberDefense",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "Cisco",
+    "SwitchConfig",
+    "CyberDefense",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop letting DHCP floods crash your switch right now! Enable DHCP snooping and on each untrusted interface set a 15 pps rate‑limit. For high‑density guest zones you can increase the limit, but never leave untrusted ports open to unlimited DHCP. Which of these have you hit in production? Tell me in the comments. #DHCPRateLimit #NetworkSecurity #Cisco #SwitchConfig #CyberDefense",
+   "linkedin_caption": "Discover how to keep your switches stable by applying a 15 pps snooping rate‑limit on untrusted ports, stopping DHCP flood crashes before they happen. The walkthrough shows the exact CLI steps and offers guidance on tuning the limit for larger guest or IoT environments. How do you secure DHCP on your network?\n\n——— Türkçe ———\n\nSwitch’lerinizi istikrarlı tutmak için untrusted portlarda 15 pps snooping rate‑limit uygulayarak DHCP flood çöküşlerini önleyin. Bu video, tam CLI adımlarını ve limitin büyük misafir veya IoT dağıtımları için nasıl ayarlanacağını gösteriyor. Ağınızda DHCP’yi nasıl koruyorsunuz?\n\n#DHCPRateLimit #NetworkSecurity #Cisco",
+   "status": "yt_failed",
+   "hook": "Stop letting DHCP floods crash your switch right now.",
+   "duration_seconds": 32.62,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18083348273536337"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18083348273536337",
+   "file_id": "BAACAgQAAxkDAAIFSGr3ey1GpWQ4IzskemydddN5mxJzAAJnNAACU6XBU4QOSQtEmseaPQQ",
+   "message_id": 1352
   }
  }
 }
