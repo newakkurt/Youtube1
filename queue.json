@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "SAN Packet Drops: Set 9000 MTU End-to-End on Switch Ports",
   "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
   "Rogue Router Joins HSRP? Set Authentication Password Now",
@@ -100,7 +99,8 @@
   "Weak IPsec Phase1/2? Switch to AES-256 & SHA-256",
   "Default SNMP Communities Leak Topology – Lock Access with ACL",
   "Zero Roaming Drops: Enable 802.11r Fast BSS Transition",
-  "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks"
+  "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks",
+  "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6869,6 +6869,37 @@
    "ig_id": "18169436212471014",
    "file_id": "BAACAgQAAxkDAAIFJGr2MDNGw2xkg4QlrYWxqfrP42dHAAJOHAACLRK4U3g6MpdyOsS_PQQ",
    "message_id": 1316
+  },
+  "70f47f65": {
+   "title": "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit",
+   "description": "Learn how a simple 15 pps rate‑limit on untrusted ports stops DHCP starvation and protects your switch CPU. Apply the limit wisely—only on edge ports—to keep legitimate traffic flowing.\n\n#Shorts #DHCPRateLimit #NetworkSecurity #SwitchConfig #DHCP #CyberOps",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkSecurity",
+    "SwitchConfig",
+    "DHCP",
+    "CyberOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop DHCP storms from blowing up your switch CPU. On untrusted edge ports, apply a 15 pps DHCP snooping rate‑limit to keep legitimate traffic flowing and avoid port shutdowns. Remember: never limit trusted uplinks. Have you hit this in production? Comment below. #DHCPRateLimit #NetworkSecurity #SwitchConfig #CyberOps",
+   "linkedin_caption": "Are untrusted DHCP floods crashing your switch? A simple 15 pps rate-limit on untrusted ports stops DHCP starvation and protects your switch CPU. Apply the limit wisely—only on edge ports—to keep legitimate traffic flowing. How do you protect your switch CPU from DHCP floods?\n\n——— Türkçe ———\n\nUntrusted DHCP flood'lar switch'inizi çökertiyor mu? Untrusted portlar üzerinde 15 pps rate-limit uygulamak DHCP starvation durumunu durdurur ve switch CPU'nuzu korur. Legitimate trafiğin sürmesi için limiti yalnızca edge portlarda uygulayın. Switch CPU'nuzu DHCP flood'lara karşı nasıl koruyorsunuz?\n\n#DHCPRateLimit #NetworkSecurity #SwitchConfig",
+   "status": "yt_failed",
+   "hook": "Stop DHCP storms from blowing up your switch CPU.",
+   "duration_seconds": 32.09,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17977758138156337"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17977758138156337",
+   "file_id": "BAACAgQAAxkDAAIFKGr2VuS6yCGniuk3yT8_ZgfHUt8_AAJoHAACLRK4U1SrOYHjptBCPQQ",
+   "message_id": 1320
   }
  }
 }
