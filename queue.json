@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
@@ -100,7 +99,8 @@
   "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit",
   "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown",
   "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It",
-  "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them"
+  "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them",
+  "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6993,6 +6993,37 @@
    "ig_id": "18123752288077081",
    "file_id": "BAACAgQAAxkDAAIFNGr20yEcn_ujA825gK6WskTepGkrAAKqHAACLRK4U91dkoaBGPetPQQ",
    "message_id": 1332
+  },
+  "72aa9710": {
+   "title": "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
+   "description": "Dynamic routing protocols like OSPF and EIGRP can be hijacked with fake announcements. Enabling MD5 or SHA authentication per area or interface stops the attack.\n\n#Shorts #RoutingAuth #NetworkSecurity #Routing #Cybersecurity #Engineering",
+   "tags": [
+    "RoutingAuth",
+    "NetworkSecurity",
+    "Routing",
+    "Cybersecurity",
+    "Engineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop trusting unauthenticated OSPF updates on your core. Enable area authentication with MD5, and set EIGRP interfaces to MD5 or SHA. Verify cryptographic authentication on every dynamic routing protocol. Have you encountered a fake announcement in production? Drop a comment or save this for later. #RoutingAuth #NetworkSecurity #Cybersecurity #Routing #Engineering",
+   "linkedin_caption": "Discover how to protect your network from hijacked OSPF and EIGRP updates. This short guide shows why enabling MD5 or SHA authentication per area or interface is essential to block fake announcements and keep routing integrity. How do you secure your routing today?\n\n——— Türkçe ———\n\nAğınızı sahte OSPF ve EIGRP duyurularından korumanın yollarını keşfedin. MD5 veya SHA kimlik doğrulamasını her alan veya arayüzde etkinleştirmenin sahte duyuruları engellemek ve yönlendirme bütünlüğünü sağlamak için neden kritik olduğunu gösteriyoruz. Yönlendirmelerinizi bugün nasıl güvence altına alıyorsunuz?\n\n#RoutingAuth #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop trusting unauthenticated OSPF updates on your core.",
+   "duration_seconds": 27.93,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18115179635331955"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18115179635331955",
+   "file_id": "BAACAgQAAxkDAAIFN2r2_WU6GOjn8_XU0tpkyBUqywmRAAIBIQACU6W5U_2DgK9vweS5PQQ",
+   "message_id": 1335
   }
  }
 }
