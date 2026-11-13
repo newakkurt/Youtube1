@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
   "Rogue Router Joins HSRP? Set Authentication Password Now",
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
@@ -100,7 +99,8 @@
   "Zero Roaming Drops: Enable 802.11r Fast BSS Transition",
   "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks",
   "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit",
-  "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown"
+  "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown",
+  "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6931,6 +6931,37 @@
    "ig_id": "18140608708632465",
    "file_id": "BAACAgQAAxkDAAIFLGr2f2aoDG8LiBvZq8vMFCZi6jR_AAJuHAACLRK4UyhKqhsh14HSPQQ",
    "message_id": 1324
+  },
+  "e5c6166b": {
+   "title": "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It",
+   "description": "Applying DHCP rate‑limit on trusted uplink ports can halt legitimate server traffic and break IP address distribution. Follow Cisco’s guidance and only enable rate‑limit on untrusted edge or DMZ ports.\n\n#Shorts #DHCPRateLimit #NetworkEngineering #CiscoBestPractices #DHCP #Security",
+   "tags": [
+    "DHCPRateLimit",
+    "NetworkEngineering",
+    "CiscoBestPractices",
+    "DHCP",
+    "Security",
+    "Shorts"
+   ],
+   "instagram_caption": "Stop your servers from getting stuck by turning off DHCP rate‑limit on the uplink. Enabling the rate‑limit on trusted uplink ports can halt legitimate server traffic and break IP address distribution. Cisco recommends disabling it unless a specific requirement demands it, and applying it only to untrusted edge or DMZ ports. Have you disabled DHCP rate‑limit on your uplinks yet? #DHCPRateLimit #Cisco #NetworkSecurity #NetworkEngineering #BestPractices",
+   "linkedin_caption": "DHCP Rate‑Limit on trusted uplinks can block server traffic. Follow Cisco’s guidance—enable it only on untrusted edge or DMZ ports. How would you handle this?\n\n——— Türkçe ———\n\nTrusted uplinks üzerinde DHCP Rate‑Limit, sunucu trafiğini engelleyebilir. Cisco'nun rehberliğini takip edin—rate‑limit'i yalnızca untrusted edge veya DMZ ports'ta etkinleştirin. Bunu nasıl ele alırsınız?\n\n#DHCPRateLimit #NetworkEngineering #CiscoBestPractices",
+   "status": "yt_failed",
+   "hook": "Don't enable DHCP rate‑limit on trusted uplink ports.",
+   "duration_seconds": 32.21,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18190993582408940"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18190993582408940",
+   "file_id": "BAACAgQAAxkDAAIFMGr2ttNDmMIJ3EmB4VVmBg5D8JOQAAJ7HAACLRK4U_u1xP2jPEh9PQQ",
+   "message_id": 1328
   }
  }
 }
