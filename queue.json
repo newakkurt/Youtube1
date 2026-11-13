@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
@@ -100,7 +99,8 @@
   "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown",
   "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It",
   "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them",
-  "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication"
+  "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
+  "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops"
  ],
  "items": {
   "dcdc2b1c": {
