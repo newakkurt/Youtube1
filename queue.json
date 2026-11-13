@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
   "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
@@ -100,7 +99,8 @@
   "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It",
   "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them",
   "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
-  "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops"
+  "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops",
+  "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs"
  ],
  "items": {
   "dcdc2b1c": {
