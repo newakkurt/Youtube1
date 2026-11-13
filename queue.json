@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Guard Untrusted Ports with 15 pps DHCP Snooping Rate‑Limit",
   "Netmiko Bulk Password Lockout? Verify on Single Switch",
   "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
@@ -100,7 +99,8 @@
   "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them",
   "Block Fake OSPF/EIGRP Announcements with MD5/SHA Authentication",
   "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops",
-  "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs"
+  "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs",
+  "Clean Fiber Patch Cables to Stop High dBm Losses"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7024,6 +7024,37 @@
    "ig_id": "18115179635331955",
    "file_id": "BAACAgQAAxkDAAIFN2r2_WU6GOjn8_XU0tpkyBUqywmRAAIBIQACU6W5U_2DgK9vweS5PQQ",
    "message_id": 1335
+  },
+  "22c4bc3e": {
+   "title": "Clean Fiber Patch Cables to Stop High dBm Losses",
+   "description": "Dirty fiber patch cables cause high dBm loss and intermittent link drops. Clean each fiber end with a proper cleaning kit before any testing to keep your network stable.\n\n#Shorts #FiberCleaning #NetworkEngineering #FiberOptics #DataCenter #Troubleshooting",
+   "tags": [
+    "FiberCleaning",
+    "NetworkEngineering",
+    "FiberOptics",
+    "DataCenter",
+    "Troubleshooting",
+    "Shorts"
+   ],
+   "instagram_caption": "Dirty fiber ends are silently killing your link performance.\nUse a fiber cleaning kit after each patch or splice to avoid dBm loss spikes and intermittent link failures.\nCleaning before testing saves hours of troubleshooting.\nWhich of these have you hit in production? #FiberCleaning #NetworkEngineering #FiberOptics #DataCenter #Troubleshooting",
+   "linkedin_caption": "Dirty fiber patch cables are a hidden source of high dBm loss and intermittent link drops. By cleaning each fiber end with a proper cleaning kit before testing, you can maintain a stable network and avoid unnecessary downtime. How do you ensure clean connections in your projects?\n\n——— Türkçe ———\n\nKirli fiber patch kabloları, yüksek dBm kaybı ve ara sıra bağlantı düşüşlerine yol açar. Her fiber ucunu uygun bir cleaning kit ile test öncesinde temizleyerek ağınızın stabil kalmasını sağlayabilirsiniz. Projelerinizde temiz bağlantıyı nasıl sağlıyorsunuz?\n\n#FiberCleaning #NetworkEngineering #DataCenter",
+   "status": "yt_failed",
+   "hook": "Dirty fiber ends are killing your link performance.",
+   "duration_seconds": 24.33,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18099832946448243"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18099832946448243",
+   "file_id": "BAACAgQAAxkDAAIFRGr3UoA6rP2k-Q16gGrkviI2yzCoAAKbIQACU6W5U-pvt2ASAAF2jj0E",
+   "message_id": 1348
   }
  }
 }
