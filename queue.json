@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Rogue Router Joins HSRP? Set Authentication Password Now",
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
   "Stop Wrong VLAN Automation Errors – Standardize VLAN Naming",
   "Prevent 802.1X auth failures – map to Auth‑Fail VLAN",
@@ -100,7 +99,8 @@
   "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks",
   "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit",
   "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown",
-  "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It"
+  "DHCP Rate‑Limit on Trusted Uplinks Blocks Server Traffic – Disable It",
+  "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6962,6 +6962,37 @@
    "ig_id": "18190993582408940",
    "file_id": "BAACAgQAAxkDAAIFMGr2ttNDmMIJ3EmB4VVmBg5D8JOQAAJ7HAACLRK4U_u1xP2jPEh9PQQ",
    "message_id": 1328
+  },
+  "450f125d": {
+   "title": "Guest & Quarantine VLANs Still Communicating? Fully Isolate Them",
+   "description": "Guest and quarantine VLANs must never share traffic. Use distinct VLAN IDs, enable 802.1X, and block inter‑VLAN routing to keep them fully isolated.\n\n#Shorts #VLANIsolation #NetworkSecurity #Cisco #ZeroTrust #NetworkEngineering",
+   "tags": [
+    "VLANIsolation",
+    "NetworkSecurity",
+    "Cisco",
+    "ZeroTrust",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Still seeing guests talk to quarantine? \n\nSeparate the VLAN IDs—guest 200, quarantine 300—enable 802.1X on each access port, and block any inter‑VLAN routing. Don’t trunk between them; keep them pure access. \n\nWhich of these have you hit in production? Comment below or share this tip. \n\n#VLANIsolation #NetworkSecurity #Cisco #ZeroTrust #NetworkEngineering",
+   "linkedin_caption": "Guest & Quarantine VLANs still communicating? Fully isolate them—never share traffic, use distinct VLAN IDs, enable 802.1X, block inter‑VLAN routing. Are you keeping your VLANs truly isolated?\n\n——— Türkçe ———\n\nGuest & Quarantine VLANs hala iletişim kuruyor mu? Onları tamamen izole edin—trafik paylaşmayın, farklı VLAN IDs kullanın, 802.1X'i etkinleştirin, inter‑VLAN routing'i engelleyin. VLAN'larınızı gerçekten izole ediyor musunuz?\n\n#VLANIsolation #NetworkSecurity #ZeroTrust",
+   "status": "yt_failed",
+   "hook": "Stop letting guest and quarantine VLANs talk to each other.",
+   "duration_seconds": 30.98,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18123752288077081"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18123752288077081",
+   "file_id": "BAACAgQAAxkDAAIFNGr20yEcn_ujA825gK6WskTepGkrAAKqHAACLRK4U91dkoaBGPetPQQ",
+   "message_id": 1332
   }
  }
 }
