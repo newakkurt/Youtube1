@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Auth‑Fail VLAN isolates bad devices – 802.1X best practice",
   "DHCP Pool Exhaustion: Fix with Snooping Limit Rate",
   "Rogue Router Joins HSRP? Set Authentication Password Now",
   "Rogue Desk Switch Loops LAN: Force BPDU Guard Err-Disable",
@@ -100,7 +99,8 @@
   "Default SNMP Communities Leak Topology – Lock Access with ACL",
   "Zero Roaming Drops: Enable 802.11r Fast BSS Transition",
   "Prevent password leaks in Git: Use .gitignore & pre‑commit hooks",
-  "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit"
+  "Untrusted DHCP Floods Crashing Switch? Set 15 pps Rate‑Limit",
+  "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown"
  ],
  "items": {
   "dcdc2b1c": {
@@ -6900,6 +6900,37 @@
    "ig_id": "17977758138156337",
    "file_id": "BAACAgQAAxkDAAIFKGr2VuS6yCGniuk3yT8_ZgfHUt8_AAJoHAACLRK4U1SrOYHjptBCPQQ",
    "message_id": 1320
+  },
+  "edbbd1dd": {
+   "title": "Faulty NIC Freezes VLAN: Enable Storm-Control Shutdown",
+   "description": "A faulty NIC or rogue loop can overwhelm an entire VLAN with broadcast traffic in seconds. Configure switch storm-control with trap or shutdown actions to contain edge floods.\n\n#Shorts #StormControl #Networking #Cisco #NetworkSecurity #CCNA",
+   "tags": [
+    "StormControl",
+    "Networking",
+    "Cisco",
+    "NetworkSecurity",
+    "CCNA",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever seen a single bad NIC bring down your entire VLAN? It’s a silent killer—one faulty interface or unmanaged loop can flood an access VLAN in seconds.\nProtect your edge ports by configuring storm‑control broadcast thresholds and set an action like shutdown or SNMP trap. That way you cut the flood before it spills over to neighbor switches.\n\nWhich broadcast storm has you on edge? Drop a comment below or save for your next deployment. #StormControl #Networking #Cisco #NetworkSecurity #CCNA",
+   "linkedin_caption": "Discover how a faulty NIC or rogue loop can freeze an entire VLAN in seconds and learn why enabling storm‑control shutdown is essential to protect your network. Have you implemented storm‑control on your edge ports?\n\n——— Türkçe ———\n\nFaulty NIC veya rogue loop bir VLAN'ı saniyeler içinde dondurabilir. Storm‑control shutdown'ı etkinleştirmenin ağınızı korumadaki önemini öğrenin. Edge portlarınızda storm‑control uyguladınız mı?\n\n#StormControl #Networking #Cisco",
+   "status": "yt_failed",
+   "hook": "Never leave edge switch ports unprotected against sudden broadcast storms.",
+   "duration_seconds": 32.69,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18140608708632465"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18140608708632465",
+   "file_id": "BAACAgQAAxkDAAIFLGr2f2aoDG8LiBvZq8vMFCZi6jR_AAJuHAACLRK4UyhKqhsh14HSPQQ",
+   "message_id": 1324
   }
  }
 }
