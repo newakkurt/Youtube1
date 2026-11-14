@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
@@ -100,7 +99,8 @@
   "Clean Fiber Patch Cables to Stop High dBm Losses",
   "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit",
   "Config Drift Breaks Audits: Compare Golden Configs with Ansible",
-  "BGP Prefix Limit Stops Full-Table Floods on Edge Routers"
+  "BGP Prefix Limit Stops Full-Table Floods on Edge Routers",
+  "Console Port Hacked? Strong Password and Exec‑Timeout Fix"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7148,6 +7148,37 @@
    "ig_id": "17916049125286171",
    "file_id": "BAACAgQAAxkDAAIFUmr30CcBf8QEDXQzYulZ9kW2qVn4AAKjNAACU6XBU_L8hhBFRehZPQQ",
    "message_id": 1362
+  },
+  "660004be": {
+   "title": "Console Port Hacked? Strong Password and Exec‑Timeout Fix",
+   "description": "Learn how to lock down your switch console port with a strong password and an automatic session timeout. These simple steps stop unauthorized physical access from compromising your network.\n\n#Shorts #ConsoleSecurity #NetworkSecurity #Cybersecurity #ITOps #Infrastructure",
+   "tags": [
+    "ConsoleSecurity",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "ITOps",
+    "Infrastructure",
+    "Shorts"
+   ],
+   "instagram_caption": "Ever wonder how a simple console port can become a backdoor? Lock it down with a strong password and exec‑timeout. Apply a complex secret on the console and set an exec‑timeout of 5 minutes to auto‑lock idle sessions. Enforce this on every console port to keep unauthorized access at bay. Which of these have you hit in production? Share in the comments.\n#ConsoleSecurity #NetworkSecurity #Cybersecurity #ITOps #Infrastructure",
+   "linkedin_caption": "Discover how a strong console password and an exec‑timeout can protect your switch from unwanted physical access. In this short video we walk through the simple configuration that locks down the console port and automatically ends idle sessions. Ready to harden your network?\n\n——— Türkçe ———\n\nSağlam bir console password ve exec‑timeout ile switch’inizi istenmeyen fiziksel erişime karşı korumanın yolunu keşfedin. Kısa videomuzda, console portunu kilitleyen ve boş oturumları otomatik olarak sonlandıran basit yapılandırmayı adım adım gösteriyoruz. Ağınızı güçlendirmeye hazır mısınız?\n\n#ConsoleSecurity #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never leave your switch console port unprotected.",
+   "duration_seconds": 25.16,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18080549642427831"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18080549642427831",
+   "file_id": "BAACAgQAAxkDAAIFVmr4CEFy2AnBbr1HEm_Z0g0WRWUcAALeNAACU6XBU_-PuJkGm0lzPQQ",
+   "message_id": 1366
   }
  }
 }
