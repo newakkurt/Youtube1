@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
   "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
   "Never auto‑fix config drift—alert first, then remediate",
@@ -100,7 +99,8 @@
   "Config Drift Breaks Audits: Compare Golden Configs with Ansible",
   "BGP Prefix Limit Stops Full-Table Floods on Edge Routers",
   "Console Port Hacked? Strong Password and Exec‑Timeout Fix",
-  "Tighten SSL VPN idle timeout to stop session hijacking"
+  "Tighten SSL VPN idle timeout to stop session hijacking",
+  "IP Source Guard only checks IP – add Port‑Security for MAC validation"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7210,6 +7210,37 @@
    "ig_id": "18014567174768131",
    "file_id": "BAACAgQAAxkDAAIFWmr4JKWj3woJI-9Yn0HiczSFxdwgAAL5NAACU6XBU9rHixwroomFPQQ",
    "message_id": 1370
+  },
+  "c4c270b5": {
+   "title": "IP Source Guard only checks IP – add Port‑Security for MAC validation",
+   "description": "Many engineers enable IP Source Guard but forget it only verifies IP addresses. Pair it with port‑security and sticky MAC to ensure both IP and MAC are validated, preventing spoofing attacks.\n\n#Shorts #IPSourceGuard #NetworkSecurity #Cisco #PortSecurity #NetworkEngineering",
+   "tags": [
+    "IPSourceGuard",
+    "NetworkSecurity",
+    "Cisco",
+    "PortSecurity",
+    "NetworkEngineering",
+    "Shorts"
+   ],
+   "instagram_caption": "Think IP Source Guard alone stops spoofing? It only checks IPs, so leave your network exposed. Pair it with port‑security and sticky MAC on the same interface—set a max MAC of 1 and bind the IP‑MAC pair for full protection.\n\nHave you enabled sticky MAC on your switches? Share your experience below!",
+   "linkedin_caption": "IP Source Guard only checks IP – add Port‑Security for MAC validation. Many engineers enable IP Source Guard but forget it verifies only IP addresses. Pair it with port‑security and sticky MAC to validate both IP and MAC, stopping spoofing. Are you leveraging both IP and MAC validation?\n\n——— Türkçe ———\n\nIP Source Guard yalnızca IP'i kontrol eder – MAC doğrulaması için Port‑Security ekleyin. Birçok mühendis IP Source Guard'ı etkinleştirir ama yalnızca IP adreslerini doğruladığını unutur. Port‑Security ve sticky MAC ile hem IP hem de MAC doğrulamasını sağlayarak sahtecilik saldırılarını önleyin. IP ve MAC doğrulamasını birlikte kullanıyor musunuz?\n\n#IPSourceGuard #NetworkSecurity #PortSecurity",
+   "status": "yt_failed",
+   "hook": "Stop trusting IP Source Guard to check only IP addresses.",
+   "duration_seconds": 29.86,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18078500747727316"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18078500747727316",
+   "file_id": "BAACAgQAAxkDAAIFXmr4Toa0ZcL9e3Uv8s6oWEUDLWHJAAI4NQACU6XBU-J_8tvc9iODPQQ",
+   "message_id": 1374
   }
  }
 }
