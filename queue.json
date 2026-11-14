@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
@@ -100,7 +99,8 @@
   "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs",
   "Clean Fiber Patch Cables to Stop High dBm Losses",
   "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit",
-  "Config Drift Breaks Audits: Compare Golden Configs with Ansible"
+  "Config Drift Breaks Audits: Compare Golden Configs with Ansible",
+  "BGP Prefix Limit Stops Full-Table Floods on Edge Routers"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7117,6 +7117,37 @@
    "ig_id": "18343026757260758",
    "file_id": "BAACAgQAAxkDAAIFTGr3phHXdHt01UjBHfkBZrUuG7rZAAKONAACU6XBU4r0iptp7KFXPQQ",
    "message_id": 1356
+  },
+  "cfd0c5d6": {
+   "title": "BGP Prefix Limit Stops Full-Table Floods on Edge Routers",
+   "description": "Learn how to protect your edge routers from BGP full-table attacks by configuring maximum-prefix limits. This quick guide shows the exact commands and why the warning and shut-down actions are essential.\n\n#Shorts #BGPMaxPrefix #networking #cybersecurity #BGP #routing",
+   "tags": [
+    "BGPMaxPrefix",
+    "networking",
+    "cybersecurity",
+    "BGP",
+    "routing",
+    "Shorts"
+   ],
+   "instagram_caption": "Think your edge router is safe? Think again. BGP full‑table floods can cripple your network. Stop letting peers dump the entire internet table into your edge router—configure the BGP maximum‑prefix command on each neighbor and apply a warning threshold with a shut‑down action to block excess routes. Always limit BGP prefixes on edge devices to protect the routing table. Have you hit a max‑prefix limit in production? Drop a comment! #BGPMaxPrefix #networking #cybersecurity #routing #BGP",
+   "linkedin_caption": "Stop BGP full-table floods on your edge routers with the BGP prefix limit. This quick guide shows how to configure maximum‑prefix limits and why the warning and shut‑down actions are essential. Can you implement this protection on your network today?\n\n——— Türkçe ———\n\nEdge yönlendiricilerinizde BGP full‑table flood'larını BGP prefix limit ile durdurun. Bu hızlı rehber, maximum‑prefix limit'lerini nasıl yapılandıracağınızı ve uyarı ile kapanma eylemlerinin önemini gösteriyor. Bu korumayı ağınızda bugün uygulayabilir misiniz?\n\n#BGPMaxPrefix #networking #cybersecurity",
+   "status": "yt_failed",
+   "hook": "Stop letting peers dump the entire internet table into your edge router.",
+   "duration_seconds": 21.91,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "17916049125286171"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "17916049125286171",
+   "file_id": "BAACAgQAAxkDAAIFUmr30CcBf8QEDXQzYulZ9kW2qVn4AAKjNAACU6XBU_L8hhBFRehZPQQ",
+   "message_id": 1362
   }
  }
 }
