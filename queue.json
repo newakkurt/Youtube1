@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "RADIUS Outage Freezes Production: Set Critical Auth VLAN",
   "Eliminate Wi‑Fi handoff drops with 802.11r Fast BSS Transition",
   "DHCP Snooping Table Wipes on Reload – Save to Flash or TFTP",
   "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
@@ -100,7 +99,8 @@
   "Loop Guard on Core Trunk Ports – Prevent One‑Way Fiber Cut Loops",
   "Dynamic VLAN & 802.1X: Fully Isolate Guest and Quarantine VLANs",
   "Clean Fiber Patch Cables to Stop High dBm Losses",
-  "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit"
+  "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit",
+  "Config Drift Breaks Audits: Compare Golden Configs with Ansible"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7086,6 +7086,37 @@
    "ig_id": "18083348273536337",
    "file_id": "BAACAgQAAxkDAAIFSGr3ey1GpWQ4IzskemydddN5mxJzAAJnNAACU6XBU4QOSQtEmseaPQQ",
    "message_id": 1352
+  },
+  "71984e15": {
+   "title": "Config Drift Breaks Audits: Compare Golden Configs with Ansible",
+   "description": "Detect unauthorized device changes by comparing live running configs against baseline golden templates using automation tools like Ansible or Netmiko. Schedule automated diff reports to eliminate configuration drift before an outage occurs.\n\n#Shorts #ConfigDrift #NetworkEngineering #Ansible #NetworkAutomation #NetDevOps",
+   "tags": [
+    "ConfigDrift",
+    "NetworkEngineering",
+    "Ansible",
+    "NetworkAutomation",
+    "NetDevOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Still watching config drift sneak into production? Define golden templates in Ansible, Netmiko, or rConfig, then schedule automated playbooks to pull live configs and generate drift diffs. Check daily before any manual tweak turns into an outage. Have you automated drift checks? Drop a comment or save for later. #ConfigDrift #NetworkAutomation #Ansible #Netmiko #NetDevOps",
+   "linkedin_caption": "Config Drift Breaks Audits: Compare Golden Configs with Ansible. Detect unauthorized device changes by comparing live running configs against baseline golden templates using automation tools like Ansible or Netmiko. Schedule automated diff reports to eliminate drift before an outage occurs. What's your approach to prevent drift? #ConfigDrift #Ansible #NetworkAutomation\n\n——— Türkçe ———\n\nConfig Drift Breaks Audits: Compare Golden Configs with Ansible. Yetkisiz cihaz değişikliklerini tespit edin; canlı çalışan konfigürasyonları baseline golden şablonlarıyla karşılaştırın. Ansible veya Netmiko gibi otomasyon araçları kullanın. Otomatik diff raporlarını zamanlayarak drifi önceden ortadan kaldırın. Drift önlemek için yaklaşımınız nedir? #ConfigDrift #Ansible #NetworkAutomation\n\n#ConfigDrift #Ansible #NetworkAutomation",
+   "status": "yt_failed",
+   "hook": "Stop letting silent config drift break your production switch configurations.",
+   "duration_seconds": 32.67,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18343026757260758"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18343026757260758",
+   "file_id": "BAACAgQAAxkDAAIFTGr3phHXdHt01UjBHfkBZrUuG7rZAAKONAACU6XBU4r0iptp7KFXPQQ",
+   "message_id": 1356
   }
  }
 }
