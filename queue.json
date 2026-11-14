@@ -1,7 +1,6 @@
 {
  "offset": 0,
  "history": [
-  "Block Rogue DHCP Offers: Set Snooping Trust on Uplinks",
   "Avoid DHCP Starvation on Untrusted Ports with Rate‑Limit",
   "Flash I/O Spikes? Set DHCP Snooping Database Timeout",
   "VLAN Hopping Attacks? Change Native VLAN & Blackhole",
@@ -100,7 +99,8 @@
   "Prevent DHCP Flood Crashes – Set 15 pps Snooping Rate‑Limit",
   "Config Drift Breaks Audits: Compare Golden Configs with Ansible",
   "BGP Prefix Limit Stops Full-Table Floods on Edge Routers",
-  "Console Port Hacked? Strong Password and Exec‑Timeout Fix"
+  "Console Port Hacked? Strong Password and Exec‑Timeout Fix",
+  "Tighten SSL VPN idle timeout to stop session hijacking"
  ],
  "items": {
   "dcdc2b1c": {
@@ -7179,6 +7179,37 @@
    "ig_id": "18080549642427831",
    "file_id": "BAACAgQAAxkDAAIFVmr4CEFy2AnBbr1HEm_Z0g0WRWUcAALeNAACU6XBU_-PuJkGm0lzPQQ",
    "message_id": 1366
+  },
+  "b745c36b": {
+   "title": "Tighten SSL VPN idle timeout to stop session hijacking",
+   "description": "Learn how tightening SSL VPN idle timeout blocks unauthorized access through forgotten sessions. Apply the setting now to keep your network safe.\n\n#Shorts #SSLVPN #NetworkSecurity #Cybersecurity #VPN #ITOps",
+   "tags": [
+    "SSLVPN",
+    "NetworkSecurity",
+    "Cybersecurity",
+    "VPN",
+    "ITOps",
+    "Shorts"
+   ],
+   "instagram_caption": "Hackers love idle VPN sessions—are yours on autopilot?\n\nIf you leave an SSL VPN open, attackers can hijack. Set the idle‑timeout to five minutes and enforce logouts.\n\nWhich of these have you hit in production? Tell me in the comments.\n#SSLVPN #NetworkSecurity #Cybersecurity #VPN #ITOps",
+   "linkedin_caption": "Want to block unauthorized access through forgotten sessions? Tighten SSL VPN idle timeout to stop session hijacking. Apply the setting now to keep your network safe. This simple change improves security. Make it part of your routine security checks. What do you think?\n\n——— Türkçe ———\n\nUnutulmuş oturumlar aracılığıyla yetkisiz erişimi engellemek ister misiniz? SSL VPN idle timeout'u sıkılaştırarak oturum kaçırmayı durdurun. Bu ayarı şimdi uygulayarak ağınızı güvende tutun. Bu basit değişiklik güvenliği artırır. Rutinin bir parçası olarak uygulayın. Ne düşünüyorsunuz?\n\n#SSLVPN #NetworkSecurity #Cybersecurity",
+   "status": "yt_failed",
+   "hook": "Never leave an SSL VPN session open—hackers love idle connections.",
+   "duration_seconds": 30.56,
+   "youtube": {
+    "status": "failed"
+   },
+   "instagram": {
+    "status": "published",
+    "media_id": "18014567174768131"
+   },
+   "linkedin": {
+    "status": "published",
+    "result": "LinkedIn (IT & Uzay/Yapay Zeka) ✅"
+   },
+   "ig_id": "18014567174768131",
+   "file_id": "BAACAgQAAxkDAAIFWmr4JKWj3woJI-9Yn0HiczSFxdwgAAL5NAACU6XBU9rHixwroomFPQQ",
+   "message_id": 1370
   }
  }
 }
